@@ -1,0 +1,73 @@
+<article class="Post">
+    <div class="Grid Grid--withGutter">
+        <div class="Grid-cell u-md-size9of12 u-md-before3of12">
+
+            <h1 class="Post-title">
+                {% if type == 'post' %}
+                    {{post.title}}
+                {% else %}
+                    <a href="{{post.url}}">{{post.title}}</a>
+                {% endif %}
+            </h1>
+
+            <div class="Post-meta u-marginBX13">
+                <time class="Post-time" datetime="{{post.date | date: '%Y-%m-%d'}}">
+                    {{post.date | date: "%B %d, %Y"}}
+                    <span>|</span>
+                </time>
+                {% if post.author %}
+                    <div class="Post-author">
+                        <!-- <a href="{{post.author.url}}">{{post.author}}</a> -->
+                        {{post.author}}
+                        <span>|</span>
+                    </div>
+                {% endif %}
+                <div class="Post-tags">
+                    {% for set in post.taxonomy %}
+                        {% for tag in set %}
+                            <span><a href="{{tag.url}}">{{ tag.value | capitalize }}</a></span>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        {% if post.meta.youtube %}
+        <div class="Grid-cell u-marginBD1">
+            <figure class="Figure">
+                <div class="FlexEmbed">
+                    <div class="FlexEmbed-ratio FlexEmbed-ratio--16by9"></div>
+                    <iframe src="https://www.youtube.com/embed/{{post.meta.youtube}}" frameborder="0" allowfullscreen="allowfullscreen" class="FlexEmbed-content"></iframe>
+                </div>
+            </figure>
+        </div>
+        {% elsif post.meta.hero-link %}
+        <div class="Grid-cell u-marginBD1">
+            <figure class="Figure">
+                <div class="FlexEmbed">
+                    <div class="FlexEmbed-ratio FlexEmbed-ratio--2by1"></div>
+                    <div class="FlexEmbed-content">
+                        <div class="u-posAbsoluteCenter CoverImage" style="background-image: url('{{ post.assets.first }}')"></div>
+                    </div>
+                </div>
+            </figure>
+        </div>
+        {% endif %}
+
+        <div class="Grid-cell u-size3of12 u-paddingRX15 u-marginTD6 u-md-display">
+            {% include 'includes/blog-aside' %}
+        </div>
+
+        <div class="Grid-cell u-md-size9of12">
+            <div class="u-sizeFull u-sm-size9of12 u-md-sizeFull">
+                {{post.body}}
+
+                <div class="SectionRule u-marginTX3">
+                    {% if previous %}<a class="Post-related" href="{{ post.previous.slug }}"><i class="Arrow-left"></i>{{post.previous.title}}</a>{% endif %}
+                    {% if next %}<a class="Post-related" href="{{ post.next.slug }}">{{post.next.title}}<i class="Arrow-right"></i></a>{% endif %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</article>

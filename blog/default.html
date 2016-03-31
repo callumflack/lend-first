@@ -1,0 +1,25 @@
+{% capture content %}
+<section class="Section">
+    <div class="Container">
+
+        {% if type == 'post' %}
+            {% assign post = current %}
+            {% include 'includes/post' %}
+        {% else %}
+            <div class="Grid Grid--withGutter">
+                <div class="Grid-cell u-size3of12 u-paddingRX15 u-marginTD6 u-md-display">
+                    {% include 'includes/blog-aside' %}
+                </div>
+                <div class="Grid-cell u-md-size9of12">
+                    {% for post in posts | limit: 12 %}
+                        {% include 'includes/post-in-list' %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
+    </div>
+</section>
+{% endcapture %}
+
+{% include 'layouts/default' %}
