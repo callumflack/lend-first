@@ -1,0 +1,77 @@
+
+
+// --------------------------------------------------------------------------
+// OBJECT: RULE
+// --------------------------------------------------------------------------
+
+
+// Rules on divs
+
+@mixin SectionRule(
+    $mixin-color: color(ui, muted),
+    $mixin-weight: 1px
+) {
+    border-top: $mixin-weight solid $mixin-color;
+    // padding-top: space(0.5);
+}
+
+.SectionRule            { @include SectionRule(); }
+.SectionRule--base      { @include SectionRule( color(ui, base) ); }
+.SectionRule--dark      { @include SectionRule( color(ui, charcoal) ); }
+
+.msm-SectionRule        { @include SectionRule(); @include respond-to(sm) { display: none; } }
+.msm-SectionRule--light { @include SectionRule($mixin-color: rgba( color(ui, muted), 0.5) ); @include respond-to(sm) { display: none; } }
+.mxs-SectionRule        { @include respond-to(max-xs) { @include SectionRule(); } }
+
+.msm-SectionRule--contact {
+    border-bottom: 1px solid rgba( color(ui, muted), 0.75);
+    padding-bottom: space(0.75);
+
+    @include respond-to(xs) {
+        border-color: transparent;
+        height: 0;
+        padding: 0;
+    }
+}
+
+.msm-SectionRule--contactTop {
+    border-top: 1px solid rgba( color(ui, muted), 0.75);
+    padding-top: space(0.75);
+
+    @include respond-to(xs) {
+        border-color: transparent;
+        height: 0;
+        padding: 0;
+    }
+}
+
+
+// Horizontal Rules (replacing HRs)
+
+@mixin HorizontalRule(
+    $mixin-color: color(ui, base),
+    $mixin-weight: 1px
+) {
+    border-top: $mixin-weight solid $mixin-color;
+    height: $mixin-weight;
+    margin: space(0.65) 0 space(0.85);
+}
+
+.HzRule          { @include HorizontalRule(); }
+.HzRule--white   { @include HorizontalRule( color(ui, white) ); }
+.HzRule--muted   { @include HorizontalRule( color(ui, muted) ); }
+.HzRule--dark    { @include HorizontalRule( color(ui, charcoal) ); }
+
+.msm-HzRule      { @include respond-to(max-sm) { @include HorizontalRule(); } }
+
+.HzRule--footer {
+    border-top: 1px solid rgba( color(ui, medium), 0.25);
+    height: 1px;
+    margin: space(0.75) 0;
+    width: 100%;
+
+    @include respond-to(xs) {
+        margin: rem(9) 0 rem(11);
+        width: 80%;
+    }
+}
