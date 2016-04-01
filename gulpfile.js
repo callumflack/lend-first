@@ -142,6 +142,8 @@ gulp.task( 'images', function() {
 gulp.task( 'compile:sass', function() {
     gulp.src( options.sass.files )
         .pipe( plugins.plumber() )
+        .pipe( plugins.sourcemaps.init() )
+        // .pipe( plugins.sass().on('error', sass.logError))
         .pipe( plugins.sass( {
             indentedSyntax: true,
             // errLogToConsole: true
@@ -150,8 +152,7 @@ gulp.task( 'compile:sass', function() {
                 browsers : [ 'last 2 versions' ],
                 cascade  : false
         } ) )
-        // .pipe(sourcemaps.init())
-        // .pipe(plugins.sourcemaps.write('./'))
+        .pipe( plugins.sourcemaps.write() )
         .pipe( gulp.dest( options.sass.destination ) )
         .pipe( plugins.size({title: 'styles'}) )
         .pipe( plugins.connect.reload() );
