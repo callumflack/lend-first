@@ -22,7 +22,7 @@
         <meta http-equiv="refresh" content="0;url={{meta.redirect}}">
     {% endif %}
 </head>
-<body id="top" class="{{type}} {{slug}} {% for tag in taxonomy.tags %} {{tag.slug}} {% endfor %} u-posRelative"
+<body id="top" class="{{type}} {{slug}} {% for tag in taxonomy.tags %} {{tag.slug}} {% endfor %}"
     data-spy="scroll" data-target="#scrollspy" data-offset="300">
 
     {% include 'includes/header' %}
@@ -36,6 +36,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="/build/site.concat.js"></script>
+    <!-- <script>
+        FontFaceOnload("regular", {
+            success: function() {
+                document.documentElement.className += " regular-loaded";
+            }
+        });
+    </script> -->
     {% include 'includes/google-analytics' %}
 
 </body>
