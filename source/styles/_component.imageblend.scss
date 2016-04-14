@@ -8,7 +8,7 @@
 
 @mixin ImageBlend(
     $blend: multiply,
-    $color: rgba( color(ui, dark), 0.2)
+    $color: rgba( color(ui, charcoal), 0.25)
 ) {
     background-blend-mode: $blend;
     background-color: $color;

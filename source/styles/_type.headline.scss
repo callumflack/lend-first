@@ -41,26 +41,36 @@
         font-family: inherit;
         padding: 0 space(0.25);
 
+        // new setup
+        position: relative;
+        z-index: 2;
+
         @include respond-to(xs) {
             padding: 0 space(0.5);
         }
     }
 
     &:after {
-        // border-top: solid 1px lighten( color(ui, brand), 25% );
-        // border-top: solid 1px rgba( color(ui, brand), 0.4);
-        border-top: solid 1px color(ui, brand);
+        // old setup
+        // border-top: solid 1px color(ui, brand);
+        // left: 0;
+        // position: absolute;
+        // right: 0;
+        // top: 120%;
+        // transform: translateY(-50%);
+        // z-index: -1;
+
+        background-color: color(ui, brand);
         content: "";
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 120%;
-        transform: translateY(-50%);
-        z-index: -1;
+        display: block;
+        height: 1px;
+        position: relative;
+        transform: translateY(-16px);
 
         @include respond-to(xs) {
-            border-width: 1px;
-            top: 50%;
+            // border-width: 1px;
+            // top: 50%;
+            transform: translateY(-20px);
         }
     }
 }
@@ -72,7 +82,8 @@
     position: relative;
 }
 
-.HeadlineRuler   { @include HeadlineRuler(); }
+.HeadlineRuler    { @include HeadlineRuler(); }
+.Headline--noRule { &:after { background-color: transparent !important; } }
 .Headline--ruled {
     @include Headline--ruled();
     &:after { border-color: color(ui, brand); }
@@ -115,7 +126,7 @@
 .Headline--highlight {
     @include Headline--ruled();
     color: color(ui, brand-alt);
-    &:after { border-color: color(ui, brand-alt); }
+    &:after { background-color: color(ui, brand-alt); }
 
     @include when-inside(".Modal") {
         span { background-color: color(ui, neutral); }
@@ -141,7 +152,7 @@
     color: color(text, medium);
     font-family: $font-sans-book;
 
-    &:after { border-color: color(ui, muted); }
+    &:after { background-color: color(ui, muted); }
 
     @include respond-to('max-sm') {
         @include when-inside('.Section--cards') {

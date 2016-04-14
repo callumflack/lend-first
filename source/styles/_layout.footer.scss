@@ -7,10 +7,22 @@
 
 .Footer {
     background-color: color(ui, neutral);
-    margin-top: space(2.5);
+
+
+    &:before {
+        background-color: color(ui, background);
+        content: "";
+        display: block;
+        height: space(2.5);
+
+        @include respond-to(xs) {
+            height: space(5);
+        }
+
+    }
 
     @include respond-to(xs) {
-        margin-top: space(5);
+        // padding-top: space(5);
     }
 
     a {

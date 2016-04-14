@@ -2,10 +2,8 @@
 
     {% assign image-path = '/build/images/' %}
 
-    <section class="Section u-marginT u-xs-marginT25 js-cards">
+    <section class="Section u-paddingT u-xs-paddingT25 js-cards">
         <div class="Container Container--lg">
-            <!-- <h1 class="Headline Headline--secondary u-xs-marginB2"><span>What do you want to do with your loan?</span></h1> -->
-            <!-- <h1 class="Headline Headline--secondary u-xs-marginB25"><span>What can your loan do for you?</span></h1> -->
             <h1 class="Headline Headline--primary u-mxs-marginB15 u-marginB25"><span>What do you want to do with your loan?</span></h1>
         </div>
 
@@ -23,8 +21,6 @@
                     </blockquote>
                     <p>
                         Through constant exposure to a variety of financial advice problems over many years, Michael uses his intuition to see answers to financial problems when others cannot even see the problem. If you seem to be stuck, or you’re looking at accepting terms that aren’t as good as you’d hoped, perhaps Michael can give you a new way of looking at the situation.
-                        <!-- <a class="u-linkBrand u-colorBrand Arrow-right" href="#" data-toggle="modal">Find out what’s possible</a> -->
-                        <!-- <a class="u-linkBrand u-colorBrand Arrow-right" href="{{ site.pages.why-choose-australian-property-finance.url }}">Find out why you should choose Australian Property Finance</a> -->
                     </p>
                 </div>
 
@@ -80,7 +76,15 @@
         </div>
     </section>
 
-    {% include 'includes/newsletter-block' %}
+    <section class="Section">
+        <div class="Container">
+            <div class="u-well--lg u-bgNeutral u-sm-size8of12 Grid-cell--center">
+                {% for post in site.pages.blog.posts | limit: 1 %}
+            		{% include 'includes/post-in-list' %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 
     <section class="Section">
         <div class="Container">
@@ -94,7 +98,7 @@
         </div>
     </section>
 
-    <section class="Section u-marginB2 u-marginT">
+    <section class="Section u-paddingB2 u-paddingT">
         <div class="Container">
             <div class="FancyWell u-size11of12 u-xs-size6of12 u-sm-size5of12 Grid-cell--center u-textCenterBlock u-padding1">
                 <h4 class="Headline--quinary u-colorBrand u-weightBold">Hey, where’s your interest rates?</h4>
