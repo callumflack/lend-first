@@ -8,10 +8,10 @@
 
 @mixin ImageBlend(
     $blend: multiply,
-    $color: rgba( color(ui, brand), 0.5)
+    $color: rgba( color(ui, dark), 0.2)
 ) {
-    // background-blend-mode: $blend;
-    // background-color: $color;
+    background-blend-mode: $blend;
+    background-color: $color;
 }
 
 .ImageBlend               { @include ImageBlend(); }
