@@ -75,3 +75,38 @@
         width: 80%;
     }
 }
+
+
+
+
+
+// Rules (replacing HRs)
+
+@mixin Rule(
+    $mixin-color: palette(base),
+    $mixin-weight: 1px
+) {
+    border: 0;
+    border-top: $mixin-weight solid $mixin-color;
+}
+
+// .HzRule {
+//     @include Rule();
+//     height: 0;
+//     margin-top: calc( #{space(1)} - 1px);
+//     margin-bottom: space(1);
+// }
+
+.DivRule {
+    @include Rule( 2px, color(ui, charcoal) );
+    padding-top: space(1/3);
+}
+
+.DivRule--light {
+    @include Rule( 1px, color(ui, base) );
+    padding-top: space(1/3);
+}
+
+.VertRule--left {
+    border-left: 1px solid color(ui, base);
+}

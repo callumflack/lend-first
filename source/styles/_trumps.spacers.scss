@@ -241,7 +241,8 @@
 }
 
 @include respond-to(xs) {
-    .u-xs-paddingT3    { @extend .u-paddingT3; }
+    .u-xs-paddingT3    { padding-top: space(3) !important; }
+    .u-xs-paddingT25   { padding-top: space(2.5) !important; }
     .u-xs-paddingB0    { @extend .u-paddingB0; }
     .u-xs-paddingB     { @extend .u-paddingB; }
     .u-xs-paddingB15   { padding-bottom: space(1.5)    !important; }

@@ -68,3 +68,32 @@ a {
 
 .u-linkInvisible { @include u-link(none); }
 .u-childLinkInvisible { a { @include u-link(none); } }
+
+
+// Buried anchors
+// Same pattern as Suit's u-linkComplex, but different styling.
+// --------------------------------------------------------------------------
+
+@mixin complexLink {
+    display: block;
+    width: 100%;
+
+    @include on-event() {
+        .u-linkBuriedTarget {
+            @include baseTransition();
+            color: color(ui, brand);
+        }
+    }
+}
+
+.u-linkBuried {
+    @include complexLink();
+    margin-bottom: space(0.5);
+}
+
+// Don't forget: this is a span, not an <a>,
+// so it needs these styles.
+.u-linkBuriedTarget {
+    @include baseTransition();
+    color: color(ui, charcoal);
+}
