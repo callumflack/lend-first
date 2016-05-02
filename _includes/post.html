@@ -6,68 +6,68 @@
 
 <article class="Post u-paddingT u-xs-paddingT25">
 
-    <div class="Container">
-        <div class="Grid Grid--withGutter">
-            <div class="Grid-cell u-xs-size4of12 u-xs-after1of12 u-paddingR u-md-display">
-                <h1 class="Headline--super">{{ post.title }}</h1>
-                <!-- <div class="DivRule u-marginT2"></div> -->
-                <!-- <p class="TextSm u-textBold u-colorMedium">Share this post</p> -->
-            </div>
+	<div class="Container">
+		<div class="Grid Grid--withGutter">
+			<div class="Grid-cell u-xs-size4of12 u-xs-after1of12 u-paddingR u-md-display">
+				<h1 class="Headline--super">{{ post.title }}</h1>
+				<p class="TextSm u-textBold u-colorMedium u-marginT2 u-marginBD2">Share this post:</p>
+				{% include 'includes/share' %}
+			</div>
 
-            <div class="Grid-cell u-xs-size7of12 u-alignBlockDown">
-                {{ post.body }}
-            </div>
-        </div>
-        <div class="DivRule--light u-marginT25"></div>
+			<div class="Grid-cell u-xs-size7of12 u-alignBlockDown">
+				{{ post.body }}
+			</div>
+		</div>
+		<div class="DivRule--light u-marginT25"></div>
 
-        {% include 'includes/newsletter-block' %}
-        {% include 'includes/path-cta' %}
+		{% include 'includes/newsletter-block' %}
+		{% include 'includes/path-cta' %}
 
-        <!-- <section class="Section">
-            <div class="Container DivRule">
-                <a href="{{ site.pages.blog.url }}">
-                    <h1 class="Headline Arrow-right">View all posts</h1>
-                </a>
-                <div class="Grid">
-                    {% if previous %}
-                        <div class="Grid-cell u-xs-size1of2">
-                            <a class="Post" href="{{ post.previous.url }}">
-                                <figure class="Post-image--dark">
-                                    <div class="FlexEmbed">
-                                        <div class="FlexEmbed-ratio FlexEmbed-ratio--16by9 u-bgDark"></div>
-                                        <div class="FlexEmbed-content CoverImage" style="background-image: url('{{ post.previous.assets.first }}')"></div>
-                                        <div class="FlexEmbed-content">
-                                            <h1 class="Post-headline Post-headline--right Arrow-left">{{ post.previous.title }}</h1>
-                                        </div>
-                                    </div>
-                                </figure>
-                            </a>
-                        </div>
-                    {% endif %}
-                    {% if next %}
-                    <div class="Grid-cell u-xs-size1of2">
-                        <a class="Post" href="{{ post.next.url }}">
-                            <figure class="Post-image--dark">
-                                <div class="FlexEmbed">
-                                    <div class="FlexEmbed-ratio FlexEmbed-ratio--16by9 u-bgDark"></div>
-                                    <div class="FlexEmbed-content CoverImage" style="background-image: url('{{ post.next.assets.first }}')"></div>
-                                    <div class="FlexEmbed-content">
-                                        <h1 class="Post-headline Arrow-right">{{ post.next.title }}</h1>
-                                    </div>
-                                </div>
-                            </figure>
-                        </a>
-                    </div>
-                    {% endif %}
+		<!-- <section class="Section">
+			<div class="Container DivRule">
+				<a href="{{ site.pages.blog.url }}">
+					<h1 class="Headline Arrow-right">View all posts</h1>
+				</a>
+				<div class="Grid">
+					{% if previous %}
+						<div class="Grid-cell u-xs-size1of2">
+							<a class="Post" href="{{ post.previous.url }}">
+								<figure class="Post-image--dark">
+									<div class="FlexEmbed">
+										<div class="FlexEmbed-ratio FlexEmbed-ratio--16by9 u-bgDark"></div>
+										<div class="FlexEmbed-content CoverImage" style="background-image: url('{{ post.previous.assets.first }}')"></div>
+										<div class="FlexEmbed-content">
+											<h1 class="Post-headline Post-headline--right Arrow-left">{{ post.previous.title }}</h1>
+										</div>
+									</div>
+								</figure>
+							</a>
+						</div>
+					{% endif %}
+					{% if next %}
+					<div class="Grid-cell u-xs-size1of2">
+						<a class="Post" href="{{ post.next.url }}">
+							<figure class="Post-image--dark">
+								<div class="FlexEmbed">
+									<div class="FlexEmbed-ratio FlexEmbed-ratio--16by9 u-bgDark"></div>
+									<div class="FlexEmbed-content CoverImage" style="background-image: url('{{ post.next.assets.first }}')"></div>
+									<div class="FlexEmbed-content">
+										<h1 class="Post-headline Arrow-right">{{ post.next.title }}</h1>
+									</div>
+								</div>
+							</figure>
+						</a>
+					</div>
+					{% endif %}
 
-                </div>
-            </div>
-        </section> -->
+				</div>
+			</div>
+		</section> -->
 
-    </div>
+	</div>
 
-    <div class="Container--lg">
-        {% include 'includes/cards-section' %}
-    </div>
-    
+	<div class="Container--lg">
+		{% include 'includes/cards-section' %}
+	</div>
+
 </article>
