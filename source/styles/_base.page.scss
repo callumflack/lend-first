@@ -26,6 +26,8 @@
  */
 
 html {
+<<<<<<< HEAD
+<<<<<<< HEAD
 	background-color: color(ui, background);
 	// color: color(text, charcoal);
 	height: 100%; /* 3 */
@@ -37,10 +39,29 @@ html {
 	// -moz-osx-font-smoothing: grayscale; /* 5 */
 	// -webkit-font-smoothing: antialiased; /* 5 */
 	-webkit-overflow-scrolling: touch; /* 6 */
+=======
+    background-color: color(ui, background);
+=======
+    background-color: color(ui, neutral);
+>>>>>>> parent of fd80e67... merge test
+    // color: color(text, charcoal);
+    height: 100%; /* 3 */
+    // font-size: 80%; /* 1 */
+    // line-height: $base-line-height-unit; /* 1 */
+    min-height: 100%; /* 3 */
+    overflow-y: scroll; /* 2 */
+    // text-size-adjust: 100%; /* 4 */
+    // -moz-osx-font-smoothing: grayscale; /* 5 */
+    // -webkit-font-smoothing: antialiased; /* 5 */
+    -webkit-overflow-scrolling: touch; /* 6 */
+<<<<<<< HEAD
+>>>>>>> parent of d47ccb7... Merge pull request #1 from callumflack/add-blog
+=======
+>>>>>>> parent of fd80e67... merge test
 }
 
 body {
-	// height: 100%;
-	//overflow-y: scroll;
-	// @include respond-to(md) { padding: 0; }
+    // height: 100%;
+    //overflow-y: scroll;
+    // @include respond-to(md) { padding: 0; }
 }

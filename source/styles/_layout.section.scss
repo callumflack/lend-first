@@ -6,10 +6,9 @@
 
 
 .Section {
-    background-color: color(ui, background);
-    padding: space(1.75) 0 0;
+    margin: space(1.75) 0 0;
 
     @include respond-to(sm) {
-        padding: space(5) 0 0;
+        margin: space(5) 0 0;
     };
 }

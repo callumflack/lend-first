@@ -31,10 +31,8 @@ em, b {
 // Root styling to cascade thru
 // --------------------------------------------------------------------------
 
-// html {
-// :root {
-
-body {
+// html
+:root {
     @include TypeReset();
     color: color(text, charcoal);
     font-family: $font-sans-regular;

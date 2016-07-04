@@ -6,100 +6,77 @@
 
 
 @mixin Headline() {
-	color: color(text, brand);
-	font-family: $font-sans-bold;
-	font-size: map-fetch($size, font, headerLg, xs);
-	line-height: 1.35;
-	margin-bottom: space(1.25);
-	text-align: center;
+    color: color(text, brand);
+    font-family: $font-sans-bold;
+    font-size: map-fetch($size, font, headerLg, xs);
+    line-height: 1.35;
+    margin-bottom: space(1.25);
+    text-align: center;
 
-	@include respond-to(xs) {
-		font-size: map-fetch($size, font, headerLg, base);
-		margin-bottom: space(1.75);
-	}
+    @include respond-to(xs) {
+        font-size: map-fetch($size, font, headerLg, base);
+        margin-bottom: space(1.75);
+    }
 }
 
 @mixin Headline--doubleLine() {
-	font-family: $font-sans-book;
-	line-height: 1.2;
+    font-family: $font-sans-book;
+    line-height: 1.2;
 
-	span,
-	.mobile {
-		font-family: $font-sans-bold;
-	}
+    span,
+    .mobile {
+        font-family: $font-sans-bold;
+    }
 
-	// First-line method (doesn't work in IE on element that 'hasLayout'!)
-	// @url: http://reference.sitepoint.com/css/pseudoelement-firstline
-	// &:first-line,
-	// &::first-line { @include font-weight('black'); }
+    // First-line method (doesn't work in IE on element that 'hasLayout'!)
+    // @url: http://reference.sitepoint.com/css/pseudoelement-firstline
+    // &:first-line,
+    // &::first-line { @include font-weight('black'); }
 }
 
 @mixin HeadlineRuler {
-	span {
-		background-color: color(ui, background);
-		display: inline-block;
-		font-family: inherit;
-		padding: 0 space(0.25);
+    span {
+        background-color: color(ui, background);
+        display: inline-block;
+        font-family: inherit;
+        padding: 0 space(0.25);
 
-		// new setup
-		position: relative;
-		z-index: 2;
+        @include respond-to(xs) {
+            padding: 0 space(0.5);
+        }
+    }
 
-		@include respond-to(xs) {
-			padding: 0 space(0.5);
-		}
-	}
+    &:after {
+        // border-top: solid 1px lighten( color(ui, brand), 25% );
+        // border-top: solid 1px rgba( color(ui, brand), 0.4);
+        border-top: solid 1px color(ui, brand);
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 120%;
+        transform: translateY(-50%);
+        z-index: -1;
 
-	&:after {
-		// old setup
-		// border-top: solid 1px color(ui, brand);
-		// left: 0;
-		// position: absolute;
-		// right: 0;
-		// top: 120%;
-		// transform: translateY(-50%);
-		// z-index: -1;
-
-		background-color: color(ui, brand);
-		content: "";
-		display: block;
-		height: 1px;
-		position: relative;
-		transform: translateY(-16px);
-
-		@include respond-to(xs) {
-			// border-width: 1px;
-			// top: 50%;
-			transform: translateY(-20px);
-		}
-	}
+        @include respond-to(xs) {
+            border-width: 1px;
+            top: 50%;
+        }
+    }
 }
 
 
 @mixin Headline--ruled() {
-	@include HeadlineRuler();
-	color: color(text, brand);
-	position: relative;
+    @include HeadlineRuler();
+    color: color(text, brand);
+    position: relative;
 }
 
-.HeadlineRuler    { @include HeadlineRuler(); }
-.Headline--noRule { &:after { background-color: transparent !important; } }
-
+.HeadlineRuler   { @include HeadlineRuler(); }
 .Headline--ruled {
-	@include Headline--ruled();
-	&:after { border-color: color(ui, brand); }
-	@include respond-to(max-xs) { &:after { border-color: transparent; } }
-}
-
-.Button--ruled {
-	@include Headline--ruled();
-	&:after {
-		border-color: color(ui, brand);
-		transform: translateY(-27px);
-	}
-	@include respond-to(max-xs) { &:after {
-		border-color: transparent;
-	} }
+    @include Headline--ruled();
+    &:after { border-color: color(ui, brand); }
+    @include respond-to(max-xs) { &:after { border-color: transparent; } }
 }
 
 
@@ -117,88 +94,88 @@
 // --------------------------------------------------------------------------
 
 .Headline--super {
-	// @include Headline;
-	border-bottom: 1px solid color(text, brand);
-	color: color(text, brand);
-	font-family: $font-sans-medium;
-	font-size: map-fetch($size, font, headerXl, xs);
-	letter-spacing: -0.015em;
-	line-height: 1.25;
-	margin-bottom: space(0.75);
-	padding-bottom: space(0.45);
-	text-align: left;
+    // @include Headline;
+    border-bottom: 1px solid color(text, brand);
+    color: color(text, brand);
+    font-family: $font-sans-medium;
+    font-size: map-fetch($size, font, headerXl, xs);
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+    margin-bottom: space(0.75);
+    padding-bottom: space(0.45);
+    text-align: left;
 
-	@include respond-to(xs) {
-		border-width: 2px;
-		font-size: map-fetch($size, font, headerXl, base);
-		line-height: 1.1;
-	}
+    @include respond-to(xs) {
+        border-width: 2px;
+        font-size: map-fetch($size, font, headerXl, base);
+        line-height: 1.1;
+    }
 }
 
 .Headline--highlight {
-	@include Headline--ruled();
-	color: color(ui, brand-alt);
-	&:after { background-color: color(ui, brand-alt); }
+    @include Headline--ruled();
+    color: color(ui, brand-alt);
+    &:after { border-color: color(ui, brand-alt); }
 
-	@include when-inside(".Modal") {
-		span { background-color: color(ui, neutral); }
-	}
+    @include when-inside(".Modal") {
+        span { background-color: color(ui, neutral); }
+    }
 }
 
 .Headline--primary {
-	@include Headline--ruled();
-	// &:after { border-color: rgba(color(ui, brand), 0.4); }
-	// &:after { border-color: color(ui, brand); }
+    @include Headline--ruled();
+    // &:after { border-color: rgba(color(ui, brand), 0.4); }
+    // &:after { border-color: color(ui, brand); }
 
-	@include when-inside(".Modal") {
-		span { background-color: color(ui, neutral); }
-	}
+    @include when-inside(".Modal") {
+        span { background-color: color(ui, neutral); }
+    }
 
-	@include when-inside(".Fold-target") {
-		span { background-color: color(ui, brand-muted); }
-	}
+    @include when-inside(".Fold-target") {
+        span { background-color: color(ui, brand-muted); }
+    }
 }
 
 .Headline--secondary {
-	@include Headline--ruled();
-	color: color(text, medium);
-	font-family: $font-sans-book;
+    @include Headline--ruled();
+    color: color(text, medium);
+    font-family: $font-sans-book;
 
-	&:after { background-color: color(ui, muted); }
+    &:after { border-color: color(ui, muted); }
 
-	@include respond-to('max-sm') {
-		@include when-inside('.Section--cards') {
-			&:after { border-color: transparent; }
-		}
-	}
+    @include respond-to('max-sm') {
+        @include when-inside('.Section--cards') {
+            &:after { border-color: transparent; }
+        }
+    }
 }
 
 .Headline--tertiary {
-	@include Headline--ruled();
-	font-family: $font-sans-bold;
-	color: color(text, charcoal);
+    @include Headline--ruled();
+    font-family: $font-sans-bold;
+    color: color(text, charcoal);
 }
 
 .Headline--quaternary {
-	color: color(text, charcoal);
-	font-family: $font-sans-black;
-	font-size: map-fetch($size, font, headerSm, xs);
-	margin-bottom: space(0.5);
-	text-align: left;
+    color: color(text, charcoal);
+    font-family: $font-sans-black;
+    font-size: map-fetch($size, font, headerSm, xs);
+    margin-bottom: space(0.5);
+    text-align: left;
 
-	@include respond-to(xs) {
-		font-size: map-fetch($size, font, headerSm, base);
-	}
+    @include respond-to(xs) {
+        font-size: map-fetch($size, font, headerSm, base);
+    }
 }
 
 .Headline--quinary {
-	color: color(text, charcoal);
-	font-family: $font-sans-medium;
-	font-size: map-fetch($size, font, textSm, base);
-	margin-bottom: space(0.5);
-	text-align: left;
+    color: color(text, charcoal);
+    font-family: $font-sans-medium;
+    font-size: map-fetch($size, font, textSm, base);
+    margin-bottom: space(0.5);
+    text-align: left;
 
-	@include respond-to(xs) {
-		// font-size: map-fetch($size, font, textSm, base);
-	}
+    @include respond-to(xs) {
+        // font-size: map-fetch($size, font, textSm, base);
+    }
 }

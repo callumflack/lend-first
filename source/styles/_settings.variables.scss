@@ -239,14 +239,14 @@ $size: (
 
 // LEGACY: easy google-fonts implementation
 // $sans: 'Source Sans Pro';
-// $font: join($sans, $font-sans-stack);
+// $font: join($sans, $sans-font-stack);
 
 // $sans-font-name       : 'BentonSans';
 $sans-font-name       : '';
 $fonts-path           : '/build/fonts/';
-$font-sans-stack      : 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-// $font-sans-stack      : -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Cantarell","Open Sans","Helvetica Neue","Ubuntu",sans-serif;
-$font-serif-stack     : Georgia, Times, serif;
+$sans-font-stack      : 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// $sans-font-stack      : -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Cantarell","Open Sans","Helvetica Neue","Ubuntu",sans-serif;
+$serif-font-stack     : Georgia, Times, serif;
 
 // Create font-file variables
 
@@ -282,21 +282,21 @@ $sans-cond-bk-italic  : #{$sans-font-name}cond-bookItalic;
 // Apply font-file variables to a font-stack
 // Only use these variables in our classes.
 
-$font-sans-thin       : join($sans-thin, $font-sans-stack);
-$font-sans-light      : join($sans-light, $font-sans-stack);
-$font-sans-book       : join($sans-book, $font-sans-stack);
-$font-sans-regular    : join($sans-regular, $font-sans-stack);
-$font-sans-regular-i  : join($sans-regular, $font-sans-stack);
-$font-sans-medium     : join($sans-medium, $font-sans-stack);
-$font-sans-bold       : join($sans-bold, $font-sans-stack);
-$font-sans-black      : join($sans-black, $font-sans-stack);
+$font-sans-thin       : join($sans-thin, $sans-font-stack);
+$font-sans-light      : join($sans-light, $sans-font-stack);
+$font-sans-book       : join($sans-book, $sans-font-stack);
+$font-sans-regular    : join($sans-regular, $sans-font-stack);
+$font-sans-regular-i  : join($sans-regular, $sans-font-stack);
+$font-sans-medium     : join($sans-medium, $sans-font-stack);
+$font-sans-bold       : join($sans-bold, $sans-font-stack);
+$font-sans-black      : join($sans-black, $sans-font-stack);
 
-$font-sans-comp-bk    : join($sans-comp-bk, $font-sans-stack);
+$font-sans-comp-bk    : join($sans-comp-bk, $sans-font-stack);
 
 // Spin out italics if req'd
 
 $font-sans-regular-i  : $font-sans-regular;
-$font-sans-cond-bk-i  : join($sans-cond-bk-italic, $font-sans-stack);
+$font-sans-cond-bk-i  : join($sans-cond-bk-italic, $sans-font-stack);
 
 // if using @fontface via a cloud service, ie. Google fonts
 
