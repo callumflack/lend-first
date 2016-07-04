@@ -1,0 +1,105 @@
+
+{% assign bridging            = site.pages.info-for.pages.bridging %}
+{% assign business            = site.pages.info-for.pages.business %}
+{% assign cashout             = site.pages.info-for.pages.cash-out %}
+{% assign construction        = site.pages.info-for.pages.construction %}
+{% assign fhbuyers            = site.pages.info-for.pages.first-home-buyers %}
+{% assign investment          = site.pages.info-for.pages.investment %}
+{% assign refinance           = site.pages.info-for.pages.refinance %}
+{% assign somethingdiff       = site.pages.info-for.pages.something-different %}
+{% assign choose              = site.pages.why-choose-australian-property-finance %}
+
+<footer class="Footer" id="nav">
+
+    {% if home? %}
+    <section class="Footer-contact">
+        <div class="Container">
+            <h1 class="Headline Headline--quaternary u-headerSizeRg u-weightBold u-marginBD6">Honest, knowledgeable advice from an experienced local</h1>
+            <p class="Grid-cell--center u-xs-size9of12 u-marginB u-colorFaint u-marginBD6">See first-hand how Michael's actionable financial intelligence can make the difference.</p>
+            <button class="Button Button--rev" data-toggle="modal">
+                <svg class="Icon Icon--md Icon--leftSm Icon--buttonAlign u-colorWhite">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-talk"></use>
+                </svg>
+                Book a free meeting today
+            </button>
+        </div>
+    </section>
+    {% endif %}
+
+    <section class="Footer-menu">
+        <div class="Container">
+            <div class="Grid Grid--withGutter">
+                <div class="Grid-cell u-sm-size2of12 u-md-size4of12 u-marginBD2 u-sm-marginB0">
+                    <figure class="Footer-logo u-xs-textCenter u-margin0">
+                        <a class="u-linkInvisible" href="/">
+                            <picture>
+                                <source media="(min-width: 767px) and (max-width: 992px)" srcset="/build/images/apf-logo-vertical.svg">
+                                <img src="/build/images/apf-logo.svg" alt="Australian Property Finance logo">
+                            </picture>
+                        </a>
+                    </figure>
+                </div>
+
+                <div class="Grid-cell u-sm-size10of12 u-md-size8of12">
+                    <div class="Grid Grid--withGutter">
+                        <div class="Grid-cell u-xs-size4of12 u-mxs-flexOrderLast">
+                            <!-- <div class="u-marginTD3 u-sm-marginT0 u-marginB u-paddingLD2 u-sm-paddingL0"> -->
+                            <div class="u-marginTD3 u-sm-marginT0">
+                                <h5 class="Headline--quinary u-marginBD3">Learn about us</h5>
+                                <ul class="">
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="{{ choose.url }}">{{ choose.title }}</a></li>
+                                    <!-- <li><a href="#">Best Wealth Tips</a></li> -->
+                                    <div class="HzRule--footer"></div>
+                                    <li><a class="u-colorMuted" href="/privacy">Your privacy</a></li>
+                                    <li><a class="u-colorMuted" href="/disclaimer">Disclaimer</a></li>
+                                    <li><a class="u-colorMuted">© 2016 Michael Garland</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="Grid-cell u-xs-size4of12">
+                            <div class="u-marginTD3 u-sm-marginT0 msm-SectionRule--contact">
+                                <h5 class="Headline--quinary u-msm-marginTD3 u-marginBD3">Learn about financing</h5>
+                                <ul class="">
+                                    <li><a href="{{ fhbuyers.url }}">{{ fhbuyers.title }}</a></li>
+                                    <li><a href="{{ bridging.url }}">{{ bridging.title }}</a></li>
+                                    <li><a href="{{ refinance.url }}">{{ refinance.title }}</a></li>
+                                    <li><a href="{{ investment.url }}">{{ investment.title }}</a></li>
+                                    <li><a href="{{ business.url }}">{{ business.title }}</a></li>
+                                    <li><a href="{{ construction.url }}">{{ construction.title }}</a></li>
+                                    <li><a href="{{ cashout.url }}">{{ cashout.title }}</a></li>
+                                    <li><a href="{{ somethingdiff.url }}">{{ somethingdiff.title }}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="Grid-cell u-xs-size4of12 u-mxs-flexOrderFirst">
+                            <div class="u-marginTD3 u-sm-marginT0 u-mxs-marginBD2 msm-SectionRule--contactTop msm-SectionRule--contact">
+                                <h5 class="Headline--quinary u-marginBD6 u-sm-marginBD2">Contact</h5>
+                                <ul class="">
+                                    <li>Michael Garland</li>
+                                    <li><a class="" href="tel:{{ site.meta.phone }}">{{ site.meta.phone }}</a></li>
+                                    <li><a class="" href="mailto:{{ site.meta.email }}">{{ site.meta.email }}</a></li>
+                                    <li>{{ site.meta.address }}</li>
+                                    <li class="SocialLinks u-marginTD2">
+                                        <a href="www.facebook.com/apfcairns">
+                                            <svg class="Icon Icon--lg Icon--left Icon--textAlign">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-social-fb"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="https://au.linkedin.com/pub/michael-garland/26/a/88b">
+                                            <svg class="Icon Icon--lg Icon--left Icon--textAlign">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-social-li"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</footer>

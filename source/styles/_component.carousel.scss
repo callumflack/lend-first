@@ -1,0 +1,20 @@
+/* page */
+
+.page {
+    display: block;
+    height: 100vh;
+    min-height: 100vh;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.owl-controls .owl-prev {
+    @include Page-link();
+}
+
+.owl-controls .owl-next {
+    @include Page-link();
+    left: auto;
+    right: 0;
+    display: none;
+}

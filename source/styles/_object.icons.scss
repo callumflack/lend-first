@@ -1,0 +1,118 @@
+
+
+// --------------------------------------------------------------------------
+// OBJECT: SVG ICONS
+// Ripped from OUI icons
+// --------------------------------------------------------------------------
+
+
+.#{$namespace}Icon {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	fill: currentColor; // The color of the SVG will inherit the parent's `color`.
+
+	&--sm {
+		width: 12px;
+		height: 12px;
+	}
+
+	&--md {
+		width: rem(18);
+		height: rem(18);
+
+		@include respond-to(xs) {
+			width: rem(24);
+			height: rem(24);
+		}
+	}
+
+	&--lg {
+		width: rem(32);
+		height: rem(32);
+	}
+
+	&--left {
+		margin-right: 4px;
+
+		@include respond-to(xs) {
+		    margin-right: rem(8);
+		}
+	}
+
+	&--leftSm {
+		margin-right: 1px;
+
+		@include respond-to(xs) {
+		    margin-right: rem(2);
+		}
+	}
+
+	// This is a vertical alignment fix when used to the right of `.#{$namespace}icon`.
+	+ [class^="#{$namespace}-arrow-inline"] {
+		vertical-align: super;
+	}
+
+	&--textAlign {
+		vertical-align: sub;
+
+		@include respond-to(xs) {
+		    vertical-align: bottom;
+		}
+	}
+
+	&--buttonAlign {
+		line-height: inherit;
+		vertical-align: middle;
+	}
+
+	&--formAlign {
+		position: relative;
+		vertical-align: top;
+	}
+
+	&--mediaAlign {
+		transform: translateY(rem(-4));
+	}
+}
+
+/// Icon alignment fixes
+/// @description Fix for icons inside buttons with text and icons inside tabs.
+
+// .#{$namespace}button .#{$namespace}Icon {
+//   vertical-align: sub;
+// }
+//
+// .#{$namespace}tabs-nav__item .#{$namespace}icon {
+//   vertical-align: sub;
+// }
+
+
+
+// Old icon format for the logo only
+// 1. adjust for Futura's odd line-height balance.
+// -------------------------------------------------------------------------
+
+$logoSize: rem(60);
+
+.iconLogo {
+	height: $logoSize;
+	padding-left: rem(72);
+	position: relative;
+	width: $logoSize;
+
+	&:before {
+		background-image: url('/assets/images/ic-billys-logo.png');
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-size: contain;
+		content: '';
+		display: inline-block;
+		height: $logoSize;
+		left: 0;
+		position: absolute;
+		top: 42%; // 1
+		transform: translateY(-50%);
+		width: $logoSize;
+	}
+}

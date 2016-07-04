@@ -1,0 +1,12 @@
+{% capture content %}
+
+    {% assign image-path = '/build/images/' %}
+
+    <li class="Aside-list--item"><a href="#different">{{ meta.menu-1 }}</a></li>
+    <li class="Aside-list--item"><a href="#types">{{ meta.menu-2 }}</a></li>
+    <li class="Aside-list--item"><a href="#security">{{ meta.menu-3 }}</a></li>
+    <li class="Aside-list--item"><a href="#deposit">{{ meta.menu-4 }}</a></li>
+
+{% endcapture %}
+
+{% include 'layouts/info-path' %}
