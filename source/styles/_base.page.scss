@@ -26,21 +26,21 @@
  */
 
 html {
-    background-color: color(ui, neutral);
-    // color: color(text, charcoal);
-    height: 100%; /* 3 */
-    // font-size: 80%; /* 1 */
-    // line-height: $base-line-height-unit; /* 1 */
-    min-height: 100%; /* 3 */
-    overflow-y: scroll; /* 2 */
-    // text-size-adjust: 100%; /* 4 */
-    // -moz-osx-font-smoothing: grayscale; /* 5 */
-    // -webkit-font-smoothing: antialiased; /* 5 */
-    -webkit-overflow-scrolling: touch; /* 6 */
+	background-color: color(ui, background);
+	// color: color(text, charcoal);
+	height: 100%; /* 3 */
+	// font-size: 80%; /* 1 */
+	// line-height: $base-line-height-unit; /* 1 */
+	min-height: 100%; /* 3 */
+	overflow-y: scroll; /* 2 */
+	// text-size-adjust: 100%; /* 4 */
+	// -moz-osx-font-smoothing: grayscale; /* 5 */
+	// -webkit-font-smoothing: antialiased; /* 5 */
+	-webkit-overflow-scrolling: touch; /* 6 */
 }
 
 body {
-    // height: 100%;
-    //overflow-y: scroll;
-    // @include respond-to(md) { padding: 0; }
+	// height: 100%;
+	//overflow-y: scroll;
+	// @include respond-to(md) { padding: 0; }
 }
