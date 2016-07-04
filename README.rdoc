@@ -1,1 +1,8 @@
+
+===========
 BUGS FIXED
+===========
+
+
+CSS: Change of stylesheets request
+    -Fix in card background bug
