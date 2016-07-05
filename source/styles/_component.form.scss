@@ -82,10 +82,6 @@ textarea {
         z-index: 100;
     }
 
-    input.form-control {
-        border-radius: 0;
-    }
-
     input.form-control,
     textarea.form-control {
         // padding: 0 rem(16) !important;
@@ -94,7 +90,6 @@ textarea {
 
     // retain theme typography alignment
     input.Button {
-        border-radius: map-fetch($size, border-radius, base );
         padding-top: 2px;
     }
 

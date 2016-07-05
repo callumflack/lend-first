@@ -2,4 +2,4 @@
 
 # Allow crawling of all content
 User-agent: *
-Disallow: ""
+Disallow: "http://www.apfbrokercairns.com.au/why-choose-australian-property-finance"

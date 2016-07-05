@@ -26,8 +26,6 @@
         "th",
         "td",
         ".u-hide",
-        ".u-marginT0",
-        ".u-padding2",
-        ".Post--glow"
+        ".u-marginT0"
     ]
 }

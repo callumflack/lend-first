@@ -1,5 +1,0 @@
-<ul class="Posts-nav">
-    {% for tag in taxonomy.tags %}
-        <li><a class="{{ tag.slug }}" href="{{ tag.url }}">{{ tag.value | capitalize }}</a></li>
-    {% endfor %}
-</ul>

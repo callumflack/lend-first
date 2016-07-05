@@ -70,11 +70,7 @@ var options = {
     },
 
     js : {
-        // files       : 'source/scripts/*.js',
-        files : [
-            'node_modules/fontfaceonload/dist/fontfaceonload.js',
-            'source/scripts/*.js'
-        ],
+        files       : 'source/scripts/*.js',
         file        : 'source/scripts/site.js',
         destination : 'source/scripts'
     },
@@ -122,13 +118,13 @@ gulp.task( 'build', function() {
 
 gulp.task( 'production', options.production.tasks );
 
-gulp.task( 'fonts', function() {
+gulp.task('fonts', function() {
     gulp.src( options.fonts.files )
         .pipe( gulp.dest( options.fonts.destination ) )
         .pipe( plugins.size({title: 'fonts'}) );
 });
 
-gulp.task( 'images', function() {
+gulp.task('images', function() {
     gulp.src( options.images.files )
         // .pipe( plugins.cache( plugins.imagemin({ })))
         .pipe( plugins.imagemin({
@@ -142,8 +138,6 @@ gulp.task( 'images', function() {
 gulp.task( 'compile:sass', function() {
     gulp.src( options.sass.files )
         .pipe( plugins.plumber() )
-        .pipe( plugins.sourcemaps.init() )
-        // .pipe( plugins.sass().on('error', sass.logError))
         .pipe( plugins.sass( {
             indentedSyntax: true,
             // errLogToConsole: true
@@ -152,11 +146,15 @@ gulp.task( 'compile:sass', function() {
                 browsers : [ 'last 2 versions' ],
                 cascade  : false
         } ) )
-        .pipe( plugins.sourcemaps.write() )
+        // .pipe(sourcemaps.init())
+        // .pipe(plugins.sourcemaps.write('./'))
         .pipe( gulp.dest( options.sass.destination ) )
         .pipe( plugins.size({title: 'styles'}) )
         .pipe( plugins.connect.reload() );
 });
+
+// Research & decide:
+// gulp-clean-css or gulp-cssmin or gulp-cssnano?
 
 gulp.task( 'minify:css', function () {
     gulp.src( options.css.file )

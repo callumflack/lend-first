@@ -83,19 +83,6 @@
 
 
 
-// Transition base
-// --------------------------------------------------------------------------
-
-@mixin baseTransition {
-    transition-property: all;
-    transition-duration: map-fetch($transition, duration, long);
-    transition-timing-function: map-fetch($transition, type, base);
-}
-
-
-
-
-
 // Spacer computation
 // --------------------------------------------------------------------------
 // See: https://gist.github.com/jlong/8760275
