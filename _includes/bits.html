@@ -1,0 +1,37 @@
+{% if home? %}
+<section class="Header-byline">
+	<div class="Container">
+		<h2 class="Headline Headline--doubleLine u-headerSizeRg">
+			<span class="u-sm-weightBold"><span class="mobile">“Over the years I’ve learned to</span> distinguish the small things</span> that make big differences to people’s finances”
+		</h2>
+
+		<div class="u-sm-hide Grid Grid--withGutter u-marginTD1 u-paddingTD1 msm-SectionRule--light">
+			<div class="Grid-cell u-ip6-size5of12">
+				<a class="Contact u-linkInvisible" href="tel:+610-422-830-333">
+					<div class="Contact-action u-colorWhite u-textCenter u-ip6-textLeft">
+						<svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-call"></use>
+						</svg>
+						Call Michael<br>
+						<span class="Contact-detail u-colorWhite">{{ site.meta.phone }}</span>
+					</div>
+				</a>
+			</div>
+			<div class="Grid-cell u-ip6-size7of12 u-marginTD2 u-ip6-marginT0">
+				<a class="Contact u-linkInvisible" href="mailto:{{ site.meta.email }}">
+					<div class="Contact-action u-colorWhite u-textCenter u-ip6-textLeft">
+						<svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-email"></use>
+						</svg>
+						Email Michael<br>
+						<span class="Contact-detail u-colorWhite">{{ site.meta.email }}</span>
+					</div>
+				</a>
+
+			</div>
+		</div>
+	</div>
+</section>
+{% endif %}
+
+<!-- <section class="Section {% if parent.slug != info-page.slug %} u-paddingT u-xs-paddingT2{% else %} u-paddingT0{% endif %}">{{ parent.slug }} -->
