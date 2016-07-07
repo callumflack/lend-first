@@ -1,0 +1,99 @@
+
+
+// --------------------------------------------------------------------------
+//   COMPONENT: BLOG POSTS
+// --------------------------------------------------------------------------
+
+
+// Posts tags nav
+// --------------------------------------------------------------------------
+
+.Posts-nav {
+    @include List--clean();
+
+    > li {
+        @include TextSm();
+        margin-bottom: 2px;
+    }
+
+    a {
+        @include u-link(none);
+        color: color(ui, medium);
+        padding-bottom: space(0.15);
+    }
+}
+
+// Simple highlighted menu using tags and CSS
+// See: https://gist.github.com/sskylar/c8f6fef2ff6fd49e1169
+// .tag.community-events .Posts-nav .community-events,
+// .tag.house-tips .Posts-nav .house-tips,
+// .tag.suburb-profiles .Posts-nav .suburb-profiles {
+//     background-color: palette(brand);
+//     color: palette(black);
+// }
+
+
+// Post block
+// --------------------------------------------------------------------------
+
+.Post {
+    @include u-link(none);
+    @include complexLink();
+    background-color: color(ui, background);
+
+    + .Post {
+        margin-top: space(1.75);
+
+        @include respond-to(sm) {
+            margin-top: space(2.5);
+        }
+    }
+
+    &--glow {
+        @include CardGlow();
+    }
+}
+
+.Post-image {
+    margin: space(0.3) 0 space(1);
+}
+
+.Post-title {
+    @include Headline();
+    margin-bottom: space(0.5);
+    text-align: left;
+
+    @include respond-to(sm) {
+        margin-bottom: space(0.75);
+    }
+}
+
+.Post-excerpt {
+    @include TextSm();
+}
+
+
+// Post headline vars
+// Includes Next/prev headlines. These are contained within
+// '.FlexEmbed-content.CoverImage' containers.
+// --------------------------------------------------------------------------
+
+.Post-headline {
+    // @include Headline();
+    // color: palette(white);
+    // margin: 0;
+    // padding: space(0.9) space(1);
+    // position: absolute;
+    // width: 75%;
+    //
+    // &--right {
+    //     bottom: 0;
+    //     float: right;
+    //     right: 0;
+    //     text-align: right;
+    // }
+    //
+    // @include on-event() {
+    //     color: palette(faint);
+    // }
+}

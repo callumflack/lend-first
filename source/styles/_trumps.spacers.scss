@@ -145,65 +145,6 @@
 
 @include respond-to(md) {
 	.u-md-marginT     { margin-top: space(1) !important; }
-	.u-mxs-marginT    { margin-top: space(1) !important; }
-	.u-mxs-marginT2   { margin-top: space(2) !important; }
-	.u-mxs-marginT25  { margin-top: space(2.5) !important; }
-	.u-mxs-marginT3   { margin-top: space(3) !important; }
-	.u-mxs-marginBD2  { margin-bottom: space(0.5) !important; }
-	.u-mxs-marginB    { margin-bottom: space(1) !important; }
-	.u-mxs-marginB15  { margin-bottom: space(1.5) !important; }
-	.u-mxs-marginB2   { margin-bottom: space(2) !important; }
-	.u-mxs-marginB25  { margin-bottom: space(2.5) !important; }
-	.u-mxs-marginBL   { margin-bottom: space(12) !important; }
-}
-
-@include respond-to(max-sm) {
-	.u-msm-marginTD3  { margin-top: space(1/3) !important; }
-	.u-msm-marginT    { margin-top: space(1) !important; }
-	.u-msm-marginT3   { margin-top: space(3) !important; }
-	.u-msm-marginBD1  { margin-bottom: space(0.75) !important; }
-	.u-msm-marginBD3  { margin-bottom: space(1/3) !important; }
-	.u-msm-marginB    { margin-bottom: space(1) !important; }
-	.u-msm-marginBXL  { margin-bottom: space(12) !important; }
-}
-
-@include respond-to(ip6) {
-	.u-ip6-marginT0   { margin-top: 0 !important; }
-}
-
-@include respond-to(xs) {
-	.u-xs-marginT0    { margin-top: 0 !important; }
-	.u-xs-marginT     { margin-top: space(1) !important; }
-	.u-xs-marginT2    { margin-top: space(2) !important; }
-	.u-xs-marginT25   { margin-top: space(2.5) !important; }
-	.u-xs-marginT3    { margin-top: space(3) !important; }
-	.u-xs-marginT5    { margin-top: space(5) !important; }
-	.u-xs-marginBD1   { margin-bottom: space(0.75) !important; }
-	.u-xs-marginB0    { margin-bottom: 0 !important; }
-	.u-xs-marginB     { margin-bottom: space(1) !important; }
-	.u-xs-marginB2    { margin-bottom: space(2) !important; }
-	.u-xs-marginB15   { margin-bottom: space(1.5) !important; }
-	.u-xs-marginB25   { margin-bottom: space(2.5) !important; }
-	.u-xs-marginB5    { margin-bottom: space(5) !important; }
-}
-
-@include respond-to(sm) {
-	.u-sm-marginT0    { margin-top: 0 !important; }
-	.u-sm-marginTD3   { margin-top: space(1/3) !important; }
-	.u-sm-marginT     { margin-top: space(1) !important; }
-	.u-sm-marginT15   { margin-top: space(1.5) !important; }
-	.u-sm-marginT2    { margin-top: space(2) !important; }
-	.u-sm-marginBD1   { margin-bottom: space(0.75) !important; }
-	.u-sm-marginBD3   { margin-bottom: space(1/3) !important; }
-	.u-sm-marginB0    { margin-bottom: 0 !important; }
-	.u-sm-marginB     { margin-bottom: space(1) !important; }
-	.u-sm-marginB2    { margin-bottom: space(2) !important; }
-	.u-sm-marginB5    { margin-bottom: space(5) !important; }
-	.u-sm-marginR2    { margin-right: space(2)  !important; }
-}
-
-@include respond-to(md) {
-	.u-md-marginT     { margin-top: space(1) !important; }
 }
 
 
@@ -308,6 +249,8 @@
 
 @include respond-to(xs) {
 	.u-xs-paddingT3    { padding-top: space(3) !important; }
+	.u-xs-paddingT25   { padding-top: space(2.5) !important; }
+	.u-xs-paddingT2    { padding-top: space(2) !important; }
 	.u-xs-paddingB0    { padding-bottom: 0 !important; }
 	.u-xs-paddingB     { padding-bottom: space(1) !important; }
 	.u-xs-paddingB15   { padding-bottom: space(1.5)    !important; }

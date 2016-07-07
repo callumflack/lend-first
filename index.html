@@ -1,107 +1,111 @@
 {% capture content %}
 
-    {% assign image-path = '/build/images/' %}
+	{% assign image-path = '/build/images/' %}
 
-    <section class="Section u-marginT u-xs-marginT25 js-cards">
-        <div class="Container Container--lg">
-            <!-- <h1 class="Headline Headline--secondary u-xs-marginB2"><span>What do you want to do with your loan?</span></h1> -->
-            <!-- <h1 class="Headline Headline--secondary u-xs-marginB25"><span>What can your loan do for you?</span></h1> -->
-            <h1 class="Headline Headline--primary u-mxs-marginB15 u-marginB25"><span>What do you want to do with your loan?</span></h1>
-        </div>
+	<section class="Section js-cards">
+		<div class="Container Container--lg">
+			<h1 class="Headline Headline--primary u-mxs-marginB15 u-marginB25"><span>What do you want to do with your loan?</span></h1>
+		</div>
 
-        {% include 'includes/cards' %}
+		{% include 'includes/cards' %}
 
-    </section>
+	</section>
 
-    <section class="Section">
-        <div class="Container">
-            <h1 class="Headline Headline--primary"><span>Broker's intuition</span></h1>
-            <div class="Grid Grid--withGutter">
-                <div class="Grid-cell u-sm-size9of12 u-paddingR2 u-marginB u-sm-marginB0">
-                    <blockquote>
-                        “When doctors look at X-rays, they see more because they know anatomy and what to look for in the mix of light and shadow. Over the years they have learned to more clearly discern slight differences in shape and shade that to us are indiscernible.”
-                    </blockquote>
-                    <p>
-                        Through constant exposure to a variety of financial advice problems over many years, Michael uses his intuition to see answers to financial problems when others cannot even see the problem. If you seem to be stuck, or you’re looking at accepting terms that aren’t as good as you’d hoped, perhaps Michael can give you a new way of looking at the situation.
-                        <!-- <a class="u-linkBrand u-colorBrand Arrow-right" href="#" data-toggle="modal">Find out what’s possible</a> -->
-                        <!-- <a class="u-linkBrand u-colorBrand Arrow-right" href="{{ site.pages.why-choose-australian-property-finance.url }}">Find out why you should choose Australian Property Finance</a> -->
-                    </p>
-                </div>
+	<section class="Section">
+		<div class="Container">
+			<h1 class="Headline Headline--primary"><span>Broker's intuition</span></h1>
+			<div class="Grid Grid--withGutter">
+				<div class="Grid-cell u-sm-size9of12 u-paddingR2 u-marginB u-sm-marginB0">
+					<blockquote>
+						“When doctors look at X-rays, they see more because they know anatomy and what to look for in the mix of light and shadow. Over the years they have learned to more clearly discern slight differences in shape and shade that to us are indiscernible.”
+					</blockquote>
+					<p>
+						Through constant exposure to a variety of financial advice problems over many years, Michael uses his intuition to see answers to financial problems when others cannot even see the problem. If you seem to be stuck, or you’re looking at accepting terms that aren’t as good as you’d hoped, perhaps Michael can give you a new way of looking at the situation.
+					</p>
+				</div>
 
-                <div class="Grid-cell u-sm-size3of12 u-alignBlockDown">
-                    <div class="sm-SectionRuler"></div>
-                    <div class="Grid Grid--withGutter">
-                        <div class="Grid-cell u-size5of12 u-sm-sizeFull">
-                            <figure class="Figure--stamp u-xs-marginBD1 u-sm-marginR2">
-                                <img src="{{ image-path }}michael-garland-sm.png" alt="Michael Garland">
-                            </figure>
-                        </div>
+				<div class="Grid-cell u-sm-size3of12 u-alignBlockDown">
+					<div class="sm-SectionRuler"></div>
+					<div class="Grid Grid--withGutter">
+						<div class="Grid-cell u-size5of12 u-sm-sizeFull">
+							<figure class="Figure--stamp u-xs-marginBD1 u-sm-marginR2">
+								<img src="{{ image-path }}michael-garland-sm.png" alt="Michael Garland">
+							</figure>
+						</div>
 
-                        <div class="Grid-cell u-size7of12 u-sm-sizeFull">
-                            <a class="Contact u-linkInvisible" href="tel:{{ site.meta.phone }}">
-                                <div class="Contact-action u-marginBD3">
-                                    <svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-call"></use>
-                                    </svg>
-                                    Call Michael<br>
-                                    <span class="Contact-detail">{{ site.meta.phone }}</span>
-                                </div>
-                            </a>
-                            <a class="Contact u-linkInvisible" href="mailto:{{ site.meta.email }}">
-                                <div class="Contact-action u-marginBD3">
-                                    <svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-email"></use>
-                                    </svg>
-                                    Email Michael<br>
-                                    <span class="Contact-detail">{{ site.meta.email }}</span>
-                                </div>
-                            </a>
-                            <a class="Contact u-linkInvisible" href="https://au.linkedin.com/pub/michael-garland/26/a/88b">
-                                <div class="Contact-action u-marginBD3">
-                                    <svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-about"></use>
-                                    </svg>
-                                    About Michael<br>
-                                    <span class="Contact-detail">Read his history and experience</span>
-                                </div>
-                            </a>
-                        </div>
+						<div class="Grid-cell u-size7of12 u-sm-sizeFull">
+							<a class="Contact u-linkInvisible" href="tel:{{ site.meta.phone }}">
+								<div class="Contact-action u-marginBD3">
+									<svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-call"></use>
+									</svg>
+									Call Michael<br>
+									<span class="Contact-detail">{{ site.meta.phone }}</span>
+								</div>
+							</a>
+							<a class="Contact u-linkInvisible" href="mailto:{{ site.meta.email }}">
+								<div class="Contact-action u-marginBD3">
+									<svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-email"></use>
+									</svg>
+									Email Michael<br>
+									<span class="Contact-detail">{{ site.meta.email }}</span>
+								</div>
+							</a>
+							<a class="Contact u-linkInvisible" href="https://au.linkedin.com/pub/michael-garland/26/a/88b">
+								<div class="Contact-action u-marginBD3">
+									<svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-about"></use>
+									</svg>
+									About Michael<br>
+									<span class="Contact-detail">Read his history and experience</span>
+								</div>
+							</a>
+						</div>
 
-                    </div>
-                </div>
-            </div>
+					</div>
+				</div>
+			</div>
 
-            <p class="Headline--ruled u-textCenter u-marginT2 u-xs-marginT2 u-mxs-marginB">
-                <span>
-                    <a class="Button u-mxs-fullWidth Arrow-right" href="{{ site.pages.why-choose-australian-property-finance.url }}">Why should you choose us?</a>
-                </span>
-            </p>
+			<p class="Button--ruled u-textCenter u-marginT2 u-xs-marginT2 u-mxs-marginB">
+				<span>
+					<a class="Button u-mxs-fullWidth Arrow-right" href="{{ site.pages.why-choose-australian-property-finance.url }}">Why should you choose us?</a>
+				</span>
+			</p>
 
-        </div>
-    </section>
+		</div>
+	</section>
 
-    {% include 'includes/newsletter-block' %}
+	<section class="Section">
+		<div class="Container">
+			<div class="u-well--lg u-bgNeutral u-sm-size8of12 Grid-cell--center">
+				{% for post in site.pages.blog.posts | limit: 1 %}
+					{% include 'includes/post-in-list' %}
+				{% endfor %}
+			</div>
+		</div>
+	</section>
 
-    <section class="Section">
-        <div class="Container">
-            <h1 class="Headline Headline--primary"><span>Some of our lending partners</span></h1>
-            <figure class="Figure">
-                <picture>
-                    <source media="(min-width: 600px)" srcset="{{ image-path }}lenders.png">
-                    <img src="{{ image-path }}lenders-xs.png" alt="Some of our lending partners">
-                </picture>
-            </figure>
-        </div>
-    </section>
+	<section class="Section">
+		<div class="Container">
+			<h1 class="Headline Headline--primary"><span>Some of our lending partners</span></h1>
+			<figure class="Figure">
+				<picture>
+					<source media="(min-width: 600px)" srcset="{{ image-path }}lenders.png">
+					<img src="{{ image-path }}lenders-xs.png" alt="Some of our lending partners">
+				</picture>
+			</figure>
+		</div>
+	</section>
 
-    <section class="Section u-marginB2 u-marginT">
-        <div class="Container">
-            <div class="FancyWell u-size11of12 u-xs-size6of12 u-sm-size5of12 Grid-cell--center u-textCenterBlock u-padding1">
-                <h4 class="Headline--quinary u-colorBrand u-weightBold">Hey, where’s your interest rates?</h4>
-                <p class="TextSm u-colorTextMedium">With 3,500 interest rate variations across 30 lenders, it’s difficult to match the right one to your circumstances. <a class="" href="mailto:{{ site.meta.email }}">That’s why I talk to people first.</a></p>
-            </div>
-        </div>
-    </section>
+	<section class="Section u-paddingB2 u-paddingT2">
+		<div class="Container">
+			<div class="FancyWell u-size11of12 u-xs-size6of12 u-sm-size5of12 Grid-cell--center u-textCenterBlock u-padding1">
+				<h4 class="Headline--quinary u-colorBrand u-weightBold">Hey, where’s your interest rates?</h4>
+				<p class="TextSm u-colorTextMedium">With 3,500 interest rate variations across 30 lenders, it’s difficult to match the right one to your circumstances. <a class="" href="mailto:{{ site.meta.email }}">That’s why I talk to people first.</a></p>
+			</div>
+		</div>
+	</section>
 
 {% endcapture %}
 
