@@ -7,20 +7,20 @@
 
 
 @mixin ButtonType {
-    color: color(text, white);
-    font-family: $font-sans-bold;
-    font-size: map-fetch($size, font, textSm, xs);
-    text-transform: uppercase;
+	color: color(text, white);
+	font-family: $font-sans-bold;
+	font-size: map-fetch($size, font, textSm, xs);
+	text-transform: uppercase;
 
-    @include respond-to(xs) {
-        font-size: map-fetch($size, font, textSm, base);
-    }
+	@include respond-to(xs) {
+		font-size: map-fetch($size, font, textSm, base);
+	}
 }
 
 // use this to vertically align elements with a button
 .ButtonLineHeight {
-    line-height: size(button-height, base);
-    vertical-align: bottom;
+	line-height: size(button-height, base);
+	vertical-align: bottom;
 }
 
 // theme typography alignment
@@ -28,64 +28,65 @@ $ButtonAlignment: 2px;
 
 
 .Button {
-    @include ButtonType();
-    background-color: color(ui, brand);
-    border: 1px solid transparent;
-    border-radius: map-fetch($size, border-radius, base);
-    line-height: size(button-height, base);
-    padding: 0 space(0.5);
-    transition: all map-fetch($transition, duration, short) map-fetch($transition, type, base);
-    vertical-align: top; // 1.
+	@include ButtonType();
+	background-color: color(ui, brand);
+	border: 1px solid transparent;
+	border-radius: map-fetch($size, border-radius, base);
+	line-height: size(button-height, base);
+	padding: 0 space(0.5);
+	transition: all map-fetch($transition, duration, short) map-fetch($transition, type, base);
+	vertical-align: top; // 1.
 
-    // theme typography alignment
-    padding-top: $ButtonAlignment;
+	// theme typography alignment
+	padding-top: $ButtonAlignment;
 
-    @include respond-to(xs) {
-        padding: $ButtonAlignment space(1) 0;
-    }
+	@include respond-to(xs) {
+		padding: $ButtonAlignment space(1) 0;
+	}
 
-    a {
-        @include u-link(none);
-    }
+	a {
+		@include u-link(none);
+	}
 
-    @include on-event() {
-        background-color: color(ui, brand-dark);
-        color: color(text, white);
-        outline: none !important;
-    }
+	@include on-event() {
+		background-color: color(ui, brand-dark);
+		color: color(text, white);
+		outline: none !important;
+	}
 
-    &.Button--highlight {
-        background-color: color(ui, brand-alt);
-        @include on-event() {
-            background-color: color(ui, brand-alt-dark);
-        }
-    }
+	&.Button--highlight {
+		background-color: color(ui, brand-alt);
+		@include on-event() {
+			background-color: color(ui, brand-alt-dark);
+		}
+	}
 
-    &.Button--feature {
-        background-color: color(ui, brand-alt-muted);
-        @include on-event() {
-            background-color: color(ui, brand-alt-muted-dark);
-        }
-    }
+	&.Button--feature {
+		background-color: color(ui, brand-alt-muted);
+		@include on-event() {
+			background-color: color(ui, brand-alt-muted-dark);
+		}
+	}
 
-    &.Button--rev {
-        border: 2px solid color(ui, white);
-        background-color: transparent;
-        @include on-event() {
-            background-color: color(ui, brand-dark);
-        }
-    }
+	&.Button--rev {
+		border: 2px solid color(ui, white);
+		background-color: transparent;
+		@include on-event() {
+			color: color(ui, white);
+			background-color: color(ui, brand-dark);
+		}
+	}
 
-    &.Button--highlightRev {
-        border: 2px solid color(ui, brand-alt);
-        background-color: transparent;
-        color: color(ui, brand-alt);
-        @include on-event() {
-            background-color: color(ui, brand-alt-dark);
-            border-color: color(ui, brand-alt-dark);
-            color: color(ui, white);
-        }
-    }
+	&.Button--highlightRev {
+		border: 2px solid color(ui, brand-alt);
+		background-color: transparent;
+		color: color(ui, brand-alt);
+		@include on-event() {
+			background-color: color(ui, brand-alt-dark);
+			border-color: color(ui, brand-alt-dark);
+			color: color(ui, white);
+		}
+	}
 }
 
 
@@ -93,39 +94,39 @@ $ButtonAlignment: 2px;
 // --------------------------------------------------------------------------
 
 @mixin ButtonSecondary (
-    $mixin-color: color(ui, brand-alt),
-    $mixin-hover-color: color(ui, brand-alt-dark)
+	$mixin-color: color(ui, brand-alt),
+	$mixin-hover-color: color(ui, brand-alt-dark)
 ) {
-    background-color: transparent;
-    border-color: currentColor;
-    color: $mixin-color;
-    padding-top: 2px; // theme typography alignment
+	background-color: transparent;
+	border-color: currentColor;
+	color: $mixin-color;
+	padding-top: 2px; // theme typography alignment
 
-    @include on-event() {
-        background-color: transparent !important;
-        border-color: $mixin-hover-color;
-        color: $mixin-hover-color;
-    }
+	@include on-event() {
+		background-color: transparent !important;
+		border-color: $mixin-hover-color;
+		color: $mixin-hover-color;
+	}
 
-    &.is-disabled {
-        color: color(text, medium);
-        border-color: currentColor;
-        opacity: 0.4;
-    }
+	&.is-disabled {
+		color: color(text, medium);
+		border-color: currentColor;
+		opacity: 0.4;
+	}
 }
 
 .Button--secondary {
-    @include ButtonSecondary();
+	@include ButtonSecondary();
 }
 
 .Button--invisible {
-    @include ButtonSecondary();
-    border-color: transparent;
-    font-family: $font-sans-regular;
-    padding: 0 space(0.25);
-    @include on-event() {
-        border-color: color(ui, muted);
-    }
+	@include ButtonSecondary();
+	border-color: transparent;
+	font-family: $font-sans-regular;
+	padding: 0 space(0.25);
+	@include on-event() {
+		border-color: color(ui, muted);
+	}
 }
 
 
@@ -133,36 +134,36 @@ $ButtonAlignment: 2px;
 // --------------------------------------------------------------------------
 
 .Button--x {
-    background: transparent !important;
-    border: none;
-    content: '';
-    padding: space(1);
-    position: absolute;
-    right: -24%;
-    top: -12%;
+	background: transparent !important;
+	border: none;
+	content: '';
+	padding: space(1);
+	position: absolute;
+	right: -24%;
+	top: -12%;
 
-    @include respond-to(max-xs) {
-        right: -8%;
-        top: -25%;
-    }
+	@include respond-to(max-xs) {
+		right: -8%;
+		top: -25%;
+	}
 
-    .icon-bar {
-        display: block;
-        width: 35px;
-        height: 2px;
-        border-radius: 1px;
-        background-color: $color-grey-lite !important;
+	.icon-bar {
+		display: block;
+		width: 35px;
+		height: 2px;
+		border-radius: 1px;
+		background-color: $color-grey-lite !important;
 
-        &.top{
-            transform: rotate(45deg);
-            transform-origin: 40% 100%;
-        }
+		&.top{
+			transform: rotate(45deg);
+			transform-origin: 40% 100%;
+		}
 
-        &.bottom{
-            transform: rotate(-45deg);
-            transform-origin: 50% 100%;
-        }
-    }
+		&.bottom{
+			transform: rotate(-45deg);
+			transform-origin: 50% 100%;
+		}
+	}
 }
 
 
@@ -177,29 +178,29 @@ $ButtonAlignment: 2px;
 button:focus { outline: none; }
 
 .Button--close {
-    color: color(text, muted);
-    font-family: $font-sans-thin;
-    font-size: map-fetch($size, font, close, xs);
-    line-height: inherit;
-    position: absolute;
-    right: -12%;
-    top: -5%;
+	color: color(text, muted);
+	font-family: $font-sans-thin;
+	font-size: map-fetch($size, font, close, xs);
+	line-height: inherit;
+	position: absolute;
+	right: -12%;
+	top: -5%;
 
-    @include respond-to(sm) {
-        font-size: map-fetch($size, font, close, base);
-    }
+	@include respond-to(sm) {
+		font-size: map-fetch($size, font, close, base);
+	}
 }
 
 .Button--close-label {
-    color: inherit;
-    display: block;
-    font-family: $font-sans-medium;
-    font-size: map-fetch($size, font, textXs, xs);
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    transform: translateY( space(-1) );
+	color: inherit;
+	display: block;
+	font-family: $font-sans-medium;
+	font-size: map-fetch($size, font, textXs, xs);
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	transform: translateY( space(-1) );
 
-    @include respond-to(xs) {
-        font-size: map-fetch($size, font, textXs, base);
-    }
+	@include respond-to(xs) {
+		font-size: map-fetch($size, font, textXs, base);
+	}
 }
