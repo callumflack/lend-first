@@ -37,7 +37,7 @@
 						<h1 class="Headline--super">{{ title }}</h1>
 
 						<div class="u-mxs-hide">
-							{% if parent.slug == info-page.slug %}
+							{% if parent.slug == info-page.slug or slug == choose-page.slug %}
 								<ul class="Aside-list nav">
 									{{ content }}
 								</ul>
