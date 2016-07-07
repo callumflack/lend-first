@@ -4,6 +4,7 @@
 		".Modal.is-displayed .Modal-content",
 		".Aside-list--item.active > a",
 		".Form-group.is-active > label:not(.error)",
+		".Card.is-open",
 		".affix",
 		".affix-bottom",
 		".Article h1",
@@ -29,6 +30,7 @@
 		".u-marginT0",
 		".u-padding2",
 		".Button.Button--rev",
+		".Footer-contact .Button",
 		".Post--glow"
 	]
 }

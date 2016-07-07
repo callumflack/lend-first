@@ -87,6 +87,15 @@ $ButtonAlignment: 2px;
 			color: color(ui, white);
 		}
 	}
+
+	@include when-inside(".Footer-contact") {
+		border: 2px solid color(ui, white) !important;
+		background-color: transparent !important;
+		@include on-event() {
+			color: color(ui, white) !important;
+			background-color: color(ui, brand-dark) !important;
+		}
+	}
 }
 
 
