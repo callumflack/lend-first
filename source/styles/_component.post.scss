@@ -49,8 +49,29 @@
         }
     }
 
-    &--glow {
+    &--home {
         @include CardGlow();
+        //background-color: color(ui, neutral);
+        //border: 2px solid color(ui, neutral);
+        background-color: $fold-bg-color;
+        border-radius: size(border-radius, large);
+        padding-bottom: 0;
+    }
+
+    .u-linkBuriedTarget {
+        color: color(ui, medium);
+    }
+
+    @include on-event() {
+        .u-linkBuriedTarget {
+            color: color(ui, brand);
+        }
+    }
+}
+
+.Post-wrapper {
+    @include when-inside(".Post--home") {
+        padding: space(2);
     }
 }
 
@@ -65,6 +86,16 @@
 
     @include respond-to(sm) {
         margin-bottom: space(0.75);
+    }
+
+    @include when-inside(".Post--home") {
+        background-color: color(ui, brand-alt);
+        //background-color: color(ui, neutral);
+        border-top-right-radius: size(border-radius, large);
+        border-top-left-radius: size(border-radius, large);
+        color: color(ui, background) !important;
+        margin-bottom: 0;
+        padding: space(0.5);
     }
 }
 

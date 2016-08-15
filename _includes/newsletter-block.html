@@ -1,7 +1,7 @@
 <section class="Section">
 	<div class="Container">
 		<div class="u-well--lg u-bgNeutral u-sm-size8of12 Grid-cell--center">
-			{% if parent.slug == 'blog' %}
+			{% if slug == 'blog' or parent.slug == 'blog' %}
 			<figure class="Figure Figure--topRounded">
 				<img src="{{ image-path }}pier-desaturated.png" alt="Get great wealth-building advice">
 			</figure>
