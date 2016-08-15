@@ -35,3 +35,47 @@
 {% endif %}
 
 <!-- <section class="Section {% if parent.slug != info-page.slug %} u-paddingT u-xs-paddingT2{% else %} u-paddingT0{% endif %}">{{ parent.slug }} -->
+
+
+<!-- some post bit… -->
+
+<!-- <section class="Section">
+    <div class="Container DivRule">
+        <a href="{{ site.pages.blog.url }}">
+            <h1 class="Headline Arrow-right">View all posts</h1>
+        </a>
+        <div class="Grid">
+            {% if previous %}
+                <div class="Grid-cell u-xs-size1of2">
+                    <a class="Post" href="{{ post.previous.url }}">
+                        <figure class="Post-image--dark">
+                            <div class="FlexEmbed">
+                                <div class="FlexEmbed-ratio FlexEmbed-ratio--16by9 u-bgDark"></div>
+                                <div class="FlexEmbed-content CoverImage" style="background-image: url('{{ post.previous.assets.first }}')"></div>
+                                <div class="FlexEmbed-content">
+                                    <h1 class="Post-headline Post-headline--right Arrow-left">{{ post.previous.title }}</h1>
+                                </div>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+            {% endif %}
+            {% if next %}
+            <div class="Grid-cell u-xs-size1of2">
+                <a class="Post" href="{{ post.next.url }}">
+                    <figure class="Post-image--dark">
+                        <div class="FlexEmbed">
+                            <div class="FlexEmbed-ratio FlexEmbed-ratio--16by9 u-bgDark"></div>
+                            <div class="FlexEmbed-content CoverImage" style="background-image: url('{{ post.next.assets.first }}')"></div>
+                            <div class="FlexEmbed-content">
+                                <h1 class="Post-headline Arrow-right">{{ post.next.title }}</h1>
+                            </div>
+                        </div>
+                    </figure>
+                </a>
+            </div>
+            {% endif %}
+
+        </div>
+    </div>
+</section> -->

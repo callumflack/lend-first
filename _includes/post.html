@@ -1,7 +1,3 @@
-
-<!-- <p>{{ post.author }}</p>
-<p>{{ profile.meta.name }}</p> -->
-
 {% assign image-path = '/build/images/' %}
 
 <article class="Post u-paddingT u-xs-paddingT25">
@@ -16,58 +12,16 @@
 
 			<div class="Grid-cell u-xs-size7of12 u-alignBlockDown">
 				{{ post.body }}
+                <p class="TextSm u-textBold u-colorMedium u-marginT2 u-marginBD2">
+                    <a class="Arrow-left" href="/blog">View all posts</a>
+                </p>
 			</div>
 		</div>
 		<div class="DivRule--light u-marginT25"></div>
 
 		{% include 'includes/newsletter-block' %}
-		{% include 'includes/path-cta' %}
+		<!-- {% include 'includes/path-cta' %} -->
 
-		<!-- <section class="Section">
-			<div class="Container DivRule">
-				<a href="{{ site.pages.blog.url }}">
-					<h1 class="Headline Arrow-right">View all posts</h1>
-				</a>
-				<div class="Grid">
-					{% if previous %}
-						<div class="Grid-cell u-xs-size1of2">
-							<a class="Post" href="{{ post.previous.url }}">
-								<figure class="Post-image--dark">
-									<div class="FlexEmbed">
-										<div class="FlexEmbed-ratio FlexEmbed-ratio--16by9 u-bgDark"></div>
-										<div class="FlexEmbed-content CoverImage" style="background-image: url('{{ post.previous.assets.first }}')"></div>
-										<div class="FlexEmbed-content">
-											<h1 class="Post-headline Post-headline--right Arrow-left">{{ post.previous.title }}</h1>
-										</div>
-									</div>
-								</figure>
-							</a>
-						</div>
-					{% endif %}
-					{% if next %}
-					<div class="Grid-cell u-xs-size1of2">
-						<a class="Post" href="{{ post.next.url }}">
-							<figure class="Post-image--dark">
-								<div class="FlexEmbed">
-									<div class="FlexEmbed-ratio FlexEmbed-ratio--16by9 u-bgDark"></div>
-									<div class="FlexEmbed-content CoverImage" style="background-image: url('{{ post.next.assets.first }}')"></div>
-									<div class="FlexEmbed-content">
-										<h1 class="Post-headline Arrow-right">{{ post.next.title }}</h1>
-									</div>
-								</div>
-							</figure>
-						</a>
-					</div>
-					{% endif %}
-
-				</div>
-			</div>
-		</section> -->
-
-	</div>
-
-	<div class="Container--lg">
-		{% include 'includes/cards-section' %}
 	</div>
 
 </article>

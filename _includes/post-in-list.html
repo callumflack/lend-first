@@ -11,20 +11,13 @@
         {% endif %}
 
         {% if home? %}
-            <!-- <h1 class="Post-title u-colorBrandAlt u-textCenter">Blog</h1> -->
             <h2 class="Headline--super u-weightBook u-marginB">{{ post.title }}</h2>
         {% else %}
-            <h1 class="Post-title {% if home? %}u-colorBrandAlt u-textCenter{% endif %}">{{ post.title }}</h1>
+            <h1 class="Post-title">{{ post.title }}</h1>
         {% endif %}
 
-        {% if type == 'post' %}
-            {{ post.body }}
-        {% else %}
-            {{ post.body | truncatewords: 32 }}
-            <span class="u-marginLD3 u-linkBuriedTarget Arrow-right">Read more</span>
-        {% endif %}
+        {{ post.body | truncatewords: 32 }}
+        <span class="u-marginLD3 u-linkBuriedTarget Arrow-right">Read more</span>
 
     </div>
-
-
 </a>
