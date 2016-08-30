@@ -135,6 +135,14 @@
 	}
 }
 
+// quick trumps 160830
+.index .Headline--super {
+    @include respond-to(sm) { width: 90%; }
+    @include respond-to(md) { width: 70%; }
+}
+
+
+
 .Headline--highlight {
 	@include Headline--ruled();
 	color: color(ui, brand-alt);
