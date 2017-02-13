@@ -1,8 +1,14 @@
-<section class="Section js-cards u-paddingB3">
-    <div class="Container Container--lg">
-        <h1 class="Headline Headline--primary u-marginB2"><span>Learn about other financing options</span></h1>
-    </div>
+<section class="Section js-cards">
+	<div class="Container Container--lg">
+		<h1 class="Headline Headline--primary u-mxs-marginB15 u-marginB25">
+		    {% if page.url == '/' %}
+                <span>What do you want to do with your loan?</span>
+            {% else %}
+                <span>Learn about other financing options</span>
+            {% endif %}
+		</h1>
+	</div>
 
-    {% include 'includes/cards' %}
+	{% include cards.html %}
 
 </section>

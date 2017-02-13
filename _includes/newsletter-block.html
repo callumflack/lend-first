@@ -1,20 +1,20 @@
 <section class="Section">
 	<div class="Container">
 		<div class="u-well--lg u-bgNeutral u-sm-size8of12 Grid-cell--center">
-			{% if slug == 'blog' or parent.slug == 'blog' %}
-			<figure class="Figure Figure--topRounded">
-				<img src="{{ image-path }}pier-desaturated.png" alt="Get great wealth-building advice">
-			</figure>
+			{% if page.url contains 'blog' %}
+    			<figure class="Figure Figure--topRounded">
+    				<img src="/public/images/pier-desaturated.png" alt="Get great wealth-building advice">
+    			</figure>
 			{% endif %}
 			<div class="u-textCenterBlock u-size11of12 u-sm-size10of12 Grid-cell--center u-paddingBD2 u-sm-paddingB15
-				{% if parent.slug == 'blog' %}u-paddingTD2
+				{% if page.url contains 'blog' %}u-paddingTD2
 				{% else %}u-paddingT
 				{% endif %}">
-				<h4 class="Headline Headline--highlight Headline--noRule u-colorBrandAlt u-marginT u-xs-marginT15 u-marginBD2">Seeking great Home Loan advice?</h4>{{page.title}}
+				<h4 class="Headline Headline--highlight Headline--noRule u-colorBrandAlt u-marginT u-xs-marginT15 u-marginBD2">Seeking great Home Loan advice?</h4>
 				<p class="u-colorTextMedium">Get the simple, actionable ‘Home Loan Tips’ newsletter.</p>
 			</div>
 			<div class="u-size10of12 Grid-cell--center u-paddingB u-xs-paddingB15">
-				{% include 'includes/newsletter-form' %}
+				{% include newsletter-form.html %}
 			</div>
 		</div>
 		<p class="TextSm u-colorTextLight u-textCenter u-marginTD1 u-xs-marginT">We respect your privacy. Your details will never be shared with a third party.</p>

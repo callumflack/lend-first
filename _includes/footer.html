@@ -1,25 +1,17 @@
 
-{% assign bridging            = site.pages.info-for.pages.bridging %}
-{% assign business            = site.pages.info-for.pages.business %}
-{% assign cashout             = site.pages.info-for.pages.cash-out %}
-{% assign construction        = site.pages.info-for.pages.construction %}
-{% assign fhbuyers            = site.pages.info-for.pages.first-home-buyers %}
-{% assign investment          = site.pages.info-for.pages.investment %}
-{% assign refinance           = site.pages.info-for.pages.refinance %}
-{% assign somethingdiff       = site.pages.info-for.pages.something-different %}
 {% assign choose              = site.pages.why-choose-australian-property-finance %}
 {% assign blog                = site.pages.blog %}
 
 <footer class="Footer" id="nav">
 
-	{% if home? %}
-	<section class="Footer-contact">
-		<div class="Container">
-			<h1 class="Headline Headline--quaternary u-headerSizeRg u-weightBold u-marginBD6">Honest, knowledgeable advice from an experienced local</h1>
-			<p class="Grid-cell--center u-xs-size9of12 u-marginB u-colorFaint u-marginBD6">See first-hand how Michael's actionable financial intelligence can make the difference.</p>
-			{% include 'includes/btn-email' %}
-		</div>
-	</section>
+	{% if page.url == '/' %}
+    	<section class="Footer-contact">
+    		<div class="Container">
+    			<h1 class="Headline Headline--quaternary u-headerSizeRg u-weightBold u-marginBD6">Honest, knowledgeable advice from an experienced local</h1>
+    			<p class="Grid-cell--center u-xs-size9of12 u-marginB u-colorFaint u-marginBD6">See first-hand how Michael's actionable financial intelligence can make the difference.</p>
+    			{% include btn-email.html %}
+    		</div>
+    	</section>
 	{% endif %}
 
 	<section class="Footer-menu">
@@ -39,14 +31,12 @@
 				<div class="Grid-cell u-sm-size10of12 u-md-size8of12">
 					<div class="Grid Grid--withGutter">
 						<div class="Grid-cell u-xs-size4of12 u-mxs-flexOrderLast">
-							<!-- <div class="u-marginTD3 u-sm-marginT0 u-marginB u-paddingLD2 u-sm-paddingL0"> -->
 							<div class="u-marginTD3 u-sm-marginT0">
 								<h5 class="Headline--quinary u-marginBD3">Learn about us</h5>
 								<ul class="">
 									<li><a href="/">Home</a></li>
-                                    <li><a href="{{ blog.url }}">Home Loan Tips</a></li>
-									<li><a href="{{ choose.url }}">{{ choose.title }}</a></li>
-									<!-- <li><a href="#">Best Wealth Tips</a></li> -->
+                                    <li><a href="/blog">Home Loan Tips</a></li>
+									<li><a href="/why-choose-lendfirst">Why choose LendFirst?</a></li>
                                     <li><a href="/privacy">Your privacy</a></li>
                                     <li><a href="/disclaimer">Disclaimer</a></li>
 									<!-- <div class="HzRule--footer"></div>
@@ -60,14 +50,10 @@
 							<div class="u-marginTD3 u-sm-marginT0 msm-SectionRule--contact" style="height:auto;">
 								<h5 class="Headline--quinary u-msm-marginTD3 u-marginBD3">Learn about financing</h5>
 								<ul class="">
-									<li><a href="{{ fhbuyers.url }}">{{ fhbuyers.title }}</a></li>
-									<li><a href="{{ bridging.url }}">{{ bridging.title }}</a></li>
-									<li><a href="{{ refinance.url }}">{{ refinance.title }}</a></li>
-									<li><a href="{{ investment.url }}">{{ investment.title }}</a></li>
-									<li><a href="{{ business.url }}">{{ business.title }}</a></li>
-									<li><a href="{{ construction.url }}">{{ construction.title }}</a></li>
-									<li><a href="{{ cashout.url }}">{{ cashout.title }}</a></li>
-									<li><a href="{{ somethingdiff.url }}">{{ somethingdiff.title }}</a></li>
+                                    {% assign infoList = site.info-for | sort: "order" %}
+							        {% for item in infoList %}
+							            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+							        {% endfor %}
 								</ul>
 							</div>
 						</div>
@@ -75,17 +61,17 @@
 							<div class="u-marginTD3 u-sm-marginT0 u-mxs-marginBD2 msm-SectionRule--contactTop msm-SectionRule--contact">
 								<h5 class="Headline--quinary u-marginBD6 u-sm-marginBD2">Contact</h5>
 								<ul class="">
-									<li>Michael Garland</li>
-									<li><a class="" href="tel:{{ site.meta.phone }}">{{ site.meta.phone }}</a></li>
-									<li><a class="" href="mailto:{{ site.meta.email }}">{{ site.meta.email }}</a></li>
-									<li>{{ site.meta.address }}</li>
+									<li>Michael Garland, Managing Director</li>
+									<li><a class="" href="tel:{{ site.phone }}">{{ site.phone }}</a></li>
+									<li><a class="" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+									<li>{{ site.address }}</li>
 									<li class="SocialLinks u-marginTD2">
-										<a href="www.facebook.com/apfcairns">
+										<a href="{{ site.social.links[0] }}">
 											<svg class="Icon Icon--lg Icon--left Icon--textAlign">
 												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-social-fb"></use>
 											</svg>
 										</a>
-										<a href="https://au.linkedin.com/pub/michael-garland/26/a/88b">
+										<a href="{{ site.social.links[1] }}">
 											<svg class="Icon Icon--lg Icon--left Icon--textAlign">
 												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-social-li"></use>
 											</svg>
@@ -98,7 +84,8 @@
 
 					</div>
 
-                    <p class="TextSm u-colorMuted u-marginT">© 2016 Michael Garland. Michael Garland (Credit Representative No. 473132) is authorised under Vow Financial Pty Ltd (Australian Credit Licence Number 390261). Your full financial situation must be reviewed prior to acceptance of any offer or product.</p>
+                    <p class="TextSm u-colorMuted u-marginT">© {{ site.time | date: '%Y' }} {{ site.title }}. {{ site.accreditation }}</p>
+                    
 				</div>
 
 			</div>

@@ -1,5 +1,3 @@
-{% assign image-path = '/build/images/' %}
-
 <article class="Post u-paddingT u-xs-paddingT25">
 
 	<div class="Container">
@@ -7,7 +5,7 @@
 			<div class="Grid-cell u-xs-size4of12 u-xs-after1of12 u-paddingR u-md-display">
 				<h1 class="Headline--super">{{ post.title }}</h1>
 				<p class="TextSm u-textBold u-colorMedium u-marginT2 u-marginBD2">Share this post:</p>
-				{% include 'includes/share' %}
+				{% include share.html %}
 			</div>
 
 			<div class="Grid-cell u-xs-size7of12 u-alignBlockDown">
@@ -19,8 +17,7 @@
 		</div>
 		<div class="DivRule--light u-marginT25"></div>
 
-		{% include 'includes/newsletter-block' %}
-		<!-- {% include 'includes/path-cta' %} -->
+		{% include newsletter-block.html %}
 
 	</div>
 

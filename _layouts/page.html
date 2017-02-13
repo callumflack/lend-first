@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+{% if page.image %}
+    <figure class="Figure">
+        <div class="Container Container--full">
+            <div class="FlexEmbed">
+                <div class="FlexEmbed-ratio FlexEmbed-ratio--2by1"></div>
+                <div class="FlexEmbed-content">
+                    <div class="u-posAbsoluteCenter CoverImage" style="background-image: url('/uploads/{{ page.title | downcase | replace: ' ', '-' }}.jpg')"></div>
+                </div>
+            </div>
+        </div>
+    </figure>
+{% endif %}
+<section class="Section u-paddingT u-xs-paddingT2">
+	<div class="Container">
+		<div class="Grid Grid--withGutter">
+			<div class="Grid-cell u-xs-size4of12 u-xs-after1of12">
+				<aside class="Aside--affixed affix-top" id="scrollspy" data-spy="affix" data-offset-top="{{ page.offset-top }}" data-offset-bottom="{{ page.offset-bottom }}">
+					<h1 class="Headline--super">{{ page.title }}</h1>
+
+					<div class="u-mxs-hide">
+						{% if page.menu %}
+							<ul class="Aside-list nav">
+								{% for item in page.menu %}
+                                    <li class="Aside-list--item">
+                                        <a href="{{ page.url  | remove: '.html' | prepend: site.baseurl }}#{{ item | downcase | replace: ' ', '-' | remove:',' | remove:'&rsquo;' }}">{{ item }}?</a>
+                                    </li>
+								{% endfor %}
+							</ul>
+							<div class="HzRule"></div>
+						{% endif %}
+						<a class="Aside-list--link Arrow-left" href="/">Back home</a>
+						<a class="Aside-list--link Arrow-top" href="#top">Back to top</a>
+					</div>
+
+				</aside>
+			</div>
+			<div class="Grid-cell u-xs-size7of12">
+				<article class="Article u-alignBlockDown">
+
+					{{ content | markdownify }}
+
+				</article>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% include contact-michael.html %}
+
+{% if page.url contains 'info-for' %}
+	{% include cards-section.html %}
+{% endif %}
+
+{% if page.url == site.pages.why-choose-lendfirst.url %}
+	{% include newsletter-block.html %}
+{% endif %}

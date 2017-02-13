@@ -1,0 +1,34 @@
+
+
+// --------------------------------------------------------------------------
+// OBJECT: IMAGE BLENDS
+// See: http://codepen.io/Guilh/pen/LEQWev?editors=110
+// See: https://sarasoueidan.com/demos/css-blender/
+// See: http://una.im/CSSgram/
+// See: https://css-tricks.com/css3-gradients/
+// --------------------------------------------------------------------------
+
+
+$darkBlendColor: rgba( palette(text), 0.8 );
+$lightBlendColor: rgba( palette(text), 0.333333333 );
+
+@mixin imageBlend(
+	$gradient: false,
+    $blend: multiply,
+    $color: $darkBlendColor
+) {
+	
+	@if $gradient {
+		//background-color: $color;
+		background-image: linear-gradient( $lightBlendColor, $darkBlendColor 50% ); 
+	} @else {
+		background-color: $color;
+	}
+	
+    background-blend-mode: $blend;
+
+}
+
+.c-imageBlend           { @include imageBlend(); }
+.c-imageBlend--gradient { @include imageBlend($gradient: true); }
+.c-imageBlend--just     { @include imageBlend($color: $lightBlendColor); }

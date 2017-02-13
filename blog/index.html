@@ -1,0 +1,25 @@
+---
+title: Blog
+layout: default
+---
+
+<section class="Section u-paddingT u-xs-paddingT25">
+    <div class="Container">
+        <div class="Grid Grid--withGutter">
+            <div class="Grid-cell u-xs-size4of12 u-after1of12 u-xs-display">
+                <div class="Affix" data-spy="affix" data-offset-top="200">
+                    <h1 class="Headline--super">{{ page.title }}</h1>
+                </div>
+            </div>
+            <div class="Grid-cell u-xs-size7of12 u-alignBlockDown">
+                {% for post in site.posts %}
+                    {% include post-in-list.html %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="DivRule--light u-marginT25"></div>
+        {% include newsletter-block.html %}
+
+    </div>
+</section>

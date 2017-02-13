@@ -1,0 +1,84 @@
+---
+title: LendFirst Home Loans
+timezone: Australia/Brisbane
+collections:
+  posts:
+    title: Blog
+    output: true
+  info-for:
+    title: Info-for
+    output: true
+  uploads:
+    title: Uploads
+    output: false
+defaults:
+- scope:
+    path: ''
+    type: about
+  values:
+    layout: post
+    permalink: "/:collection/:path/"
+- scope:
+    path: ''
+    type: info-for
+  values:
+    layout: page
+    permalink: "/:collection/:path/"
+    image: true
+    offset-top: 970
+    offset-bottom: 2010
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    permalink: "/:categories/:title/"
+    has-javascripts: true
+    title: 
+    categories: 
+    image: 
+description: LendFirst offers smart advice and real solutions for first home buyers and first-time investors, in Cairns, Queeensland, Australia.
+baseurl: 
+url: http://lendfirst.com.au
+logo: "/uploads/the-substation-logo.png"
+facebook:
+  username: LendFirst
+social:
+  name: LendFirst
+  links:
+  - https://www.facebook.com/lendfirst
+  - https://www.linkedin.com/in/michael-garland-88b00a26
+author: patternworks_
+address: PO Box 526 Redlynch, Queensland 4870 Australia
+address-link: https://goo.gl/maps/3RTKiR89iD72
+phone: 04022 830 333
+email: michael@lendfirst.com.au
+accreditation: Michael Garland (Credit Representative No. 473132) is authorised under Vow Financial Pty Ltd (Australian Credit Licence Number 390261). Your full financial situation must be reviewed prior to acceptance of any offer or product.
+google-analytics: UA-75811838-1
+javascriptsurl: "/public/javascripts/"
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+gems:
+- jekyll-feed
+- jekyll-sitemap
+- jekyll-seo-tag
+exclude:
+- assets/_source
+- Gemfile
+- Gemfile.lock
+- ".gitignore"
+- ".editorconfig"
+- gulpfile.js
+- package.json
+- node_modules
+- yarn.lock
+- DESCRIPTION*
+- README*
+- TODO*

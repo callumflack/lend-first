@@ -1,41 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#" {% if url == site.pages.thanks.url %}class="u-bgNeutral"{% endif %}>
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible", content="IE=edge,chrome=1" >
-	<meta http-equiv="cleartype", content="on" >
-	<meta name="viewport", content="width=device-width, initial-scale=1.0" >
-	<title>{{site.title}} | Michael Garland, Mortgage Broker</title>
-	<meta name='description' content='{{ site.meta.description }}' >
-	<meta name='keywords' content="{{ site.meta.keywords }}" >
-	<meta name="author", content="patternworks.com.au + Michael Garland" >
-	<meta name="handheldfriendly", content="true" >
-	<meta name="mobileoptimized", content="320" >
-	<link rel="ca nonical" href="{{ site.meta.url }}">
-	{% include 'includes/meta-share' %}
-	<meta name="google-site-verification" content="Ddvwst6-Fw6kkksCHuCIIucsm2XCdjXl5PCnyVABqYs" />
-	<link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
-	<link rel="alternate" type="application/rss+xml" href="{{site.sitemap_url}}" />
-	<link rel="stylesheet" href="/build/styles/styles.css">
-	<!-- <link rel="stylesheet" href="/build/styles.min.css"> -->
-	{% if meta.redirect %}
-		<meta http-equiv="refresh" content="0;url={{meta.redirect}}">
-	{% endif %}
-</head>
-<body id="top" class="{{type}} {{slug}} {% for tag in taxonomy.tags %} {{tag.slug}} {% endfor %}"
+<html lang="{{ site.lang | default: page.lang | default: 'en' }}" {% if page.url == site.pages.thanks.url %}class="u-bgNeutral"{% endif %}>
+
+{% include head.html %}
+
+<body id="top" class="{{ page.title | downcase | replace: ' ', '-' }}"
 	data-spy="scroll" data-target="#scrollspy" data-offset="300">
 
-	{% include 'includes/header' %}
+	{% include header.html %}
 
 	{{ content }}
 
-	{% include 'includes/footer' %}
-	{% include 'includes/touch-nav' %}
-	{% include 'includes/icons' %}
+	{% include footer.html %}
+	{% include touch-nav.html %}
+	{% include icons.html %}
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="/build/site.concat.js"></script>
-	{% include 'includes/google-analytics' %}
+	{% include google-analytics.html %}
 
 </body>
 </html>

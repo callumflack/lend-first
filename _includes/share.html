@@ -5,7 +5,7 @@
 	more refs: https://developers.facebook.com/docs/javascript/quickstart/v2.5
 {% endcomment %}
 
-{% capture caption %} {{ title }} {{ meta['hero-byline' ]}} {% endcapture %}
+{% capture caption %} {{ page.title }} {{ page['hero-byline' ]}} {% endcapture %}
 
 <div class="u-childLinkInvisible">
 	<a class="u-linkInvisible" href="https://www.facebook.com/sharer/sharer.php?u={{ permalink }}">
@@ -13,7 +13,7 @@
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-social-fb"></use>
 		</svg>
 	</a>
-	<a class="u-linkInvisible" href="http://www.linkedin.com/shareArticle?mini=true&url={{ permalink }}&title={{ title }}&summary={{ caption }}&source={{ permalink }}" target="_blank">
+	<a class="u-linkInvisible" href="http://www.linkedin.com/shareArticle?mini=true&url={{ permalink }}&title={{ page.title }}&summary={{ caption }}&source={{ permalink }}" target="_blank">
 		<svg class="Icon Icon--lg Icon--left Icon--textAlign">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-social-li"></use>
 		</svg>
@@ -32,7 +32,7 @@
 <a class="" href="https://twitter.com/intent/tweet?source=&text={{ caption }}&url={{ permalink }}" target="_blank">
 	<svg class="ic-sm-twitter" viewBox="0 0 44 44"><use xlink:href="#ic-sm-twitter"></use></svg>
 </a>
-<a class="" href="http://www.linkedin.com/shareArticle?mini=true&url={{ permalink }}&title={{ title }}&summary={{ caption }}&source={{ permalink }}" target="_blank">
+<a class="" href="http://www.linkedin.com/shareArticle?mini=true&url={{ permalink }}&title={{ page.title }}&summary={{ caption }}&source={{ permalink }}" target="_blank">
 	<svg class="ic-sm-linkedin" viewBox="0 0 44 44"><use xlink:href="#ic-sm-linkedin"></use></svg>
 </a>
 <a class="" href="mailto:?subject=Check out this article from Ward6&body={{ caption }} {{ permalink }}" target="_blank">

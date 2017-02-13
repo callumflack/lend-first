@@ -1,3 +1,25 @@
+class="{{type}} {{slug}} {% for tag in taxonomy.tags %} {{tag.slug}} {% endfor %}"
+
+{% if page.url contains 'info-for' or page.url == choose-page.url %}
+
+{% capture content %}
+
+	<!-- <h1 class="Headline--super">Why choose Australian Property Finance</h1> -->
+	<li class="Aside-list--item"><a href="#what">{{ page.menu-1 | capitalize }}</a></li>
+	<li class="Aside-list--item"><a href="#qualifications">{{ page.menu-2 | capitalize }}</a></li>
+	<li class="Aside-list--item"><a href="#who">{{ page.menu-3 | capitalize }}</a></li>
+	<li class="Aside-list--item"><a href="#difference">{{ page.menu-4 | capitalize }}</a></li>
+	<li class="Aside-list--item"><a href="#paid">{{ page.menu-5 | capitalize }}</a></li>
+
+{% endcapture %}
+
+{% include page.html %}
+
+{% if type == 'post' %}
+    {% assign post = page %}
+    {% include post.html %}
+{% else %}
+
 {% if home? %}
 <section class="Header-byline">
 	<div class="Container">
@@ -13,18 +35,18 @@
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-call"></use>
 						</svg>
 						Call Michael<br>
-						<span class="Contact-detail u-colorWhite">{{ site.meta.phone }}</span>
+						<span class="Contact-detail u-colorWhite">{{ site.phone }}</span>
 					</div>
 				</a>
 			</div>
 			<div class="Grid-cell u-ip6-size7of12 u-marginTD2 u-ip6-marginT0">
-				<a class="Contact u-linkInvisible" href="mailto:{{ site.meta.email }}">
+				<a class="Contact u-linkInvisible" href="mailto:{{ site.email }}">
 					<div class="Contact-action u-colorWhite u-textCenter u-ip6-textLeft">
 						<svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-email"></use>
 						</svg>
 						Email Michael<br>
-						<span class="Contact-detail u-colorWhite">{{ site.meta.email }}</span>
+						<span class="Contact-detail u-colorWhite">{{ site.email }}</span>
 					</div>
 				</a>
 
@@ -41,7 +63,7 @@
 
 <!-- <section class="Section">
     <div class="Container DivRule">
-        <a href="{{ site.pages.blog.url }}">
+        <a href="{{ site.html_pages.blog.url }}">
             <h1 class="Headline Arrow-right">View all posts</h1>
         </a>
         <div class="Grid">

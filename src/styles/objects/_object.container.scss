@@ -1,0 +1,115 @@
+
+
+// --------------------------------------------------------------------------
+//   CONTAINER OBJECT
+// --------------------------------------------------------------------------
+
+
+@mixin container(
+	$padded: true,
+	$width: container-width(lg)
+) {
+
+	@if $padded {
+		height: inherit;
+		padding-left: $gutterSpace * 0.5;
+		padding-right: $gutterSpace * 0.5;
+		
+		@include media-breakpoint-up(lg) {
+			padding-left: $gutterSpace;
+			padding-right: $gutterSpace;
+		}
+		
+	} @else {
+		max-width: $width - ($gutterSpace);
+		
+		@include media-breakpoint-up(lg) {
+			max-width: $width - ($gutterSpace * 2);
+		}
+	}
+	
+	@include clearfix();
+	margin: 0 auto;
+	max-width: $width;
+	position: relative;
+
+	p,
+	li,
+	ol {
+		&:last-child,
+		&:last-child a {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+.o-container {
+	@include container();
+
+    // sizes
+	&--md {
+		@include container( $width: container-width(md) );
+	}
+
+	&--xl {
+		@include container( $width: container-width(xl) );
+	}
+
+    //&--super {
+    //    //@include container( container-width(su) );
+	//	max-width: 100%;
+	//	padding: 0 space(1.5);
+	//
+    //    @include media-breakpoint-up(sm) {
+    //        padding: 0 space(4);
+    //    }
+	//}
+
+	//&--postInfo {
+	//	@include container( $width: container-width(lg) );
+	//	//padding: 0;
+	//
+	//	@include media-breakpoint-up(xs) {
+	//		padding: 0 !important;
+	//	}
+	//
+	//	@include media-breakpoint-up(xl) {
+	//		// @include container( container-width(xl) );
+	//		padding: 0 space(1.5);
+	//	}
+	//
+	//	@include media-breakpoint-up(su) {
+	//		@include container( $width: container-width(xl) );
+	//	}
+	//}
+}
+
+
+
+
+@mixin containerWindow() {
+	padding: space(1) space(1.5) space(0.75);
+	//@include media-breakpoint-up(sm) { padding: space(1) space(1.5) space(0.75); }
+}
+
+.c-container--window {
+	@include containerWindow();
+}
+
+
+
+
+
+.c-container-rule {
+	@include container(false);
+	border-top: 1px solid palette(black-10);
+	margin-top: 0;
+	margin-bottom: space(0.75);
+}
+
+.o-column--post {
+	max-width: container-width(xs);
+	// @include when-inside(".o-container")     { margin-left: 0; }
+	// @include when-inside(".o-container--xl") { margin-left: calc( (1200-960) / 2 ); }
+}

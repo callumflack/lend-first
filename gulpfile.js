@@ -1,30 +1,64 @@
+// -----------------------------------------------
+//
+//   Gulpfile.
+//   Based on: https://github.com/drewbarontini/noise
+//
+// -----------------------------------------------
 
-// -----------------------------------------------
-//
-//   A not-so-simple gulpfile.
-//   Based on: https://github.com/braveux/website
-//   and: https://github.com/drewbarontini/noise
-//
-// -----------------------------------------------
-//
-//   ToDo:
+// Available tasks:
+//   `gulp`
+//   `gulp build`
+//   `gulp compile:coffee`
+//   `gulp compile:sass`
+//   `gulp connect`
+//   `gulp icons`
+//   `gulp images`
+//   `gulp lint:coffee`
+//   `gulp lint:sass`
+//   `gulp minify:css`
+//   `gulp minify:js`
+//   `gulp test:css`
+//   `gulp test:js`
+
+// …run from these plugins:
+// gulp              : The streaming build system
+// gulp-autoprefixer : Prefix CSS
+// gulp-coffee       : Compile CoffeeScript files
+// gulp-coffeelint   : Lint your CoffeeScript
+// gulp-concat       : Concatenate files
+// gulp-connect      : Gulp plugin to run a webserver (with LiveReload)
+// gulp-csscss       : CSS redundancy analyzer
+// gulp-jshint       : JavaScript code quality tool
+// gulp-load-plugins : Automatically load Gulp plugins
+// gulp-minify-css   : Minify CSS
+// gulp-parker       : Stylesheet analysis tool
+// gulp-plumber      : Prevent pipe breaking from errors
+// gulp-rename       : Rename files
+// gulp-sass         : Compile Sass
+// gulp-sass-lint    : Lint Sass
+// gulp-svgmin       : Minify SVG files
+// gulp-svgstore     : Combine SVG files into one
+// gulp-uglify       : Minify JavaScript with UglifyJS
+// gulp-util         : Utility functions
+// gulp-watch        : Watch stream
+// run-sequence      : Run a series of dependent Gulp tasks in order
+
+// ToDo:
 // - linting
-// - options as an object (ala Noise)
-// - sass sourcemaps (so can minify everything always)
-//
-// -----------------------------------------------
+// - gzip (https://github.com/jstuckey/gulp-gzip)
+// - zopfli gzip (eg. pngs) (https://github.com/romeovs/gulp-zopfli)
+
 
 var gulp    = require( 'gulp' );
-// var run     = require( 'run-sequence' );
-var plugins = require( 'gulp-load-plugins' )( {
-    lazy: true,
-    rename : {
-        'gulp-sass-lint'  : 'sasslint',
-        'gulp-svg-symbols': 'svgsymbols',
-        'psi'             : 'pagespeedindex'
-    }
-
-} );
+var run     = require( 'run-sequence' );
+var plugins = require( 'gulp-load-plugins' )({
+	lazy: true,
+	rename : {
+		'gulp-sass-lint'   : 'sasslint',
+		'gulp-svg-symbols' : 'svgsymbols',
+		'psi'              : 'pagespeedindex'
+	}
+});
 
 
 // -----------------------------------------------
@@ -33,210 +67,231 @@ var plugins = require( 'gulp-load-plugins' )( {
 
 var options = {
 
-    default : {
-        tasks : [ 'build', 'watch' ]
+    // ---- Primary batched --- //
+
+	default : {
+		tasks : [ 'build', 'watch' ]
+	},
+
+	build : {
+		tasks : [ 'images', 'compile:sass' ],
+        destination : 'public/'
+	},
+
+	production : {
+		tasks : [ 'build', 'minify:css', 'minify:js' ]
+	},
+
+    connect : {
+        port : 9000,
+        base : 'http://localhost',
+        root : 'assets'
     },
 
-    build : {
-        tasks       : [ 'images', 'compile:sass', 'minify:js', 'fonts' ],
-        destination : 'build/'
-    },
+    // ---- Alphabetical --- //
 
-    production : {
-        tasks : [ 'build', 'minify:css' ]
-    },
+	css : {
+		files       : 'public/styles/*.css',
+		file        : 'public/styles/application.css',
+		destination : 'public/styles'
+	},
 
-    css : {
-        files       : 'source/stylesheets/*.css',
-        // file        : 'source/stylesheets/application.css',
-        // destination : 'source/stylesheets'
-        file        : 'build/styles/styles.css',
-        destination : 'build/styles'
-    },
+	icons : {
+		files       : 'src/icons/ic-*.svg',
+		destination : 'public/icons'
+	},
 
-    fonts : {
-        files       : 'source/fonts/*.{otf,ttf,eot,woff,woff2,svg}',
-        destination : 'build/fonts'
-    },
+	images : {
+		files       : 'src/images/*',
+		destination : 'public/images'
+	},
 
-    icons : {
-        files       : 'source/icons/ic-*.svg',
-        destination : 'build/icons'
-    },
+	js : {
+		files : [
+			'node_modules/fontfaceonload/dist/fontfaceonload.js',
+			'src/scripts/*.js'
+		],
+		file        : 'src/scripts/application.js',
+        destination : 'public/scripts'
+	},
 
-    images : {
-        files       : 'source/images/*',
-        destination : 'build/images'
-    },
+	sass : {
+		files       : 'src/styles/*.scss',
+		destination : 'public/styles/'
+	},
 
-    js : {
-        // files       : 'source/scripts/*.js',
-        files : [
-            'node_modules/fontfaceonload/dist/fontfaceonload.js',
-            'source/scripts/*.js'
-        ],
-        file        : 'source/scripts/site.js',
-        destination : 'source/scripts'
-    },
-
-    pagespeedindex : {
-        site        : 'http://www.apfbrokercairns.com.au/',
-        key         : ''
-    },
-
-    sass : {
-        files       : 'source/styles/*.scss',
-        destination : 'build/styles'
-    },
-
-    watch : {
-        files : function() {
-            return [
-                options.images.files,
-                options.js.files,
-                options.sass.files
-            ]
-        },
-        run : function() {
-            return [
-                [ 'images' ],
-                [ 'minify:js' ],
-                [ 'compile:sass' ]
-            ]
-        }
-    }
+	watch : {
+		files : function() {
+			return [
+				options.images.files,
+				// options.js.files,
+				options.sass.files
+			]
+		},
+		run : function() {
+			return [
+				[ 'images' ],
+				// [ 'minify:js' ],
+				[ 'compile:sass' ]
+			]
+		}
+	}
 }
 
 
 // -----------------------------------------------
-//   Tasks
+//   Primary tasks
 // -----------------------------------------------
 
 gulp.task( 'default', options.default.tasks );
 
 gulp.task( 'build', function() {
-    options.build.tasks.forEach( function( task ) {
-        gulp.start( task );
-    } );
+	options.build.tasks.forEach( function( task ) {
+		gulp.start( task );
+	} );
 });
 
 gulp.task( 'production', options.production.tasks );
 
-gulp.task( 'fonts', function() {
-    gulp.src( options.fonts.files )
-        .pipe( gulp.dest( options.fonts.destination ) )
-        .pipe( plugins.size({title: 'fonts'}) );
+gulp.task( 'connect', function() {
+    plugins.connect.server( {
+        root       : [ options.connect.root ],
+        port       : options.connect.port,
+        base       : options.connect.base,
+        livereload : true
+    } );
 });
 
+
+// -------------------------------------
+//   Font, image & icons tasks
+// -------------------------------------
+
+// gulp.task( 'fonts', function() {
+// 	gulp.src( options.fonts.files )
+// 		.pipe( gulp.dest( options.fonts.destination ) )
+// 		.pipe( plugins.size({title: 'fonts'}) );
+// });
+
+// currently broken, awaiting update:
+// https://github.com/sindresorhus/gulp-imagemin/issues/221
 gulp.task( 'images', function() {
-    gulp.src( options.images.files )
-        // .pipe( plugins.cache( plugins.imagemin({ })))
-        .pipe( plugins.imagemin({
-            progressive: true,
-            interlaced: true
-        }))
-        .pipe( gulp.dest( options.images.destination ) )
-        .pipe( plugins.size({title: 'images'}) );
-});
-
-gulp.task( 'compile:sass', function() {
-    gulp.src( options.sass.files )
-        .pipe( plugins.plumber() )
-        .pipe( plugins.sourcemaps.init() )
-        // .pipe( plugins.sass().on('error', sass.logError))
-        .pipe( plugins.sass( {
-            indentedSyntax: true,
-            // errLogToConsole: true
-        } ) )
-        .pipe( plugins.autoprefixer( {
-                browsers : [ 'last 2 versions' ],
-                cascade  : false
-        } ) )
-        .pipe( plugins.sourcemaps.write() )
-        .pipe( gulp.dest( options.sass.destination ) )
-        .pipe( plugins.size({title: 'styles'}) )
-        .pipe( plugins.connect.reload() );
-});
-
-gulp.task( 'minify:css', function () {
-    gulp.src( options.css.file )
-        .pipe( plugins.plumber() )
-        .pipe( plugins.uncss ( {
-            html: [
-                '_includes/*.html',
-                '_layouts/*.html',
-                '/blog/*.html',
-                '/info-for/*.html',
-                '*.html'
-            ],
-            uncssrc: '.uncssrc'
-        } ) )
-        .pipe( plugins.cssnano( { advanced: false } ) )
-        .pipe( plugins.rename( { suffix: '.min' } ) )
-        .pipe( gulp.dest( options.build.destination ) )
-        .pipe( plugins.size({title: 'styles'}) )
-        .pipe( plugins.connect.reload() );
-});
-
-gulp.task( 'minify:js', function () {
-    gulp.src( options.js.files )
-        .pipe( plugins.plumber() )
-        .pipe( plugins.concat('site.concat.js') )
-        .pipe( plugins.uglify() )
-        // .pipe( plugins.rename( { suffix: '.min' } ) )
-        .pipe( gulp.dest( options.build.destination ) )
-        .pipe( plugins.connect.reload() );
+	gulp.src( options.images.files )
+		// .pipe( plugins.cache( plugins.imagemin({ })))
+		.pipe( plugins.imagemin({
+			progressive: true,
+			interlaced: true
+		}))
+		.pipe( gulp.dest( options.images.destination ) )
+		.pipe( plugins.size({title: 'images'}) );
 });
 
 // Creates SVG sprite and demo page.
-// See: https://github.com/Hiswe/gulp-svg-symbols
-
-// gulp.task( 'svg:16', function() {
-//     gulp.src( options.svg.files + '/16/*.svg' )
-//         .pipe( plugins.svgsymbols({
-//             title: false,
-//             templates: [
-//                 'default-svg',                    // generates the SVG sprite
-//                 options.svg.template + '/16.html' // example file
-//             ]
-//         }))
-//         .pipe( gulp.dest( options.svg.files + '/16' ) );
-// });
-
+// Alt: https://github.com/Hiswe/gulp-svg-symbols & OUI
 gulp.task( 'icons', function() {
-    gulp.src( options.icons.files )
-        .pipe( plugins.svgmin() )
-        .pipe( plugins.svgstore( { inlineSvg: true } ) )
-        .pipe( gulp.dest( options.icons.destination ) );
+	gulp.src( options.icons.files )
+		.pipe( plugins.svgmin() )
+		.pipe( plugins.svgstore( { inlineSvg: true } ) )
+		.pipe( gulp.dest( options.icons.destination ) );
 });
 
-// PageSpeed tests using the `nokey` option.
-// See: https://github.com/addyosmani/psi-gulp-sample/blob/master/gulpfile.js
 
-gulp.task('psiMobile', function () {
-    return plugins.psi( options.pagespeedindex.site, {
-        // key: key
-        nokey: 'true',
-        strategy: 'mobile',
-    }).then(function (data) {
-        console.log('Speed score: ' + data.ruleGroups.SPEED.score);
-        console.log('Usability score: ' + data.ruleGroups.USABILITY.score);
-    });
+// -------------------------------------
+//   Stylesheet tasks
+// -------------------------------------
+
+gulp.task( 'compile:sass', function() {
+	gulp.src( options.sass.files )
+		.pipe( plugins.plumber() )
+		.pipe( plugins.sourcemaps.init() )
+		// .pipe( plugins.sass().on('error', sass.logError))
+		.pipe( plugins.sass( {
+			indentedSyntax: true,
+			// errLogToConsole: true
+		} ) )
+		.pipe( plugins.autoprefixer( {
+                // http://www.analog-ni.co/my-css-autoprefixer-settings-for-ie9-and-up
+                browsers: [
+                    'last 2 versions',
+                    'Explorer >= 9',
+                    'iOS >= 5',
+                    'Safari >= 5',
+                    'OperaMobile >= 11',
+                    'ChromeAndroid >= 9',
+                    'ExplorerMobile >= 9'
+                ],
+				cascade  : false
+		} ) )
+		.pipe( plugins.sourcemaps.write() )
+		.pipe( gulp.dest( options.sass.destination ) )
+		.pipe( plugins.size({title: 'styles'}) )
+		.pipe( plugins.connect.reload() );
 });
 
-gulp.task('psiDesktop', function () {
-    return plugins.psi( options.pagespeedindex.site, {
-        // key: key,
-        nokey: 'true',
-        strategy: 'desktop',
-    }).then(function (data) {
-        console.log('Speed score: ' + data.ruleGroups.SPEED.score);
-    });
+gulp.task( 'lint:sass', function() {
+    gulp.src( options.sass.files )
+        .pipe( plugins.plumber() )
+        .pipe( plugins.sasslint() )
+        .pipe( plugins.sasslint.format() )
+        .pipe( plugins.sasslint.failOnError() );
+} );
+
+gulp.task( 'minify:css', function () {
+	gulp.src( options.css.file )
+		.pipe( plugins.plumber() )
+		.pipe( plugins.uncss ( {
+            // for Jekyll:
+			html: [
+				'_site/**/*.html'
+			],
+			uncssrc: '.uncssrc'
+		} ) )
+		.pipe( plugins.cssnano( { advanced: false } ) )
+		.pipe( plugins.rename( { suffix: '.min' } ) )
+		.pipe( gulp.dest( options.css.destination ) )
+		.pipe( plugins.size({title: 'styles'}) )
+		.pipe( plugins.connect.reload() );
 });
+
+gulp.task( 'test:css', function() {
+    gulp.src( options.css.file )
+        .pipe( plugins.plumber() )
+        .pipe( plugins.parker() )
+    gulp.src( options.css.file )
+        .pipe( plugins.plumber() )
+        .pipe( plugins.csscss() )
+});
+
+
+// -------------------------------------
+//   Javascript tasks
+// -------------------------------------
+
+gulp.task( 'minify:js', function () {
+	gulp.src( options.js.files )
+		.pipe( plugins.plumber() )
+		.pipe( plugins.concat('application.js') )
+		.pipe( plugins.uglify() )
+		.pipe( plugins.rename( { suffix: '.min' } ) )
+		.pipe( gulp.dest( options.js.destination ) )
+		.pipe( plugins.connect.reload() );
+});
+
+gulp.task( 'test:js', function() {
+    gulp.src( options.js.file )
+        .pipe( plugins.plumber() )
+        .pipe( plugins.jshint() )
+        .pipe( plugins.jshint.reporter( 'default' ) )
+});
+
+
+// -------------------------------------
+//   Watch task
+// -------------------------------------
 
 gulp.task( 'watch', function() {
-    var watchFiles = options.watch.files();
-    watchFiles.forEach( function( files, index ) {
-        gulp.watch( files, options.watch.run()[ index ]  );
-    } );
+	var watchFiles = options.watch.files();
+	watchFiles.forEach( function( files, index ) {
+		gulp.watch( files, options.watch.run()[ index ]  );
+	} );
 });

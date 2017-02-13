@@ -1,22 +1,22 @@
-<a class="Post {% if home? %}Post--home{% endif %}" href="{{ post.url }}">
+<a class="Post {% if page.url == '/' %}Post--home{% endif %}" href="{{ post.url }}">
     <div class="Post-wrapper">
 
-        {% if post.meta.hero == 'true' %}
+        {% if post.hero-image %}
             <figure class="Post-image">
                 <div class="FlexEmbed">
                     <div class="FlexEmbed-ratio FlexEmbed-ratio--16by9"></div>
-                    <div class="FlexEmbed-content CoverImage" style="background-image: url('{{ post.assets.first }}')"></div>
+                    <div class="FlexEmbed-content CoverImage" style="background-image: url('{{ post.hero-image }}')"></div>
                 </div>
             </figure>
         {% endif %}
 
-        {% if home? %}
+        {% if page.url == '/' %}
             <h2 class="Headline--super u-weightBook u-marginB">{{ post.title }}</h2>
         {% else %}
             <h1 class="Post-title">{{ post.title }}</h1>
         {% endif %}
 
-        {{ post.body | truncatewords: 30 }}
+        {{ post.content | truncatewords: 30 }}
         <span class="u-marginLD3 u-linkBuriedTarget Arrow-right">Read more</span>
 
     </div>
