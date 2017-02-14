@@ -6,32 +6,35 @@
 
 
 @mixin container(
-	$padded: true,
+	//$padded: true,
 	$width: container-width(lg)
 ) {
 
-	@if $padded {
-		height: inherit;
-		padding-left: $gutterSpace * 0.5;
-		padding-right: $gutterSpace * 0.5;
-		
-		@include media-breakpoint-up(lg) {
-			padding-left: $gutterSpace;
-			padding-right: $gutterSpace;
-		}
-		
-	} @else {
-		max-width: $width - ($gutterSpace);
-		
-		@include media-breakpoint-up(lg) {
-			max-width: $width - ($gutterSpace * 2);
-		}
-	}
+	//@if $padded {
+	//	height: inherit;
+	//	padding-left: $containerSpace * 0.5;
+	//	padding-right: $containerSpace * 0.5;
+	//	
+	//	@include media-breakpoint-up(lg) {
+	//		padding-left: $containerSpace;
+	//		padding-right: $containerSpace;
+	//	}
+	//	
+	//} @else {
+	//	max-width: $width - ($containerSpace);
+	//	
+	//	@include media-breakpoint-up(lg) {
+	//		max-width: $width - ($containerSpace * 2);
+	//	}
+	//}
 	
 	@include clearfix();
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 	max-width: $width;
 	position: relative;
+    
+    padding: 0 $containerSpace;
 
 	p,
 	li,
@@ -46,44 +49,25 @@
 
 .o-container {
 	@include container();
+    @include media-breakpoint-up(xl) { padding: 0; }
 
     // sizes
 	&--md {
 		@include container( $width: container-width(md) );
+        @include media-breakpoint-up(lg) { padding: 0; }
 	}
 
 	&--xl {
 		@include container( $width: container-width(xl) );
+        @include media-breakpoint-up(su) { padding: 0; }
 	}
 
-    //&--super {
-    //    //@include container( container-width(su) );
-	//	max-width: 100%;
-	//	padding: 0 space(1.5);
-	//
-    //    @include media-breakpoint-up(sm) {
-    //        padding: 0 space(4);
-    //    }
-	//}
-
-	//&--postInfo {
-	//	@include container( $width: container-width(lg) );
-	//	//padding: 0;
-	//
-	//	@include media-breakpoint-up(xs) {
-	//		padding: 0 !important;
-	//	}
-	//
-	//	@include media-breakpoint-up(xl) {
-	//		// @include container( container-width(xl) );
-	//		padding: 0 space(1.5);
-	//	}
-	//
-	//	@include media-breakpoint-up(su) {
-	//		@include container( $width: container-width(xl) );
-	//	}
-	//}
+    
 }
+
+//.o-container {
+//	@include container();
+//}
 
 
 
@@ -101,15 +85,60 @@
 
 
 
+
+
+//&--super {
+//    //@include container( container-width(su) );
+//	max-width: 100%;
+//	padding: 0 space(1.5);
+//
+//    @include media-breakpoint-up(sm) {
+//        padding: 0 space(4);
+//    }
+//}
+
+//&--postInfo {
+//	@include container( $width: container-width(lg) );
+//	//padding: 0;
+//
+//	@include media-breakpoint-up(xs) {
+//		padding: 0 !important;
+//	}
+//
+//	@include media-breakpoint-up(xl) {
+//		// @include container( container-width(xl) );
+//		padding: 0 space(1.5);
+//	}
+//
+//	@include media-breakpoint-up(su) {
+//		@include container( $width: container-width(xl) );
+//	}
+//}
+
+
+//&.Container--full {
+//    margin: 0;
+//    max-width: map-fetch($size, container, wide-picture);
+//    padding: 0;
+//
+//    @include respond-to(xs) {
+//        margin: 0 auto !important;
+//        padding: 0 space(0.75);
+//    }
+//}
+
+//.o-column--post {
+//	max-width: container-width(xs);
+//	// @include when-inside(".o-container")     { margin-left: 0; }
+//	// @include when-inside(".o-container--xl") { margin-left: calc( (1200-960) / 2 ); }
+//}
+
+
+
+
 .c-container-rule {
 	@include container(false);
 	border-top: 1px solid palette(black-10);
 	margin-top: 0;
 	margin-bottom: space(0.75);
-}
-
-.o-column--post {
-	max-width: container-width(xs);
-	// @include when-inside(".o-container")     { margin-left: 0; }
-	// @include when-inside(".o-container--xl") { margin-left: calc( (1200-960) / 2 ); }
 }

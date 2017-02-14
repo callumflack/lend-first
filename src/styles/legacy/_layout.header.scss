@@ -1,0 +1,155 @@
+
+
+// --------------------------------------------------------------------------
+// LAYOUT: HEADER
+// --------------------------------------------------------------------------
+
+
+.Header {
+    background-color: palette(brand-light);
+    background: linear-gradient( palette(brand), palette(brand-light) 100% );
+    //border-bottom: 2px solid palette(brand);
+
+}
+
+.Header-nav {
+    border-bottom: 1px solid $color-grey-rule;
+    margin: space(0.5) 0 0;
+    padding-bottom: space(0.5);
+    position: relative;
+}
+
+.Header-logo {
+    border-bottom: 1px solid color(ui, muted);
+    color: palette(white);
+    margin-bottom: space(0.75);
+    padding-bottom: space(0.5);
+
+    a {
+        background-image: none;
+        color: palette(white);
+    }
+}
+
+.Header-menu {
+    position: absolute;
+    top: space(1); right: 0;
+    margin: 0;
+
+    li {
+        background-image: none;
+        color: rgba(color(text, medium), 0.25);
+        font-size: 15px;
+        display: inline-block;
+        margin: 0;
+        // vertical-align: baseline;
+    }
+
+    li a {
+        color: rgba(color(text, medium), 0.5);
+
+    }
+}
+
+
+// Intro block (info + portrait)
+// --------------------------------------------------------------------------
+
+.Header-intro {
+    position: relative;
+    // margin-top: space(-0.5);
+    margin-top: space(0.5);
+}
+
+.Header-portrait {
+    height: rem(200);
+    margin: 0;
+    overflow: hidden;
+    text-align: right;
+    width: calc(100% + #{space(1)} );
+
+    img {
+        // height: auto;
+        height: rem(240);
+        margin-right: -135px;
+    }
+
+    @include respond-to(ip6) {
+        img {
+            margin-right: -75px;
+        }
+    }
+
+    @include respond-to(xs) {
+        height: auto;
+        overflow: auto;
+        width: 100%;
+
+        img {
+            height: rem(290);
+            margin-right: space(2);
+        }
+    }
+}
+
+.Header-info {
+    position: absolute;
+    // left: space(0.75);
+    left: 0;
+    top: space(0.25);
+    width: 58%;
+
+    @include respond-to(sm) {
+        top: space(1);
+        width: 47%;
+    }
+}
+
+
+// Byline
+// --------------------------------------------------------------------------
+
+.Header-byline {
+    z-index: map-fetch($z-index, 'first');
+    background-color: color(ui, brand);
+    margin-top: -space(1);
+    padding: space(0.75) 0;
+    position: relative;
+
+    .Headline,
+    .Headline span {
+        // color: white !important;
+    }
+
+    .Headline--doubleLine {
+        margin: 0 auto;
+        margin-bottom: 0;
+        // width: 97%;
+
+        @include respond-to(sm) {
+            width: 73%;
+        }
+    }
+
+    h1,
+    p,
+    a {
+        color: white;
+    }
+
+    h1 {
+        margin-bottom: space(1.5);
+    }
+
+    p {
+        @include remFallback(20);
+    }
+
+    a {
+        @include underlineLink($mixin-rule: $linkRuleWhite);
+    }
+
+    @include respond-to(sm) {
+        margin-top: 0;
+    }
+}

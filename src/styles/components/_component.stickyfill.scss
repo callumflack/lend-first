@@ -1,0 +1,19 @@
+//https://github.com/wilddeer/stickyfill
+
+@mixin Sticky() {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.c-sm-sticky {
+    @include media-breakpoint-up(sm) {
+        @include Sticky();
+    }
+}
+
+.c-sticky:before,
+.c-sticky:after {
+    content: '';
+    display: table;
+}

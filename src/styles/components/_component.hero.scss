@@ -1,0 +1,15 @@
+
+
+// --------------------------------------------------------------------------
+//   HERO COMPONENT
+//	 Used with Suit's "FlexEmbed" component.
+// --------------------------------------------------------------------------
+
+
+.c-hero-ratio {
+	padding-bottom: 80%;
+	
+	@include media-breakpoint-up(sm) {
+		padding-bottom: 600px;
+	}
+}

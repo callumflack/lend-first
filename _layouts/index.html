@@ -2,93 +2,66 @@
 layout: default
 ---
 
-{% include cards-section.html %}
+<section class="Section--hero">
+    <div class="FlexEmbed">
+        <div class="FlexEmbed-ratio"></div>
+        <div class="FlexEmbed-content o-coverImage c-imageBlend--just" style="background-image: url('/public/images/hero-08.jpg')">
+            <div class="o-container--md o-aligner">
+                <div class="c-headline-block o-aligner-item">
+                    <h1 class="c-headline--hero">Smart advice.<br>Real solutions.</h1>
+                    <p class="c-text--lg c-text--hero">
+                        We'll help you find the right door<br>to secure your future lifestyle.
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+	<div class="o-container--md u-spaceT4">
+        <blockquote>“When doctors look at X-rays, they see more because they know anatomy and what to look for in the mix of light and shadow. Over the years they have learned to more clearly discern slight differences in shape and shade that to us are indiscernible.”</blockquote>
+        <p class="c-text--lg u-spaceB3">
+            Through constant exposure to a variety of financial advice problems over many years, Michael uses his intuition to see answers to financial problems when others cannot even see the problem. If you seem to be stuck, or you’re looking at accepting terms that aren’t as good as you’d hoped, perhaps Michael can give you a new way of looking at the situation.
+        </p>
 
-<section class="Section">
-	<div class="Container">
-		<h1 class="Headline Headline--primary"><span>Broker's intuition</span></h1>
-		<div class="Grid Grid--withGutter">
-			<div class="Grid-cell u-sm-size9of12 u-paddingR2 u-marginB u-sm-marginB0">
-				<blockquote>
-					“When doctors look at X-rays, they see more because they know anatomy and what to look for in the mix of light and shadow. Over the years they have learned to more clearly discern slight differences in shape and shade that to us are indiscernible.”
-				</blockquote>
-				<p>
-					Through constant exposure to a variety of financial advice problems over many years, Michael uses his intuition to see answers to financial problems when others cannot even see the problem. If you seem to be stuck, or you’re looking at accepting terms that aren’t as good as you’d hoped, perhaps Michael can give you a new way of looking at the situation.
-                    <a class="Arrow-right" href="{{ site.html_pages.why-choose-australian-property-finance.url }}">Why should you choose us?</a>
-				</p>
-			</div>
+		
+        {% include contact-michael.html %}
 
-			<div class="Grid-cell u-sm-size3of12 u-alignBlockDown">
-				<div class="sm-SectionRuler"></div>
-				<div class="Grid Grid--withGutter">
-					<div class="Grid-cell u-size5of12 u-sm-sizeFull">
-						<figure class="Figure--stamp u-xs-marginBD1 u-sm-marginR2">
-							<img src="/build/images/michael-garland-sm.png" alt="Michael Garland">
-						</figure>
-					</div>
-
-					<div class="Grid-cell u-size7of12 u-sm-sizeFull">
-						<a class="Contact u-linkInvisible" href="tel:{{ site.phone }}">
-							<div class="Contact-action u-marginBD3">
-								<svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-call"></use>
-								</svg>
-								Call Michael<br>
-								<span class="Contact-detail">{{ site.phone }}</span>
-							</div>
-						</a>
-						<a class="Contact u-linkInvisible" href="mailto:{{ site.email }}">
-							<div class="Contact-action u-marginBD3">
-								<svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-email"></use>
-								</svg>
-								Email Michael<br>
-								<span class="Contact-detail">{{ site.email }}</span>
-							</div>
-						</a>
-						<a class="Contact u-linkInvisible" href="{{ site.social.links[1] }}">
-							<div class="Contact-action u-marginBD3">
-								<svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-about"></use>
-								</svg>
-								About Michael<br>
-								<span class="Contact-detail">Read his history and experience</span>
-							</div>
-						</a>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-		<p class="Button--ruled u-textCenter u-marginT2 u-xs-marginT2 u-mxs-marginB">
+		<!-- <p class="u-textCenter u-marginT2 u-xs-marginT2 u-mxs-marginB"> -->
+		<!-- <p class="u-textCenter c-highlightBox-button">
 			<span>
-				<a class="Button u-mxs-fullWidth Arrow-right" href="/why-choose-lendfirst">Why should you choose us?</a>
+				<a class="Button c-button c-button--lg u-mxs-fullWidth" href="/why-choose-lendfirst">Why you should choose LendFirst</a>
 			</span>
-		</p>
+		</p> -->
 
 	</div>
 </section>
 
+{% include cards-block.html %}
+
 <section class="Section">
-	<div class="Container">
-        <h1 class="Headline Headline--primary"><span>Best wealth tips</span></h1>
+	<div class="o-container">
+        <div class="c-headline-block">
+            <h1 class="c-headline--display">Best wealth tips</h1>
+            <p class="c-text--lg">
+                <a class="" href="/blog">View all blog posts</a>
+            </p>
+        </div>
 		<div class="u-well--lg u-bgNeutral u-sm-size8of12 Grid-cell--center">
 			{% for post in site.posts limit: 1 %}
 				{% include post-in-list.html %}
 			{% endfor %}
 		</div>
-        <div class="u-size11of12 u-xs-size6of12 u-sm-size5of12 Grid-cell--center u-textCenterBlock u-padding1">
-            <p class="TextSm u-colorTextMedium">
-                <a class="" href="/blog">View all blog posts</a>
-            </p>
-        </div>
+        
 	</div>
 </section>
 
 <section class="Section">
-	<div class="Container">
-		<h1 class="Headline Headline--primary"><span>Some of our lending partners</span></h1>
+	<div class="o-container">
+        <div class="c-headline-block c-headline-block--md">
+            <h1 class="c-headline--display">Some of our lending partners</h1>
+            <p class="c-text--lg">With 3,500 interest rate variations across 30 lenders, we've got options. However, we always match the right one to your circumstances. <a class="" href="/why-choose-lendfirst">That’s why we talk to people first.</a></p>
+        </div>
 		<figure class="Figure">
 			<picture>
 				<source media="(min-width: 600px)" srcset="/build/images/lenders.png">
@@ -98,11 +71,19 @@ layout: default
 	</div>
 </section>
 
-<section class="Section u-paddingB2 u-paddingT2">
-	<div class="Container">
+<!-- <section class="Section u-paddingB2 u-paddingT2">
+	<div class="o-container">
 		<div class="FancyWell u-size11of12 u-xs-size6of12 u-sm-size5of12 Grid-cell--center u-textCenterBlock u-padding1">
 			<h4 class="Headline--quinary u-colorBrand u-weightBold">Hey, where’s your interest rates?</h4>
 			<p class="TextSm u-colorTextMedium">With 3,500 interest rate variations across 30 lenders, it’s difficult to match the right one to your circumstances. <a class="" href="/why-choose-lendfirst">That’s why I talk to people first.</a></p>
 		</div>
 	</div>
-</section>
+</section> -->
+
+<!-- <section class="Footer-contact">
+    <div class="o-container">
+        <h1 class="Headline Headline--quaternary u-headerSizeRg u-weightBold u-marginBD6">Honest, knowledgeable advice from an experienced local</h1>
+        <p class="Grid-cell--center u-xs-size9of12 u-marginB u-colorFaint u-marginBD6">See first-hand how Michael's actionable financial intelligence can make the difference.</p>
+        {% include btn-email.html %}
+    </div>
+</section> -->

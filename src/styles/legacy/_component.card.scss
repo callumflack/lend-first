@@ -1,0 +1,166 @@
+
+
+// --------------------------------------------------------------------------
+//   COMPONENT: CARDS
+//   See: https://github.com/IanLunn/Hover
+// --------------------------------------------------------------------------
+
+
+@mixin CardGlow() {
+	@include smoothTransition();
+	//transition: box-shadow 0.3s ease-in-out;
+
+	&:hover {
+		box-shadow: 0 0 space(1.5) palette(black-40);
+	}
+}
+
+@mixin ImageFilter {
+	filter: grayscale(50%);
+	&:hover {
+		filter: grayscale(0);
+	}
+}
+
+// The Card
+.Card {
+    @include CardGlow();
+    background-image: none;
+	border: 1px solid palette(black-20);
+    border-radius: map-fetch($size, border-radius, base);
+    display: block;
+	margin-bottom: space(0.5);
+    position: relative;
+    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    &:after {
+        border-left: 1rem solid transparent;
+        border-right: 1rem solid transparent;
+        border-bottom: 1rem solid palette(brand-muted);
+        content: "";
+        display: inline-block;
+        height: 0;
+        left: 50%;
+        opacity: 0;
+        position: absolute;
+        top: calc(100% + #{2.25rem} );
+        // transform: translate(-50%, 0);
+        transition: all map-fetch($transition, duration, short) map-fetch($transition, type, fine);
+        vertical-align: middle;
+        width: 0;
+    }
+    
+    @include on-event() {
+        border-color: palette(brand);
+        transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        
+        .Card-title {
+            color: palette(brand);
+            transition: color 0.3s ease-in-out;
+        }
+    }
+
+    &.is-open:after {
+        opacity: 1;
+		transform: translate(-50%, 0);
+    }
+
+	@include respond-to(xs) {
+	    margin-bottom: 0;
+	}
+}
+
+.Card-image {
+	@include CoverImage();
+	@include ImageBlend();
+	height: rem(80) !important;
+
+	@include respond-to(xs) {
+	    height: rem(165) !important;
+	}
+
+	&.with-headline {
+		@extend .u-flex;
+		@extend .u-flexAlignItemsEnd;
+		.Card-type { background-color: transparent !important; }
+	}
+
+	> img {
+		// @include ImageFilter();
+		border-top-left-radius: map-fetch($size, border-radius, base);
+		border-top-right-radius: map-fetch($size, border-radius, base);
+	}
+}
+
+.Card-type {
+    background-color: palette(brand);
+    color: palette(white);
+	font-family: $font-text-bold;
+	font-size: map-fetch($size, font, textSm, xs);
+    margin-bottom: 0;
+    padding: rem(7) rem(12) rem(6);
+    text-align: left;
+	text-transform: capitalize;
+
+	@include respond-to(xs) {
+	    font-size: map-fetch($size, font, textSm, base);
+		padding: rem(7) rem(16) rem(6);
+	}
+}
+
+.Card-title {
+    @include Headline();
+	// background-color: rgba( palette(brand), 0.05);
+	// background-color: palette(brand-light);
+	// background-color: palette(brand-muted);
+    color: paleete(black-66);
+	font-family: $font-text-regular;
+	font-size: map-fetch($size, font, headerRg, xs);
+	margin-bottom: 0;
+	min-height: rem(85);
+    padding: rem(7) rem(16) rem(7) rem(12);
+    text-align: left;
+    transition: color 0.3s ease-in-out;
+
+    @include respond-to(sm) {
+		font-family: $font-text-light;
+		font-size: map-fetch($size, font, headerMd, base);
+        // margin-bottom: space(0.75);
+        margin-bottom: 0;
+		min-height: rem(125);
+		padding: rem(12) rem(24) rem(12) rem(14);
+    }
+}
+
+
+// Info opened via fold-toggling the Card
+// --------------------------------------------------------------------------
+
+//.Info {
+//    position: relative;
+//}
+//
+//.Info-menu {
+//    margin: space(1) 0 space(0.5);
+//}
+//
+//// on 'a' element in a '.Fold'
+//.Info-link {
+//	@include textSm();
+//	@include underlineLink(none);
+//	@extend .u-flexAlignSelfStretch;
+//	border: 1px solid currentColor;
+//	border-radius: map-fetch($size, border-radius, base);
+//	color: paleete(black-66);
+//	display: block;
+//	font-family: $font-text-bold;
+//	margin-bottom: space(0.5);
+//	min-height: space(3);
+//	padding: rem(10) rem(20) rem(12) rem(12);
+//	transition: all map-fetch($transition, duration, short) map-fetch($transition, type, base);
+//	width: 100%;
+//
+//	@include on-event() {
+//		background-color: palette(white);
+//	}
+//}

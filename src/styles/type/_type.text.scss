@@ -1,0 +1,291 @@
+
+
+// --------------------------------------------------------------------------
+//   TEXT TYPOGRAPHY
+// --------------------------------------------------------------------------
+
+
+// Common theme…
+// PS: https://blog.codepen.io/2016/10/31/fluid-type-blogs/
+
+@mixin textTemplate(
+	$mixinSize: text,
+	$mixinColor: palette(text),
+	$mixinFont: $font-text-regular,
+	$mixinLetterSpacing: 0,
+	$mixinLineHeight: $base-line-height-unit
+) {
+
+	// standards
+	color: $mixinColor;
+	font-family: $mixinFont;
+	letter-spacing: $mixinLetterSpacing;
+	line-height: $mixinLineHeight;
+
+	// sizes
+	font-size: fontsize($mixinSize, xs);
+	@include media-breakpoint-up(sm) { font-size: fontsize($mixinSize, sm); }
+	@include media-breakpoint-up(xl) { font-size: fontsize($mixinSize, rg); }
+
+	// very specific children
+	> li,
+	> li a,
+	> a {
+		color: currentColor;
+		//font-family: inherit;
+		//font-size: inherit;
+		margin: 0;
+	}
+}
+
+
+
+// Text components by size…
+
+@mixin textSm() {
+    @include textTemplate(
+	    $mixinSize: text--sm,
+	    $mixinLetterSpacing: 0.0125em
+    );
+}
+
+@mixin textRg() {
+	@include textTemplate(
+        //$mixinLetterSpacing: 0.0125em
+    );
+}
+
+@mixin textRgBold() {
+	@include textTemplate(
+        $mixinFont: $font-text-bold
+    );
+}
+
+@mixin textLg() {
+	@include textTemplate(
+		$mixinSize: text--lg
+	);
+}
+
+@mixin textLgBold() {
+	@include textTemplate(
+		$mixinSize: text--lg,
+		$mixinFont: $font-text-bold
+	);
+}
+
+
+// UNUSED
+
+//@mixin textXs() {
+//    @include textTemplate(
+//	    $mixinSize: text--xs
+//    );
+//}
+//
+//@mixin textXsBold() {
+//    @include textTemplate(
+//	    $mixinSize: text--xs,
+//		$mixinFont: $font-text-bold
+//    );
+//}
+//
+//@mixin textMetaHeadline() {
+//    @include textTemplate(
+//        $mixinColor: palette(text),
+//        $mixinSize: text,
+//    	$mixinFont: $font-text-medium
+//    );
+//
+//    @include media-breakpoint-down(sm) {
+//        //line-height: 1.25;
+//    }
+//}
+//
+//@mixin textMeta() {
+//	@include textTemplate(
+//    	$mixinSize: text--meta,
+//    	$mixinFont: $font-text-medium,
+//        $mixinLetterSpacing: 0.075em
+//    );
+//    margin-bottom: $paragraphSpace * 0.5;
+//    text-transform: uppercase;
+//
+//    @include media-breakpoint-down(sm) {
+//        line-height: 1.25;
+//    }
+//}
+//
+//@mixin textAside {
+//    @include textTemplate(
+//    	$mixinSize: text--sm,
+//    	$mixinFont: $font-text-medium,
+//        $mixinLetterSpacing: 0.075em
+//    );
+//    text-transform: uppercase;
+//
+//    @include media-breakpoint-down(sm) {
+//        line-height: 1.25;
+//    }
+//}
+
+
+
+// Utility: HTML elements
+// --------------------------------------------------------------------------
+
+// h1, h2, h3, h4, h5, h6,
+// blockquote, figure
+// li
+ul, ol, dl,
+p, address,
+table, time,
+fieldset, figcaption,
+pre {
+	@include textRg();
+}
+
+em,
+.u-textEm {
+	@include typeReset();
+	//font-family: $font-text-bold-i;
+}
+
+b,
+strong,
+.u-textBold {
+	@include typeReset();
+    //@include textMeta();
+	//font-family: $font-text-bold;
+}
+
+blockquote,
+.Blockquote {
+    @include textTemplate(
+	    $mixinSize: headline--md,
+	    //$mixinLetterSpacing: 0.0125em,
+    	$mixinColor: palette(black-50),
+    	$mixinLineHeight: $base-line-height-unit
+    );
+	
+    border-left: 2px solid palette(black-30);
+    padding-left: space(1);
+}
+
+.Lede {
+ 	@include textRg();
+ 	color: palette(brand);
+ 	font-family: $font-text-regular;
+ 	font-size: fontsize(headline, xs);
+ 	line-height: 1.45;
+ 	// margin-bottom: space(1);
+
+ 	@include media-breakpoint-up(sm) {
+ 		font-family: $font-text-bold;
+ 		font-size: fontsize(headline, base);
+ 		line-height: $base-line-height-unit;
+ 	}
+}
+
+
+
+// Utility: weights & italics
+// --------------------------------------------------------------------------
+
+.u-textWtLt        { font-family: $font-text-light !important; }
+.u-textWtRg        { font-family: $font-text-regular !important; }
+.u-textWtMd        { font-family: $font-text-medium !important; }
+//.u-textWtSemi      { font-family: $font-text-semibold !important; }
+
+//.u-textEmRg        { font-family: $font-text-regular-i !important; }
+//.u-textEmMd        { font-family: $font-text-medium-i !important; }
+
+
+// Component: Text
+// Init mixins in classes.
+// --------------------------------------------------------------------------
+
+//.c-text--xs       { @include textXs(); }
+.c-text--sm       { @include textSm(); }
+.c-text           { @include textRg(); }
+.c-text--lg       { @include textLg(); }
+.c-text--intro    { @include textRg(); color: palette(black-50); margin-bottom: space(0.5); }
+//.c-text--lg       { @include textLg(); margin-bottom: 0; > strong { font-family: $font-text-extrabold; text-transform: initial; } }
+//.c-text--aside { @include textAside(); }
+
+
+
+
+.c-text--meta {
+	@include textSm();
+	color: palette(black-50) !important;
+	// text-align: center;
+
+	> a {
+		border-color: transparent !important;
+
+		@include on-event() {
+			border-color: palette(black-50) !important;
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+		margin: auto;
+		// width: 70%;
+	}
+}
+
+
+
+// Component: Text blocks
+// --------------------------------------------------------------------------
+
+.c-text-block { > * { @include textRg(); } }
+
+.c-text-block--footer {
+	@include listClean();
+	margin: 0;
+
+	&::before {
+		background-color: rgba( palette(background), 0.2);
+		content: " ";
+		display: block;
+		height: 1px;
+		margin: space(1) 0 space(1.15);
+		width: 2.5%;
+	}
+
+	> * {
+		@include textRg();
+		margin-bottom: 0;
+	}
+}
+
+
+
+
+// Component: list
+// --------------------------------------------------------------------------
+
+//list cell of fixed width, like a tabbed info element
+.c-list--itemTag {
+	@include textSm();
+	display: inline-block;
+	width: space(0.75);
+}
+
+.c-list--meta {
+	@include textSm();
+	@include listClean();
+	color: palette(black-50);
+	margin-bottom: space(1.25);
+}
+
+.c-list--meta-title {
+	color: palette(text) !important;
+	margin: space(1.25) 0 space(0.625) !important;
+
+	&:first-child {
+		margin-top: 0 !important;
+	}
+}

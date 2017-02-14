@@ -1,0 +1,96 @@
+
+
+// --------------------------------------------------------------------------
+// FLICKITY THEME COMPONENT
+// --------------------------------------------------------------------------
+
+
+// This seems to be integral
+// to getting flickity to show up.
+.carousel-cell {
+	width: 100%;
+}
+
+a.carousel-cell {
+	border: none;
+}
+
+.carousel {
+	position: relative;
+}
+
+// .flickity-prev-next-button {
+// 	background-color: transparent;
+// 	border: none;
+// 	color: palette(black-40);
+// 	height: 100%;
+// 	opacity: 0;
+// 	top: 0;
+// 	transform: none;
+// 	width: 20%;
+//
+// 	&:disabled {
+// 		opacity: 0;
+// 	}
+//
+// 	&.next     { right: -20%; }
+// 	&.previous { left: -20%; }
+//
+// 	.arrow {
+// 		fill: currentColor;
+// 	}
+//
+// 	@include on-event() {
+// 		background-color: transparent;
+// 		opacity: 1;
+// 		transition: opacity 500ms;
+// 	}
+// }
+
+
+// Hero fade effect hack
+// See: http://codepen.io/eikeco/pen/MwGRKr?editors=1100
+// See: http://codepen.io/Tumki/pen/JXOyvp?editors=1100
+// --------------------------------------------------------------------------
+
+.flickity-slider {
+	transform: none !important;
+}
+
+.carousel--fader .carousel-cell {
+	left: 0 !important;
+	opacity: 0;
+	transition: opacity 700ms ease-in-out;
+	z-index: -1;
+}
+
+.carousel--fader .carousel-cell.is-selected {
+	opacity: 1;
+	z-index: 0
+}
+
+
+// Hero dots
+// --------------------------------------------------------------------------
+
+.Hero .flickity-page-dots {
+	bottom: space(1.5);
+	visibility: hidden;
+	z-index: 1000;
+
+	@include media-breakpoint-up(xs) {
+		visibility: visible;
+	}
+
+	.dot {
+		background: transparent;
+		border: 1px solid palette(text);
+		height: space(0.5);
+		opacity: 1;
+		width: space(0.5);
+
+		&.is-selected {
+			background: palette(text);
+		}
+	}
+}

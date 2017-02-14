@@ -1,0 +1,130 @@
+
+
+// --------------------------------------------------------------------------
+//   COMPONENT: BLOG POSTS
+// --------------------------------------------------------------------------
+
+
+// Posts tags nav
+// --------------------------------------------------------------------------
+
+.Posts-nav {
+    @include listClean();
+
+    > li {
+        @include textSm();
+        margin-bottom: 2px;
+    }
+
+    a {
+        @include underlineLink(none);
+        color: color(ui, medium);
+        padding-bottom: space(0.15);
+    }
+}
+
+// Simple highlighted menu using tags and CSS
+// See: https://gist.github.com/sskylar/c8f6fef2ff6fd49e1169
+// .tag.community-events .Posts-nav .community-events,
+// .tag.house-tips .Posts-nav .house-tips,
+// .tag.suburb-profiles .Posts-nav .suburb-profiles {
+//     background-color: palette(brand);
+//     color: palette(black);
+// }
+
+
+// Post block
+// --------------------------------------------------------------------------
+
+.Post {
+    @include underlineLink(none);
+    @include complexLink();
+    background-color: color(ui, background);
+
+    + .Post {
+        margin-top: space(1.75);
+
+        @include respond-to(sm) {
+            margin-top: space(2.5);
+        }
+    }
+
+    &--home {
+        @include cardGlow();
+        //background-color: color(ui, neutral);
+        //border: 2px solid color(ui, neutral);
+        background-color: $fold-bg-color;
+        border-radius: size(border-radius, large);
+        padding-bottom: 0;
+    }
+
+    .underlineLinkBuriedTarget {
+        color: color(ui, medium);
+    }
+
+    @include on-event() {
+        .underlineLinkBuriedTarget {
+            color: color(ui, brand);
+        }
+    }
+}
+
+.Post-wrapper {
+    @include when-inside(".Post--home") {
+        padding: space(2);
+    }
+}
+
+.Post-image {
+    margin: space(0.3) 0 space(1);
+}
+
+.Post-title {
+    @include Headline();
+    margin-bottom: space(0.5);
+    text-align: left;
+
+    @include respond-to(sm) {
+        margin-bottom: space(0.75);
+    }
+
+    @include when-inside(".Post--home") {
+        background-color: color(ui, brand-alt);
+        //background-color: color(ui, neutral);
+        border-top-right-radius: size(border-radius, large);
+        border-top-left-radius: size(border-radius, large);
+        color: color(ui, background) !important;
+        margin-bottom: 0;
+        padding: space(0.5);
+    }
+}
+
+.Post-excerpt {
+    @include textSm();
+}
+
+
+// Post headline vars
+// Includes Next/prev headlines. These are contained within
+// '.FlexEmbed-content.CoverImage' containers.
+// --------------------------------------------------------------------------
+
+.Post-headline {
+    // @include Headline();
+    // color: palette(white);
+    // margin: 0;
+    // padding: space(0.9) space(1);
+    // position: absolute;
+    // width: 75%;
+    //
+    // &--right {
+    //     bottom: 0;
+    //     float: right;
+    //     right: 0;
+    //     text-align: right;
+    // }
+    //
+    // @include on-event() {
+    //     color: palette(faint);
+    // }
+}

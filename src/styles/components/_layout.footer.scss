@@ -1,0 +1,80 @@
+
+
+// --------------------------------------------------------------------------
+//   LAYOUT: FOOTER
+// --------------------------------------------------------------------------
+
+
+.Footer {
+    @include sectionSpace();
+    //background-color: palette(white);
+    background-color: rgba( palette(brand-neutral), 0.05 );
+    //border-top: 1px solid palette(black-10);
+
+    a {
+        @include underlineLink(none);
+        @include on-event() {
+            color: palette(brand);
+        }
+    }
+}
+
+.Footer-menu {
+    padding: space(1) 0 space(1);
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        position: relative;
+    }
+
+    li {
+        @include textSm();
+        color: color(text, lite);
+        margin: 0 0 2px;
+    }
+
+    @include respond-to(sm) {
+        padding: space(1.5) 0 space(2.5);
+    }
+}
+
+.Footer-logo img {
+    height: rem(50);
+
+    @media (min-width: 767px) and (max-width: 992px) {
+        height: rem(90);
+    }
+
+    @include respond-to(md) {
+        height: rem(50);
+    }
+}
+
+
+
+
+
+
+
+
+
+//.Footer-contact {
+//    background-color: color(ui, brand);
+//    padding: space(2) 0;
+//    text-align: center;
+//
+//    h1,
+//    p {
+//        color: color(text, white);
+//        text-align: center;
+//    }
+//
+//    h1 {
+//        margin-bottom: space(0.5);
+//    }
+//
+//    @include respond-to(sm) {
+//        padding: space(2.5) 0;
+//    }
+//}

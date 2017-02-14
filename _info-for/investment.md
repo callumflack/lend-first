@@ -3,18 +3,16 @@ title: Investment
 card-title: I want to get a second loan.
 order: 2
 menu:
-- What is negative gearing?
-- Good debt versus bad debt?
-- Debt recycling?
-- Using equity to invest in property?
-- Principal & interest or interest only?
+- What is negative gearing
+- Good debt versus bad debt
+- Debt recycling
+- Using equity to invest in property
+- Principal and interest or interest only
 ---
 
-So your accountant has said to borrow money against your house to invest but you have no idea where to begin.
+So your accountant has said to borrow money against your house to invest but you have no idea where to begin. Whether to invest in shares or property is best left to those more appropriately qualified but here you will find some useful information on how the equity in your home can be utilised for the purpose.
 
-Whether to invest in shares or property is best left to those more appropriately qualified but here you will find some useful information on how the equity in your home can be utilised for the purpose.
-
-<h4 id="gearing">What is negative gearing?</h4>
+<h4 id="what-is-negative-gearing">What is negative gearing?</h4>
 When borrowing to invest, a loss classifies the investment as being negatively geared but a profit classifies the investment as being positively geared.
 
 This is general information only and you should speak to your accountant or tax advisor to determine how negative gearing effects your specific circumstances.
@@ -38,7 +36,7 @@ The below table shows an example of a negative and positively geared investment.
 
 Any losses are subtracted from normal annual taxable income and profits are added to normal annual taxable income before the ATO works out how much tax needs to be paid or refunded.
 
-<h4 id="debt">Good debt versus bad debt?</h4>
+<h4 id="good-debt-vs-bad-debt">Good debt versus bad debt?</h4>
 Good debt is money borrowed that produces an income and the asset can be sold to clear the debt without selling the family home.
 An example of good debt is a loan to buy an investment property.
 
@@ -47,7 +45,7 @@ An example of bad debt is a loan for repairs/extensions to the family home.
 
 Having a big loan is not necessarily a bad thing if it is good debt, but it is always recommended to have as little bad debt as possible.
 
-<h4 id="recycling">Debt recycling?</h4>
+<h4 id="debt-recycling">Debt recycling?</h4>
 Is the process of turning Bad Debt into Good Debt.  Best suited for those with share investments, this is an excellent strategy to quickly turn bad debt into good debt.
 
 Let’s say you have $200k bad debt and $50k good debt. The repayment on the Bad debt is $1,000/mth and the repayment on the good debt is interest only. Shares grow at 5% per annum.
@@ -75,7 +73,7 @@ Debt Recycling allows good debt to automatically increase when a payment is made
 Bad Debt has reduced just as quickly but the Shares have grown much faster.  If you sold the shares and cleared the good debt, you would be $1,830 better off.
 
 
-<h4 id="equity">Using equity to invest in property?</h4>
+<h4 id="using-equity-to-invest-in-property">Using equity to invest in property?</h4>
 An investment property can be purchased without a deposit if there is enough equity in the existing home, however smaller equity means a larger deposit is needed.
 
 ##### Working out your equity
@@ -92,7 +90,7 @@ An investment property can be purchased without a deposit if there is enough equ
 | Funds available (d-e) | $440,000 | $350,000 | $440,000 |
 | Deposit required | $0 | $90,000 | $0 (funds needed – funds available) |
 
-<h4 id="principal">Principal & interest or interest only?</h4>
+<h4 id="principal-and-interest-or-interest-only">Principal & interest or interest only?</h4>
 Interest only is the most common form of repayment structure for investment loans.  This is because the interest expense each year remains high which can be of benefit for a negative gearing situation.
 
 | Time | P&I      | Interest  | Interest only | Interest |

@@ -1,0 +1,359 @@
+
+
+// --------------------------------------------------------------------------
+// FORM
+// --------------------------------------------------------------------------
+
+
+input,
+textarea,
+select,
+label {
+	@include on-event() {
+		outline: 0;
+	}
+}
+
+//input:not([type="radio"]),
+//input:not([type="submit"]),
+//input:not(".Button"),
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+.select select,
+textarea {
+	background: transparent;
+    border: 0;
+    display: inline-block;
+    resize: none;
+    width: 100%;
+    appearance: none;
+
+    // theme
+    //@include textAside();
+    //background-color: palette(neutral);
+    //border: 1px solid palette(neutral);
+    //background-color: palette(neutral-light);
+    background-color: palette(background);
+    border: 1px solid palette(black-20);
+    border-radius: 0;
+    line-height: map-fetch($button-height, base);
+	padding: 0 space(0.5);
+	transition: all map-fetch($transition, duration, long) map-fetch($transition, type, base);
+
+	// @include on-event() {
+	//	outline: 0;
+	//}
+
+    // filled-in form styling
+	&:-webkit-autofill {
+		-webkit-box-shadow: 0 0 0 rem(100) palette(faint) inset;
+		-webkit-text-fill-color: palette(brand);
+		background-clip: padding-box;
+	}
+
+    // placeholder color
+	$color-placeholder: rgba( palette(text), 0.7 );
+
+	&::-webkit-input-placeholder { color: $color-placeholder; }
+	&:-moz-placeholder           { color: $color-placeholder; }
+	&::-moz-placeholder          { color: $color-placeholder; }
+	&:-ms-input-placeholder      { color: $color-placeholder; }
+}
+
+// reinstate line height for multi-row textareas.
+textarea {
+    line-height: $base-line-height-unit;
+    //padding-top: space(0.5);
+}
+
+// mimicking placeholder colors.
+// Ref: http://stackoverflow.com/questions/8619406/css-selected-pseudo-class-similar-to-checked-but-for-select-elements
+$color-placeholder: rgba( palette(text), 0.5 );
+
+input[type="date"],
+option[type="selected"] {
+    color: $color-placeholder;
+}
+
+
+
+// Theme vars
+// --------------------------------------------------------------------------
+
+.c-formWrapper-note {
+    @include headlineSm();
+    font-family: $font-text-bold;
+    //@include textAside();
+    //@include textRg();
+    //font-family: $font-serif;
+
+	background-color: rgba( palette(brand), 0.15 );
+    //border-bottom: 1px solid palette(black-40);
+    margin: $blockSpace 0 0;
+	padding: space(0.5) space(1);
+
+    @include media-breakpoint-up(lg) {
+    	padding: space(1) 20% space(1) space(2);
+    }
+
+    ~ .c-formWrapper {
+        margin-top: 0;
+        padding-top: space(0.75);
+
+        @include media-breakpoint-up(lg) {
+            padding-top: space(1.5);
+        }
+    }
+}
+
+.c-formWrapper {
+	background-color: rgba( palette(brand), 0.09 );
+    margin: $blockSpace 0 0;
+	padding: space(1);
+
+    @include media-breakpoint-up(lg) {
+        padding: space(2);
+    }
+}
+
+.c-form {
+    margin-top: space(2);
+
+    @include when-inside(".c-formWrapper") {
+        margin-top: 0;
+    }
+}
+
+.c-form-labelBlock {
+    margin-top: space(1);
+
+    &:not(:last-child) {
+        //margin-top: space(1);
+    }
+}
+
+.c-form label,
+.c-form .label {
+    @include textMetaHeadline();
+    color: palette(text);
+    display: block;
+    font-family: $font-text-regular;
+
+    @include media-breakpoint-down(sm) {
+        line-height: 2;
+    }
+}
+
+//.c-form label,
+//.c-form .select {
+//    &:not(:last-child) {
+//        margin-top: space(1);
+//    }
+//}
+
+.c-form .select {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        top: 50%;
+        right: 1.25rem;
+        display: inline-block;
+        content: "";
+        width: 0;
+        height: 0;
+        margin-top: -.15rem;
+        pointer-events: none;
+        border-top: .35rem solid;
+        border-right: .35rem solid transparent;
+        border-bottom: .35rem solid transparent;
+        border-left: .35rem solid transparent;
+    }
+}
+
+.c-form .select select {
+    //display: inline-block;
+    //width: 100%;
+    //margin: 0;
+    color: lighten( palette(black-50), 10%);
+    cursor: pointer;
+    outline: 0;
+    appearance: none;
+}
+
+.c-form-alert {
+    color: palette(bad-news);
+    position: absolute;
+    top: 66px;
+    right: 0;
+}
+
+
+// Newsletter signup var
+// --------------------------------------------------------------------------
+
+//.c-formWrapper #mc_embed_signup {
+//    @include media-breakpoint-up(sm) {
+//        width: 90%;
+//    }
+//}
+
+//#mc_embed_signup {
+//	input[type="email"] {
+//		background-color: transparent;
+//		border-color: transparent;
+//	    border-bottom: 1px solid palette(black-40);
+//		//padding: 0 0 0 space(0.5);
+//		margin-right: space(0.25);
+//		padding: 0;
+//	}
+//
+//	.t-button {
+//		background-color: palette(brand);
+//        border-color: palette(brand);
+//		color: palette(background);
+//	}
+//}
+
+
+
+
+
+
+
+// input,
+// textarea {
+// 	border: 1px solid palette(black-20);
+// 	margin-bottom: space(0.5);
+// }
+//
+// textarea {
+// 	line-height: 1.5;
+// 	padding-top: space(0.5);
+// }
+
+
+
+
+
+// REFACTOR: text inputs only so I don't override radio btn component styles…
+
+//input[type="text"], input[type="email"], input[type="tel"] {
+//	@include textRg();
+//	color: rgba( palette(brand-counter), 0.7 );
+//	background: transparent;
+//	border: 0;
+//	border-bottom: 1px solid transparent;
+//	border-color: rgba( palette(brand-counter), 0.4 );
+//	// border-radius: map-fetch($border-radius, base);
+//	display: inline-block;
+//	// font-family: $font-text-regular;
+//	line-height: map-fetch($button-height, lg);
+//	padding: 0;
+//	resize: none;
+//	transition: all map-fetch($transition, duration, long) map-fetch($transition, type, base);
+//	width: 100%;
+//	-webkit-appearance: none;
+//
+//	@include on-event() {
+//		outline: 0;
+//	}
+//
+//	@include media-breakpoint-down(sm) {
+//		// font-size: 16px;
+//	}
+//
+//	&:-webkit-autofill {
+//		-webkit-box-shadow: 0 0 0 rem(100) darken( palette(neutral),4%) inset;
+//		-webkit-text-fill-color: palette(black-50);
+//		background-clip: padding-box;
+//	}
+//
+//	$color-placeholder: rgba( palette(brand-counter), 0.7 );
+//
+//	&::-webkit-input-placeholder { color: $color-placeholder; }
+//	&:-moz-placeholder           { color: $color-placeholder; }
+//	&::-moz-placeholder          { color: $color-placeholder; }
+//	&:-ms-input-placeholder      { color: $color-placeholder; }
+//}
+
+
+// Floating label pattern
+// Usually requires JS unless you're using React…
+// --------------------------------------------------------------------------
+
+/* uncss:ignore */
+//.Form-group {
+//	position: relative;
+//
+//	//&:not(:last-child) {
+//	//	margin: 0 0 space(1.1);
+//	//}
+//
+//	label {
+//		@include textLg();
+//		color: rgba( palette(brand), 1 );
+//		cursor: text;
+//		left: 0;
+//		position: absolute;
+//		top: 6px;
+//		transition: all map-fetch($transition, duration, fast) map-fetch($transition, type, fine);
+//		z-index: 99;
+//	}
+//
+//	input.Form-control,
+//	textarea.Form-control {
+//	}
+//
+//	&--sm {
+//		// line-height: map-fetch($button-height, lg);
+//		line-height: 38px;
+//
+//		label {
+//			@include textRg();
+//			color: palette(brand-counter);
+//		}
+//
+//		input.Form-control {
+//			line-height: inherit;
+//		}
+//	}
+//
+//	// retain theme typography alignment
+//	// input.Button {
+//	//     padding-top: 2px;
+//	// }
+//
+//	// /* uncss:ignore */
+//	// &.is-active > label:not(.has-error) {
+//	//     // color: paleete(black-66);
+//	//     // font-size: rem($sizeTextSm * 0.65);
+//	//     opacity: 0;
+//	//     transform: translateY(rem(-10));
+//	// }
+//}
+//
+//.Form-group.is-active {
+//	label {
+//		font-size: fontsize(text--sm, sm);
+//		opacity: 1;
+//		transform: translate(1px, -16px);
+//	}
+//
+//	input.Form-control {
+//		border-color: rgba( palette(brand-complement), 1 );
+//		color: palette(brand-complement);
+//	}
+//}
+//
+//.Form-group.has-error {
+//	label {
+//		color: palette(bad-news);
+//	}
+//
+//	input.Form-control {
+//		border-color: palette(bad-news);
+//	}
+//}

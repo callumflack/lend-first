@@ -1,0 +1,52 @@
+.c-highlightBox {
+    background-color: palette(white);
+    border: 1px solid palette(black-20);
+    border-radius: $cardRadius;
+    margin: auto;
+    padding: space(1.5);
+    width: 70%;
+}
+
+.c-highlightBox--cta {
+    padding-bottom: space(2.5);
+}
+
+.c-highlightBox-button {
+    transform: translateY(-50%);
+    
+    .Button { 
+        background-color: palette(background-light-alt);
+    }
+}
+
+.c-headline-block {
+    margin-bottom: space(3);
+}
+
+.c-headline-block--md {
+    //@include container( $padded: false, $width: container-width(md) );
+    @include container( $width: container-width(md) );
+}
+
+.c-headline-block .c-headline--display,
+.c-headline-block .c-headline--hero {
+    //color: palette(brand);
+    margin-bottom: space(0.5);
+}
+
+.c-headline-block .c-text--lg {
+    color: palette(black-40);
+    //font-family: $font-text-medium;
+    margin: 0;
+    text-align: center;
+    
+    span {
+        //border-bottom: 1px solid palette(brand);
+        //padding-bottom: space(1);
+    }
+}
+
+.c-headline-block .c-headline--hero, 
+.c-headline-block .c-text--hero {
+    color: palette(white);
+}

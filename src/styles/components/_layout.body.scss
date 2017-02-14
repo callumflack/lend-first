@@ -1,0 +1,35 @@
+
+
+// --------------------------------------------------------------------------
+//   LAYOUT: BODY
+// --------------------------------------------------------------------------
+
+
+html {
+    //background-color: palette(neutral);
+}
+
+.c-header,
+.c-content {
+    //background-color: palette(background);
+}
+
+.c-content--page,
+.c-content--post {
+    padding-bottom: $blockSpace * 1.25 !important;
+    //@include media-breakpoint-up(sm) { padding-bottom: $blockSpace * 1.25 !important; }
+}
+
+
+
+.c-listPanel {
+    //background-color: palette(text);
+    //padding: 0 ($blockSpace * 0.75);
+    //padding: 0 2px;
+}
+
+// make backgrounds black during image loading
+.c-content .FlexEmbed,
+.c-postCell .FlexEmbed {
+    background-color: palette(text);
+}

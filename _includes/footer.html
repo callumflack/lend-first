@@ -4,18 +4,8 @@
 
 <footer class="Footer" id="nav">
 
-	{% if page.url == '/' %}
-    	<section class="Footer-contact">
-    		<div class="Container">
-    			<h1 class="Headline Headline--quaternary u-headerSizeRg u-weightBold u-marginBD6">Honest, knowledgeable advice from an experienced local</h1>
-    			<p class="Grid-cell--center u-xs-size9of12 u-marginB u-colorFaint u-marginBD6">See first-hand how Michael's actionable financial intelligence can make the difference.</p>
-    			{% include btn-email.html %}
-    		</div>
-    	</section>
-	{% endif %}
-
 	<section class="Footer-menu">
-		<div class="Container">
+		<div class="o-container">
 			<div class="Grid Grid--withGutter">
 				<div class="Grid-cell u-sm-size2of12 u-md-size4of12 u-marginBD2 u-sm-marginB0">
 					<figure class="Footer-logo u-xs-textCenter u-margin0">
@@ -84,7 +74,7 @@
 
 					</div>
 
-                    <p class="TextSm u-colorMuted u-marginT">© {{ site.time | date: '%Y' }} {{ site.title }}. {{ site.accreditation }}</p>
+                    <p class="c-text--sm u-colorMuted u-marginT">© {{ site.time | date: '%Y' }} {{ site.title }}. {{ site.accreditation }}</p>
                     
 				</div>
 

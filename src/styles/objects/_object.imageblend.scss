@@ -9,8 +9,8 @@
 // --------------------------------------------------------------------------
 
 
-$darkBlendColor: rgba( palette(text), 0.8 );
-$lightBlendColor: rgba( palette(text), 0.333333333 );
+$darkBlendColor: rgba( palette(text), 0.7 );
+$lightBlendColor: rgba( palette(text), 0.1 );
 
 @mixin imageBlend(
 	$gradient: false,

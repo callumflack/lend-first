@@ -1,0 +1,222 @@
+
+
+// --------------------------------------------------------------------------
+//    POST META LAYOUTS
+// --------------------------------------------------------------------------
+
+
+.c-post-meta {
+
+    // blocks
+    background-color: palette(background);
+    margin: 0;
+    padding: $blockSpace * 0.2 $blockSpace * 0.25;
+
+    @include media-breakpoint-up(sm) {
+        padding: $blockSpace * 0.125 $blockSpace * 0.25 $blockSpace * 0.2;
+    }
+
+    // borders
+    border: 1px solid palette(text);
+    // &:not(:last-child) { border-right: 0; }
+    + .c-post-meta { margin-left: -1px; }
+    @include after-first(4) { border-top: 0; }
+    &:nth-child(5) { margin-left: 0; }
+
+    @include media-breakpoint-up(lg-for-container-lg) {
+        border: 0;
+        margin: 0;
+        &:not(:first-child) { border-left: 1px solid palette(text); }
+    }
+
+    //  typography
+    span,
+    span a {
+        @include textMetaHeadline();
+    }
+
+    span {
+        @include media-breakpoint-down(sm) {
+            display: block;
+            margin-bottom: $blockSpace * 0.125;
+        }
+    }
+
+    p {
+        @include textMeta();
+        margin-bottom: 0;
+    }
+
+    p a {
+        @include underlineLink();
+        letter-spacing: 0.075em;
+    }
+
+
+    // for when there's only one meta item
+    // -----------------------------------
+
+    &--single {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+// Post CTA button
+// --------------------------------------------------------------------------
+
+.c-post-cta {
+}
+
+
+// Post share block
+// --------------------------------------------------------------------------
+
+.c-post-share {
+    display: flex;
+
+    &:not(:first-child) {
+        margin-top: $blockSpace * 0.75;
+    }
+
+    @include media-breakpoint-up(sm) {
+        display: block;
+    }
+
+    > a {
+        @include underlineLink(none);
+        color: palette(black-40);
+        display: inline-block;
+        text-align: center;
+
+        &:not(:first-child) {
+            margin-left: -1px;
+        }
+
+        @include media-breakpoint-up(sm) {
+            display: block;
+
+            &:not(:first-child) {
+                margin-left: 0;
+                margin-top: -1px;
+            }
+        }
+
+        @include on-event() {
+            color: palette(black-40);
+        }
+    }
+}
+
+
+// End of article post-meta for supporters, image credit & archive note.
+// ---------------------------------------------------------------------
+
+.c-post-endBlock {
+    @include textMetaHeadline();
+    border-top: 1px solid palette(black-10);
+    color: palette(black-50);
+    // display: inline-block;
+    font-family: $font-text-regular;
+    margin-top: $paragraphSpace * 1.25;
+    padding: $blockSpace * 0.15 0 0;
+
+    a {
+        @include underlineLink();
+    }
+}
+
+
+// End of article supporters logos (using vendor.family)
+// --------------------------------------------------------------------------
+
+.c-post-supporters {
+    margin: $paragraphSpace * 0.5 0;
+    opacity: 0.5;
+
+    img {
+        height: 40px;
+        margin-left: $paragraphSpace;
+
+        // @include first-child() { margin-top: $paragraphSpace * 0.5; }
+        @include every(4) { margin-top: $paragraphSpace * 0.5; }
+
+        // @include media-breakpoint-up(sm) {
+        //     // @include first-child() { margin-top: $paragraphSpace * 0.5; }
+        //     // @include all-but(1) { margin-left: $paragraphSpace * 1; }
+        //     // display: block;
+        //     // margin-left: $paragraphSpace * 0.5;
+        //     // width: 66.666%;
+        // }
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 0 !important;
+        }
+
+        @include media-breakpoint-up(xl) {
+            height: 50px;
+            width: auto;
+        }
+
+        &.portrait {
+            height: 60px;
+            width: auto;
+
+            @include media-breakpoint-up(sm) { height: 80px; }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// this is slightly tricky:
+// .c-post-meta when inside .c-post-info
+
+// $asideColor: text;
+//
+// .c-post-info .c-post-meta {
+//     background-color: palette(background);
+//     border: 0;
+//     margin: 0;
+//     padding: $blockSpace * 0.2 $blockSpace * 0.25;
+//
+//     @include media-breakpoint-up(sm) {
+//         padding: $blockSpace * 0.125 $blockSpace * 0.25 $blockSpace * 0.2;
+//     }
+//
+//     &:not(:first-child) {
+//         border-left: 1px solid palette($asideColor);
+//         //margin-left: -1px;
+//     }
+//
+//     span,
+//     span a,
+//     li {
+//         color: palette($asideColor);
+//         font-family: $font-text-black;
+//     }
+//
+//     span {
+//         @include media-breakpoint-down(sm) {
+//             display: block;
+//             margin-bottom: $blockSpace * 0.125;
+//         }
+//     }
+//
+//     p {
+//         color: palette($asideColor);
+//     }
+// }
+//

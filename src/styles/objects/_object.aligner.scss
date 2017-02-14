@@ -14,13 +14,14 @@
 @mixin o-aligner {
 	display: flex;
 	align-items: center;
-	height: 100%; /* 1 */
+	//height: 100%; /* 1 */
 	min-height: 100%; /* 2 */
 	justify-content: center;
 }
 
 @mixin o-aligner-item {
 	flex: 1;
+    margin-bottom: 0 !important;
 }
 
 .o-aligner {

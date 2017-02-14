@@ -24,27 +24,31 @@ $season2016                    : #65bd24;
 $palette: (
 	black                      : $base-black,
 	text-dark                  : #151515,
-	text                       : #5C5C5C,
+	text                       : #333,
 	dark                       : tint($base-black, 15%),
 	ash                        : tint($base-black, 22%),
-	charcoal                   : tint($base-black, 39%),
+	black-66                   : tint($base-black, 34%),
 	black-50                   : tint($base-black, 50%),
 	black-40                   : tint($base-black, 60%),
 	black-30                   : tint($base-black, 70%),
-	black-20                   : tint($base-black, 86%),
+	black-20                   : tint($base-black, 80%),
+	black-15                   : tint($base-black, 86%),
 	black-10                   : tint($base-black, 91%),
 	black-5                    : tint($base-black, 96%),
 	black-3                    : tint($base-black, 98%),
 	white                      : $base-white,
 	background                 : #fdfdfd,
 	background-neutral         : #F7F4F4,
+    background-light           : rgba( #F7F4F4, 0.25 ),
+    background-light-alt       : rgba( #F2F2F2, 0.8 ),
 	neutral                    : #F3F2F1,
 	neutral-text               : darken(#f0eeeb, 27%),
 	neutral-dark               : darken(#f0eeeb, 9%),
 	neutral-light              : lighten(#f0eeeb, 4%),
-	brand                      : #2f99de,
+	brand                      : #1096ef, // #2494dd, //#2f99de,
 	brand-light                : #c7e3f6,
 	brand-counter              : #887E73,
+	brand-neutral              : #3A7BA6,
 	modal-background           : #151515,
 	highlight-action           : #E01D64,
 	highlight-action-dark      : #A30C43,
@@ -65,12 +69,13 @@ $base-line-height              : ($base-font-size-unit * $base-line-height-unit)
 $space-unit                    : $base-line-height;
 $space                         : $space-unit * 1;
 
-$gutterSpace                   : space(0.75);
+$gutterSpace                   : space(1);
+$containerSpace                : space(2);
 $paragraphSpace                : space(0.75);
 $blockSpace                    : 5.5vh;
 
-$cardRadius                    : 6px;
-$buttonRadius                  : 4px;
+$cardRadius                    : 8px;
+$buttonRadius                  : 6px;
 $labelRadius                   : 3px;
 
 
@@ -96,7 +101,7 @@ $grid-breakpoints: (
 	lg: 992px,
 	lg-for-container-lg: 1080px,
 	xl: 1200px,
-	su: 1700px
+	su: 1400px
 ) !default;
 
 $container-max-widths: (
@@ -107,6 +112,14 @@ $container-max-widths: (
 	xl: 1400px,
 	su: 1700px,
 ) !default;
+
+
+//modal-form        : rem(740),
+//modal-form-sm     : 80%,
+//default           : rem(960),
+//text-column       : rem(960),
+//picture           : rem(960),
+//wide-picture      : rem(1240)
 
 
 // Font sizes
@@ -131,12 +144,12 @@ $fontsizes: (
 	text: (
 		xs            : 14px,
 		sm            : 15px,
-		rg            : 16px
+		rg            : 17px
 	),
 	text--lg: (
-        xs            : 18px,
-        sm            : 20px,
-        lg            : 21px
+        xs            : 19px,
+        sm            : 21px,
+        lg            : 22px
 	),
 	headline--xs: (
 		xs            : 18px,
@@ -144,14 +157,14 @@ $fontsizes: (
 		lg            : 27px
 	),
 	headline--sm: (
-		xs            : 17px,
-		sm            : 19px,
-		lg            : 20px
+		xs            : 15px,
+		sm            : 17px,
+		lg            : 18px
 	),
 	headline--md: (
-		xs            : 19px,
-		sm            : 21px,
-		lg            : 23px
+		xs            : 22px,
+		sm            : 25px,
+		lg            : 28px
 	),
 	headline: (
 		xs            : 27px,
@@ -159,9 +172,9 @@ $fontsizes: (
 		lg            : 44px
 	),
 	display: (
-		xs            : 40px,
-		sm            : 54px,
-		lg            : 60px
+		xs            : 32px,
+		sm            : 42px,
+		lg            : 48px
 	)
 );
 
@@ -179,7 +192,7 @@ $button-height: (
     concise           : 36px,
     base              : 44px,
     baseWithBorder    : 46px,
-    lg                : 55px
+    lg                : 60px
 );
 
 $list-inset: (
@@ -231,23 +244,23 @@ $serif-font-stack      : Georgia, "Times New Roman", "Times", serif;
 $display-font-stack    : $sans-font-stack;
 
 // Are you referencing the font files rather than using a base64 string?
-$fonts-path           : '/fonts/';
+$fonts-path           : '/public/fonts-2/';
 
 // Is your font namespaced?
-$font-namespace        : 'Camphor-';
+$font-namespace        : 'AtlasGrotesk-';
 
 // Is the html-level font stack sans or serif?
 $main-font-stack       : $sans-font-stack;
 
 // Create font-file variables
-$sans-thin            : '#{$font-namespace}Light';
+$sans-thin            : '#{$font-namespace}Thin';
 $sans-light           : '#{$font-namespace}Light';
-$sans-book            : '#{$font-namespace}Regular';
+$sans-book            : '#{$font-namespace}Light';
 $sans-regular         : '#{$font-namespace}Regular';
 $sans-medium          : '#{$font-namespace}Medium';
 $sans-bold            : '#{$font-namespace}Bold';
+$sans-black           : '#{$font-namespace}Black';
 //$sans-xbold           : Extrabold;
-$sans-black           : '#{$font-namespace}Heavy';
 //$display              : #{$display-font-name};
 
 $sans-regular-italic  : Regular-italic;
@@ -291,8 +304,8 @@ $font-text-regular-i  : $font-text-regular;
 $font-display         : $font-text-regular;
 
 // Unused, so apply a default to avoid gulp fuckups
-//$font-sans-xbold      : join($sans-xbold, $main-font-stack);
-//$font-sans-regular-i  : join($sans-regular-italic, $main-font-stack);
+//$font-text-xbold      : join($sans-xbold, $main-font-stack);
+//$font-text-regular-i  : join($sans-regular-italic, $main-font-stack);
 //$font-display         : join($display, $display-font-stack);
 
 
@@ -300,17 +313,17 @@ $font-display         : $font-text-regular;
 // Object/component default fonts
 // --------------------------------------------------------------------------
 
-$fonts-path-2           : '/assets/fonts-serif/';
-
-$serif                  : NoticiaText-Regular;
-$serif-i                : NoticiaText-Italic;
-
-@include font-face($serif, '#{$fonts-path-2}#{$serif}' );
-@include font-face($serif-i, '#{$fonts-path-2}#{$serif-i}' );
-
-$font-serif             : join($serif, $serif-font-stack);
-$font-serif-i           : join($serif-i, $serif-font-stack);
-$font-serif-i           : $serif-i;
+//$fonts-path-2           : '/assets/fonts-serif/';
+//
+//$serif                  : NoticiaText-Regular;
+//$serif-i                : NoticiaText-Italic;
+//
+//@include font-face($serif, '#{$fonts-path-2}#{$serif}' );
+//@include font-face($serif-i, '#{$fonts-path-2}#{$serif-i}' );
+//
+//$font-serif             : join($serif, $serif-font-stack);
+//$font-serif-i           : join($serif-i, $serif-font-stack);
+//$font-serif-i           : $serif-i;
 
 //$font-serif             : 'Maitree';
 //$font-serif             : 'Yrsa';

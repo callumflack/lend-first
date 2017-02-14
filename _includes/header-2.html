@@ -1,0 +1,55 @@
+<header class="Header" role="banner">
+    
+    <ul class="Header-nav">
+        <!-- <li><a href="/">Home</a></li> -->
+        <li><a href="/why-choose-lendfirst">Why choose LendFirst?</a></li>
+        <li><a href="/info-for">Choose your loan</a></li>
+        <li><a href="/blog">Home Loan Tips</a></li>
+    </ul>
+    
+    <div class="o-aligner">
+        
+        <div class="o-aligner-item">
+            <div class="Header-logo">
+                <a href="/">
+                    <svg class="o-icon" height="66" version="1.1" viewBox="0 0 200 66" width="180">
+                        {% include ic-logo.html %}
+                    </svg>
+                </a>
+            </div>
+            {% if page.url == '/' %}
+                <h1 class="Header-headline">
+                    Smart advice. Real solutions.
+                </h1>
+            {% endif %}
+        </div>
+        
+        <!-- <div class="Grid">
+            <div class="Grid-cell u-size4of12">
+                <a class="Contact Contact--primary Media u-linkInvisible" href="tel:+610-422-830-333">
+                    <svg class="Icon Icon--md Icon--left Icon--mediaAlign">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-call"></use>
+                    </svg>
+                    <div class="Contact-action Media-body">
+                        Call Michael<br>
+                        <span class="Contact-detail">{{ site.phone }}</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="Grid-cell u-size7of12">
+                <a class="Contact Contact--primary Media u-linkInvisible" href="mailto:{{ site.email }}">
+                    <svg class="Icon Icon--md Icon--left Icon--mediaAlign">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-email"></use>
+                    </svg>
+                    <div class="Contact-action Media-body">
+                        Email Michael<br>
+                        <span class="Contact-detail">{{ site.email }}</span>
+                    </div>
+                </a>
+            </div>
+
+        </div> -->
+        
+    </div>
+</header>

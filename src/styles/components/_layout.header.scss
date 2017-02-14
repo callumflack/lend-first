@@ -1,0 +1,46 @@
+
+
+// --------------------------------------------------------------------------
+//   HEADER LAYOUT
+// --------------------------------------------------------------------------
+
+
+// use padding so we can go exactly 'back to top'
+.c-header {
+    padding: ($blockSpace * 0.75) 0;
+	position: relative;
+
+    @include media-breakpoint-up(sm) {
+        //padding: ($blockSpace * 0.75) 0;
+    }
+}
+
+.c-header-brand {
+    @include media-breakpoint-up(sm) {
+        margin-bottom: $blockSpace * 0.75;
+        //margin-top: $blockSpace * 0.75;
+    }
+}
+
+.c-header-logo > img {
+    margin-bottom: 0;
+    width: 150px;
+
+    @include media-breakpoint-up(sm) { width: 225px; }
+    @include media-breakpoint-up(xl) { width: 260px; }
+}
+
+// the address/open text in the header
+.c-header-infoAlign {
+    border-bottom: 1px solid palette(brand);
+    //padding-bottom: $blockSpace * 0.2;
+    padding-bottom: 7px;
+    transform: translate(0, 7px);
+}
+
+.c-header-info {
+    @include textAside();
+    color: palette(brand);
+    //font-family: $font-text-bold;
+    //font-family: $font-serif;
+}

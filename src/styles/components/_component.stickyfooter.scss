@@ -1,0 +1,30 @@
+
+
+// --------------------------------------------------------------------------
+//   STICKY FOOTER COMPONENT
+//   https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+// --------------------------------------------------------------------------
+
+
+
+.c-site {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: 100%;
+}
+
+@mixin dontStick() {
+    flex: none;
+}
+
+.c-site-header,
+.c-site-footer {
+    @include dontStick();
+}
+
+.c-site-content {
+    flex: 1 0 auto;
+    flex: 1;
+    //width: 100%;
+}
