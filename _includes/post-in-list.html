@@ -19,12 +19,13 @@
 
 <div class="Card-image o-coverImage o-coverImage--alignBottom" style="background-image: url('/uploads/post-{{ post.title | downcase | replace: ' ', '-' }}.jpg')">
 
+<div class="o-posAbsoluteCenterAlt o-coverImage o-coverImage--alignBottom" style="background-image: url('/uploads/post-{{ post.title | downcase | replace: ' ', '-' }}.jpg')"></div>
+<div class="o-posAbsoluteCenterAlt o-imageBlend--brand"></div>
+
 {% endcomment %}
     
 <a class="Card Card--lg" href="{{ post.url }}">
     <div class="Card-image o-coverImage--alignBottom" style="background-image: url('/uploads/post-{{ post.title | downcase | replace: ' ', '-' }}.jpg')">
-        <!-- <div class="o-posAbsoluteCenterAlt o-coverImage o-coverImage--alignBottom" style="background-image: url('/uploads/post-{{ post.title | downcase | replace: ' ', '-' }}.jpg')"></div> -->
-        <!-- <div class="o-posAbsoluteCenterAlt o-imageBlend--brand"></div> -->
         <h2 class="c-headline--md">{{ post.title }}</h2>
     </div>
     <div class="Card-lede">

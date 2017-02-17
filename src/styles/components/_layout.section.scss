@@ -29,11 +29,7 @@
 }
 
 .Section--underHero {
-    margin-top: $blockSpace;
-    
-    @include media-breakpoint-down(sm) {
-        margin-top: $blockSpace * 0.5;
-    }
+    margin-top: $blockSpace * 0.5;
 }
 
 .Section--header + .Section {

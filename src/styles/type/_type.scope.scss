@@ -11,23 +11,18 @@
 
 .s-article h4 { 
     @include headlineSm(); 
-    &:not(:first-child) { margin-top: $paragraphSpace * 2; } 
+    //&:not(:first-child) { margin-top: $paragraphSpace * 2; } 
 }
 
 .s-article h5 {
     @include headlineXs();
-    &:not(:first-child) { margin-top: $paragraphSpace * 1.25; }
+    //&:not(:first-child) { margin-top: $paragraphSpace * 1.25; }
 }
 
-.s-article p:first-of-type { 
-    //@include textTemplate(
-	//    $mixinSize: headline--md
-    //);
-    @include textLg(); 
-}
-
+.s-article p:first-of-type { @include textLg(); }
 .s-article p b { font-family: $font-text-medium; }
 .s-article small { @include textSm(); }
+//.s-article ul { margin-top: -#{$paragraphSpace}; }
 
 .s-article a {
     @include underlineLink($linkRuleBrand);

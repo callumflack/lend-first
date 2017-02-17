@@ -72,7 +72,6 @@ gems:
 - jekyll-sitemap
 - jekyll-seo-tag
 exclude:
-- assets/_source
 - Gemfile
 - Gemfile.lock
 - ".gitignore"
@@ -81,6 +80,8 @@ exclude:
 - package.json
 - node_modules
 - yarn.lock
+- src
+- build
 - DESCRIPTION*
 - README*
 - TODO*

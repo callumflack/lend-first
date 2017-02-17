@@ -39,7 +39,6 @@ $footerColor: #677985;
     li a {
         @include underlineLink(none);
         display: inline-block;
-        font-family: $font-text-medium;
         padding: $headerInset 0;
         
         @include on-event(true) {
@@ -62,6 +61,7 @@ $footerColor: #677985;
         }
 
         li a {
+            font-family: $font-text-medium;
             padding: $headerInsetMobile 0;
         }
     }
@@ -89,34 +89,11 @@ $footerColor: #677985;
 // --------------------------------------------------------------------------
 
 .Footer {
-    //background-color: palette(white);
-    //background-color: rgba( palette(brand-neutral), 0.05 );
     background-color: palette('black-5');
-    margin-top: $blockSpace * 1.25;
+    margin-top: $blockSpace * 1.1;
     padding-bottom: $headlineSpace;
-
-    //a {
-    //    @include underlineLink(none);
-    //    @include on-event() {
-    //        color: palette(brand);
-    //    }
-    //}
 }
 
 .Footer .Nav-menu {
     //margin-left: 0;
-        
-    li a {
-        @include on-event(true) {
-            //color: $footerColor;
-            //font-family: $font-text-medium;
-        }
-    }
-}
-    
-.Footer .Nav-logo a {
-    @include on-event(true) {
-        //color: palette(brand-neutral);
-        //color: $footerColor;
-    }
 }
