@@ -3,8 +3,7 @@
 
 {% include head.html %}
 
-<body id="top" class="{{ page.title | downcase | replace: ' ', '-' }}"
-	data-spy="scroll" data-target="#fuck" data-offset="300">
+<body id="top" class="{{ page.title | downcase | replace: ' ', '-' }}" data-offset="300">
 
 	{% comment %}{% endcomment %}
     {% include nav.html %}
@@ -20,6 +19,14 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="/public/scripts/gumshoe.js"></script>
+    
+    <script>
+        gumshoe.init({
+            offset: 150
+        });
+    </script>
+    
     <!-- <script src="/public/scripts/bootstrap.scrollspy.js"></script> -->
     
     <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
