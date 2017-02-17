@@ -1,6 +1,7 @@
 ---
 title: Disclaimer
 layout: page
+single-column: true
 offset-top: 400
 offset-bottom: 1300
 ---
