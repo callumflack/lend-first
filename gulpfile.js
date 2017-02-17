@@ -202,12 +202,12 @@ gulp.task( 'icons', function() {
 
 gulp.task( 'compile:sass', function() {
 	gulp.src( options.sass.files )
-		.pipe( plugins.plumber() )
-		.pipe( plugins.sourcemaps.init() )
+		// .pipe( plugins.plumber() )
+		// .pipe( plugins.sourcemaps.init() )
 		// .pipe( plugins.sass().on('error', sass.logError))
 		.pipe( plugins.sass( {
 			indentedSyntax: true,
-			// errLogToConsole: true
+			errLogToConsole: true
 		} ) )
 		.pipe( plugins.autoprefixer( {
                 // http://www.analog-ni.co/my-css-autoprefixer-settings-for-ie9-and-up

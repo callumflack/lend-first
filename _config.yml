@@ -44,6 +44,8 @@ defaults:
     title: 
     categories: 
     image: true
+    offset-top: 820
+    offset-bottom: 1300
 description: LendFirst offers smart advice and real solutions for first home buyers and first-time investors, in Cairns, Queeensland, Australia.
 baseurl: 
 url: http://lendfirst.com.au

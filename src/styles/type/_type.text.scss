@@ -42,6 +42,13 @@
 
 // Text components by size…
 
+@mixin textXs() {
+    @include textTemplate(
+	    $mixinSize: text--xs,
+	    $mixinLetterSpacing: 0.0125em
+    );
+}
+
 @mixin textSm() {
     @include textTemplate(
 	    $mixinSize: text--sm,
@@ -90,12 +97,6 @@
 
 // UNUSED
 
-//@mixin textXs() {
-//    @include textTemplate(
-//	    $mixinSize: text--xs
-//    );
-//}
-//
 //@mixin textXsBold() {
 //    @include textTemplate(
 //	    $mixinSize: text--xs,

@@ -51,7 +51,7 @@ Michael holds the following qualifications making him one of the most highly edu
 * Certificate IV in Finance and Mortgage Broking
 * JP (Qualified)
 
-<h4 id="the-lend-first-difference">The APF Difference</h4>
+<h4 id="the-lend-first-difference">The LendFirst difference</h4>
 Michael has extensive lending knowledge and has the ability to explain the mortgage landscape and how this impacts your particular situation in a manner that is easy to follow and understand.
 
 He specialises in complex residential and commercial lending scenarios that other brokers and banks find too difficult.  Other brokers and bank managers often refer clients to Michael due to his industry knowledge and experience knowing that he will be able to find a solution where they simply can’t.

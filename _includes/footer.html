@@ -4,7 +4,12 @@
 	{% include nav.html %}
 	
 	<div class="o-container">
-	    <p class="c-text--sm u-colorBlack40 u-marginB0">© {{ site.time | date: '%Y' }} {{ site.title }}. {{ site.accreditation }}</p>
+	    <p class="Footer-minors">
+            © {{ site.time | date: '%Y' }} {{ site.title }}. {{ site.accreditation }}
+            <a href="/privacy">Privacy</a>
+            <span>&nbsp;|&nbsp;</span>
+            <a href="/disclaimer">Disclaimer</a>
+        </p>
 	</div>
 
 </footer>

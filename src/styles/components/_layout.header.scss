@@ -24,6 +24,24 @@ $footerColor: #677985;
     }
 }
 
+.Nav-logo {
+    @include o-aligner();
+    margin-right: $headerInset;
+
+    a {
+        background-image: none;
+        
+        @include on-event(true) {
+            color: palette(brand);
+        }
+    }
+    
+    @include media-breakpoint-down(sm) {
+        justify-content: flex-start;
+        padding: $headerInsetMobile 0 0;
+    }
+}
+
 .Nav-menu {
     @include o-aligner();
     @include listInline();
@@ -67,22 +85,7 @@ $footerColor: #677985;
     }
 }
 
-.Nav-logo {
-    @include o-aligner();
-    //text-align: left;
 
-    a {
-        background-image: none;
-        @include on-event(true) {
-            color: palette(brand);
-        }
-    }
-    
-    @include media-breakpoint-down(sm) {
-        justify-content: flex-start;
-        padding: $headerInsetMobile 0 0;
-    }
-}
 
 
 // The footer
@@ -90,10 +93,22 @@ $footerColor: #677985;
 
 .Footer {
     background-color: palette('black-5');
-    margin-top: $blockSpace * 1.1;
-    padding-bottom: $headlineSpace;
+    margin-top: $blockSpace * 0.9;
+    padding-bottom: $headlineSpace * 0.75;
 }
 
 .Footer .Nav-menu {
-    //margin-left: 0;
+    //margin: 0;
+}
+
+.Footer-minors {
+    @include textXs();
+    border-top: 1px solid palette('black-20');
+    color: palette('black-40');
+    margin: 0;
+    padding-top: 8px;
+    
+    @include media-breakpoint-up(sm) {
+        //width: 70%;
+    }
 }

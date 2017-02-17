@@ -43,26 +43,28 @@ layout: default
     <section class="Section--withFigure">
         <div class="o-container--md">
             <div class="Grid Grid--withGutter">
-                <div class="Grid-cell u-sm-size4of12 u-sm-after1of12 u-hide u-sm-display">
-                    <aside class="Aside--affixed affix-top" id="fuck" data-spy="affix" data-offset-top="{{ page.offset-top }}" data-offset-bottom="{{ page.offset-bottom }}">
-                        {% if page.menu %}
-                            <ul class="Aside-list nav">
-                                {% for item in page.menu %}
-                                    <li class="Aside-list--item">
-                                        <a href="{{ page.url  | remove: '.html' | prepend: site.baseurl }}#{{ item | downcase | replace: ' ', '-' | remove:',' | remove:'&rsquo;' }}">{{ item }}?</a>
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        {% endif %}
-                        
-                        <div class="Aside-share u-flex">
-                            {% include share.html %}
-                        </div>
-                        
-                        <a class="Aside-list--link o-arrowNorthLeft" href="#top">Back to top</a>
+                {% unless page.url contains 'disclaimer' %}
+                    <div class="Grid-cell u-sm-size4of12 u-sm-after1of12 u-hide u-sm-display">
+                        <aside class="Aside--affixed affix-top" data-spy="affix" data-offset-top="{{ page.offset-top }}" data-offset-bottom="{{ page.offset-bottom }}">
+                            {% if page.menu %}
+                                <ul class="Aside-list" data-gumshoe>
+                                    {% for item in page.menu %}
+                                        <li class="Aside-list--item">
+                                            <a href="{{ page.url  | remove: '.html' | prepend: site.baseurl }}#{{ item | downcase | replace: ' ', '-' | remove:',' | remove:'&rsquo;' }}">{{ item }}?</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
                             
-                    </aside>
-                </div>
+                            <a class="Aside-list--link o-arrowNorth" href="#top">Back to top</a>
+                            
+                            <div class="Aside-share u-flex">
+                                {% include share.html %}
+                            </div>
+                                
+                        </aside>
+                    </div>
+                {% endunless %}
                 <div class="Grid-cell u-sm-size8of12">
                     <div class="s-article">
     
@@ -75,16 +77,7 @@ layout: default
     </section>
 </article>
 
-<section class="Section">
-	<div class="o-container--md">
-        <div class="c-block--headline">
-            <!-- <h1 class="c-headline--md">Questions, ideas, action?</h1> -->
-            <h1 class="c-display">Smart advice. Real solutions.</h1>
-        </div>
-        {% include contact-michael.html %}
-	</div>
-</section>
-
+{% include contact-michael-block.html %}
 
 {% if page.url contains 'info-for' %}
 	{% include cards-block.html %}

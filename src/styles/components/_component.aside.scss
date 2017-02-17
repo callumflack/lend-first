@@ -7,8 +7,8 @@
 
 
 // consistent spacing variable
-$leftOutset: 13px;
-$leftBorder: 2px;
+$leftOutset: 16px;
+$leftBorder: 1px;
 
 .Aside--affixed {
 	margin: 0;
@@ -19,15 +19,14 @@ $leftBorder: 2px;
 .Aside-list {
     list-style-type: none;
     margin-left: - $leftOutset;
-    margin-bottom: space(0.5);
+    margin-bottom: 0;
     padding-left: 0;
 }
 
-// on 'li' element in a scrollspy '.nav'
+// on 'li' element in a 'gumshoe' scrollspy
 .Aside-list--item {
 	@include textSm();
 	color: palette(black-50);
-	//font-family: $font-text-medium;
 	line-height: $base-line-height-unit;
 	margin: 0;
 	transition: all map-fetch($transition, duration, short) map-fetch($transition, type, base);
@@ -36,7 +35,7 @@ $leftBorder: 2px;
 		@include underlineLink(none);
 		border-left: $leftBorder solid transparent;
 		display: block;
-		margin: 0 0 rem(2) 0;
+		margin: 0 0 2px 0;
 		padding: space(0.2) 0 space(0.125) ($leftOutset - $leftBorder);
 
 		@include on-event() {
@@ -45,12 +44,10 @@ $leftBorder: 2px;
 		}
 	}
 
-	// styling on scrollspy
 	&.active {
         > a {
             border-color: palette(brand);
             color: palette(brand);
-			font-family: $font-text-bold;
         }
 	}
 }
@@ -59,9 +56,10 @@ $leftBorder: 2px;
 	@include textSm();
 	@include underlineLink(none);
 	color: palette(black-50);
+    display: block;
 	font-family: $font-text-regular;
 	line-height: $base-line-height-unit;
-	margin: rem(8) 0 rem(8) 0;
+	margin: 8px 0 space(1) 0;
 
 	& + .Aside-list--link {
 		margin-left: rem(10);
@@ -74,7 +72,6 @@ $leftBorder: 2px;
 
 .Aside-share {
     color: palette('black-40');
-    margin-bottom: space(0.5);
     
     a {
         font-size: 0;
