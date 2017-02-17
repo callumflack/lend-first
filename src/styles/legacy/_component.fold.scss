@@ -7,7 +7,7 @@
 // --------------------------------------------------------------------------
 
 
-$fold-bg-color: color(ui, brand-muted);
+$fold-bg-color: palette(brand-muted);
 
 .Fold {
     perspective-origin: 50% 50%;
@@ -76,7 +76,7 @@ $fold-bg-color: color(ui, brand-muted);
     letter-spacing: 0.02em;
     transform: translateY( space(-1) );
 
-    @include respond-to(xs) {
+    @include media-breakpoint-up(xs) {
         // font-size: size2(font, textXs, base);
         font-size: map-fetch($size, font, textXs, base);
     }
@@ -91,18 +91,18 @@ $fold-bg-color: color(ui, brand-muted);
 
 // .CleanFold {
 //     .Card:after {
-//         border-color: color(ui, background);
+//         border-color: palette(background);
 //     }
 //
 //     .Fold-target {
-//         background-color: color(ui, background);
+//         background-color: palette(background);
 //     }
 //
 //     .Fold-target.is-open {
-//         border-top: 1px solid color(ui, light);
+//         border-top: 1px solid palette(light);
 //     }
 //
 //     .Fold .Headline--tertiary span {
-//         background-color: color(ui, background);
+//         background-color: palette(background);
 //     }
 // }

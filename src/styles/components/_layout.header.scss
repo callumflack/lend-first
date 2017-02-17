@@ -1,46 +1,122 @@
 
 
 // --------------------------------------------------------------------------
-//   HEADER LAYOUT
+// LAYOUT: HEADER
 // --------------------------------------------------------------------------
 
 
-// use padding so we can go exactly 'back to top'
-.c-header {
-    padding: ($blockSpace * 0.75) 0;
-	position: relative;
+$headerInset: space(1.5);
+$headerInsetMobile: space(0.75);
+//$footerColor: palette(brand-neutral);
+//$footerColor: rgba( palette(brand), 0.5);
+//$footerColor: palette('black-50');
+//$footerColor: #89a1b0;
+$footerColor: #677985;
 
-    @include media-breakpoint-up(sm) {
-        //padding: ($blockSpace * 0.75) 0;
+.Nav {
+    background-color: palette(white);
+    border-bottom: 1px solid palette(black-10);
+    position: relative;
+
+    @include when-inside(".Footer") { 
+        background-color: transparent;
+        border: 0;
     }
 }
 
-.c-header-brand {
-    @include media-breakpoint-up(sm) {
-        margin-bottom: $blockSpace * 0.75;
-        //margin-top: $blockSpace * 0.75;
+.Nav-menu {
+    @include o-aligner();
+    @include listInline();
+    margin: 0 0 0 auto;
+    right: space(1);
+
+    li {
+        &:not(:last-child) {
+			margin-right: $headerInset;
+		}
+    }
+
+    li a {
+        @include underlineLink(none);
+        display: inline-block;
+        font-family: $font-text-medium;
+        padding: $headerInset 0;
+        
+        @include on-event(true) {
+            color: palette(black-40);
+        }
+    }
+    
+    .is-active a {
+        color: palette(text);
+    }
+    
+    @include media-breakpoint-down(sm) {
+        margin: 0;
+        justify-content: flex-start;
+        
+        li {
+            &:not(:last-child) {
+    			margin-right: $headerInsetMobile;
+    		}
+        }
+
+        li a {
+            padding: $headerInsetMobile 0;
+        }
     }
 }
 
-.c-header-logo > img {
-    margin-bottom: 0;
-    width: 150px;
+.Nav-logo {
+    @include o-aligner();
+    //text-align: left;
 
-    @include media-breakpoint-up(sm) { width: 225px; }
-    @include media-breakpoint-up(xl) { width: 260px; }
+    a {
+        background-image: none;
+        @include on-event(true) {
+            color: palette(brand);
+        }
+    }
+    
+    @include media-breakpoint-down(sm) {
+        justify-content: flex-start;
+        padding: $headerInsetMobile 0 0;
+    }
 }
 
-// the address/open text in the header
-.c-header-infoAlign {
-    border-bottom: 1px solid palette(brand);
-    //padding-bottom: $blockSpace * 0.2;
-    padding-bottom: 7px;
-    transform: translate(0, 7px);
+
+// The footer
+// --------------------------------------------------------------------------
+
+.Footer {
+    //background-color: palette(white);
+    //background-color: rgba( palette(brand-neutral), 0.05 );
+    background-color: palette('black-5');
+    margin-top: $blockSpace * 1.25;
+    padding-bottom: $headlineSpace;
+
+    //a {
+    //    @include underlineLink(none);
+    //    @include on-event() {
+    //        color: palette(brand);
+    //    }
+    //}
 }
 
-.c-header-info {
-    @include textAside();
-    color: palette(brand);
-    //font-family: $font-text-bold;
-    //font-family: $font-serif;
+.Footer .Nav-menu {
+    //margin-left: 0;
+        
+    li a {
+        @include on-event(true) {
+            //color: $footerColor;
+            //font-family: $font-text-medium;
+        }
+    }
+}
+    
+.Footer .Nav-logo a {
+    @include on-event(true) {
+        //color: palette(brand-neutral);
+        //color: $footerColor;
+    }
 }

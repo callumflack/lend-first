@@ -9,8 +9,12 @@
 // --------------------------------------------------------------------------
 
 
-$darkBlendColor: rgba( palette(text), 0.7 );
-$lightBlendColor: rgba( palette(text), 0.1 );
+$brandBlendColor:      rgba( palette(brand), 0.7 );
+$brandLightBlendColor: rgba( palette(brand), 0.1 );
+$darkBlendColor :      rgba( palette(text), 0.7 );
+$greyBlendColor:       rgba( palette(text), 0.1 );
+$lightBlendColor:      rgba( palette(white), 0.4 );
+$whiteBlendColor:      rgba( palette(white), 0.85 );
 
 @mixin imageBlend(
 	$gradient: false,
@@ -20,7 +24,7 @@ $lightBlendColor: rgba( palette(text), 0.1 );
 	
 	@if $gradient {
 		//background-color: $color;
-		background-image: linear-gradient( $lightBlendColor, $darkBlendColor 50% ); 
+		background-image: linear-gradient( $greyBlendColor, $darkBlendColor 50% ); 
 	} @else {
 		background-color: $color;
 	}
@@ -29,6 +33,10 @@ $lightBlendColor: rgba( palette(text), 0.1 );
 
 }
 
-.c-imageBlend           { @include imageBlend(); }
-.c-imageBlend--gradient { @include imageBlend($gradient: true); }
-.c-imageBlend--just     { @include imageBlend($color: $lightBlendColor); }
+.o-imageBlend             { @include imageBlend(); }
+.o-imageBlend--gradient   { @include imageBlend($gradient: true); }
+.o-imageBlend--brand      { @include imageBlend($color: $brandBlendColor); }
+.o-imageBlend--brandLight { @include imageBlend($color: $brandLightBlendColor); }
+.o-imageBlend--grey       { @include imageBlend($color: $greyBlendColor); }
+.o-imageBlend--light      { @include imageBlend($blend: overlay, $color: $lightBlendColor); }
+.o-imageBlend--whiten     { @include imageBlend($blend: overlay, $color: $whiteBlendColor); filter: grayscale(100%); }

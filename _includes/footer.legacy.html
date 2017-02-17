@@ -1,0 +1,84 @@
+
+{% assign choose              = site.pages.why-choose-australian-property-finance %}
+{% assign blog                = site.pages.blog %}
+
+<footer class="Footer" id="nav">
+
+	<section class="Footer-menu">
+		<div class="o-container">
+			<div class="Grid Grid--withGutter">
+				<div class="Grid-cell u-sm-size2of12 u-md-size4of12 u-marginBD2 u-sm-marginB0">
+					<figure class="Footer-logo u-xs-textCenter u-margin0">
+						<a class="u-linkInvisible" href="/">
+							<picture>
+								<source media="(min-width: 767px) and (max-width: 992px)" srcset="/build/images/apf-logo-vertical.svg">
+								<img src="/build/images/apf-logo.svg" alt="LendFirst logo">
+							</picture>
+						</a>
+					</figure>
+				</div>
+
+				<div class="Grid-cell u-sm-size10of12 u-md-size8of12">
+					<div class="Grid Grid--withGutter">
+						<div class="Grid-cell u-xs-size4of12 u-mxs-flexOrderLast">
+							<div class="u-marginTD3 u-sm-marginT0">
+								<h5 class="Headline--quinary u-marginBD3">Learn about us</h5>
+								<ul class="">
+									<li><a href="/">Home</a></li>
+                                    <li><a href="/blog">Home Loan Tips</a></li>
+									<li><a href="/why-choose-lendfirst">Why choose LendFirst?</a></li>
+                                    <li><a href="/privacy">Your privacy</a></li>
+                                    <li><a href="/disclaimer">Disclaimer</a></li>
+									<!-- <div class="HzRule--footer"></div>
+									<li><a class="u-colorMuted" href="/privacy">Your privacy</a></li>
+									<li><a class="u-colorMuted" href="/disclaimer">Disclaimer</a></li> -->
+									<!-- <li class="u-colorMuted">© 2016 Michael Garland</li> -->
+								</ul>
+							</div>
+						</div>
+						<div class="Grid-cell u-xs-size4of12">
+							<div class="u-marginTD3 u-sm-marginT0 msm-SectionRule--contact" style="height:auto;">
+								<h5 class="Headline--quinary u-msm-marginTD3 u-marginBD3">Learn about financing</h5>
+								<ul class="">
+                                    {% assign infoList = site.info-for | sort: "order" %}
+							        {% for item in infoList %}
+							            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+							        {% endfor %}
+								</ul>
+							</div>
+						</div>
+						<div class="Grid-cell u-xs-size4of12 u-mxs-flexOrderFirst">
+							<div class="u-marginTD3 u-sm-marginT0 u-mxs-marginBD2 msm-SectionRule--contactTop msm-SectionRule--contact">
+								<h5 class="Headline--quinary u-marginBD6 u-sm-marginBD2">Contact</h5>
+								<ul class="">
+									<li>Michael Garland, Managing Director</li>
+									<li><a class="" href="tel:{{ site.phone }}">{{ site.phone }}</a></li>
+									<li><a class="" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+									<li>{{ site.address }}</li>
+									<li class="SocialLinks u-marginTD2">
+										<a href="{{ site.social.links[0] }}">
+											<svg class="Icon Icon--lg Icon--left Icon--textAlign">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-social-fb"></use>
+											</svg>
+										</a>
+										<a href="{{ site.social.links[1] }}">
+											<svg class="Icon Icon--lg Icon--left Icon--textAlign">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-social-li"></use>
+											</svg>
+										</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</div>
+
+                    <p class="c-text--sm u-colorMuted u-marginT">© {{ site.time | date: '%Y' }} {{ site.title }}. {{ site.accreditation }}</p>
+                    
+				</div>
+
+			</div>
+		</div>
+	</section>
+</footer>

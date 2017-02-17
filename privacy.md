@@ -5,7 +5,7 @@ offset-top: 400
 offset-bottom: 1300
 ---
 
-This privacy policy refers to Australian Property Finance ACR 356422, Australian Credit Licence 390261 and its related businesses.
+This privacy policy refers to LendFirst ACR 356422, Australian Credit Licence 390261 and its related businesses.
 
 We want you to be confident that the personal information you provide to us is treated with the highest degree of integrity and privacy. However, it is equally important to us that we provide the best possible service across our wide range of products and services. To achieve this aim we need to make the most efficient use of your personal information.
 

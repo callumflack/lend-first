@@ -9,7 +9,7 @@ $linkWidth: 4rem;
 
 @mixin Page-link() {
     @include underlineLinkInvisible();
-    background-color: color(ui, brand);
+    background-color: palette(brand);
     bottom: 0;
     cursor: pointer;
     height: 100vh;
@@ -27,7 +27,7 @@ $linkWidth: 4rem;
     align-items: center;
 
     &:hover {
-        background-color: darken(color(ui, brand),5%);
+        background-color: darken(palette(brand),5%);
     }
 
     > span {
@@ -44,7 +44,7 @@ $linkWidth: 4rem;
     @include Page-link();
 
     @include when-inside('.is-work') {
-        background-color: color(ui, neutral);
+        background-color: palette(neutral);
     }
 }
 
@@ -70,8 +70,8 @@ $linkWidth: 4rem;
  */
 
 .index {
-    @include respond-to(sm) {
-        background-color: color(ui, neutral);
+    @include media-breakpoint-up(sm) {
+        background-color: palette(neutral);
         max-width: 100%;
         overflow-x: hidden;
         position: relative;
@@ -80,15 +80,15 @@ $linkWidth: 4rem;
 }
 
 .index.is-work .page-index {
-    @include respond-to(sm) {
+    @include media-breakpoint-up(sm) {
         transform: translate(calc(100% - #{$linkWidth}),0);
         overflow-x: hidden;
     }
 }
 
 .page-index {
-    @include respond-to(sm) {
-        background-color: color(ui, background);
+    @include media-breakpoint-up(sm) {
+        background-color: palette(background);
         height: 100%;
         left: 0;
         padding: 0 space(0.75);
@@ -105,7 +105,7 @@ $linkWidth: 4rem;
 
 .index .page-index,
 .index .page-work {
-    @include respond-to(sm) {
+    @include media-breakpoint-up(sm) {
         min-height: 100vh;
         overflow-y: scroll;
     }

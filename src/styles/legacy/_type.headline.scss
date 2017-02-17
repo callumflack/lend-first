@@ -13,7 +13,7 @@
 	margin-bottom: space(1.25);
 	text-align: center;
 
-	@include respond-to(xs) {
+	@include media-breakpoint-up(xs) {
 		font-size: map-fetch($size, font, headerLg, base);
 		margin-bottom: space(1.75);
 	}
@@ -36,7 +36,7 @@
 
 @mixin HeadlineRuler {
 	span {
-		background-color: color(ui, background);
+		background-color: palette(background);
 		display: inline-block;
 		font-family: inherit;
 		padding: 0 space(0.25);
@@ -45,20 +45,20 @@
 		position: relative;
 		z-index: 2;
 
-		@include respond-to(xs) {
+		@include media-breakpoint-up(xs) {
 			padding: 0 space(0.5);
 		}
 	}
 
 	//&:after {
-	//	background-color: color(ui, brand);
+	//	background-color: palette(brand);
 	//	content: "";
 	//	display: block;
 	//	height: 1px;
 	//	position: relative;
 	//	transform: translateY(-16px);
     //
-	//	@include respond-to(xs) {
+	//	@include media-breakpoint-up(xs) {
 	//		transform: translateY(-20px);
 	//	}
 	//}
@@ -76,17 +76,17 @@
 
 .Headline--ruled {
 	@include Headline--ruled();
-	&:after { border-color: color(ui, brand); }
-	@include respond-to(max-xs) { &:after { border-color: transparent; } }
+	&:after { border-color: palette(brand); }
+	@include media-breakpoint-up(max-xs) { &:after { border-color: transparent; } }
 }
 
 .Button--ruled {
 	@include Headline--ruled();
 	&:after {
-		border-color: color(ui, brand);
+		border-color: palette(brand);
 		transform: translateY(-27px);
 	}
-	@include respond-to(max-xs) { &:after {
+	@include media-breakpoint-up(max-xs) { &:after {
 		border-color: transparent;
 	} }
 }
@@ -118,7 +118,7 @@
 //	padding-bottom: space(0.45);
 //	text-align: left;
 //
-//	@include respond-to(xs) {
+//	@include media-breakpoint-up(xs) {
 //		border-width: 2px;
 //		font-size: map-fetch($size, font, headerXl, base);
 //		line-height: 1.1;
@@ -127,33 +127,33 @@
 //
 //// quick trumps 160830
 //.index .Headline--super {
-//    @include respond-to(sm) { width: 90%; }
-//    @include respond-to(md) { width: 70%; }
+//    @include media-breakpoint-up(sm) { width: 90%; }
+//    @include media-breakpoint-up(md) { width: 70%; }
 //}
 
 
 
 .Headline--highlight {
 	@include Headline--ruled();
-	color: color(ui, brand-alt);
-	&:after { background-color: color(ui, brand-alt); }
+	color: palette(brand-alt);
+	&:after { background-color: palette(brand-alt); }
 
 	@include when-inside(".Modal") {
-		span { background-color: color(ui, neutral); }
+		span { background-color: palette(neutral); }
 	}
 }
 
 .Headline--primary {
 	@include Headline--ruled();
-	// &:after { border-color: rgba(color(ui, brand), 0.4); }
-	// &:after { border-color: color(ui, brand); }
+	// &:after { border-color: rgba(palette(brand), 0.4); }
+	// &:after { border-color: palette(brand); }
 
 	@include when-inside(".Modal") {
-		span { background-color: color(ui, neutral); }
+		span { background-color: palette(neutral); }
 	}
 
 	@include when-inside(".Fold-target") {
-		span { background-color: color(ui, brand-muted); }
+		span { background-color: palette(brand-muted); }
 	}
 }
 
@@ -162,9 +162,9 @@
 	color: color(text, medium);
 	font-family: $font-text-book;
 
-	&:after { background-color: color(ui, muted); }
+	&:after { background-color: palette(muted); }
 
-	@include respond-to('max-sm') {
+	@include media-breakpoint-up('max-sm') {
 		@include when-inside('.Section--cards') {
 			&:after { border-color: transparent; }
 		}
@@ -184,7 +184,7 @@
 	margin-bottom: space(0.5);
 	text-align: left;
 
-	@include respond-to(xs) {
+	@include media-breakpoint-up(xs) {
 		font-size: map-fetch($size, font, headerSm, base);
 	}
 }
@@ -196,7 +196,7 @@
 	margin-bottom: space(0.5);
 	text-align: left;
 
-	@include respond-to(xs) {
+	@include media-breakpoint-up(xs) {
 		// font-size: map-fetch($size, font, textSm, base);
 	}
 }

@@ -12,7 +12,7 @@
 	font-size: map-fetch($size, font, textSm, xs);
 	text-transform: uppercase;
 
-	@include respond-to(xs) {
+	@include media-breakpoint-up(xs) {
 		font-size: map-fetch($size, font, textSm, base);
 	}
 }
@@ -29,7 +29,7 @@ $ButtonAlignment: 2px;
 
 .Button {
 	@include ButtonType();
-	background-color: color(ui, brand);
+	background-color: palette(brand);
 	border: 1px solid transparent;
 	border-radius: map-fetch($size, border-radius, base);
 	line-height: size(button-height, base);
@@ -40,7 +40,7 @@ $ButtonAlignment: 2px;
 	// theme typography alignment
 	padding-top: $ButtonAlignment;
 
-	@include respond-to(xs) {
+	@include media-breakpoint-up(xs) {
 		padding: $ButtonAlignment space(1) 0;
 	}
 
@@ -49,51 +49,51 @@ $ButtonAlignment: 2px;
 	}
 
 	@include on-event() {
-		background-color: color(ui, brand-dark);
+		background-color: palette(brand-dark);
 		color: color(text, white);
 		outline: none !important;
 	}
 
 	&.Button--highlight {
-		background-color: color(ui, brand-alt);
+		background-color: palette(brand-alt);
 		@include on-event() {
-			background-color: color(ui, brand-alt-dark);
+			background-color: palette(brand-alt-dark);
 		}
 	}
 
 	&.Button--feature {
-		background-color: color(ui, brand-alt-muted);
+		background-color: palette(brand-alt-muted);
 		@include on-event() {
-			background-color: color(ui, brand-alt-muted-dark);
+			background-color: palette(brand-alt-muted-dark);
 		}
 	}
 
 	&.Button--rev {
-		border: 2px solid color(ui, white);
+		border: 2px solid palette(white);
 		background-color: transparent;
 		@include on-event() {
-			color: color(ui, white);
-			background-color: color(ui, brand-dark);
+			color: palette(white);
+			background-color: palette(brand-dark);
 		}
 	}
 
 	&.Button--highlightRev {
-		border: 2px solid color(ui, brand-alt);
+		border: 2px solid palette(brand-alt);
 		background-color: transparent;
-		color: color(ui, brand-alt);
+		color: palette(brand-alt);
 		@include on-event() {
-			background-color: color(ui, brand-alt-dark);
-			border-color: color(ui, brand-alt-dark);
-			color: color(ui, white);
+			background-color: palette(brand-alt-dark);
+			border-color: palette(brand-alt-dark);
+			color: palette(white);
 		}
 	}
 
 	@include when-inside(".Footer-contact") {
-		border: 2px solid color(ui, white) !important;
+		border: 2px solid palette(white) !important;
 		background-color: transparent !important;
 		@include on-event() {
-			color: color(ui, white) !important;
-			background-color: color(ui, brand-dark) !important;
+			color: palette(white) !important;
+			background-color: palette(brand-dark) !important;
 		}
 	}
 }
@@ -103,8 +103,8 @@ $ButtonAlignment: 2px;
 // --------------------------------------------------------------------------
 
 @mixin ButtonSecondary (
-	$mixin-color: color(ui, brand-alt),
-	$mixin-hover-color: color(ui, brand-alt-dark)
+	$mixin-color: palette(brand-alt),
+	$mixin-hover-color: palette(brand-alt-dark)
 ) {
 	background-color: transparent;
 	border-color: currentColor;
@@ -134,7 +134,7 @@ $ButtonAlignment: 2px;
 	font-family: $font-text-regular;
 	padding: 0 space(0.25);
 	@include on-event() {
-		border-color: color(ui, muted);
+		border-color: palette(muted);
 	}
 }
 
@@ -151,7 +151,7 @@ $ButtonAlignment: 2px;
 	right: -24%;
 	top: -12%;
 
-	@include respond-to(max-xs) {
+	@include media-breakpoint-up(max-xs) {
 		right: -8%;
 		top: -25%;
 	}
@@ -195,7 +195,7 @@ button:focus { outline: none; }
 	right: -12%;
 	top: -5%;
 
-	@include respond-to(sm) {
+	@include media-breakpoint-up(sm) {
 		font-size: map-fetch($size, font, close, base);
 	}
 }
@@ -209,7 +209,7 @@ button:focus { outline: none; }
 	text-transform: uppercase;
 	transform: translateY( space(-1) );
 
-	@include respond-to(xs) {
+	@include media-breakpoint-up(xs) {
 		font-size: map-fetch($size, font, textXs, base);
 	}
 }

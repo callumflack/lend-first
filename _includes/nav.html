@@ -1,0 +1,40 @@
+<nav class="Nav" role="banner">
+    <div class="o-container">
+        <div class="u-sm-flex">
+            
+            <div class="Nav-logo">
+                <a href="/">
+                    <!-- <svg class="o-icon" height="42" version="1.1" viewBox="0 0 200 66" width="120"> -->
+                    <svg class="o-icon o-icon--logo" version="1.1" viewBox="0 0 200 66">
+                        {% include ic-logo.html %}
+                    </svg>
+                </a>
+            </div>
+            <ul class="Nav-menu">
+                <!-- <li><a href="tel:{{ site.phone }}">Call {{ site.phone }}</a></li> -->
+                
+                {% for item in site.data.navigation %}
+                    <li class="
+                        {% if page.url != '/' and page.url contains item.url | remove:'.html' %}is-active
+                        
+                        {% endif %}">
+
+                        <a href="{{ item.url }}">{{ item.title }}</a>
+
+                        {% comment %}
+                        <br>
+                        {{ item.categories }}<br>
+                        {{ page.categories }}<br>
+                        {{ page.url }}<br>
+                        {{ item.url }}
+                        {{ page.url }}
+                        {% endcomment %}
+
+                    </li>
+                {% endfor %}
+                
+                
+            </ul>
+        </div>
+    </div>
+</nav>

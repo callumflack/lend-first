@@ -57,6 +57,10 @@
 	}
 }
 
+.o-coverImage--alignBottom {
+    background-position-y: 100% !important;
+}
+
 .o-containImage {
 	@include coverImage();
 	background-size: contain;

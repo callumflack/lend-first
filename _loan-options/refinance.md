@@ -30,7 +30,7 @@ For loans greater than 80% of the house value Mortgage Insurance may be required
 
 It’s not always about getting a better deal, circumstances may have change and the current bank will no longer help.
 
-The best option is to speak to Australian Property Finance who can assess your individual circumstances and advise if refinancing is the right thing to do.
+The best option is to speak to LendFirst who can assess your individual circumstances and advise if refinancing is the right thing to do.
 
 <h4 id="what-are-the-risks">What are the risks?</h4>
 
@@ -49,4 +49,4 @@ It can take 3-4 weeks from application to refinance to take place so factor this
 
 Most lenders will offer special rates to stay but why should it take you to leave before you get the best offer. Some lenders delay the refinance on purpose to allow time to win you back. So be prepared for a little brown nosing from your bank when you decide to leave them.
 
-If you have a top quality broker like Australian Property Finance on your side, refinancing will be one of the easiest financial transactions you will ever do.
+If you have a top quality broker like LendFirst on your side, refinancing will be one of the easiest financial transactions you will ever do.

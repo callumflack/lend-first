@@ -5,8 +5,8 @@ collections:
   posts:
     title: Blog
     output: true
-  info-for:
-    title: Info-for
+  loan-options:
+    title: Loan options
     output: true
   uploads:
     title: Uploads
@@ -20,32 +20,34 @@ defaults:
     permalink: "/:collection/:path/"
 - scope:
     path: ''
-    type: info-for
+    type: loan-options
   values:
     layout: page
     permalink: "/:collection/:path/"
     image: true
-    offset-top: 970
-    offset-bottom: 2010
+    offset-top: 820
+    offset-bottom: 1300
 - scope:
     path: ''
     type: pages
   values:
     layout: page
+    offset-top: 820
+    offset-bottom: 1300
 - scope:
     path: ''
     type: posts
   values:
-    layout: post
-    permalink: "/:categories/:title/"
+    layout: page
+    permalink: "/blog/:slug/"
     has-javascripts: true
     title: 
     categories: 
-    image: 
+    image: true
 description: LendFirst offers smart advice and real solutions for first home buyers and first-time investors, in Cairns, Queeensland, Australia.
 baseurl: 
 url: http://lendfirst.com.au
-logo: "/uploads/the-substation-logo.png"
+logo: "/uploads/lendfirst-logo.png"
 facebook:
   username: LendFirst
 social:

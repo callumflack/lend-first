@@ -1,0 +1,17 @@
+<div class="o-container--xl">
+    <div class="Grid Grid--withFullGutter Grid--alignCenter">
+        
+        {% assign infoList = site.loan-options | sort: "order" %}
+        {% for item in infoList %}
+            <div class="Grid-cell u-size1of2 u-sm-size1of3 u-lg-size1of4{% if item.url == page.url %} u-hide{% endif %}">
+                <a class="Card" href="{{ item.url  | remove: '.html' | prepend: site.baseurl }}">
+                    <div class="Card-image" style="background-image: url('/public/images/{{ item.title | downcase | replace: ' ', '-' | prepend: "card-" | append: ".jpg" }}')">
+                        <h2 class="Card-title">{{ item.title | capitalize }}</h2>
+                    </div>
+                    <h3 class="Card-lede">{{ item.card-title }}</h3>
+                </a>
+            </div>
+        {% endfor %}
+        
+    </div>
+</div>

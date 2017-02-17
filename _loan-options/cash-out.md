@@ -45,7 +45,7 @@ A redraw is completed over the phone, in branch or online with little to no fuss
 
 Cash out is when there are not enough funds for redraw.  A full application is required along with income assessment, credit history checks and valuations.
 
-Even if enough funds are available for redraw, there could still be other more suitable options available.  This is where expert advice from experienced lenders like Australian Property Finance can make the difference.
+Even if enough funds are available for redraw, there could still be other more suitable options available.  This is where expert advice from experienced lenders like LendFirst can make the difference.
 
 <h4 id="line-of-credit-vs-term-loan">Line of credit versus term loans?</h4>
 A Term Loan is a normal Home Loan with Principal  & Interest repayments designed to be repaid within a designated timeframe.

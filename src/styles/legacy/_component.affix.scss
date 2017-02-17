@@ -9,7 +9,7 @@
     top: space(1);
 
     // only affix on larger viewports
-    @include respond-to(sm) {
+    @include media-breakpoint-up(sm) {
         position: fixed;
     }
 }

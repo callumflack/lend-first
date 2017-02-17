@@ -6,12 +6,12 @@
 // --------------------------------------------------------------------------
 
 
-.o-iconWrapper {
-	//cursor: pointer;
-	//display: inline-block;
-	//margin: -30px;
-	//padding: 30px;
-}
+//.o-iconWrapper {
+//	cursor: pointer;
+//	display: inline-block;
+//	margin: -30px;
+//	padding: 30px;
+//}
 
 //.o-iconWrapper + .o-iconWrapper {
 //	margin-top: space(0.5);
@@ -51,7 +51,18 @@
 		margin-left: 3px;
 		@include media-breakpoint-up(sm) { margin-left: 4px; }
 	}
+    
+    // vars
+    
+    &--logo {
+        height: 33.25px;
+        width: 95px;
 
+        @include media-breakpoint-up(sm) {
+            height: 42px;
+            width: 120px;
+        }
+    }
 
 	// These are prob useful…
 	// This is a vertical alignment fix when used to the right of `.#{$namespace}icon`.
@@ -85,6 +96,12 @@
 	&--mediaAlign {
 		transform: translateY(rem(-4));
 	}
+
+
+
+
+
+
 
 
 
@@ -138,12 +155,12 @@
 
 	&--xl {
         border: 1px solid currentColor;
-		height: 48px;
-        width: 48px;
+		height: 32px;
+        width: 32px;
 
         @include media-breakpoint-up(sm) {
-			height: 60px;
-            width: 60px;
+			height: 44px;
+            width: 44px;
 		}
 	}
 

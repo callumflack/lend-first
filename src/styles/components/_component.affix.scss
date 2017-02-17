@@ -8,7 +8,7 @@
 .affix,
 .affix-bottom {
     top: space(2);
-    width: 268px;
+    width: $affixWidth;
 }
 
 // only affix on larger viewports

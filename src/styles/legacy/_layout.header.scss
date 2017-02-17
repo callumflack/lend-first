@@ -20,7 +20,7 @@
 }
 
 .Header-logo {
-    border-bottom: 1px solid color(ui, muted);
+    border-bottom: 1px solid palette(muted);
     color: palette(white);
     margin-bottom: space(0.75);
     padding-bottom: space(0.5);
@@ -74,13 +74,13 @@
         margin-right: -135px;
     }
 
-    @include respond-to(ip6) {
+    @include media-breakpoint-up(ip6) {
         img {
             margin-right: -75px;
         }
     }
 
-    @include respond-to(xs) {
+    @include media-breakpoint-up(xs) {
         height: auto;
         overflow: auto;
         width: 100%;
@@ -99,7 +99,7 @@
     top: space(0.25);
     width: 58%;
 
-    @include respond-to(sm) {
+    @include media-breakpoint-up(sm) {
         top: space(1);
         width: 47%;
     }
@@ -111,7 +111,7 @@
 
 .Header-byline {
     z-index: map-fetch($z-index, 'first');
-    background-color: color(ui, brand);
+    background-color: palette(brand);
     margin-top: -space(1);
     padding: space(0.75) 0;
     position: relative;
@@ -126,7 +126,7 @@
         margin-bottom: 0;
         // width: 97%;
 
-        @include respond-to(sm) {
+        @include media-breakpoint-up(sm) {
             width: 73%;
         }
     }
@@ -149,7 +149,7 @@
         @include underlineLink($mixin-rule: $linkRuleWhite);
     }
 
-    @include respond-to(sm) {
+    @include media-breakpoint-up(sm) {
         margin-top: 0;
     }
 }

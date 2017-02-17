@@ -21,13 +21,13 @@
 .Grid--withGutter {
     margin: 0 space(-0.25);
 
-    @include respond-to(xs) { margin: 0 space(-0.5); }
+    @include media-breakpoint-up(xs) { margin: 0 space(-0.5); }
 }
 
 .Grid--withGutter > .Grid-cell {
     padding: 0 space(0.25);
 
-    @include respond-to(xs) { padding: 0 space(0.5); }
+    @include media-breakpoint-up(xs) { padding: 0 space(0.5); }
 }
 
 // test

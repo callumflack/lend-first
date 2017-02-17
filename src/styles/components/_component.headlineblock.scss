@@ -1,0 +1,42 @@
+
+
+// --------------------------------------------------------------------------
+//   HEADLINE BLOCK
+// --------------------------------------------------------------------------
+
+
+.c-block--headline {
+    margin-bottom: space(3);
+}
+
+.c-block--headline--md {
+    //@include container( $padded: false, $width: container-width(md) );
+    @include container( $width: container-width(md) );
+}
+
+.c-block--headline .c-display,
+.c-block--headline .c-display--hero {
+    //color: palette(brand);
+    margin-bottom: space(0.5);
+}
+
+.c-block--headline .c-text--lg {
+    color: palette(black-40);
+    //font-family: $font-text-medium;
+    margin: 0;
+    text-align: center;
+
+    a {
+        @include underlineLink();
+    }
+    
+    span {
+        //border-bottom: 1px solid palette(brand);
+        //padding-bottom: space(1);
+    }
+}
+
+.c-block--headline .c-display--hero, 
+.c-block--headline .c-text--hero {
+    color: palette(white);
+}

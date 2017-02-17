@@ -1,5 +1,6 @@
 ---
 title: Something different
+headline: Loan options for something different
 card-title: I have an unusual loan…
 order: 8
 menu:

@@ -35,7 +35,7 @@ li a {
 
 	@include on-event() {
 		.o-linkBuriedTarget {
-			background-color: palette(brand);
+			color: palette(brand);
 		}
 	}
 }
@@ -56,7 +56,7 @@ li a {
 // Component: control underlines with linear-gradient
 // --------------------------------------------------------------------------
 
-$linkRuleBlack: linear-gradient(to bottom, rgba(palette(dark),0) 50%,  rgba(palette(dark),0.4) 50%);
+$linkRuleBlack: linear-gradient(to bottom, rgba(palette(text),0) 50%,  rgba(palette(text),0.4) 50%);
 $linkRuleGrey:  linear-gradient(to bottom, rgba(palette(black-40),0) 50%, palette(black-40) 50%);
 $linkRuleLite:  linear-gradient(to bottom, rgba(palette(black-10),0) 50%, palette(black-10) 50%);
 $linkRuleWhite: linear-gradient(to bottom, rgba(palette(white),0) 50%, palette(white) 50%);
@@ -74,7 +74,7 @@ $linkRuleNone:  linear-gradient(to bottom, rgba(palette(dark),0) 50%,  rgba(pale
 ) {
 
 	@if $mixin-rule == 'none' {
-		background-image: none;
+		background-image: none !important;
 		//padding-bottom: 0;
 	}
 

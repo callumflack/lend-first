@@ -64,7 +64,7 @@
         }
     }
 
-    @include respond-to(sm) {
+    @include media-breakpoint-up(sm) {
         height: rem(200);
     }
 }
@@ -92,6 +92,6 @@
 
 .Thumb-caption p {
     @include textSm();
-    color: color(ui, white);
+    color: palette(white);
     margin-bottom: 0;
 }

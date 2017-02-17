@@ -34,21 +34,21 @@
 }
 
 @mixin o-posCenter(
-	$posCenterPosition: absolute
+	$posCenterType: absolute
 ) {
 	left: 50%;
-	position: $posCenterPosition;
+	position: $posCenterType;
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
 
 @mixin o-posFullScreen(
-	$posFullScreen: fixed
+	$posFullScreenType: fixed
 ) {
 	bottom: 0;
 	left: 0;
 	margin: auto;
-	position: $posFullScreen;
+	position: $posFullScreenType;
 	right: 0;
 	top: 0;
 }

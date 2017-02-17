@@ -49,48 +49,31 @@
 
 @mixin display() {
     @include headlineTemplate(
-        $mixinColor: palette(black-66),
+        //$mixinColor: palette(black-66),
+        $mixinColor: palette(brand),
     	$mixinMarginBottom: space(2),
         $mixinSize: display,
         $mixinTextAlign: center
     );
 }
 
-@mixin headlineSuper() {
+@mixin displaySuper() {
     @include headlineTemplate(
         $mixinColor: palette(brand),
-    	$mixinMarginBottom: space(1),
+    	$mixinMarginBottom: $headlineSpace,
         $mixinSize: display
     );
-    border-bottom: 1px solid currentColor;
-    padding-bottom: space(0.75);
+    //border-bottom: 1px solid currentColor;
+    //padding-bottom: space(0.75);
 }
 
 @mixin headline() {
     @include headlineTemplate(
         $mixinColor: palette(brand),
-    	$mixinFont: $font-text-bold,
+    	$mixinFont: $font-text-regular,
     	$mixinMarginBottom: space(2),
-        $mixinSize: headline--md
-    );
-}
-
-@mixin headlineSm() {
-	@include headlineTemplate(
-        $mixinColor: palette(text),
-    	$mixinFont: $font-text-medium,
-        $mixinLineHeight: $base-line-height-unit,
-    	$mixinMarginBottom: $paragraphSpace,
-        $mixinSize: headline--sm
-    );
-}
-@mixin lede() {
-	@include headlineTemplate(
-        $mixinColor: palette(brand),
-    	$mixinFont: $font-text-medium,
-    	$mixinLineHeight: $base-line-height-unit,
-        $mixinMarginBottom: $paragraphSpace,
-        $mixinSize: headline--sm
+        $mixinSize: headline--md,
+        $mixinTextAlign: center
     );
 }
 
@@ -103,6 +86,35 @@
         $mixinSize: headline--md,
         $mixinTextAlign: center
     );
+}
+
+@mixin headlineSm() {
+	@include headlineTemplate(
+        $mixinColor: palette(text),
+    	$mixinFont: $font-text-medium,
+        $mixinLineHeight: $base-line-height-unit,
+    	//$mixinMarginBottom: $paragraphSpace,
+        $mixinSize: headline--sm
+    );
+}
+
+@mixin lede() {
+	@include headlineTemplate(
+        $mixinColor: palette(brand),
+    	$mixinFont: $font-text-medium,
+    	$mixinLineHeight: $base-line-height-unit,
+        $mixinMarginBottom: $paragraphSpace,
+        $mixinSize: headline--sm
+    );
+}
+
+@mixin headlineXs() {
+    @include headlineTemplate(
+		$mixinFont: $font-text-bold,
+        $mixinSize: text--meta,
+        $mixinLetterSpacing: 0.05em
+    );
+    text-transform: uppercase;
 }
 
 
@@ -124,7 +136,7 @@
 //	padding-bottom: space(0.45);
 //	text-align: left;
 //
-//	@include respond-to(xs) {
+//	@include media-breakpoint-up(xs) {
 //		border-width: 2px;
 //		font-size: map-fetch($size, font, headerXl, base);
 //		line-height: 1.1;
@@ -133,8 +145,8 @@
 //
 //// quick trumps 160830
 //.index .Headline--super {
-//    @include respond-to(sm) { width: 90%; }
-//    @include respond-to(md) { width: 70%; }
+//    @include media-breakpoint-up(sm) { width: 90%; }
+//    @include media-breakpoint-up(md) { width: 70%; }
 //}
 
 
@@ -151,16 +163,6 @@
 //        $mixinLineHeight: 1.1,
 //        $mixinSize: headline
 //    );
-//}
-//
-//@mixin headlineXs() {
-//    @include headlineTemplate(
-//		$mixinFont: $font-text-bold,
-//        $mixinSize: text--meta,
-//        $mixinLetterSpacing: 0.1em
-//    );
-//    text-transform: uppercase;
-//
 //}
 //
 //@mixin headlineMdLight() {
@@ -188,9 +190,9 @@
 // Component: headline
 // --------------------------------------------------------------------------
 
-.c-headline--hero    { @include display(); color: palette(brand); }
-.c-headline--display { @include display(); }
-.c-headline--super   { @include headlineSuper(); }
+.c-display--hero     { @include display(); color: palette(brand); }
+.c-display           { @include display(); }
+.c-display--super    { @include displaySuper(); }
 .c-headline          { @include headline(); }
 .c-headline--md      { @include headlineMd(); }
 .c-headline--sm      { @include headlineSm(); }

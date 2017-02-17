@@ -46,7 +46,7 @@ tr {
 }
 
 table {
-    border-top: 1px solid color(ui, charcoal);
+    border-top: 1px solid palette(charcoal);
     margin: space(0.5) 0 space(1);
 }
 
@@ -56,18 +56,18 @@ tbody tr {
 }
 
 thead tr {
-    background-color: color(ui, brand-faint);
+    background-color: palette(brand-faint);
 }
 
 tbody tr {
-    background-color: color(ui, brand-light);
+    background-color: palette(brand-light);
 
     &:last-child {
         padding-bottom: space(0.5);
     }
 
     @include when-inside(".first-home-buyers") {
-        &:last-child { border-top: 1px solid color(ui, muted); }
+        &:last-child { border-top: 1px solid palette(muted); }
     }
 }
 
@@ -110,7 +110,7 @@ td {
 
 /* uncss:ignore */
 .investment tbody tr:nth-last-child(2),
-.investment tbody tr::last-child { border-top: 1px solid color(ui, muted); }
+.investment tbody tr::last-child { border-top: 1px solid palette(muted); }
 
 /* uncss:ignore */
 .first-home-buyers th,
@@ -121,4 +121,4 @@ td {
 .first-home-buyers td:nth-of-type(2) { text-align: right; width: 10%; }
 
 /* uncss:ignore */
-.first-home-buyers tbody tr:last-child { border-top: 1px solid color(ui, muted); }
+.first-home-buyers tbody tr:last-child { border-top: 1px solid palette(muted); }

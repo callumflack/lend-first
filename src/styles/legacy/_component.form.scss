@@ -33,13 +33,13 @@ select {
         outline: 0;
     }
 
-    @include respond-to(max-xs) {
+    @include media-breakpoint-up(max-xs) {
         // font-size: 16px;
         // padding: rem(16) rem(19) !important;
     }
 
     &:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0 rem(100) darken(color(ui, neutral),4%) inset;
+        -webkit-box-shadow: 0 0 0 rem(100) darken(palette(neutral),4%) inset;
         -webkit-text-fill-color: color(text, medium);
         background-clip:         padding-box;
     }
@@ -54,7 +54,7 @@ select {
 
 input,
 textarea {
-    border-bottom: 1px solid color(ui, muted);
+    border-bottom: 1px solid palette(muted);
     margin-bottom: space(0.5);
 }
 
@@ -121,12 +121,12 @@ textarea {
 // label {
 //     &.error{
 //         box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-//         background-color: color(ui, warning );
+//         background-color: palette(warning );
 //         padding: 10px 20px 10px 20px;
 //         max-width: 260px !important;
 //         border-radius: 5px;
 //         margin-top: 40px;
-//         color: color(ui, white);
+//         color: palette(white);
 //         position: absolute;
 //         z-index: $zindex-tooltip;
 //

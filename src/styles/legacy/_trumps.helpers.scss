@@ -10,7 +10,7 @@
 
 .u-fullHeight       { height: 100%; }
 .u-fullWidth        { width: 100%; }
-.u-mxs-fullWidth    { @include respond-to(max-xs) { width: 100%; } }
+.u-mxs-fullWidth    { @include media-breakpoint-up(max-xs) { width: 100%; } }
 
 
 // Colors
@@ -43,10 +43,10 @@
 .u-textSizeRg       { font-size: size(font, text) !important; }
 .u-textSizeLg       { font-size: size(font, text-lg) !important; }
 
-.u-sm-textSizeRg    { @include respond-to(sm) { font-size: size(font, text) !important; } }
+.u-sm-textSizeRg    { @include media-breakpoint-up(sm) { font-size: size(font, text) !important; } }
 
 // .u-headerSizeRg     { font-size: size(font, header) !important; }
-.u-headerSizeRg     { font-size: map-fetch($size, font, headerRg, xs) !important; @include respond-to(xs) { font-size: map-fetch($size, font, headerRg, base) !important } }
+.u-headerSizeRg     { font-size: map-fetch($size, font, headerRg, xs) !important; @include media-breakpoint-up(xs) { font-size: map-fetch($size, font, headerRg, base) !important } }
 
 
 
@@ -58,8 +58,8 @@
 .u-weightBold       { font-family: $font-text-bold !important; }
 .u-weightBlack      { font-family: $font-text-black !important; }
 
-.u-sm-weightBold    { @include respond-to(sm) { font-family: $font-text-bold !important; } }
-.u-sm-weightBlack   { @include respond-to(sm) { font-family: $font-text-black !important; } }
+.u-sm-weightBold    { @include media-breakpoint-up(sm) { font-family: $font-text-bold !important; } }
+.u-sm-weightBlack   { @include media-breakpoint-up(sm) { font-family: $font-text-black !important; } }
 
 
 // Background colors
@@ -82,28 +82,28 @@
 // brand-alt                : map-fetch($root-color, brand-alt),
 // brand-alt-dark           : map-fetch($root-color, brand-alt-dark),
 
-.u-bgWhite          { background-color: color(ui, background) !important; }
-.u-bgNeutral        { background-color: color(ui, neutral) !important; }
-.u-bgNeutralLight   { background-color: color(ui, neutral-light) !important; }
+.u-bgWhite          { background-color: palette(background) !important; }
+.u-bgNeutral        { background-color: palette(neutral) !important; }
+.u-bgNeutralLight   { background-color: palette(neutral-light) !important; }
 
-.u-bgCharcoal       { background-color: color(ui, charcoal) !important; }
-.u-bgDark           { background-color: color(ui, dark) !important; }
-.u-bgBrand          { background-color: color(ui, brand) !important; }
-.u-bgBrandLight     { background-color: color(ui, brand-light) !important; }
+.u-bgCharcoal       { background-color: palette(charcoal) !important; }
+.u-bgDark           { background-color: palette(dark) !important; }
+.u-bgBrand          { background-color: palette(brand) !important; }
+.u-bgBrandLight     { background-color: palette(brand-light) !important; }
 
-.u-sm-bgNeutral     { @include respond-to(sm) { background-color: color(ui, neutral) !important; } }
+.u-sm-bgNeutral     { @include media-breakpoint-up(sm) { background-color: palette(neutral) !important; } }
 
 
 // Border colors
 // --------------------------------------------------------------------------
 
-.u-borderBase       { border: 1px solid color(ui, base) !important; }
-.u-borderMuted      { border: 1px solid color(ui, muted) !important; }
-.u-borderDark       { border: 1px solid color(ui, dark) !important; }
-.u-borderBrand      { border: 1px solid color(ui, brand) !important; }
-.u-borderBrandLight { border: 1px solid color(ui, brand-light) !important; }
+.u-borderBase       { border: 1px solid palette(base) !important; }
+.u-borderMuted      { border: 1px solid palette(muted) !important; }
+.u-borderDark       { border: 1px solid palette(dark) !important; }
+.u-borderBrand      { border: 1px solid palette(brand) !important; }
+.u-borderBrandLight { border: 1px solid palette(brand-light) !important; }
 
-.u-sm-borderDark    { @include respond-to(sm) { border: 1px solid color(ui, dark) !important; } }
+.u-sm-borderDark    { @include media-breakpoint-up(sm) { border: 1px solid palette(dark) !important; } }
 
 
 // Rounded wells. Usually require a background-color or a border.
@@ -129,13 +129,13 @@
 }
 
 .u-alignBlockUp {
-    @include respond-to(sm) {
+    @include media-breakpoint-up(sm) {
         transform: translateY( rem(-12) );
     }
 }
 
 .u-alignBlockDown {
-    @include respond-to(sm) {
+    @include media-breakpoint-up(sm) {
         transform: translateY( rem(12) );
     }
 }

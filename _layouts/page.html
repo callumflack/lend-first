@@ -2,56 +2,83 @@
 layout: default
 ---
 
-{% if page.image %}
-    <figure class="Figure">
-        <div class="o-container o-container--xl">
-            <div class="FlexEmbed">
-                <div class="FlexEmbed-ratio FlexEmbed-ratio--3by1"></div>
-                <div class="FlexEmbed-content">
-                    <div class="u-posAbsoluteCenter CoverImage" style="background-image: url('/uploads/{{ page.title | downcase | replace: ' ', '-' }}.jpg')"></div>
+<article>
+    <section class="Section--header">
+        <div class="o-container--md">
+            <h1 class="c-display--super">
+                {% if page.url contains "loan-options"  %}
+                    {% if page.headline %}
+                        {{ page.headline }}
+                    {% else %}
+                        {{ page.title }} loan options
+                    {% endif %}
+                {% else %}
+                    {{ page.title }}
+                {% endif %}
+            </h1>
+        </div>
+    </section>
+    {% if page.image or post.image %}
+        <figure class="Figure">
+            <div class="o-container o-container--lg o-container--fullWindowMobile">
+                <div class="FlexEmbed">
+                    <div class="FlexEmbed-ratio FlexEmbed-ratio--2by1"></div>
+                    <div class="FlexEmbed-content">
+                        <div class="u-posAbsoluteCenter o-coverImage{% if page.url contains "blog" %} o-coverImage--alignBottom{% endif %}" 
+                            {% if page.url contains "blog" %}
+                                style="background-image: url('/uploads/post-{{ page.title | downcase | replace: ' ', '-' | remove: '?' }}.jpg')"
+                            {% else %}
+                                style="background-image: url('/uploads/{{ page.title | downcase | replace: ' ', '-' | remove: '?' }}.jpg')"
+                            {% endif %}
+                        ></div>
+                        {% comment %}
+                        {% assign image = "{{ page.title | downcase | replace: ' ', '-' }}.jpg" %}
+                        {% include responsive-img-cloudinary.html %}
+                        {% endcomment %}
+                    </div>
                 </div>
             </div>
-        </div>
-    </figure>
-{% endif %}
-<section class="Section--withFigure">
-	<div class="o-container">
-		<div class="Grid Grid--withGutter">
-			<div class="Grid-cell u-xs-size4of12 u-xs-after1of12">
-				<aside class="Aside--affixed affix-top" id="scrollspy" data-spy="affix" data-offset-top="{{ page.offset-top }}" data-offset-bottom="{{ page.offset-bottom }}">
-                    <h1 class="c-headline--super">{{ page.title }}</h1>					
-					<div class="u-mxs-hide">
-						{% if page.menu %}
-							<ul class="Aside-list nav">
-								{% for item in page.menu %}
+        </figure>
+    {% endif %}
+    <section class="Section--withFigure">
+        <div class="o-container--md">
+            <div class="Grid Grid--withGutter">
+                <div class="Grid-cell u-sm-size4of12 u-sm-after1of12 u-hide u-sm-display">
+                    <aside class="Aside--affixed affix-top" id="scrollspy" data-spy="affix" data-offset-top="{{ page.offset-top }}" data-offset-bottom="{{ page.offset-bottom }}">
+                        {% if page.menu %}
+                            <ul class="Aside-list nav">
+                                {% for item in page.menu %}
                                     <li class="Aside-list--item">
                                         <a href="{{ page.url  | remove: '.html' | prepend: site.baseurl }}#{{ item | downcase | replace: ' ', '-' | remove:',' | remove:'&rsquo;' }}">{{ item }}?</a>
                                     </li>
-								{% endfor %}
-							</ul>
-							<!-- <div class="HzRule"></div> -->
-						{% endif %}
-
-						<!-- <a class="Aside-list--link Arrow-left" href="/">Back home</a> -->
-						<a class="Aside-list--link Arrow-top" href="#top">Back to top</a>
-					</div>
-				</aside>
-			</div>
-			<div class="Grid-cell u-xs-size7of12">
-				<article class="s-article u-alignBlockDown">
-
-					{{ content | markdownify }}
-
-				</article>
-			</div>
-		</div>
-	</div>
-</section>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        
+                        <div class="Aside-share u-flex">
+                            {% include share.html %}
+                        </div>
+                        
+                        <a class="Aside-list--link o-arrowNorthLeft" href="#top">Back to top</a>
+                            
+                    </aside>
+                </div>
+                <div class="Grid-cell u-sm-size8of12">
+                    <div class="s-article">
+    
+                        {{ content | markdownify }}
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
 
 <section class="Section">
 	<div class="o-container--md">
-        <div class="c-headline-block">
-            <h1 class="c-headline--display">Need help?</h1>
+        <div class="c-block--headline">
+            <h1 class="c-headline--md">Questions? Ideas?</h1>
         </div>
         {% include contact-michael.html %}
 	</div>
@@ -62,6 +89,6 @@ layout: default
 	{% include cards-block.html %}
 {% endif %}
 
-{% if page.url == site.pages.why-choose-lendfirst.url %}
+{% if page.url == site.pages.why-choose-lendfirst.url or post.url %}
 	{% include newsletter-block.html %}
 {% endif %}

@@ -6,6 +6,6 @@
 
 
 .NewsletterForm {
-    background-color: color(ui, neutral);
+    background-color: palette(neutral);
     border-radius: map-fetch($size, border-radius, large );
 }

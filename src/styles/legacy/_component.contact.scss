@@ -6,12 +6,12 @@
 
 
 .Contact {
-    color: color(text, medium);
+    color: palette('black-40');
+    display: block;
 }
 
 .Contact + .Contact {
     margin-top: space(1/6);
-    padding-top: rem(3);
 }
 
 .Contact-action {
@@ -20,10 +20,10 @@
     font-family: $font-text-medium;
     line-height: 1.2;
     position: relative;
+}
 
-    @include when-inside('.Header-byline') {
-        color: color(ui, white);
-    }
+.Contact-action + .Contact-action {
+    margin-top: 4px;
 }
 
 .Contact-detail {
@@ -33,7 +33,7 @@
     font-size: map-fetch($size, font, textSm, xs);
     margin: rem(4) 0 0;
 
-    @include respond-to(xs) {
+    @include media-breakpoint-up(xs) {
         font-size: map-fetch($size, font, textSm, base);
     }
 }

@@ -22,7 +22,23 @@ $arrowMargin: 0.35rem;
 }
 
 // regular size
-.o-arrowR:after {
+.o-arrowNorth:after {
+    @include arrow();
+    border-bottom: $arrowSize solid;
+    border-left: $arrowSize solid transparent;
+    border-right: $arrowSize solid transparent;
+    margin-left: $arrowMargin;
+}
+
+.o-arrowNorthLeft:before {
+    @include arrow();
+    border-bottom: $arrowSize solid;
+    border-left: $arrowSize solid transparent;
+    border-right: $arrowSize solid transparent;
+    margin-right: $arrowMargin;
+}
+
+.o-arrowEast:after {
     @include arrow();
     border-top: $arrowSize solid transparent;
     border-bottom: $arrowSize solid transparent;
@@ -31,15 +47,7 @@ $arrowMargin: 0.35rem;
     // margin: 0 $arrowMargin;
 }
 
-.o-arrowL:before {
-    @include arrow();
-    border-top: $arrowSize solid transparent;
-    border-bottom: $arrowSize solid transparent;
-    border-right: $arrowSize solid;
-    margin-right: $arrowMargin;
-}
-
-.o-arrowB:after {
+.o-arrowSouth:after {
     @include arrow();
     border-top: $arrowSize solid;
     border-left: $arrowSize solid transparent;
@@ -47,16 +55,18 @@ $arrowMargin: 0.35rem;
     margin-left: $arrowMargin;
 }
 
-.o-arrowT:after {
+.o-arrowWest:before {
     @include arrow();
-    border-bottom: $arrowSize solid;
-    border-left: $arrowSize solid transparent;
-    border-right: $arrowSize solid transparent;
-    margin-left: $arrowMargin;
+    border-top: $arrowSize solid transparent;
+    border-bottom: $arrowSize solid transparent;
+    border-right: $arrowSize solid;
+    margin-right: $arrowMargin;
 }
 
+
+
 // small
-.o-arrowR--sm:after {
+.o-arrowEast--sm:after {
     @include arrow();
     border-top: $arrowSizeSm solid transparent;
     border-bottom: $arrowSizeSm solid transparent;
@@ -66,7 +76,7 @@ $arrowMargin: 0.35rem;
     transform: translateY(rem(-4));
 }
 
-.o-arrowL--sm:before {
+.o-arrowWest--sm:before {
     @include arrow();
     border-top: $arrowSizeSm solid transparent;
     border-bottom: $arrowSizeSm solid transparent;
@@ -76,7 +86,7 @@ $arrowMargin: 0.35rem;
 }
 
 // large
-.o-arrowL--lg:before {
+.o-arrowWest--lg:before {
     @include arrow();
     border-top: $arrowSizeSm solid transparent;
     border-bottom: $arrowSizeSm solid transparent;
@@ -84,6 +94,15 @@ $arrowMargin: 0.35rem;
     margin-right: 0;
     transform: translateY(rem(-6));
 }
+
+
+
+
+
+
+
+
+
 
 
 // wha?

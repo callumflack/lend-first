@@ -60,7 +60,7 @@
     .active {
         > a {
             border-left: 2px solid currentColor;
-            color: color(ui, brand);
+            color: palette(brand);
             padding-left: rem(11);
         }
 

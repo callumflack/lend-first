@@ -40,22 +40,22 @@ Buying a commercial premises to operate a business from is the most common Comme
 
 Commercial Property is divided into 2 categories, Non-Specialised and Specialised. This has the biggest impact on which lender and which type of facilities are possible.
 
-Non-Specialised
+##### Non-Specialised*
 * Retail Shops
 * Offices
 * Warehouse/Sheds
 
-<p><small>* Must be Located in a Large Population Centre</small></p>
+<small>*Must be Located in a Large Population Centre</small>
 
-Specialised
+##### Specialised*
 * Service Stations
 * Rural Farms
 * Child Care Centres
- * Places of Worship
+* Places of Worship
 * Caravan Parks
 * Hotels/Motels
 
-<p><small>* Located in remote areas or small population centres</small></p>
+<small>*Located in remote areas or small population centres</small>
 
 The standard loan term is 15yrs however some niche lenders will consider up to 30 year terms for Non-Specialised securities often at cheaper rates.
 

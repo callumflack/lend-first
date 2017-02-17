@@ -17,7 +17,7 @@
         max-width: map-fetch($size, container, text-column);
         padding: 0;
 
-        @include respond-to(xs) {
+        @include media-breakpoint-up(xs) {
             margin: 0 auto !important;
 
         }
@@ -44,7 +44,7 @@
         margin: 0;
         max-width: map-fetch($size, container, wide-picture);
 
-        @include respond-to(xs) {
+        @include media-breakpoint-up(xs) {
             margin: 0 auto !important;
         }
     }
@@ -54,13 +54,13 @@
         max-width: map-fetch($size, container, wide-picture);
         padding: 0;
 
-        @include respond-to(xs) {
+        @include media-breakpoint-up(xs) {
             margin: 0 auto !important;
             padding: 0 space(0.75);
         }
     }
 
-    @include respond-to(lg) {
+    @include media-breakpoint-up(lg) {
         padding: 0;
     }
 }

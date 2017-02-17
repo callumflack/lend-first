@@ -5,12 +5,16 @@
 // --------------------------------------------------------------------------
 
 
-.o-figure--stamp {
+.c-figure--stamp {
 	background-color: palette(neutral);
     border-radius: 50%;
     display: block;
-	margin: 0;
+	margin: 0 $headlineSpace;
     overflow: hidden;
+    
+    @include media-breakpoint-up(sm) {
+        margin: 0;
+    }
 }
 
 //.o-figure--teamGrid {

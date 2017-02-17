@@ -7,7 +7,7 @@
 
 .Modal {
     z-index: map-fetch($z-index, 'below');
-    background-color: color(ui, neutral);
+    background-color: palette(neutral);
     backface-visibility: hidden;
     margin: 0;
     opacity: 0;
@@ -36,14 +36,14 @@
         opacity 250ms ease;
     // z-index: $zIndex-1;
 
-    @include respond-to(xs) {
+    @include media-breakpoint-up(xs) {
         overflow-x: hidden;
         overflow-y: auto;
     }
 }
 
 .Modal-dialog {
-    border: 1px solid color(ui, muted);
+    border: 1px solid palette(muted);
     border-radius: size(border-radius, large);
     margin: space(1) auto;
     position: relative;
@@ -57,14 +57,14 @@
         // transition: transform map-fetch($transition, duration, short) map-fetch($transition, type, cubic-state)
     }
 
-    @include respond-to(sm) {
+    @include media-breakpoint-up(sm) {
         margin: space(2.5) auto;
         width: size(container, modal-form);
     }
 }
 
 .Modal-title {
-    color: color(ui, brand-alt);
+    color: palette(brand-alt);
     text-align: center;
 }
 
@@ -87,7 +87,7 @@
         transition: transform map-fetch($transition, duration, short) map-fetch($transition, type, cubic-state);
     }
 
-    @include respond-to(xs) {
+    @include media-breakpoint-up(xs) {
         // box-shadow: 0 5px 15px rgba(0,0,0,.5);
         padding: space(1.5);
     }

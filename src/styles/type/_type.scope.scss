@@ -5,50 +5,9 @@
 // --------------------------------------------------------------------------
 
 
-//.s-post {
-//    @include media-breakpoint-up(sm) {
-//        margin-right: $gutterSpace * 2;
-//    }
-//
-//	h2 {
-//		@include textRg();
-//        font-family: $font-text-bold;
-//
-//        &:not(:first-child) {
-//            margin-top: $paragraphSpace * 2;
-//		}
-//
-//        &:not(:last-child) {
-//            margin-bottom: $paragraphSpace;
-//		}
-//	}
-//
-//    hr {
-//        border: 0;
-//        border-top: 1px solid palette(black-20);
-//		margin: $paragraphSpace * 2 0;
-//    }
-//}
-//
-//
-//.s-aside {
-//
-//    p {
-//		@include textMeta();
-//        //font-family: $font-text-bold;
-//        margin-bottom: $paragraphSpace * 0.5;
-//
-//        &:not(:first-child) {
-//            //margin-top: $paragraphSpace;
-//		}
-//    }
-//}
-
-
-
-.s-article h1 { @extend .Headline; @extend .Headline--primary; }
-.s-article h2 { @extend .Headline; @extend .Headline--secondary; }
-.s-article h3 { @extend .Headline; @extend .Headline--tertiary; }
+.s-article h1 { @include headlineSm(); }
+.s-article h2 { @include headlineSm(); }
+.s-article h3 { @include headlineSm(); }
 
 .s-article h4 { 
     @include headlineSm(); 
@@ -56,13 +15,8 @@
 }
 
 .s-article h5 {
-    @extend .Headline;
-    @extend .Headline--quinary;
-    font-family: $font-text-bold;
-    letter-spacing: 0.03em;
-    margin-top: space(1.5);
-    margin-bottom: space(0.25);
-    text-transform: uppercase;
+    @include headlineXs();
+    &:not(:first-child) { margin-top: $paragraphSpace * 1.25; }
 }
 
 .s-article p:first-of-type { 
@@ -72,12 +26,12 @@
     @include textLg(); 
 }
 
-.s-article p b { @extend .u-weightMedium; }
-.s-article small { @extend .c-text--sm; }
+.s-article p b { font-family: $font-text-medium; }
+.s-article small { @include textSm(); }
 
 .s-article a {
     @include underlineLink($linkRuleBrand);
-    color: color(text, brand) !important;
+    color: palette(brand) !important;
 }
 
 
@@ -96,7 +50,7 @@ tr {
 }
 
 table {
-    border-top: 1px solid palette(black-20);
+    //border-top: 1px solid palette(black-20);
     margin: space(0.5) 0 space(1);
 }
 
@@ -106,19 +60,19 @@ tbody tr {
 }
 
 thead tr {
-    background-color: palette(brand-light);
+    background-color: rgba( palette(brand), 0.1 );
 }
 
 tbody tr {
-    background-color: palette(white);
+    background-color: rgba( palette(brand), 0.05 );
 
     &:last-child {
         padding-bottom: space(0.5);
     }
 
-    @include when-inside(".first-home-buyers") {
-        &:last-child { border-top: 1px solid color(ui, muted); }
-    }
+    //@include when-inside(".first-home-buyers") {
+    //    &:last-child { border-top: 1px solid palette(muted); }
+    //}
 }
 
 th,
@@ -160,7 +114,7 @@ td {
 
 /* uncss:ignore */
 .investment tbody tr:nth-last-child(2),
-.investment tbody tr::last-child { border-top: 1px solid color(ui, muted); }
+.investment tbody tr::last-child { border-top: 1px solid palette(muted); }
 
 /* uncss:ignore */
 .first-home-buyers th,
@@ -171,4 +125,4 @@ td {
 .first-home-buyers td:nth-of-type(2) { text-align: right; width: 10%; }
 
 /* uncss:ignore */
-.first-home-buyers tbody tr:last-child { border-top: 1px solid color(ui, muted); }
+.first-home-buyers tbody tr:last-child { border-top: 1px solid palette(muted); }

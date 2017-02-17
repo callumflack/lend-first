@@ -430,7 +430,7 @@ ul {
  * Supports: 2, 4, 5, 6, 8, 10, 12 section
  */
 
-@include respond-to(xs) {
+@include media-breakpoint-up(xs) {
   .u-xs-afterNone {
     margin-left: 0 !important;
   }
@@ -555,7 +555,7 @@ ul {
  * Supports: 2, 4, 5, 6, 8, 10, 12 section
  */
 
-@include respond-to(sm) {
+@include media-breakpoint-up(sm) {
   .u-sm-afterNone {
     margin-left: 0 !important;
   }
@@ -680,7 +680,7 @@ ul {
  * Supports: 2, 4, 5, 6, 8, 10, 12 section
  */
 
-@include respond-to(md) {
+@include media-breakpoint-up(md) {
   .u-md-afterNone {
     margin-left: 0 !important;
   }
@@ -805,7 +805,7 @@ ul {
  * Supports: 2, 4, 5, 6, 8, 10, 12 section
  */
 
-@include respond-to(lg) {
+@include media-breakpoint-up(lg) {
   .u-lg-afterNone {
     margin-left: 0 !important;
   }
@@ -1047,7 +1047,7 @@ ul {
  * Supports: 2, 3, 4, 5, 6, 8, 10, 12 section
  */
 
-@include respond-to(xs) {
+@include media-breakpoint-up(xs) {
   .u-xs-beforeNone {
     margin-left: 0 !important;
   }
@@ -1172,7 +1172,7 @@ ul {
  * Supports: 2, 3, 4, 5, 6, 8, 10, 12 section
  */
 
-@include respond-to(sm) {
+@include media-breakpoint-up(sm) {
   .u-sm-beforeNone {
     margin-left: 0 !important;
   }
@@ -1297,7 +1297,7 @@ ul {
  * Supports: 2, 3, 4, 5, 6, 8, 10, 12 section
  */
 
-@include respond-to(md) {
+@include media-breakpoint-up(md) {
   .u-md-beforeNone {
     margin-left: 0 !important;
   }
@@ -1422,7 +1422,7 @@ ul {
  * Supports: 2, 3, 4, 5, 6, 8, 10, 12 section
  */
 
-@include respond-to(lg) {
+@include media-breakpoint-up(lg) {
   .u-lg-beforeNone {
     margin-left: 0 !important;
   }
@@ -1767,7 +1767,7 @@ ul {
  * Size: breakpoint iphone6 (extra-extra-small)
  */
 
-@include respond-to(ip6) {
+@include media-breakpoint-up(ip6) {
   /* Proportional widths: breakpoint 1 (extra-small)
      ========================================================================== */
 
@@ -1796,7 +1796,7 @@ ul {
  * Size: breakpoint 1 (extra-small)
  */
 
-@include respond-to(xs) {
+@include media-breakpoint-up(xs) {
   /* Proportional widths: breakpoint 1 (extra-small)
      ========================================================================== */
 
@@ -1977,7 +1977,7 @@ ul {
   }
 }
 
-@include respond-to(sm) {
+@include media-breakpoint-up(sm) {
   /* Proportional widths: breakpoint 2 (small)
      ========================================================================== */
 
@@ -2163,7 +2163,7 @@ ul {
  * Size: breakpoint 3 (medium)
  */
 
-@include respond-to(md) {
+@include media-breakpoint-up(md) {
   /* Proportional widths: breakpoint 3 (medium)
      ========================================================================== */
 
@@ -2349,7 +2349,7 @@ ul {
  * Size: breakpoint 3 (large)
  */
 
-@include respond-to(lg) {
+@include media-breakpoint-up(lg) {
   /* Proportional widths: breakpoint 3 (large)
      ========================================================================== */
 
@@ -2925,7 +2925,7 @@ ul {
  * Size: breakpoint 1 (extra-small)
  */
 
-@include respond-to(xs) {
+@include media-breakpoint-up(xs) {
   /* Applies to flex container
      ========================================================================== */
 
@@ -3236,7 +3236,7 @@ ul {
  * Size: breakpoint 1 (medium)
  */
 
-@include respond-to(md) {
+@include media-breakpoint-up(md) {
   /* Applies to flex container
      ========================================================================== */
 
@@ -3547,7 +3547,7 @@ ul {
  * Size: breakpoint 1 (large)
  */
 
-@include respond-to(lg) {
+@include media-breakpoint-up(lg) {
   /* Applies to flex container
      ========================================================================== */
 

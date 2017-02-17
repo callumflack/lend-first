@@ -12,14 +12,14 @@ $leftBorder: 2px;
 
 .Aside--affixed {
 	margin: 0;
-	width: 300px;
+	width: $affixWidth;
 }
 
 // List for the affix aside menu.
 .Aside-list {
     list-style-type: none;
     margin-left: - $leftOutset;
-    margin-bottom: space(0.25);
+    margin-bottom: space(0.5);
     padding-left: 0;
 }
 
@@ -70,4 +70,14 @@ $leftBorder: 2px;
 	@include on-event() {
 		color: palette(brand);
 	}
+}
+
+.Aside-share {
+    color: palette('black-40');
+    margin-bottom: space(0.5);
+    
+    a {
+        font-size: 0;
+        &:not(:first-child) { margin-left: -1px; }
+    }
 }

@@ -65,7 +65,7 @@
 		transform: translate(-50%, 0);
     }
 
-	@include respond-to(xs) {
+	@include media-breakpoint-up(xs) {
 	    margin-bottom: 0;
 	}
 }
@@ -75,7 +75,7 @@
 	@include ImageBlend();
 	height: rem(80) !important;
 
-	@include respond-to(xs) {
+	@include media-breakpoint-up(xs) {
 	    height: rem(165) !important;
 	}
 
@@ -102,7 +102,7 @@
     text-align: left;
 	text-transform: capitalize;
 
-	@include respond-to(xs) {
+	@include media-breakpoint-up(xs) {
 	    font-size: map-fetch($size, font, textSm, base);
 		padding: rem(7) rem(16) rem(6);
 	}
@@ -122,7 +122,7 @@
     text-align: left;
     transition: color 0.3s ease-in-out;
 
-    @include respond-to(sm) {
+    @include media-breakpoint-up(sm) {
 		font-family: $font-text-light;
 		font-size: map-fetch($size, font, headerMd, base);
         // margin-bottom: space(0.75);

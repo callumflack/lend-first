@@ -26,7 +26,7 @@
  */
 
 html {
-	background-color: color(ui, background);
+	background-color: palette(background);
 	// color: color(text, charcoal);
 	height: 100%; /* 3 */
 	// font-size: 80%; /* 1 */
@@ -42,5 +42,5 @@ html {
 body {
 	// height: 100%;
 	//overflow-y: scroll;
-	// @include respond-to(md) { padding: 0; }
+	// @include media-breakpoint-up(md) { padding: 0; }
 }

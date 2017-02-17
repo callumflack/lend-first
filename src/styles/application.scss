@@ -17,8 +17,6 @@
 @import "tools/tools.mixins";
 @import "tools/tools.settings";
 @import "tools/tools.mixins.breakpoints";
-@import "legacy/tools.mixins"; // ----------------------------------------- LEGACY
-@import "legacy/settings.variables"; // ----------------------------------------- LEGACY
 
 // VENDOR
 // TODO: use npm for Suit
@@ -57,8 +55,8 @@
 @import "objects/object.media";
 @import "objects/object.coverimage";
 @import "objects/object.imageblend";
-//@import "objects/object.grid";
 //@import "objects/object.rule";
+//@import "objects/object.grid";
 //@import "objects/object.modal";
 //@import "objects/object.fitimage";
 
@@ -68,15 +66,22 @@
 @import "type/type.helpers";
 @import "type/type.scope";
 
+// LAYOUTS
+@import "components/layout.header";
+@import "components/layout.section";
+//@import "components/layout.footer";
+
 // COMPONENTS
+@import "components/component.button";
 @import "components/component.figure";
-@import "components/component.header";
-@import "components/component.box";
+@import "components/component.blocks";
 @import "components/component.card";
+@import "components/component.post";
+@import "components/component.contact";
+@import "components/component.aside";
 @import "components/component.scrollspy";
 @import "components/component.affix";
-@import "components/component.button";
-@import "components/component.aside";
+@import "components/component.touchnav";
 @import "components/component.cloudinaryloader";
 //@import "components/component.form";
 //@import "components/component.form.v2";
@@ -100,11 +105,8 @@
 //@import "components/component.membersettings";
 //@import "components/component.registry";
 
-// LAYOUTS
-@import "components/layout.section";
-@import "components/layout.footer";
-
 // UTILITIES
+@import "utils/utility.responsive";
 //@import "utils/utility.spacers.v2";
 //@import "utils/utility.helpers";
 @import "utils/utility.helpers.base";
@@ -113,44 +115,4 @@
 
 
 
-@import "legacy/type.anchor";
-
-//@import "legacy/object.buttons";
-@import "legacy/object.media";
-@import "legacy/object.container";
-@import "legacy/object.rule";
 @import "legacy/object.icons";
-
-//@import "type.elements";
-@import "legacy/type.headline";
-//@import "type.markdown";
-
-//@import "layout.header";
-//@import "legacy/layout.footer";
-//@import "legacy/layout.section";
-@import "legacy/layout.thanks";
-
-@import "legacy/component.coverimage";
-@import "legacy/component.imageblend";
-@import "legacy/component.contact";
-@import "legacy/component.form";
-@import "legacy/component.fold";
-//@import "legacy/component.modal";
-//@import "legacy/component.card";
-@import "legacy/component.fancywell";
-//@import "legacy/component.scrollspy";
-//@import "legacy/component.affix";
-//@import "legacy/component.aside";
-@import "legacy/component.post";
-@import "legacy/component.touchnav";
-// @import "component.navstack";
-// @import "component.newsletter";
-// @import "component.thumbnail";
-// @import "component.sticky";
-// @import "component.fixedsticky";
-// @import "component.page-slider";
-// @import "component.carousel";
-
-@import "legacy/trumps.helpers";
-@import "legacy/trumps.spacers";
-@import "legacy/trumps.responsive";

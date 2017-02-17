@@ -1,8 +1,7 @@
 ---
 title: Why choose LendFirst?
 layout: page
-offset-top: 400
-offset-bottom: 1300
+image: hero-blue-sky
 menu: 
 - What is a Mortgage Broker
 - What qualifications does a Mortgage Broker have

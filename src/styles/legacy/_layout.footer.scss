@@ -16,22 +16,22 @@
 
 
 .Footer {
-    background-color: color(ui, neutral);
+    background-color: palette(neutral);
 
 
     &:before {
-        background-color: color(ui, background);
+        background-color: palette(background);
         content: "";
         display: block;
         height: space(2.5);
 
-        @include respond-to(xs) {
+        @include media-breakpoint-up(xs) {
             height: space(5);
         }
 
     }
 
-    @include respond-to(xs) {
+    @include media-breakpoint-up(xs) {
         // padding-top: space(5);
     }
 
@@ -44,7 +44,7 @@
 }
 
 .Footer-contact {
-    background-color: color(ui, brand);
+    background-color: palette(brand);
     padding: space(2) 0;
     text-align: center;
 
@@ -58,13 +58,13 @@
         margin-bottom: space(0.5);
     }
 
-    @include respond-to(sm) {
+    @include media-breakpoint-up(sm) {
         padding: space(2.5) 0;
     }
 }
 
 .Footer-menu {
-    border-top: 1px solid color(ui, base);
+    border-top: 1px solid palette(base);
     padding: space(1) 0 space(1);
 
     ul {
@@ -79,7 +79,7 @@
         margin: 0 0 2px;
     }
 
-    @include respond-to(sm) {
+    @include media-breakpoint-up(sm) {
         padding: space(1.5) 0 space(2.5);
     }
 }
@@ -91,7 +91,7 @@
         height: rem(90);
     }
 
-    @include respond-to(md) {
+    @include media-breakpoint-up(md) {
         height: rem(50);
     }
 }
@@ -100,7 +100,7 @@
 // crash test
 
 // .Columns {
-//     @include respond-to(xs) {
+//     @include media-breakpoint-up(xs) {
 //         columns: 3;
 //     }
 // }

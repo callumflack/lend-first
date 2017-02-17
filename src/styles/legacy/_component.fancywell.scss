@@ -6,7 +6,7 @@
 
 
 @mixin FancyWell {
-    color: color(ui, brand);
+    color: palette(brand);
     display: inline-block;
     font-family: $font-text-thin;
     font-size: map-fetch($size, font, super, xs);
@@ -14,7 +14,7 @@
     top: 0;
     transform: translateY( rem(2) );
 
-    @include respond-to(xs) {
+    @include media-breakpoint-up(xs) {
         font-size: map-fetch($size, font, super, base);
         transform: translateY( rem(4) );
     }
@@ -28,7 +28,7 @@
         content: "{";
         left: -1%;
 
-        @include respond-to(xs) {
+        @include media-breakpoint-up(xs) {
             left: -10%;
         }
     }
@@ -38,7 +38,7 @@
         content: "}";
         right: -1%;
 
-        @include respond-to(xs) {
+        @include media-breakpoint-up(xs) {
             right: -10%;
         }
     }

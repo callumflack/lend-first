@@ -67,12 +67,25 @@
 	);
 }
 
+@mixin textLgMeta() {
+	@include textTemplate(
+		$mixinSize: text--lg,
+    	$mixinColor: palette('black-40')
+	);
+    text-align: center;
+}
+
 @mixin textLgBold() {
 	@include textTemplate(
 		$mixinSize: text--lg,
 		$mixinFont: $font-text-bold
 	);
 }
+
+
+
+
+
 
 
 // UNUSED
@@ -209,6 +222,7 @@ blockquote,
 .c-text--sm       { @include textSm(); }
 .c-text           { @include textRg(); }
 .c-text--lg       { @include textLg(); }
+.c-text--lgMeta   { @include textLgMeta(); }
 .c-text--intro    { @include textRg(); color: palette(black-50); margin-bottom: space(0.5); }
 //.c-text--lg       { @include textLg(); margin-bottom: 0; > strong { font-family: $font-text-extrabold; text-transform: initial; } }
 //.c-text--aside { @include textAside(); }

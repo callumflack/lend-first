@@ -6,35 +6,23 @@
 
 
 @mixin container(
-	//$padded: true,
-	$width: container-width(lg)
+	$padded: true,
+	$width: container-width(md)
 ) {
 
-	//@if $padded {
-	//	height: inherit;
-	//	padding-left: $containerSpace * 0.5;
-	//	padding-right: $containerSpace * 0.5;
-	//	
-	//	@include media-breakpoint-up(lg) {
-	//		padding-left: $containerSpace;
-	//		padding-right: $containerSpace;
-	//	}
-	//	
-	//} @else {
-	//	max-width: $width - ($containerSpace);
-	//	
-	//	@include media-breakpoint-up(lg) {
-	//		max-width: $width - ($containerSpace * 2);
-	//	}
-	//}
+	@if $padded {
+		height: inherit;
+		padding-left: $containerSpace;
+		padding-right: $containerSpace;
+	} @else {
+		max-width: $width - ($containerSpace);
+	}
 	
 	@include clearfix();
 	margin-left: auto;
 	margin-right: auto;
 	max-width: $width;
 	position: relative;
-    
-    padding: 0 $containerSpace;
 
 	p,
 	li,
@@ -46,29 +34,45 @@
 	}
 }
 
-
 .o-container {
 	@include container();
-    @include media-breakpoint-up(xl) { padding: 0; }
 
     // sizes
 	&--md {
 		@include container( $width: container-width(md) );
-        @include media-breakpoint-up(lg) { padding: 0; }
+	}
+
+	&--lg {
+		@include container( $width: container-width(lg) );
 	}
 
 	&--xl {
 		@include container( $width: container-width(xl) );
-        @include media-breakpoint-up(su) { padding: 0; }
 	}
 
+    &--fullWindowMobile {
+        @include media-breakpoint-down(lg-tablet) {
+            max-width: 100%;
+            padding: 0;
+        }
+    }
     
 }
 
-//.o-container {
-//	@include container();
-//}
 
+
+
+
+
+
+
+
+.c-container-rule {
+	@include container(false);
+	border-top: 1px solid palette(black-10);
+	margin-top: 0;
+	margin-bottom: space(0.75);
+}
 
 
 
@@ -121,7 +125,7 @@
 //    max-width: map-fetch($size, container, wide-picture);
 //    padding: 0;
 //
-//    @include respond-to(xs) {
+//    @include media-breakpoint-up(xs) {
 //        margin: 0 auto !important;
 //        padding: 0 space(0.75);
 //    }
@@ -132,13 +136,3 @@
 //	// @include when-inside(".o-container")     { margin-left: 0; }
 //	// @include when-inside(".o-container--xl") { margin-left: calc( (1200-960) / 2 ); }
 //}
-
-
-
-
-.c-container-rule {
-	@include container(false);
-	border-top: 1px solid palette(black-10);
-	margin-top: 0;
-	margin-bottom: space(0.75);
-}

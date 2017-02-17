@@ -13,8 +13,8 @@
 }
 
 .Figure--hero {
-	// border-bottom: 2px solid color(ui, brand);
-	// background-color: color(ui, neutral-light);
+	// border-bottom: 2px solid palette(brand);
+	// background-color: palette(neutral-light);
 	// margin: 0 0 space(1.75) 0;
 	margin: 0 0 space(1);
 	// margin: 0 0 space(1.25);
@@ -24,7 +24,7 @@
 	// height: rem(460);
 	// overflow-y: hidden;
 
-	@include respond-to(xs) {
+	@include media-breakpoint-up(xs) {
 		margin: space(1.5) 0 space(1.25);
 		margin: 0 0 space(1.25);
 	}
@@ -35,7 +35,7 @@
 }
 
 .Figure--stamp {
-	background-color: color(ui, neutral);
+	background-color: palette(neutral);
 	margin-top: 0;
 }
 
@@ -55,12 +55,12 @@
 
 .Figure--workPost {
 	margin: $space auto 0;
-	// @include respond-to(xs) { margin: ($space * 1) auto 0; }
-	@include respond-to(md) { margin: 0 auto; }
+	// @include media-breakpoint-up(xs) { margin: ($space * 1) auto 0; }
+	@include media-breakpoint-up(md) { margin: 0 auto; }
 }
 
 .md-Figure--workPostNudgeLeft {
-	@include respond-to(md) {
+	@include media-breakpoint-up(md) {
 		margin: 0;
 		margin-left: space(-1.25);
 	}

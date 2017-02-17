@@ -44,7 +44,7 @@ Common stages are:
 | Fixing     | 20%     | All internal fixtures are in showers sinks etc.                  |
 | Completion | Balance | Hand over keys                                                   |
 
-After each stage, the builder will send an invoice.  The work should be inspected and if satisfactory, invoices are sent to Australian Property Finance who will facilitate the payment from the bank to the builder.
+After each stage, the builder will send an invoice.  The work should be inspected and if satisfactory, invoices are sent to LendFirst who will facilitate the payment from the bank to the builder.
 
 During construction, monthly interest on the loan needs to be paid.  This will be small at the start but will increase as the loan balance increases each time the builder is paid.
 

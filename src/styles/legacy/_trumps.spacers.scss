@@ -80,7 +80,7 @@
 .u-marginR6      { margin-right   : space(6)    !important; }
 .u-marginRL      { margin-right   : space(12)   !important; }
 
-@include respond-to(max-xs) {
+@include media-breakpoint-up(max-xs) {
 	.u-mxs-marginTD2  { margin-top: space(1/2) !important; }
 	.u-mxs-marginT    { margin-top: space(1) !important; }
 	.u-mxs-marginT13  { margin-top: space(1.333333333) !important; }
@@ -97,7 +97,7 @@
 	.u-mxs-marginBL   { margin-bottom: space(12) !important; }
 }
 
-@include respond-to(max-sm) {
+@include media-breakpoint-up(max-sm) {
 	.u-msm-marginTD3  { margin-top: space(1/3) !important; }
 	.u-msm-marginT    { margin-top: space(1) !important; }
 	.u-msm-marginT3   { margin-top: space(3) !important; }
@@ -107,11 +107,11 @@
 	.u-msm-marginBXL  { margin-bottom: space(12) !important; }
 }
 
-@include respond-to(ip6) {
+@include media-breakpoint-up(ip6) {
 	.u-ip6-marginT0   { margin-top: 0 !important; }
 }
 
-@include respond-to(xs) {
+@include media-breakpoint-up(xs) {
 	.u-xs-marginT0    { margin-top: 0 !important; }
 	.u-xs-marginT     { margin-top: space(1) !important; }
 	.u-xs-marginT2    { margin-top: space(2) !important; }
@@ -127,7 +127,7 @@
 	.u-xs-marginB5    { margin-bottom: space(5) !important; }
 }
 
-@include respond-to(sm) {
+@include media-breakpoint-up(sm) {
 	.u-sm-marginT0    { margin-top: 0 !important; }
 	.u-sm-marginTD3   { margin-top: space(1/3) !important; }
 	.u-sm-marginT     { margin-top: space(1) !important; }
@@ -143,7 +143,7 @@
 	.u-sm-marginR2    { margin-right: space(2)  !important; }
 }
 
-@include respond-to(md) {
+@include media-breakpoint-up(md) {
 	.u-md-marginT     { margin-top: space(1) !important; }
 }
 
@@ -226,7 +226,7 @@
 .u-paddingR6      { padding-right   : space(6)    !important; }
 .u-paddingRL      { padding-right   : space(12)   !important; }
 
-@include respond-to(max-xs) {
+@include media-breakpoint-up(max-xs) {
 	.u-mxs-paddingT    { padding-top: space(1) !important; }
 	.u-mxs-paddingT2   { padding-top: space(2) !important; }
 	.u-mxs-paddingT25  { padding-top: space(2.5) !important; }
@@ -237,7 +237,7 @@
 	.u-mxs-paddingBL   { padding-bottom: space(12) !important; }
 }
 
-@include respond-to(max-sm) {
+@include media-breakpoint-up(max-sm) {
 	.u-msm-paddingT    { padding-top: space(1) !important; }
 	.u-msm-paddingT3   { padding-top: space(3) !important; }
 	.u-msm-paddingBD1  { padding-bottom: space(3/4) !important; }
@@ -247,7 +247,7 @@
 	.u-msm-paddingBL   { padding-bottom: space(12) !important; }
 }
 
-@include respond-to(xs) {
+@include media-breakpoint-up(xs) {
 	.u-xs-paddingT3    { padding-top: space(3) !important; }
 	.u-xs-paddingT25   { padding-top: space(2.5) !important; }
 	.u-xs-paddingT2    { padding-top: space(2) !important; }
@@ -259,7 +259,7 @@
 
 }
 
-@include respond-to(sm) {
+@include media-breakpoint-up(sm) {
 	.u-sm-paddingTD3   { padding-top: space(1/3) !important; }
 	.u-sm-paddingT     { padding-top: space(1) !important; }
 	.u-sm-paddingT15   { padding-top: space(1.5) !important; }
@@ -276,6 +276,6 @@
 	.u-sm-paddingR2    { padding-right: space(2)  !important; }
 }
 
-@include respond-to(md) {
+@include media-breakpoint-up(md) {
 	.u-md-paddingT     { padding-top: space(1) !important; }
 }

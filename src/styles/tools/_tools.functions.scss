@@ -115,16 +115,11 @@ $config: (
 	@return map-fetch($palette, $hue);
 }
 
-@function size($type: 'font', $increment: 'text') {
-	@return map-fetch($size, $type, $increment);
-}
-
 @function container-width($width: 'lg') {
 	@return map-get($container-max-widths, $width);
 }
 
 @function fontsize($increment: 'Text', $response: 'sm') {
-	// @return map-fetch($size, font, $increment, $response);
 	@return map-fetch($fontsizes, $increment, $response);
 }
 

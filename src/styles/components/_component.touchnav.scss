@@ -1,0 +1,39 @@
+
+
+// --------------------------------------------------------------------------
+//    MOBILE NAV
+// --------------------------------------------------------------------------
+
+
+.TouchNav {
+    // @include smoothTransition();
+    // background-color: map-fetch($color, ui, brand-alt);
+    background-color: palette(neutral);
+    bottom: space(1);
+    border-radius: $cardRadius;
+    box-shadow: 0 0 space(1.5) palette('black-40');
+    padding: space(0.75) space(1) space(0.75) space(0.75);
+    position: fixed;
+    right: space(1.5);
+    z-index: 99;
+}
+
+
+.TouchNav-item {
+    @include underlineLink(none);
+	@include textSm();
+    display: block;
+	font-family: $font-text-bold;
+	line-height: $base-line-height-unit;
+	margin: 0 0 space(0.5);
+
+    &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+	@include on-event() {
+		border-color: palette(brand);
+		color: palette(brand);
+	}
+}

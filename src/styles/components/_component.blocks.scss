@@ -1,0 +1,71 @@
+
+
+// --------------------------------------------------------------------------
+//   BLOCKS
+// --------------------------------------------------------------------------
+
+
+// Headline block
+// --------------------------------------------------------------------------
+
+.c-block--headline {
+    margin-bottom: $headlineSpace * 1.5;
+}
+
+.c-block--headline--md {
+    //@include container( $padded: false, $width: container-width(md) );
+    @include container( $width: container-width(md) );
+}
+
+.c-block--headline .c-display,
+.c-block--headline .c-display--hero,
+.c-block--headline .c-headline {
+    //color: palette(brand);
+    margin-bottom: space(0.5);
+}
+
+.c-block--headline .c-headline {
+    color: palette(black-66);
+}
+
+.c-block--headline .c-text--lg {
+    //color: palette(black-40);
+    //margin: 0;
+    //text-align: center;
+
+    a {
+        @include underlineLink();
+    }
+}
+
+.c-block--headline .c-display--hero, 
+.c-block--headline .c-text--hero {
+    color: palette(white);
+    text-align: center;
+}
+
+
+// Highlight block
+// --------------------------------------------------------------------------
+
+.c-block--highlight {
+    background-color: palette(white);
+    border: 1px solid palette(black-15);
+    border-radius: $cardRadius;
+    margin: auto;
+    padding: space(1.5);
+    padding: $headlineSpace;
+    width: 75%;
+    
+    @include media-breakpoint-up(sm) {
+        width: 70%;
+    }
+}
+
+//.c-block--highlight-button {
+//    transform: translateY(-50%);
+//    
+//    .Button { 
+//        background-color: palette(background-light-alt);
+//    }
+//}

@@ -19,12 +19,10 @@ $namespace             : '';
 $base-black                    : #000;
 $base-white                    : #FFF;
 
-$season2016                    : #65bd24;
-
 $palette: (
 	black                      : $base-black,
 	text-dark                  : #151515,
-	text                       : #333,
+	text                       : #353535,
 	dark                       : tint($base-black, 15%),
 	ash                        : tint($base-black, 22%),
 	black-66                   : tint($base-black, 34%),
@@ -45,7 +43,7 @@ $palette: (
 	neutral-text               : darken(#f0eeeb, 27%),
 	neutral-dark               : darken(#f0eeeb, 9%),
 	neutral-light              : lighten(#f0eeeb, 4%),
-	brand                      : #1096ef, // #2494dd, //#2f99de,
+	brand                      : #1096ef,
 	brand-light                : #c7e3f6,
 	brand-counter              : #887E73,
 	brand-neutral              : #3A7BA6,
@@ -65,20 +63,21 @@ $palette: (
 $base-font-size-unit           : 16;
 $base-line-height-unit         : 1.5;
 $base-font-size                : $base-font-size-unit * 1px;
-$base-line-height              : ($base-font-size-unit * $base-line-height-unit) * 1px; // 24.65
+$base-line-height              : ($base-font-size-unit * $base-line-height-unit) * 1px; // 24
 $space-unit                    : $base-line-height;
 $space                         : $space-unit * 1;
 
-$gutterSpace                   : space(1);
-$containerSpace                : space(2);
+$gutterSpace                   : space(0.5);
+$containerSpace                : space(1);
 $paragraphSpace                : space(0.75);
-$blockSpace                    : 5.5vh;
+$blockSpace                    : 12.5vh;
+$headlineSpace                 : 3vh;
 
-$cardRadius                    : 8px;
+$affixWidth                    : 240px;
+
+$cardRadius                    : 0;
 $buttonRadius                  : 6px;
 $labelRadius                   : 3px;
-
-
 
 
 // Widths (based on BS4)
@@ -99,7 +98,7 @@ $grid-breakpoints: (
 	sm: 544px,
 	md: 768px,
 	lg: 992px,
-	lg-for-container-lg: 1080px,
+	lg-tablet: 1024px,
 	xl: 1200px,
 	su: 1400px
 ) !default;
@@ -108,18 +107,10 @@ $container-max-widths: (
 	sm: 576px,
 	rg: 660px,
 	md: 960px,
-	lg: 1170px,
+	lg: 1080px,
 	xl: 1400px,
 	su: 1700px,
 ) !default;
-
-
-//modal-form        : rem(740),
-//modal-form-sm     : 80%,
-//default           : rem(960),
-//text-column       : rem(960),
-//picture           : rem(960),
-//wide-picture      : rem(1240)
 
 
 // Font sizes
@@ -132,23 +123,23 @@ $fontsizes: (
 		rg            : 12px
 	),
 	text--sm: (
-		xs            : 10px,
-		sm            : 12px,
+		xs            : 11px,
+		sm            : 13px,
 		rg            : 14px
 	),
     text--meta: (
-        xs            : 11px,
-        sm            : 13px,
+        xs            : 12px,
+        sm            : 14px,
         rg            : 15px
     ),
 	text: (
-		xs            : 14px,
+		xs            : 13px,
 		sm            : 15px,
 		rg            : 17px
 	),
 	text--lg: (
-        xs            : 19px,
-        sm            : 21px,
+        xs            : 16px,
+        sm            : 20px,
         lg            : 22px
 	),
 	headline--xs: (
@@ -162,7 +153,7 @@ $fontsizes: (
 		lg            : 18px
 	),
 	headline--md: (
-		xs            : 22px,
+		xs            : 21px,
 		sm            : 25px,
 		lg            : 28px
 	),

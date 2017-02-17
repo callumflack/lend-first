@@ -7,16 +7,20 @@
 	data-spy="scroll" data-target="#scrollspy" data-offset="300">
 
 	{% comment %}{% endcomment %}
-    {% include header-3.html %}
+    {% include nav.html %}
+    
+    <main>
+        {{ content }}
+    </main>
 
-	{{ content }}
 
 	{% include footer.html %}
 	{% include touch-nav.html %}
 	{% include icons.html %}
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="/build/site.concat.js"></script>
+    <script src="/public/scripts/bootstrap.scrollspy.js"></script>
+	<script src="/public/scripts/application.min.js"></script>
 	{% include google-analytics.html %}
 
 </body>
