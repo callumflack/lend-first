@@ -19,16 +19,16 @@ layout: default
         </div>
     </section>
     {% if page.image or post.image %}
-        <figure class="Figure">
+        <figure class="">
             <div class="o-container o-container--lg o-container--fullWindowMobile">
                 <div class="FlexEmbed">
                     <div class="FlexEmbed-ratio FlexEmbed-ratio--2by1"></div>
                     <div class="FlexEmbed-content">
-                        <div class="u-posAbsoluteCenter o-coverImage{% if page.url contains "blog" %} o-coverImage--alignBottom{% endif %}" 
-                            {% if page.url contains "blog" %}
-                                style="background-image: url('/uploads/post-{{ page.title | downcase | replace: ' ', '-' | remove: '?' }}.jpg')"
+                        <div class="u-posAbsoluteCenter o-coverImage{% if page.image-align %} o-coverImage--alignBottom{% endif %}" 
+                            {% if page.type == 'post' %}
+                                style="background-image: url('/uploads/post-{{ page.title | downcase | replace: ' ', '-' | replace: '—', '-' | remove: '?' }}.jpg')"
                             {% else %}
-                                style="background-image: url('/uploads/{{ page.title | downcase | replace: ' ', '-' | remove: '?' }}.jpg')"
+                                style="background-image: url('/uploads/{{ page.title | downcase | replace: ' ', '-' | replace: '—', '-' | remove: '?' }}.jpg')"
                             {% endif %}
                         ></div>
                         {% comment %}
@@ -40,12 +40,12 @@ layout: default
             </div>
         </figure>
     {% endif %}
-    <section class="Section--withFigure">
+    <section class="{% if page.image or post.image %}Section--withFigure{% else %}Section{% endif %}">
         <div class="o-container--md">
             <div class="Grid Grid--withGutter">
                 
                 {% unless page.single-column %}
-                    <div class="Grid-cell u-sm-size4of12 u-sm-after1of12 u-hide u-sm-display">
+                    <div class="Grid-cell u-sm-size4of12 u-hide u-sm-display">
                         <aside class="Aside--affixed affix-top" data-spy="affix" data-offset-top="{{ page.offset-top }}" data-offset-bottom="{{ page.offset-bottom }}">
                             
                             {% if page.menu %}
@@ -70,12 +70,11 @@ layout: default
                 {% endunless %}
                 
                 <div class="Grid-cell u-sm-size8of12">
-                    <div class="s-article">
-    
+                    <div class="s-article {% if page.lede %}s-article--withLede{% endif %}">
                         {{ content | markdownify }}
-    
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -90,3 +89,8 @@ layout: default
 {% if page.url == site.pages.why-choose-lendfirst.url or post.url %}
 	{% include newsletter-block.html %}
 {% endif %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="/public/scripts/gumshoe.js"></script>
+<script src="/public/scripts/application.min.js"></script>

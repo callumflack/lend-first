@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<section class="Section u-marginT0">
+    <div class="o-container">
+        <div class="Grid Grid--withGutter">
+            <div class="Grid-cell u-sm-size3of12 u-sm-display">
+                <div class="Affix" data-spy="affix" data-offset-top="200">
+                    {% include blog-aside.html %}
+                </div>
+            </div>
+            <div class="Grid-cell u-sm-size9of12">
+                {% for post in posts %}
+                    {% include post-in-list.html %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

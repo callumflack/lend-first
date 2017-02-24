@@ -9,9 +9,8 @@ layout: default
             <div class="o-container--md o-aligner">
                 <div class="c-block--headline o-aligner-item">
                     <h1 class="c-display--hero">Smart advice.<br>Real solutions.</h1>
-                    <p class="c-text--lg c-text--hero">
-                        We'll help you find the right door<br>to secure your future lifestyle.
-                    </p>
+                    <!-- <p class="c-text--lg c-text--hero">We'll help you find the right door<br>to secure your future lifestyle.</p> -->
+                    <p class="c-text--lg c-text--hero">We'll help you open a door<br>when they all seem locked.</p>
                     
                 </div>
             </div>
@@ -54,7 +53,7 @@ layout: default
             </p>
         </div>
 		{% for post in site.posts limit: 1 %}
-			{% include post-in-list.html %}
+			{% include post-cell.html %}
 		{% endfor %}
         
 	</div>
@@ -66,7 +65,7 @@ layout: default
             <h1 class="c-display">Some of our lending partners</h1>
             <p class="c-text--lgMeta">With 3,500 interest rate variations across 30 lenders, we've got options. However, we always match the right one to your circumstances. <a class="" href="/why-choose-lendfirst">That’s why we talk to people first.</a></p>
         </div>
-		<figure class="Figure">
+		<figure class="t-figure--lenders">
 			<picture>
 				<source media="(min-width: 600px)" srcset="/uploads/lenders.png">
 				<img src="/uploads/lenders-xs.png" alt="Some of our lending partners">

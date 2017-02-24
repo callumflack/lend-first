@@ -13,10 +13,7 @@ layout: default
 <section class="Section">
     <div class="o-container">
         
-        {% assign sortedPosts = (site.posts | sort: "date") | reverse  %}
-        {% for post in site.posts %}
-			{% include post-in-list.html %}
-		{% endfor %}
+        {{ content }}
         
     </div>
 </section>

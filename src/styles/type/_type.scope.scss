@@ -5,6 +5,12 @@
 // --------------------------------------------------------------------------
 
 
+.s-article { 
+    @include media-breakpoint-up(sm) {
+        margin-top: 7px;
+    }
+}
+
 .s-article h1 { @include headlineSm(); }
 .s-article h2 { @include headlineSm(); }
 .s-article h3 { @include headlineSm(); }
@@ -19,7 +25,9 @@
     //&:not(:first-child) { margin-top: $paragraphSpace * 1.25; }
 }
 
-.s-article p:first-of-type { @include textLg(); }
+//.s-article h4 + h5 { margin-top: $paragraphSpace * 1.25; }
+
+.s-article--withLede p:first-of-type { @include textLg(); }
 .s-article p b { font-family: $font-text-medium; }
 .s-article small { @include textSm(); }
 //.s-article ul { margin-top: -#{$paragraphSpace}; }

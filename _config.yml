@@ -25,6 +25,7 @@ defaults:
     layout: page
     permalink: "/:collection/:path/"
     image: true
+    lede: true
     offset-top: 820
     offset-bottom: 1300
 - scope:
@@ -39,11 +40,14 @@ defaults:
     type: posts
   values:
     layout: page
-    permalink: "/blog/:slug/"
+    permalink: "/:categories/:slug/"
     has-javascripts: true
     title: 
     categories: 
+    type: post
     image: true
+    image-align: false
+    lede: true
     offset-top: 820
     offset-bottom: 1300
 description: LendFirst offers smart advice and real solutions for first home buyers and first-time investors, in Cairns, Queeensland, Australia.
@@ -62,7 +66,8 @@ address: PO Box 526 Redlynch, Queensland 4870 Australia
 address-link: https://goo.gl/maps/3RTKiR89iD72
 phone: 0422 830 333
 email: michael@lendfirst.com.au
-accreditation: Michael Garland (Credit Representative No. 473132) is authorised under Vow Financial Pty Ltd (Australian Credit Licence Number 390261). Your full financial situation must be reviewed prior to acceptance of any offer or product.
+insurance-link: https://bob.ensurance.com.au/Proposal/New/3/Agent/LENDFIRST
+accreditation: Michael Garland is a credit representative (473132) of BLSSA Pty Ltd ACN 117 651 760 (Australian Credit Licence 391237).
 google-analytics: UA-75811838-1
 javascriptsurl: "/public/javascripts/"
 markdown: kramdown

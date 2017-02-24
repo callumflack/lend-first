@@ -97,6 +97,17 @@ $footerColor: #677985;
     padding-bottom: $headlineSpace * 0.75;
 }
 
+.Footer-feature {
+    background-color: palette('brand');
+    padding: space(0.5) 0;
+    
+    p {
+        color: palette(white);
+        font-family: $font-text-medium;
+        text-align: center;
+    }
+}
+
 .Footer .Nav-menu {
     //margin: 0;
 }

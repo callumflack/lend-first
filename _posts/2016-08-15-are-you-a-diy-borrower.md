@@ -1,7 +1,8 @@
 ---
 title: Are you a DIY borrower?
 date: 2016-08-15 00:00:00 +10:00
-categories: 
+categories: tips
+tags: 
 - borrowing
 image: 
 ---

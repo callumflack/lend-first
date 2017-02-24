@@ -62,6 +62,12 @@ $(document).ready(function() {
     //     }
     // 
     // });
-
+    
+    
+    
+    // gumshoe
+    gumshoe.init({
+        offset: 150
+    });
 
 });

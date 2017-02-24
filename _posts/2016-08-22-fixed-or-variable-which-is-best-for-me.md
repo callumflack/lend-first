@@ -1,9 +1,10 @@
 ---
 title: Fixed or Variable—which is best for me?
 date: 2016-08-22 00:00:00 +10:00
-categories: 
+categories: tips
+tags: 
 - interest rates
-image: 
+image-align: true
 ---
 
 In the great debate between fixed and variable rate loans there are those that are firmly planted in the always go variable and those that believe fixed rates are the only option. 

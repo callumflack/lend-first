@@ -16,7 +16,6 @@
                 {% for item in site.data.navigation %}
                     <li class="
                         {% if page.url != '/' and page.url contains item.url | remove:'.html' %}is-active
-                        
                         {% endif %}">
 
                         <a href="{{ item.url }}">{{ item.title }}</a>

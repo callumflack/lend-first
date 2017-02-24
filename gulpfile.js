@@ -117,7 +117,7 @@ var options = {
 
 	sass : {
 		files       : 'src/styles/*.scss',
-		destination : 'public/styles/'
+		destination : 'public/styles'
 	},
 
 	watch : {
@@ -164,14 +164,8 @@ gulp.task( 'connect', function() {
 
 
 // -------------------------------------
-//   Font, image & icons tasks
+//   Image & icons tasks
 // -------------------------------------
-
-// gulp.task( 'fonts', function() {
-// 	gulp.src( options.fonts.files )
-// 		.pipe( gulp.dest( options.fonts.destination ) )
-// 		.pipe( plugins.size({title: 'fonts'}) );
-// });
 
 // currently broken, awaiting update:
 // https://github.com/sindresorhus/gulp-imagemin/issues/221

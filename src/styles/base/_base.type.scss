@@ -55,5 +55,9 @@ blockquote, p, address,
 table, time,
 fieldset,
 pre {
-	margin-bottom: $paragraphSpace;
+	margin-bottom: $paragraphSpace * 0.75;
+    
+    @include media-breakpoint-up(sm) {
+        margin-bottom: $paragraphSpace;
+    }
 }

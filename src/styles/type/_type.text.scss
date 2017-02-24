@@ -159,6 +159,10 @@ pre {
 	@include textRg();
 }
 
+p + ul {
+	margin-top: -$paragraphSpace;
+}
+
 em,
 .u-textEm {
 	@include typeReset();

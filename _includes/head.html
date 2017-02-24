@@ -9,11 +9,6 @@
 
     {% comment %}{% feed_meta %}{% endcomment %}
 
-    <!-- <link rel="stylesheet" href="{{ "/assets/stylesheets/application.min.css" | prepend: site.baseurl }}"> -->
     <link rel="stylesheet" href="{{ "/public/styles/application.css" | prepend: site.baseurl }}">
-	
-    {% if meta.redirect %}
-		<meta http-equiv="refresh" content="0;url={{meta.redirect}}">
-	{% endif %}
 
 </head>

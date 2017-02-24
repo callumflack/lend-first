@@ -1,0 +1,4 @@
+{% assign sortedPosts = (site.categories[categoryName] | sort: 'date') | reverse %}
+{% for post in sortedPosts %}
+    {% include post-cell.html %}
+{% endfor %}

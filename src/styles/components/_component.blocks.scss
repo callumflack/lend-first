@@ -63,14 +63,11 @@
 
 .c-block--highlight {
     background-color: palette(white);
-    border: 1px solid palette(black-15);
+    //border: 1px solid palette(black-15);
     border-radius: $cardRadius;
     margin: auto;
-    padding: $headlineSpace;
+    padding: 0 $headlineSpace;
     width: 75%;
-    
-    border: 0;
-    padding-top: 0;
     
     @include media-breakpoint-up(sm) {
         width: 70%;
@@ -84,3 +81,38 @@
 //        background-color: palette(background-light-alt);
 //    }
 //}
+
+
+
+
+// Newsletter block
+// --------------------------------------------------------------------------
+
+.c-block--newsletter {
+    //margin-bottom: space(2);
+    
+    .form-control {
+    	@include baseTransition();
+        @include typeReset();
+        @include textRg();
+        border: 1px solid palette('black-20');
+    	border-top-left-radius: $buttonRadius;
+    	border-bottom-left-radius: $buttonRadius;
+        line-height: map-fetch($button-height, base);
+    	padding: 0 space(1);
+
+    	@include on-event(true) {
+    		outline: none !important;
+    	}
+        
+        @include media-breakpoint-up(sm) {
+            width: 50%;
+        }
+    }
+    
+    .c-button {
+    	border-top-left-radius: 0;
+    	border-bottom-left-radius: 0;
+        margin-left: -1px;
+    }
+}

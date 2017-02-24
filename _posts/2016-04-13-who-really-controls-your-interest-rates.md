@@ -1,11 +1,12 @@
 ---
 title: Who really controls your interest rates?
 date: 2016-04-13 00:00:00 +10:00
-categories: 
+categories: bulletin
+tags: 
 - interest rates
 - reserve bank
 - mortgage
-image: 
+image-align: true
 ---
 
 Does the Reserve Bank really have control over home loan interest rates? Most believe the Reserve Bank has ultimate control over interest rates. Every month, mortgage holders anxiously await the outcome of the RBA's monthly board meeting. 

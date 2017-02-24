@@ -15,3 +15,11 @@
 	margin-bottom: space(0.25);
 	max-width: 100%;
 }
+
+.t-figure--hero {
+    margin: $headlineSpace 0 0;
+}
+
+.t-figure--lenders img {
+    opacity: 0.4;
+}

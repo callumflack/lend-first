@@ -25,7 +25,10 @@
 {% endcomment %}
     
 <a class="Card Card--lg" href="{{ post.url }}">
-    <div class="Card-image o-coverImage--alignBottom" style="background-image: url('/uploads/post-{{ post.title | downcase | replace: ' ', '-' }}.jpg')">
+    <div class="Card-image {% if post.image-align %}o-coverImage--alignBottom{% endif %} {% if post.image == false %}Card-image--blank{% endif %}" 
+        {% unless post.image == false %}
+            style="background-image: url('/uploads/post-{{ post.title | downcase | replace: ' ', '-' | replace: '—', '-' | remove: '?' }}.jpg')"
+        {% endunless %}>
         <h2 class="c-headline--md">{{ post.title }}</h2>
     </div>
     <div class="Card-lede">
