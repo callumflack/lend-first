@@ -1,7 +1,8 @@
 ---
 title: Why choose LendFirst?
 layout: page
-image: hero-blue-sky
+image: /uploads/why-choose-lendfirst.jpg
+has-javascripts: true
 menu: 
 - What is a Mortgage Broker
 - What qualifications does a Mortgage Broker have
@@ -50,6 +51,8 @@ Michael holds the following qualifications making him one of the most highly edu
 * Certificate IV in Training and Assessment
 * Certificate IV in Finance and Mortgage Broking
 * JP (Qualified)
+
+Learn more about Michael on his [Linkedin profile](https://www.linkedin.com/in/michael-garland-88b00a26).
 
 <h4 id="the-lend-first-difference">The LendFirst difference</h4>
 Michael has extensive lending knowledge and has the ability to explain the mortgage landscape and how this impacts your particular situation in a manner that is easy to follow and understand.

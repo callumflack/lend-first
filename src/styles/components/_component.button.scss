@@ -17,7 +17,7 @@
 
 	@include on-event(true) {
 		background-color: transparent;
-		border-color: palette(brand);
+		border-color: currentColor;
 		outline: none !important;
 
         // theme unused
@@ -58,6 +58,13 @@
 
 .c-button {
 	@include button;
+}
+
+.c-button--dark {
+	@include on-event(true) {
+        color: palette("black-66");
+        //font-family: $font-text-bold;
+    }
 }
 
 .c-button--lg {

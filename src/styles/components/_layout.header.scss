@@ -7,14 +7,9 @@
 
 $headerInset: space(1.5);
 $headerInsetMobile: space(0.75);
-//$footerColor: palette(brand-neutral);
-//$footerColor: rgba( palette(brand), 0.5);
-//$footerColor: palette('black-50');
-//$footerColor: #89a1b0;
 $footerColor: #677985;
 
 .Nav {
-    background-color: palette(white);
     border-bottom: 1px solid palette(black-10);
     position: relative;
 
@@ -26,7 +21,6 @@ $footerColor: #677985;
 
 .Nav-logo {
     @include o-aligner();
-    margin-right: $headerInset;
 
     a {
         background-image: none;
@@ -36,9 +30,13 @@ $footerColor: #677985;
         }
     }
     
+    @include media-breakpoint-up(sm) {
+        margin-right: $headerInset;
+    }
+    
     @include media-breakpoint-down(sm) {
         justify-content: flex-start;
-        padding: $headerInsetMobile 0 0;
+        padding: $headerInsetMobile 0;
     }
 }
 
@@ -69,22 +67,50 @@ $footerColor: #677985;
     }
     
     @include media-breakpoint-down(sm) {
-        margin: 0;
-        justify-content: flex-start;
-        
-        li {
-            &:not(:last-child) {
-    			margin-right: $headerInsetMobile;
-    		}
-        }
-
-        li a {
-            font-family: $font-text-medium;
-            padding: $headerInsetMobile 0;
+        @include when-inside("nav[role="banner"]") {
+            display: none;
         }
     }
 }
 
+
+// Mobile nav
+// --------------------------------------------------------------------------
+
+.o-modal .Nav-logo {
+    justify-content: center;
+    padding: 0 0 $headerInset;
+    
+    a {        
+        @include on-event(true) {
+            color: palette(white) !important;
+        }
+    }
+}
+
+.o-modal .Nav-menu {
+    flex-direction: column;
+    
+    li {
+        margin: 0;
+    }
+        
+    a {
+        @include displaySuper();
+        margin: 0;
+        padding: 0 0 $headerInset 0;
+
+        @include on-event(true) {
+            color: palette(white) !important;
+        }
+    }
+}
+
+.o-modal .Contact-detail {
+    color: palette(white);
+    margin-top: 10px;
+    text-align: center;
+}
 
 
 

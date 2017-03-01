@@ -4,6 +4,7 @@ date: 2016-08-29 00:00:00 +10:00
 categories: tips
 tags:
 - borrowing 
+image: /uploads/post-5-reasons-why-pre-approvals-are-bad.jpg
 image-align: true
 ---
 

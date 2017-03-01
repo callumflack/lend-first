@@ -25,12 +25,8 @@ layout: default
                     <div class="FlexEmbed-ratio FlexEmbed-ratio--2by1"></div>
                     <div class="FlexEmbed-content">
                         <div class="u-posAbsoluteCenter o-coverImage{% if page.image-align %} o-coverImage--alignBottom{% endif %}" 
-                            {% if page.type == 'post' %}
-                                style="background-image: url('/uploads/post-{{ page.title | downcase | replace: ' ', '-' | replace: '—', '-' | remove: '?' }}.jpg')"
-                            {% else %}
-                                style="background-image: url('/uploads/{{ page.title | downcase | replace: ' ', '-' | replace: '—', '-' | remove: '?' }}.jpg')"
-                            {% endif %}
-                        ></div>
+                            style="background-image: url('{{ page.image | downcase | replace: ' ', '-' | replace: '—', '-' | remove: '?' }}')">
+                        </div>
                         {% comment %}
                         {% assign image = "{{ page.title | downcase | replace: ' ', '-' }}.jpg" %}
                         {% include responsive-img-cloudinary.html %}
@@ -89,8 +85,3 @@ layout: default
 {% if page.url == site.pages.why-choose-lendfirst.url or post.url %}
 	{% include newsletter-block.html %}
 {% endif %}
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="/public/scripts/gumshoe.js"></script>
-<script src="/public/scripts/application.min.js"></script>

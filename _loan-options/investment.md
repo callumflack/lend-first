@@ -1,6 +1,7 @@
 ---
 title: Investment
 card-title: I want to get another loan.
+image: /uploads/investment.jpg
 order: 2
 menu:
 - What is negative gearing

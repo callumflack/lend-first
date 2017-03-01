@@ -5,6 +5,7 @@ categories: tips
 tags: 
 - problem solved
 - debt
+image: /uploads/post-an-unsuccessful-debt-reduction-strategy.jpg
 image-align: true
 ---
 

@@ -39,7 +39,7 @@
     color: palette(brand);
     font-family: $font-text-medium;
     
-    border-bottom: 1px solid palette(brand);
+    border-bottom: 1px solid currentColor;
     padding-bottom: 6px;
     display: inline-block;
     margin: 0 auto;

@@ -26,13 +26,15 @@ defaults:
     permalink: "/:collection/:path/"
     image: true
     lede: true
+    has-javascripts: true
     offset-top: 820
-    offset-bottom: 1300
+    offset-bottom: 1940
 - scope:
     path: ''
     type: pages
   values:
     layout: page
+    has-javascripts: true
     offset-top: 820
     offset-bottom: 1300
 - scope:

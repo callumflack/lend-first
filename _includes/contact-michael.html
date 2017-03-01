@@ -28,6 +28,7 @@
                             <span class="Contact-detail">{{ site.email }}</span>
                         </div>
                     </a>
+                    {% comment %}
                     <a class="Contact u-linkInvisible" href="{{ site.social.links[1] }}">
                         <div class="Contact-action u-marginBD2">
                             <svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
@@ -37,7 +38,17 @@
                             <span class="Contact-detail">Read his history and experience</span>
                         </div>
                     </a>
-                    <a class="Button c-button u-smDown-fullWidth u-smDown-spaceTD2" href="mailto:{{ site.email }}">Book a free hour</a>
+                    {% endcomment %}
+                    <a class="Contact u-linkInvisible" href="{{ site.social.links[0] }}">
+                        <div class="Contact-action u-marginBD2">
+                            <svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-social-fb"></use>
+                            </svg>
+                            Connect with us<br>
+                            <span class="Contact-detail">Follow us on Facebook</span>
+                        </div>
+                    </a>
+                    <a class="Button c-button u-smDown-fullWidth u-spaceTD2" href="mailto:{{ site.email }}">Book a free hour</a>
                 </div>
             </div>
         </div>

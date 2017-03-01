@@ -6,6 +6,7 @@ tags:
 - interest rates
 - reserve bank
 - mortgage
+image: /uploads/post-who-really-controls-your-interest-rates.jpg
 image-align: true
 ---
 

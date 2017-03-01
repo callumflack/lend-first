@@ -91,7 +91,7 @@
 @mixin headlineSm() {
 	@include headlineTemplate(
         $mixinColor: palette(text),
-    	$mixinFont: $font-text-medium,
+    	$mixinFont: $font-text-bold,
         $mixinLineHeight: $base-line-height-unit,
     	//$mixinMarginBottom: $paragraphSpace,
         $mixinSize: headline--sm

@@ -5,10 +5,11 @@
 // alternatives to the Suit hammers…
 .u-hide        { display: none; }
 .u-posRelative { position: relative; }
+.u-sm-hide { @include media-breakpoint-up(sm) { display: none; } }
 
 
 //colors
-.u-colorDark    { color: paleete(black-66) !important; }
+.u-colorDark    { color: palette(black-66) !important; }
 .u-colorBlack50 { color: palette(black-50) !important; }
 .u-colorBlack40 { color: palette(black-40) !important; }
 .u-colorBlack20 { color: palette(black-20) !important; }

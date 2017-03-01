@@ -4,6 +4,7 @@ date: 2016-08-22 00:00:00 +10:00
 categories: tips
 tags: 
 - interest rates
+image: /uploads/post-fixed-or-variable-which-is-best-for-me.jpg
 image-align: true
 ---
 

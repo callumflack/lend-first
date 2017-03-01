@@ -4,7 +4,7 @@ date: 2016-08-15 00:00:00 +10:00
 categories: tips
 tags: 
 - borrowing
-image: 
+image: /uploads/post-are-you-a-diy-borrower.jpg
 ---
 
 Everyone knows one, the obsessive ‘DIY’er.  That one person who is so confident in their own ability that no-one, not even the experts can do a better job and do it cheaper.  That one person who has to show off how good they are at everything.

@@ -160,7 +160,10 @@ pre {
 }
 
 p + ul {
-	margin-top: -$paragraphSpace;
+	margin-top: -$paragraphSpace * 0.75;
+	@include media-breakpoint-up(sm) {
+        margin-top: -$paragraphSpace;
+    }
 }
 
 em,
@@ -174,7 +177,7 @@ strong,
 .u-textBold {
 	@include typeReset();
     //@include textMeta();
-	//font-family: $font-text-bold;
+	font-family: $font-text-medium;
 }
 
 blockquote,
