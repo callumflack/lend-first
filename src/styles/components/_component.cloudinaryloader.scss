@@ -1,0 +1,35 @@
+
+
+// --------------------------------------------------------------------------
+//   CLOUDINARY LOADER
+//   Ref: https://jsfiddle.net/idobarnoam/k89ff3ay/1/
+// --------------------------------------------------------------------------
+
+
+.CloudinaryImage {
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s linear;
+    width: 100%;
+    
+    // stick it
+    bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.CloudinaryImage.is-loaded {
+    opacity: 1;
+}
+
+.CloudinaryImage.xs {
+    filter: blur(5px);
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.5s linear, filter 0.5s linear;
+}
+
+

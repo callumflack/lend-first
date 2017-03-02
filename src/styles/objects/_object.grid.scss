@@ -1,0 +1,19 @@
+
+
+// --------------------------------------------------------------------------
+//   COMPONENT: GRID
+//   See: https://github.com/Heydon/fukol-grids
+// --------------------------------------------------------------------------
+
+
+.o-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.o-grid > * {
+    flex: 1 0 5em;
+}
+
+// variables
+.o-grid--spaceBetween { justify-content: space-between; }

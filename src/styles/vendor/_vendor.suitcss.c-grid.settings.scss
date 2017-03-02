@@ -1,0 +1,82 @@
+
+
+// --------------------------------------------------------------------------
+//    SUIT GRID SETTINGS
+// --------------------------------------------------------------------------
+
+
+.Grid--withGutter {
+	margin: 0 -#{$gutterSpace * 0.5};
+    @include media-breakpoint-up(lg) { margin: 0 -#{$gutterSpace}; }
+}
+
+.Grid--withGutter > .Grid-cell {
+	padding: 0 $gutterSpace * 0.5;
+    @include media-breakpoint-up(lg) { padding: 0 $gutterSpace; }
+}
+
+// not just left & right margins, but all around
+
+.Grid--withFullGutter {
+	margin: -#{$gutterSpace * 0.5};
+    @include media-breakpoint-up(lg) { margin: -#{$gutterSpace}; }
+}
+
+.Grid--withFullGutter > .Grid-cell {
+	padding: $gutterSpace * 0.5;
+    @include media-breakpoint-up(lg) { padding: $gutterSpace; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// sm
+
+.Grid--withGutterSm {
+	margin: 0 -#{$gutterSpace * 0.25};
+    @include media-breakpoint-up(lg) { margin: 0 -#{$gutterSpace * 0.5}; }
+}
+
+.Grid--withGutterSm > .Grid-cell {
+	padding: 0 $gutterSpace * 0.25;
+    @include media-breakpoint-up(lg) { padding: 0 $gutterSpace * 0.25; }
+}
+
+
+// lg
+
+.Grid--withGutterLg {
+	margin: 0 -#{$gutterSpace};
+    @include media-breakpoint-up(lg) { margin: 0 -#{$gutterSpace * 3}; }
+}
+
+.Grid--withGutterLg > .Grid-cell {
+	padding: 0 $gutterSpace;
+    @include media-breakpoint-up(lg) { padding: 0 $gutterSpace * 3; }
+}
+
+
+
+
+//$gutterSpaceNegative : -($gutterSpace);
+
+//.Grid--withGutterLg {
+//	margin: 0 $gutterSpaceNegative;
+//	padding: 0 ($gutterSpace * 2);
+//
+//	@include media-breakpoint-up(xs) { margin: 0 $gutterSpaceNegative; }
+//}
+//
+//.Grid--withGutterLg > .Grid-cell {
+//	padding: 0 $gutterSpace;
+//
+//	@include media-breakpoint-up(xs) { padding: 0 $gutterSpace; }
+//}

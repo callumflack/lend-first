@@ -1,0 +1,141 @@
+
+
+// --------------------------------------------------------------------------
+// HELPERS
+// --------------------------------------------------------------------------
+
+
+// Full height or width
+// --------------------------------------------------------------------------
+
+.u-fullHeight       { height: 100%; }
+.u-fullWidth        { width: 100%; }
+.u-mxs-fullWidth    { @include media-breakpoint-up(max-xs) { width: 100%; } }
+
+
+// Colors
+// Alt: .u-colorBrand { color: color($increment: brand) !important; }
+// --------------------------------------------------------------------------
+
+.u-colorWhite       { color: color(text, background) !important; }
+.u-colorFaint       { color: color(text, faint) !important; }
+.u-colorLight       { color: color(text, light) !important; }
+.u-colorFaint       { color: color(text, faint) !important; }
+.u-colorMuted       { color: color(text, muted) !important; }
+.u-colorMedium      { color: color(text, medium) !important; }
+.u-colorGreyLite    { color: color(text, light) !important; }
+.u-colorGrey        { color: color(text, medium) !important; }
+.u-colorDark        { color: color(text, charcoal) !important; }
+.u-colorBlack       { color: color(text, dark) !important; }
+.u-colorBrand       { color: color(text, brand) !important; }
+.u-colorBrandAlt    { color: color(text, brand-alt) !important; }
+
+.u-colorTextLight   { color: color(text, light) !important; }
+.u-colorTextMuted   { color: color(text, muted) !important; }
+.u-colorTextMedium  { color: color(text, medium) !important; }
+
+
+// Font sizes
+// --------------------------------------------------------------------------
+
+.u-textSizeXs       { font-size: size(font, text-xs) !important; }
+.u-textSizeSm       { font-size: size(font, text-sm) !important; }
+.u-textSizeRg       { font-size: size(font, text) !important; }
+.u-textSizeLg       { font-size: size(font, text-lg) !important; }
+
+.u-sm-textSizeRg    { @include media-breakpoint-up(sm) { font-size: size(font, text) !important; } }
+
+// .u-headerSizeRg     { font-size: size(font, header) !important; }
+.u-headerSizeRg     { font-size: map-fetch($size, font, headerRg, xs) !important; @include media-breakpoint-up(xs) { font-size: map-fetch($size, font, headerRg, base) !important } }
+
+
+
+// Font weights
+// --------------------------------------------------------------------------
+
+.u-weightBook       { font-family: $font-text-book !important; }
+.u-weightMedium     { font-family: $font-text-medium !important; }
+.u-weightBold       { font-family: $font-text-bold !important; }
+.u-weightBlack      { font-family: $font-text-black !important; }
+
+.u-sm-weightBold    { @include media-breakpoint-up(sm) { font-family: $font-text-bold !important; } }
+.u-sm-weightBlack   { @include media-breakpoint-up(sm) { font-family: $font-text-black !important; } }
+
+
+// Background colors
+// --------------------------------------------------------------------------
+
+// white                    : $base-white,
+// faint                    : map-fetch($root-color, grey-03),
+// light                    : map-fetch($root-color, grey-06),
+// base                     : map-fetch($root-color, grey-12),
+// muted                    : map-fetch($root-color, grey-25),
+// medium                   : map-fetch($root-color, grey-40),
+// charcoal                 : map-fetch($root-color, grey-78),
+// dark                     : map-fetch($root-color, grey-85),
+// background               : map-fetch($root-color, background),
+// neutral                  : map-fetch($root-color, neutral),
+// neutral-light            : map-fetch($root-color, neutral-light),
+// brand                    : map-fetch($root-color, brand),
+// brand-light              : map-fetch($root-color, brand-light),
+// brand-dark               : map-fetch($root-color, brand-dark),
+// brand-alt                : map-fetch($root-color, brand-alt),
+// brand-alt-dark           : map-fetch($root-color, brand-alt-dark),
+
+.u-bgWhite          { background-color: palette(background) !important; }
+.u-bgNeutral        { background-color: palette(neutral) !important; }
+.u-bgNeutralLight   { background-color: palette(neutral-light) !important; }
+
+.u-bgCharcoal       { background-color: palette(charcoal) !important; }
+.u-bgDark           { background-color: palette(dark) !important; }
+.u-bgBrand          { background-color: palette(brand) !important; }
+.u-bgBrandLight     { background-color: palette(brand-light) !important; }
+
+.u-sm-bgNeutral     { @include media-breakpoint-up(sm) { background-color: palette(neutral) !important; } }
+
+
+// Border colors
+// --------------------------------------------------------------------------
+
+.u-borderBase       { border: 1px solid palette(base) !important; }
+.u-borderMuted      { border: 1px solid palette(muted) !important; }
+.u-borderDark       { border: 1px solid palette(dark) !important; }
+.u-borderBrand      { border: 1px solid palette(brand) !important; }
+.u-borderBrandLight { border: 1px solid palette(brand-light) !important; }
+
+.u-sm-borderDark    { @include media-breakpoint-up(sm) { border: 1px solid palette(dark) !important; } }
+
+
+// Rounded wells. Usually require a background-color or a border.
+// --------------------------------------------------------------------------
+
+.u-well             { border-radius: size(border-radius, base); }
+.u-well--lg         { border-radius: size(border-radius, large); }
+
+
+// Opacity
+// --------------------------------------------------------------------------
+
+.u-opaque           { opacity: 1 !important; }
+
+
+// Block element helpers
+// --------------------------------------------------------------------------
+
+.u-textCenterBlock {
+    > * {
+        @extend .u-textCenter;
+    }
+}
+
+.u-alignBlockUp {
+    @include media-breakpoint-up(sm) {
+        transform: translateY( rem(-12) );
+    }
+}
+
+.u-alignBlockDown {
+    @include media-breakpoint-up(sm) {
+        transform: translateY( rem(12) );
+    }
+}

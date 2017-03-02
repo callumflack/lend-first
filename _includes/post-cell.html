@@ -1,0 +1,38 @@
+{% comment %}
+<div class="FlexEmbed">
+    <div class="FlexEmbed-ratio FlexEmbed-ratio--2by1"></div>
+    <div class="FlexEmbed-content">
+        <div class="o-posAbsoluteCenterAlt o-coverImage o-imageBlend--whiten" style="background-image: url('/uploads/post-{{ post.title | downcase | replace: ' ', '-' }}.jpg')"></div>
+        
+        <a class="Post o-imageBlend--brandLight" href="{{ post.url }}">
+            <div class="o-container o-aligne">
+                <div class="o-aligner-item">
+                    <h2 class="c-display">{{ post.title }}</h2>
+                    {{ post.content | truncatewords: 30 }}
+                    <span class="u-marginLD3 o-linkBuriedTarget o-arrowEast">Read more</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+<div class="Card-image o-coverImage o-coverImage--alignBottom" style="background-image: url('/uploads/post-{{ post.title | downcase | replace: ' ', '-' }}.jpg')">
+
+<div class="o-posAbsoluteCenterAlt o-coverImage o-coverImage--alignBottom" style="background-image: url('/uploads/post-{{ post.title | downcase | replace: ' ', '-' }}.jpg')"></div>
+<div class="o-posAbsoluteCenterAlt o-imageBlend--brand"></div>
+
+{% endcomment %}
+    
+<a class="Card Card--lg" href="{{ post.url }}">
+    <div class="Card-image {% if post.image-align %}o-coverImage--alignBottom{% endif %} {% if post.image == false %}Card-image--blank{% endif %}" 
+        {% unless post.image == false %}
+            style="background-image: url('/uploads/post-{{ post.title | downcase | replace: ' ', '-' | replace: '—', '-' | remove: '?' }}.jpg')"
+        {% endunless %}>
+        <h2 class="c-headline--md">{{ post.title }}</h2>
+    </div>
+    <div class="Card-lede">
+        {{ post.content | truncatewords: 30 }}
+        <span class="u-marginLD3 o-linkBuriedTarget o-arrowEast">Read more</span>
+    </div>
+</a>

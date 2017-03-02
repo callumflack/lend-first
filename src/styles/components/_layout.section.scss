@@ -1,0 +1,37 @@
+
+
+// --------------------------------------------------------------------------
+//   LAYOUT: SECTION
+// --------------------------------------------------------------------------
+
+
+@mixin sectionSpace() {
+    margin-top: $blockSpace;
+}
+
+.Section {
+    @include sectionSpace();
+}
+
+.Section--hero {
+    margin: 0;
+    .FlexEmbed-ratio { padding-bottom: 50vh; }
+}
+
+.Section--header,
+.Section--withFigure {
+    margin: $headlineSpace 0 0;
+    
+    //margin: space(1) 0 0;
+    //@include media-breakpoint-up(sm) {
+    //    margin: space(2) 0 0;
+    //};
+}
+
+.Section--underHero {
+    margin-top: $blockSpace * 0.5;
+}
+
+.Section--header + .Section {
+    margin-top: 0;
+}

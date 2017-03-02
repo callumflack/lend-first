@@ -1,0 +1,220 @@
+
+
+// --------------------------------------------------------------------------
+//   HEADLINE TYPOGRAPHY
+// --------------------------------------------------------------------------
+
+
+// Common theme…
+
+@mixin headlineTemplate(
+	$mixinColor: palette(text),
+	$mixinFont: $font-text-light,
+	$mixinLetterSpacing: 0,
+	$mixinLineHeight: 1.25,
+	$mixinMarginBottom: 0,
+    $mixinSize: headline,
+    $mixinTextAlign: left
+) {
+
+	// standards
+	color: $mixinColor;
+	font-family: $mixinFont;
+	letter-spacing: $mixinLetterSpacing;
+	line-height: $mixinLineHeight;
+	margin-bottom: $mixinMarginBottom;
+	text-align: $mixinTextAlign;
+
+	// sizes
+	font-size: fontsize($mixinSize, xs);
+	@include media-breakpoint-up(sm) { font-size: fontsize($mixinSize, sm); }
+	@include media-breakpoint-up(xl) { font-size: fontsize($mixinSize, lg); }
+
+	// children
+	> li,
+	> li a,
+	> a {
+		border-bottom: 0;
+		color: currentColor;
+		font-family: inherit;
+		font-size: inherit;
+		margin: 0;
+	}
+}
+
+
+
+
+// Component by size…
+
+@mixin display() {
+    @include headlineTemplate(
+        //$mixinColor: palette(black-66),
+        $mixinColor: palette(brand),
+    	$mixinMarginBottom: space(2),
+        $mixinSize: display,
+        $mixinTextAlign: center
+    );
+}
+
+@mixin displaySuper() {
+    @include headlineTemplate(
+        $mixinColor: palette(brand),
+    	$mixinMarginBottom: $headlineSpace,
+        $mixinSize: display
+    );
+    //border-bottom: 1px solid currentColor;
+    //padding-bottom: space(0.75);
+}
+
+@mixin headline() {
+    @include headlineTemplate(
+        $mixinColor: palette(brand),
+    	$mixinFont: $font-text-regular,
+    	$mixinMarginBottom: space(2),
+        $mixinSize: headline--md,
+        $mixinTextAlign: center
+    );
+}
+
+@mixin headlineMd() {
+    @include headlineTemplate(
+        $mixinColor: palette(text),
+    	$mixinFont: $font-text-regular,
+        $mixinLineHeight: $base-line-height-unit,
+        $mixinMarginBottom: $paragraphSpace,
+        $mixinSize: headline--md,
+        $mixinTextAlign: center
+    );
+}
+
+@mixin headlineSm() {
+	@include headlineTemplate(
+        $mixinColor: palette(text),
+    	$mixinFont: $font-text-bold,
+        $mixinLineHeight: $base-line-height-unit,
+    	//$mixinMarginBottom: $paragraphSpace,
+        $mixinSize: headline--sm
+    );
+}
+
+@mixin lede() {
+	@include headlineTemplate(
+        $mixinColor: palette(brand),
+    	$mixinFont: $font-text-medium,
+    	$mixinLineHeight: $base-line-height-unit,
+        $mixinMarginBottom: $paragraphSpace,
+        $mixinSize: headline--sm
+    );
+}
+
+@mixin headlineXs() {
+    @include headlineTemplate(
+		$mixinFont: $font-text-bold,
+        $mixinSize: text--meta,
+        $mixinLetterSpacing: 0.05em
+    );
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+// aka display
+//.Headline--super {
+//	// @include Headline;
+//	border-bottom: 1px solid color(text, brand);
+//	color: color(text, brand);
+//	font-family: $font-text-medium;
+//	font-size: map-fetch($size, font, headerXl, xs);
+//	letter-spacing: -0.015em;
+//	line-height: 1.25;
+//	margin-bottom: space(0.75);
+//	padding-bottom: space(0.45);
+//	text-align: left;
+//
+//	@include media-breakpoint-up(xs) {
+//		border-width: 2px;
+//		font-size: map-fetch($size, font, headerXl, base);
+//		line-height: 1.1;
+//	}
+//}
+//
+//// quick trumps 160830
+//.index .Headline--super {
+//    @include media-breakpoint-up(sm) { width: 90%; }
+//    @include media-breakpoint-up(md) { width: 70%; }
+//}
+
+
+
+
+
+
+//UNUSED SO FAR
+
+//@mixin displayRg() {
+//    @include headlineTemplate(
+//		$mixinFont: $font-text-regular,
+//        $mixinLetterSpacing: -0.005em,
+//        $mixinLineHeight: 1.1,
+//        $mixinSize: headline
+//    );
+//}
+//
+//@mixin headlineMdLight() {
+//    @include headlineTemplate(
+//    	$mixinFont: $font-text-regular,
+//        $mixinSize: headline--md
+//    );
+//	
+//	color: palette('black-40');
+//}
+//
+//@mixin headlineMdBold() {
+//    @include headlineTemplate(
+//    	$mixinFont: $font-text-bold,
+//        $mixinSize: headline--md
+//    );
+//}
+
+
+
+
+
+
+
+// Component: headline
+// --------------------------------------------------------------------------
+
+.c-display--hero     { @include display(); color: palette(brand); }
+.c-display           { @include display(); }
+.c-display--super    { @include displaySuper(); }
+.c-headline          { @include headline(); }
+.c-headline--md      { @include headlineMd(); }
+.c-headline--sm      { @include headlineSm(); }
+//.c-headline--xs      { @include headlineXs(); }
+
+
+.c-headline em {
+	font-family: inherit;
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+
+
+
+
+
+
+
+
+// Component: headline blocks.
+// --------------------------------------------------------------------------
+
+// .Headline-block { > * { @include headline(); } }

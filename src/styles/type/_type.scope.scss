@@ -1,0 +1,131 @@
+
+
+// --------------------------------------------------------------------------
+//   TYPE: MARKDOWN SCOPES
+// --------------------------------------------------------------------------
+
+
+.s-article { 
+    @include media-breakpoint-up(sm) {
+        margin-top: 7px;
+    }
+}
+
+.s-article h1 { @include headlineSm(); }
+.s-article h2 { @include headlineSm(); }
+.s-article h3 { @include headlineSm(); }
+
+.s-article h4 { 
+    @include headlineSm(); 
+    //&:not(:first-child) { margin-top: $paragraphSpace * 2; } 
+}
+
+.s-article h5 {
+    @include headlineXs();
+    //&:not(:first-child) { margin-top: $paragraphSpace * 1.25; }
+}
+
+//.s-article h4 + h5 { margin-top: $paragraphSpace * 1.25; }
+
+.s-article--withLede p:first-of-type { @include textLg(); }
+.s-article p b { font-family: $font-text-medium; }
+.s-article small { @include textSm(); }
+//.s-article ul { margin-top: -#{$paragraphSpace}; }
+
+.s-article a {
+    @include underlineLink($linkRuleBrand);
+    color: palette(brand) !important;
+}
+
+
+// Tables
+// Get markdown tables from CSV via:
+// http://www.tablesgenerator.com/markdown_tables
+// See also: http://fletcher.github.io/MultiMarkdown-4/tables.html
+// May req: https://css-tricks.com/almanac/selectors/n/nth-of-type/
+// --------------------------------------------------------------------------
+
+table,
+thead,
+tbody,
+tr {
+    display: block;
+}
+
+table {
+    //border-top: 1px solid palette(black-20);
+    margin: space(0.5) 0 space(1);
+}
+
+thead tr,
+tbody tr {
+    padding: space(0.35) space(0.75) space(0.25);
+}
+
+thead tr {
+    background-color: rgba( palette(brand), 0.1 );
+}
+
+tbody tr {
+    background-color: rgba( palette(brand), 0.05 );
+
+    &:last-child {
+        padding-bottom: space(0.5);
+    }
+
+    //@include when-inside(".first-home-buyers") {
+    //    &:last-child { border-top: 1px solid palette(muted); }
+    //}
+}
+
+th,
+td {
+    @include textSm();
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: text-top;
+}
+
+th {
+    font-family: $font-text-bold;
+}
+
+
+// Table column widths
+// --------------------------------------------------------------------------
+
+th,
+td {
+    width: 18%; // default to prevent layouts failing abjectly.
+}
+
+/* uncss:ignore */
+.bridging th,
+.bridging td { width: 40%; }
+
+/* uncss:ignore */
+.cash-out th,
+.cash-out td { width: 30%; }
+
+/* uncss:ignore */
+.construction th:nth-of-type(3),
+.construction td:nth-of-type(3) { width: 60%; }
+
+/* uncss:ignore */
+.investment table:nth-of-type(1) th,
+.investment table:nth-of-type(1) td { width: 32.5%; }
+
+/* uncss:ignore */
+.investment tbody tr:nth-last-child(2),
+.investment tbody tr::last-child { border-top: 1px solid palette(muted); }
+
+/* uncss:ignore */
+.first-home-buyers th,
+.first-home-buyers td { width: 48%; }
+
+/* uncss:ignore */
+.first-home-buyers th:nth-of-type(2),
+.first-home-buyers td:nth-of-type(2) { text-align: right; width: 10%; }
+
+/* uncss:ignore */
+.first-home-buyers tbody tr:last-child { border-top: 1px solid palette(muted); }

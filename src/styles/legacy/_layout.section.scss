@@ -1,0 +1,24 @@
+
+
+// --------------------------------------------------------------------------
+//   LAYOUT: SECTION
+// --------------------------------------------------------------------------
+
+
+.Section {
+    padding: space(4) 0 0;
+
+    @include media-breakpoint-up(sm) {
+        padding: space(12) 0 0;
+    };
+}
+
+.Section--hero {
+    padding: 0;
+    
+    .FlexEmbed-ratio { padding-bottom: 50vh; }
+    //.o-container--md { transform: translateY( -#{space(4)} ); }
+    //.c-block--headline .c-display,
+    //.c-block--headline .c-text--lg { color: white; }
+
+}

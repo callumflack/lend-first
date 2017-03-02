@@ -1,0 +1,92 @@
+
+
+
+// plain display/pos objects that can be overridden by the responsive display/pos utils
+// alternatives to the Suit hammers…
+.u-hide        { display: none; }
+.u-posRelative { position: relative; }
+.u-sm-hide { @include media-breakpoint-up(sm) { display: none; } }
+
+
+//colors
+.u-colorDark    { color: palette(black-66) !important; }
+.u-colorBlack50 { color: palette(black-50) !important; }
+.u-colorBlack40 { color: palette(black-40) !important; }
+.u-colorBlack20 { color: palette(black-20) !important; }
+.u-colorBlack10 { color: palette(black-10) !important; }
+
+.u-colorBrand { color: palette(brand) !important; }
+.u-colorNeutralDark { color: palette(neutral-dark) !important; }
+
+.u-colorHighlightAction     { color: palette(highlight-action) !important; }
+.u-colorHighlightActionDark { color: palette(highlight-action-dark) !important; }
+
+
+// width utils
+.u-smDown-fullWidth { @include media-breakpoint-down(sm) { width: 100% !important; } }
+
+
+// block utils
+.u-inlineBlockWrapper > * { display: inline-block; }
+
+
+
+
+
+
+// quick margin spacers
+// --------------------------------------------------------------------------
+
+.u-marginT0      { margin-top     : 0 !important; }
+
+
+.u-space0     { margin: 0 !important; }
+
+.u-spaceT1of4 { margin-top: space(0.25); }
+
+.u-marginNTD3 { margin-top: -#{space(1/3)}  !important; }
+.u-spaceTD2   { margin-top: space(0.5) !important; }
+.u-spaceT     { margin-top: space(1) !important; }
+.u-spaceT2    { margin-top: space(2) !important; }
+.u-spaceT4    { margin-top: space(4) !important; }
+.u-spaceB     { margin-bottom: space(1) !important; }
+.u-spaceB2    { margin-bottom: space(2) !important; }
+.u-spaceB3    { margin-bottom: space(3) !important; }
+.u-spaceR     { margin-right: space(1) !important; }
+
+
+
+// responsive
+.u-sm-spaceLN1 { @include media-breakpoint-up(sm) { margin-left: -1px; } }
+.u-sm-spaceT   { @include media-breakpoint-up(sm) { margin-top: space(1); } }
+.u-sm-spaceT2  { @include media-breakpoint-up(sm) { margin-top: space(2); } }
+
+.u-smDown-spaceR   { @include media-breakpoint-down(sm) { margin-right: space(1); } }
+.u-smDown-spaceTD2 { @include media-breakpoint-down(sm) { margin-top: space(0.5); } }
+.u-smDown-spaceT   { @include media-breakpoint-down(sm) { margin-top: space(1); } }
+.u-smDown-spaceT2  { @include media-breakpoint-down(sm) { margin-top: space(2); } }
+.u-smDown-spaceB   { @include media-breakpoint-down(sm) { margin-bottom: space(1); } }
+.u-smDown-spaceBD2 { @include media-breakpoint-down(sm) { margin-bottom: space(0.5); } }
+
+
+
+// vh block spacers
+// --------------------------------------------------------------------------
+
+.u-headlineSpaceT  { margin-top: $headlineSpace !important; }
+.u-headlineSpaceB  { margin-bottom: $headlineSpace !important; }
+.u-headlineSpaceB2 { margin-bottom: $headlineSpace * 2 !important; }
+
+.u-blockSpaceT { margin-top: $blockSpace; }
+
+.u-smDown-blockR--3by4 { @include media-breakpoint-down(xs) { margin-right: $blockSpace * 0.75; } }
+.u-smDown-blockT--3by4 { @include media-breakpoint-down(xs) { margin-top: $blockSpace * 0.75; } }
+.u-smDown-blockB--3by4 { @include media-breakpoint-down(xs) { margin-bottom: $blockSpace * 0.75; } }
+
+.u-sm-blockB--1by4 { margin-bottom: $blockSpace * 0.25; }
+.u-sm-blockB--1by3 { margin-bottom: $blockSpace * 0.333333; }
+.u-sm-blockB--1by2 { margin-bottom: $blockSpace * 0.5; }
+
+.u-sm-blockT--1by4 { margin-top: $blockSpace * 0.25; }
+.u-sm-blockT--1by3 { margin-top: $blockSpace * 0.333333; }
+.u-sm-blockT--1by2 { margin-top: $blockSpace * 0.5; }

@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<article>
+    <h1>{{ post.title }}</h1>
+    {{ content }}
+</article>
+<nav>
+    {% if previous %}<a href="{{ previous }}">previous</a>{% endif %}
+    {% if next %}<a href="{{ next }}">next</a>{% endif %}
+</nav>

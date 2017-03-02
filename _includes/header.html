@@ -1,8 +1,8 @@
 <header class="Header" role="banner">
-    <div class="Container">
+    <div class="o-container">
         <!-- <nav class="Header-nav">
             <div class="Header-logo">
-                <a href="/"><img src="/build/images/sprite/apf-logo.svg" alt="Australian Property Finance logo"></a>
+                <a href="/"><img src="/uploads/sprite/apf-logo.svg" alt="LendFirst logo"></a>
             </div>
             <ul class="Header-menu">
                 <li><a href="/why-engage-apf-cairns">Why engage APF Cairns?</a></li>
@@ -12,7 +12,11 @@
         <section class="Header-intro">
             <div class="Header-info">
                 <div class="Header-logo">
-                    <a href="/"><img src="/build/images/apf-logo.svg" alt="Australian Property Finance logo"></a>
+                    <a href="/">
+                        <svg height="66" version="1.1" viewBox="0 0 200 66" width="200" class="o-icon">
+                            {% include ic-logo.html %}
+                        </svg>
+                    </a>
                 </div>
                 <h1 class="Headline Headline--doubleLine u-marginBD1 u-textLeft" style="line-height:1.15;"><span>Real Advice for Real People.&nbsp;&nbsp;</span> Michael Garland, Cairns.</h1>
                 <div class="Grid u-xs-flex">
@@ -23,19 +27,19 @@
                             </svg>
                             <div class="Contact-action Media-body">
                                 Call Michael<br>
-                                <span class="Contact-detail">{{ site.meta.phone }}</span>
+                                <span class="Contact-detail">{{ site.phone }}</span>
                             </div>
                         </a>
                     </div>
 
                     <div class="Grid-cell u-size7of12">
-                        <a class="Contact Contact--primary Media u-linkInvisible" href="mailto:{{ site.meta.email }}">
+                        <a class="Contact Contact--primary Media u-linkInvisible" href="mailto:{{ site.email }}">
                             <svg class="Icon Icon--md Icon--left Icon--mediaAlign">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-email"></use>
                             </svg>
                             <div class="Contact-action Media-body">
                                 Email Michael<br>
-                                <span class="Contact-detail">{{ site.meta.email }}</span>
+                                <span class="Contact-detail">{{ site.email }}</span>
                             </div>
                         </a>
                     </div>
@@ -44,16 +48,16 @@
             </div>
 
             <figure class="Header-portrait">
-                <img src="/build/images/michael-garland.png" alt="Michael Garland">
+                <img src="/uploads/michael-garland.png" alt="Michael Garland">
             </figure>
 
         </section>
     </div>
 </header>
 
-{% if home? %}
+{% if page.url == '/' %}
 <section class="Header-byline u-sm-hide">
-    <div class="Container">
+    <div class="o-container">
 
         <div class="Grid Grid--withGutter ">
             <div class="Grid-cell u-ip6-size5of12">
@@ -63,18 +67,18 @@
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-call"></use>
                         </svg>
                         Call Michael<br>
-                        <span class="Contact-detail u-colorWhite">{{ site.meta.phone }}</span>
+                        <span class="Contact-detail u-colorWhite">{{ site.phone }}</span>
                     </div>
                 </a>
             </div>
             <div class="Grid-cell u-ip6-size7of12 u-marginTD2 u-ip6-marginT0">
-                <a class="Contact u-linkInvisible" href="mailto:{{ site.meta.email }}">
+                <a class="Contact u-linkInvisible" href="mailto:{{ site.email }}">
                     <div class="Contact-action u-colorWhite u-textCenter u-ip6-textLeft">
                         <svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-email"></use>
                         </svg>
                         Email Michael<br>
-                        <span class="Contact-detail u-colorWhite">{{ site.meta.email }}</span>
+                        <span class="Contact-detail u-colorWhite">{{ site.email }}</span>
                     </div>
                 </a>
 

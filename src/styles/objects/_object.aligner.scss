@@ -1,0 +1,81 @@
+
+
+// --------------------------------------------------------------------------
+//   FLEX ALIGNER OBJECT
+//   See: https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/
+// --------------------------------------------------------------------------
+
+
+/**
+ * 1. If IE10/11 compatibility req'd, use height.
+ * 2. If you need min-height, wrap in 'u-ieMinHeightBug'.
+ * See http://bit.ly/1gy8OJS for details.
+ */
+@mixin o-aligner {
+	display: flex;
+	align-items: center;
+	//height: 100%; /* 1 */
+	min-height: 100%; /* 2 */
+	justify-content: center;
+}
+
+@mixin o-aligner-item {
+	flex: 1;
+    margin-bottom: 0 !important;
+}
+
+.o-aligner {
+	@include o-aligner;
+}
+
+.o-aligner-item {
+	@include o-aligner-item;
+}
+
+.o-aligner-item--top {
+	align-self: flex-start;
+}
+
+.o-aligner-item--bottom {
+	align-self: flex-end;
+}
+
+.o-aligner-item--fixed {
+	flex: none;
+	max-width: 50%;
+}
+
+/**
+ * Fixes the min-height bug in IE10-11.
+ * This class should be added to a container element as described in
+ * Flexbug #3. See http://bit.ly/1gy8OJS for details.
+ */
+.u-ieMinHeightBugFix {
+  display: flex;
+  flex-direction: column;
+}
+
+
+// --------------------------------------------------------------------------
+//   ALT VERTICAL ALIGNER
+//   Ripped from: instrument.com
+// --------------------------------------------------------------------------
+
+
+.o-ghost {
+    font-size: 0;
+    height: inherit;
+}
+
+.o-ghost:before {
+    content: "";
+    height: 100%;
+    margin-left: -1px;
+    width: 1px;
+}
+
+.o-ghost:before,
+.o-ghost-child {
+    display: inline-block;
+    vertical-align: middle;
+}

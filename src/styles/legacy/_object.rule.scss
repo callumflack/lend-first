@@ -1,0 +1,112 @@
+
+
+// --------------------------------------------------------------------------
+// OBJECT: RULE
+// --------------------------------------------------------------------------
+
+
+// Rules on divs
+
+@mixin SectionRule(
+    $mixin-color: palette(muted),
+    $mixin-weight: 1px
+) {
+    border-top: $mixin-weight solid $mixin-color;
+    // padding-top: space(0.5);
+}
+
+.SectionRule            { @include SectionRule(); }
+.SectionRule--base      { @include SectionRule( palette(base) ); }
+.SectionRule--dark      { @include SectionRule( palette(charcoal) ); }
+
+.msm-SectionRule        { @include SectionRule(); @include media-breakpoint-up(sm) { display: none; } }
+.msm-SectionRule--light { @include SectionRule($mixin-color: rgba( palette(muted), 0.5) ); @include media-breakpoint-up(sm) { display: none; } }
+.mxs-SectionRule        { @include media-breakpoint-up(max-xs) { @include SectionRule(); } }
+
+.msm-SectionRule--contact {
+    border-bottom: 1px solid rgba( palette(muted), 0.75);
+    padding-bottom: space(0.75);
+
+    @include media-breakpoint-up(xs) {
+        border-color: transparent;
+        height: 0;
+        padding: 0;
+    }
+}
+
+.msm-SectionRule--contactTop {
+    border-top: 1px solid rgba( palette(muted), 0.75);
+    padding-top: space(0.75);
+
+    @include media-breakpoint-up(xs) {
+        border-color: transparent;
+        height: 0;
+        padding: 0;
+    }
+}
+
+
+// Horizontal Rules (replacing HRs)
+
+@mixin HorizontalRule(
+    $mixin-color: palette(base),
+    $mixin-weight: 1px
+) {
+    border-top: $mixin-weight solid $mixin-color;
+    height: $mixin-weight;
+    margin: space(0.65) 0 space(0.85);
+}
+
+.HzRule          { @include HorizontalRule(); }
+.HzRule--white   { @include HorizontalRule( palette(white) ); }
+.HzRule--muted   { @include HorizontalRule( palette(muted) ); }
+.HzRule--dark    { @include HorizontalRule( palette(charcoal) ); }
+
+.msm-HzRule      { @include media-breakpoint-up(max-sm) { @include HorizontalRule(); } }
+
+.HzRule--footer {
+    border-top: 1px solid rgba( palette(medium), 0.25);
+    height: 1px;
+    margin: space(0.75) 0;
+    width: 100%;
+
+    @include media-breakpoint-up(xs) {
+        margin: rem(9) 0 rem(11);
+        width: 80%;
+    }
+}
+
+
+
+
+
+// Rules (replacing HRs)
+
+@mixin Rule(
+    $mixin-color: palette(base),
+    $mixin-weight: 1px
+) {
+    border: 0;
+    border-top: $mixin-weight solid $mixin-color;
+}
+
+// .HzRule {
+//     @include Rule();
+//     height: 0;
+//     margin-top: calc( #{space(1)} - 1px);
+//     margin-bottom: space(1);
+// }
+
+.DivRule {
+    @include Rule( 2px, palette(charcoal) );
+    padding-top: space(1/3);
+}
+
+.DivRule--light {
+    @include Rule( 1px, palette(base) );
+    padding-top: space(1/3);
+}
+
+.VertRule--left {
+    border-left: 1px solid palette(base);
+}

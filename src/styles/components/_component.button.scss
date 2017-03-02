@@ -1,0 +1,308 @@
+
+
+// --------------------------------------------------------------------------
+//    BUTTONS
+// --------------------------------------------------------------------------
+
+
+@mixin buttonTheme() {
+	@include baseTransition();
+	border-radius: $buttonRadius;
+	border-style: solid;
+	border-width: 1px;
+	padding: 0 space(1);
+    
+	// transition: all transition(duration, short) transition(type, base);
+	// vertical-align: top; // 1.
+
+	@include on-event(true) {
+		background-color: transparent;
+		border-color: currentColor;
+		outline: none !important;
+
+        // theme unused
+        //opacity: 0.5;
+	}
+	
+	a {
+
+	}
+
+	&[disabled] {
+		border-color: palette(black-40);
+		background-color: palette(black-40);
+		cursor: not-allowed;
+		opacity: 0.4;
+	}
+}
+
+@mixin buttonText() {
+    @include typeReset();
+    @include textRg();
+    line-height: map-fetch($button-height, base);
+
+    @include on-event(true) {
+        color: palette(brand);
+        font-family: $font-text-bold;
+    }
+}
+
+
+// Primary button
+// --------------------------------------------------------------------------
+
+@mixin button() {
+	@include buttonTheme();
+	@include buttonText();
+}
+
+.c-button {
+	@include button;
+}
+
+.c-button--dark {
+	@include on-event(true) {
+        color: palette("black-66");
+        //font-family: $font-text-bold;
+    }
+}
+
+.c-button--lg {
+	line-height: map-fetch($button-height, lg);
+    padding: 0 space(2);
+}
+
+.c-button--full {
+	text-align: center;
+	width: 100%;
+}
+
+.c-button--lineHeight {
+    line-height: map-fetch($button-height, base) !important;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.c-button--rev {
+    @include button;
+	
+	@include on-event(true) {
+        background-color: transparent;
+		border-color: currentColor;
+		color: palette(highlight-edit);
+	}
+}
+
+.c-button--transparent {
+	@include on-event(true) {
+	    background-color: transparent;
+	    border-color: transparent;
+		color: palette(black-40);
+		font-family: $font-text-medium;
+	}
+}
+
+.c-button--profile {
+	position: absolute;
+	right: space(1.5);
+    top: space(1.5);
+}
+
+
+
+// Ticket button
+// --------------------------------------------------------------------------
+
+$arrowSize: map-fetch($button-height, base);
+
+@mixin Arrow() {
+    content: "";
+    display: block;
+    position: absolute;
+    //right: -#{$arrowSize * 0.5};
+    right: -23px;
+    top: -1px;
+
+}
+
+/* uncss:ignore */
+.t-button--primary {
+	@include button();
+    min-width: 92%;
+    padding: space(0.25) space(0.25) space(0.25) space(0.5);
+    position: relative;
+
+    &:after {
+        @include Arrow();
+        border-bottom: 59px solid transparent;
+        border-left: $arrowSize * 0.5 solid palette(brand);
+    }
+}
+
+//.t-button--secondary {
+//	@include button();
+//    //background-color: transparent;
+//	//border-color: palette(text);
+//	//color: palette(text);
+//    background-color: palette(brand);
+//	border-color: palette(brand);
+//	color: palette(background);
+//    font-family: $font-text-bold;
+//    padding: space(0.25) space(1.5);
+//    position: relative;
+//
+//    &:after {
+//        //@include Arrow();
+//        //border-bottom: 59px solid transparent;
+//        //border-left: $arrowSize * 0.5 solid palette(text);
+//    }
+//
+//    @include on-event() {
+//        background-color: transparent;
+//        //color: palette(white);
+//        font-family: $font-text-bold;
+//    }
+//}
+
+
+// Secondary buttons
+// --------------------------------------------------------------------------
+
+//@mixin textButtonSm(
+//	$mixinColor: palette(brand-complement),
+//	$mixinBorderColor: $mixinColor
+//) {
+//	@include typeReset();
+//	color: $mixinColor;
+//	font-family: $font-button;
+//	font-size: fontsize(text--sm, xs);
+//	letter-spacing: 0.05em;
+//	line-height: map-fetch($button-height, concise);
+//	text-transform: uppercase;
+//
+//	@include media-breakpoint-up(sm) {
+//		font-size: fontsize(text--sm, rg);
+//	}
+//
+//	@include on-event() {
+//		// border-color: rgba( $mixinBorderColor, 0.5);
+//		// color: rgba( $mixinColor, 0.5);
+//		color: $mixinColor;
+//	}
+//}
+//
+//@mixin buttonSecondary() {
+//	@include buttonTheme();
+//	@include textButtonSm();
+//	background-color: transparent;
+//	border-color: currentColor;
+//	border-width: 1px;
+//	line-height: map-fetch($button-height, concise) !important;
+//	padding-top: 1px;
+//
+//	@include on-event() {
+//	}
+//}
+//
+//.t-buttonSecondary {
+//	@include buttonSecondary();
+//}
+
+
+// Invisible button (for holding the touch space & layout)
+// --------------------------------------------------------------------------
+
+//@mixin buttonInvisible () {
+//	@include buttonTheme();
+//	@include textButtonSm($mixinColor: palette(brand) );
+//	background-color: transparent;
+//	border-color: transparent;
+//	padding: 0 0 0 space(0.75);
+//	text-transform: none;
+//
+//	@include on-event() {
+//		color: palette(brand);
+//	}
+//}
+//
+//.t-buttonInvisible {
+//	@include buttonInvisible();
+//}
+
+
+// Button sizes
+// --------------------------------------------------------------------------
+
+//.t-button {
+//	@include button;
+//
+//	&--md {
+//		line-height: map-fetch($button-height, base);
+//		text-align: center;
+//		width: space(5);
+//
+//		@include media-breakpoint-up(xs) {
+//			width: space(6);
+//		}
+//	}
+//
+//	&--lg {
+//		line-height: map-fetch($button-height, large);
+//		text-align: center;
+//		width: 100%;
+//
+//		@include media-breakpoint-up(sm) {
+//			width: space(12);
+//		}
+//	}
+//
+//	&--full {
+//		line-height: map-fetch($button-height, large);
+//		text-align: center;
+//		width: 100%;
+//	}
+//}
+//
+//.t-xs-button {
+//	@include media-breakpoint-up(xs) {
+//		&--md {
+//			line-height: map-fetch($button-height, base);
+//			text-align: center;
+//			width: space(6);
+//		}
+//	}
+//}
+
+
+// Close button (this just positions an icon)
+// --------------------------------------------------------------------------
+
+.t-buttonClose {
+	color: palette(brand);
+	position: fixed;
+	right: space(0.5);
+	top: space(0.5);
+	z-index: map-fetch($z-index, first);
+
+	@include on-event() {
+		outline: none;
+	}
+
+	@include media-breakpoint-up(xs) {
+		right: space(1);
+		top: 31px;
+	}
+}
+
+
+
+// Subtitle
+// --------------------------------------------------------------------------
+
+// use this to vertically align elements with a button
+// .ButtonLineHeight {
+//     line-height: map-fetch($button-height, base);
+//     vertical-align: bottom;
+// }
+
+// padding-top: 2px; // theme typography alignment

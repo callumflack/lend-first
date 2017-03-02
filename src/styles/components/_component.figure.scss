@@ -1,0 +1,32 @@
+
+
+// --------------------------------------------------------------------------
+//   FIGURE COMPONENTS
+// --------------------------------------------------------------------------
+
+
+.c-figure--stamp {
+	background-color: palette(neutral);
+    border-radius: 50%;
+    display: block;
+	margin: 0 $headlineSpace;
+    overflow: hidden;
+    
+    @include media-breakpoint-up(sm) {
+        margin: 0;
+    }
+}
+
+//.o-figure--teamGrid {
+//	margin-bottom: space(0.5);
+//	width: rem(150);
+//}
+//
+//.o-figure--topRounded {
+//	margin: 0;
+//
+//	> img {
+//		border-top-left-radius: map-fetch($size, border-radius, large );
+//		border-top-right-radius: map-fetch($size, border-radius, large );
+//	}
+//}

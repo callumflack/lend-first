@@ -1,0 +1,57 @@
+<div class="c-block--highlight">
+
+    <div class="Grid Grid--withGutter Grid--alignCenter">
+        <div class="Grid-cell u-sizeFull u-sm-size5of12 o-aligner u-smDown-spaceB">
+            <figure class="o-figure c-figure--stamp o-aligner-item">
+                <img src="/uploads/michael-garland-sm.png" alt="Michael Garland">
+            </figure>
+        </div>
+    
+        <div class="Grid-cell u-sizeFull u-sm-size5of12">
+            <div class="o-aligner">
+                <div class="o-aligner-item">
+                    <a class="Contact u-linkInvisible" href="tel:{{ site.phone }}">
+                        <div class="Contact-action u-marginBD3">
+                            <svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-call"></use>
+                            </svg>
+                            Call Michael<br>
+                            <span class="Contact-detail">{{ site.phone }}</span>
+                        </div>
+                    </a>
+                    <a class="Contact u-linkInvisible" href="mailto:{{ site.email }}">
+                        <div class="Contact-action u-marginBD3">
+                            <svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-email"></use>
+                            </svg>
+                            Email Michael<br>
+                            <span class="Contact-detail">{{ site.email }}</span>
+                        </div>
+                    </a>
+                    {% comment %}
+                    <a class="Contact u-linkInvisible" href="{{ site.social.links[1] }}">
+                        <div class="Contact-action u-marginBD2">
+                            <svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-about"></use>
+                            </svg>
+                            About Michael<br>
+                            <span class="Contact-detail">Read his history and experience</span>
+                        </div>
+                    </a>
+                    {% endcomment %}
+                    <a class="Contact u-linkInvisible" href="{{ site.social.links[0] }}">
+                        <div class="Contact-action u-marginBD2">
+                            <svg class="Icon Icon--md Icon--leftSm Icon--textAlign">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-social-fb"></use>
+                            </svg>
+                            Connect with us<br>
+                            <span class="Contact-detail">Follow us on Facebook</span>
+                        </div>
+                    </a>
+                    <a class="Button c-button u-smDown-fullWidth u-spaceTD2" href="mailto:{{ site.email }}">Book a free hour</a>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>

@@ -1,0 +1,80 @@
+
+
+// --------------------------------------------------------------------------
+//   COMPONENT: ARTICLE ASIDE
+//   Can be used with the 'affix' & 'scrollspy' functions
+// --------------------------------------------------------------------------
+
+
+// consistent spacing variable
+$leftOutset: 16px;
+$leftBorder: 1px;
+
+.Aside--affixed {
+	margin: 0;
+	width: $affixWidth;
+}
+
+// List for the affix aside menu.
+.Aside-list {
+    list-style-type: none;
+    margin-left: - $leftOutset;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+// on 'li' element in a 'gumshoe' scrollspy
+.Aside-list--item {
+	@include textSm();
+	color: palette(black-50);
+	line-height: $base-line-height-unit;
+	margin: 0;
+	transition: all map-fetch($transition, duration, short) map-fetch($transition, type, base);
+
+	a {
+		@include underlineLink(none);
+		border-left: $leftBorder solid transparent;
+		display: block;
+		margin: 0 0 2px 0;
+		padding: space(0.2) 0 space(0.125) ($leftOutset - $leftBorder);
+
+		@include on-event() {
+			border-color: palette(brand);
+			color: palette(brand);
+		}
+	}
+
+	&.active {
+        > a {
+            border-color: palette(brand);
+            color: palette(brand);
+        }
+	}
+}
+
+.Aside-list--link {
+	@include textSm();
+	@include underlineLink(none);
+	color: palette(black-50);
+    display: block;
+	font-family: $font-text-regular;
+	line-height: $base-line-height-unit;
+	margin: 8px 0 space(1) 0;
+
+	& + .Aside-list--link {
+		margin-left: rem(10);
+	}
+
+	@include on-event() {
+		color: palette(brand);
+	}
+}
+
+.Aside-share {
+    color: palette('black-40');
+    
+    a {
+        font-size: 0;
+        &:not(:first-child) { margin-left: -1px; }
+    }
+}

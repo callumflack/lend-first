@@ -1,0 +1,162 @@
+
+
+// --------------------------------------------------------------------------
+//   COMPONENT: CARDS
+//   See: https://github.com/IanLunn/Hover
+// --------------------------------------------------------------------------
+
+
+@mixin cardGlow() {
+	@include smoothTransition();
+	//transition: box-shadow 0.3s ease-in-out;
+
+	&:hover {
+		box-shadow: 0 0 space(1.5) palette(black-40);
+	}
+}
+
+@mixin imageFilter {
+	filter: grayscale(100%);
+	&:hover {
+		filter: grayscale(0);
+	}
+}
+
+// The Card
+.Card {
+    @include cardGlow();
+    background-image: none;
+	border: 1px solid palette(black-15);
+    border-radius: $cardRadius;
+    display: block;
+	margin-bottom: space(0.5);
+    position: relative;
+    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    //&:after {
+    //    border-left: 1rem solid transparent;
+    //    border-right: 1rem solid transparent;
+    //    border-bottom: 1rem solid palette(brand-muted);
+    //    content: "";
+    //    display: inline-block;
+    //    height: 0;
+    //    left: 50%;
+    //    opacity: 0;
+    //    position: absolute;
+    //    top: calc(100% + #{2.25rem} );
+    //    // transform: translate(-50%, 0);
+    //    transition: all map-fetch($transition, duration, short) map-fetch($transition, type, fine);
+    //    vertical-align: middle;
+    //    width: 0;
+    //}
+    //
+    //&.is-open:after {
+    //    opacity: 1;
+	//	transform: translate(-50%, 0);
+    //}
+    
+    @include on-event() {
+        border-color: palette(brand);
+        transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        
+        //.Card-image {
+        //	@include imageBlend( $color: rgba( palette(brand), 0.7 ) );
+        //    transition: background-color 0.3s ease-in-out;
+        //}
+
+        .Card-title {
+            color: palette(brand);
+            transition: color 0.3s ease-in-out;
+        }
+    }
+
+	@include media-breakpoint-up(xs) {
+	    margin-bottom: 0;
+	}
+}
+
+.Card-image {
+	@include coverImage();
+	//@include imageBlend( $color: rgba( palette(brand), 0.7 ) );
+    //@include imageFilter();
+	border-top-left-radius: $cardRadius;
+	border-top-right-radius: $cardRadius;
+	height: space(4);
+    position: relative;
+	
+    &:before {
+        @include o-posFullScreen(absolute);
+        background-image: linear-gradient( rgba( palette(text), 0 ) 50%, rgba( palette(text), 0.7 ) 100% );
+        //background-image: linear-gradient(to bottom, rgba( palette(brand), 1 ) 0%, rgba( palette(brand), 0.2 ) 100%);
+        background-blend-mode: multiply;
+        content: " ";
+        opacity: 1;
+        // z-index: -1;
+    }
+
+	@include media-breakpoint-up(xs) {
+	    height: space(8);
+	}
+
+	&.with-headline {
+		@extend .u-flex;
+		@extend .u-flexAlignItemsEnd;
+		.Card-type { background-color: transparent !important; }
+	}
+
+	//> img {
+	//	// @include ImageFilter();
+	//	border-top-left-radius: $cardRadius;
+	//	border-top-right-radius: $cardRadius;
+	//}
+}
+
+.Card-title {
+    background-color: transparent;
+    color: palette(white);
+	font-family: $font-text-bold;
+	font-size: map-fetch($size, font, textSm, xs);
+    margin-bottom: 0;
+    padding: rem(7) rem(12) rem(6);
+    text-align: left;
+	text-transform: capitalize;
+    z-index: 2;
+
+	@include media-breakpoint-up(xs) {
+	    font-size: map-fetch($size, font, textSm, base);
+		padding: rem(7) rem(16) rem(6);
+	}
+}
+
+.Card-lede {
+    @include textTemplate(
+    	$mixinColor: palette(text),
+    	$mixinFont: $font-text-light,
+    	$mixinLineHeight: $base-line-height-unit,
+        $mixinSize: headline--md
+    );
+    
+	// background-color: rgba( palette(brand), 0.05);
+	// background-color: palette(brand-light);
+	background-color: palette(white);
+	border-bottom-left-radius: $cardRadius;
+	border-bottom-right-radius: $cardRadius;
+    //color: paleete(black-66);
+	//font-family: $font-text-regular;
+	//font-size: map-fetch($size, font, headerRg, xs);
+	//letter-spacing: -0.005em;
+	margin-bottom: 0;
+	min-height: rem(85);
+    padding: rem(7) rem(16) rem(7) rem(12);
+    text-align: left;
+    transition: color 0.3s ease-in-out;
+
+    @include media-breakpoint-up(sm) {
+		//font-family: $font-text-light;
+		//font-size: map-fetch($size, font, headerMd, base);
+        // margin-bottom: space(0.75);
+        margin-bottom: 0;
+		min-height: rem(125);
+		padding: rem(12) rem(24) rem(12) rem(14);
+    }
+}

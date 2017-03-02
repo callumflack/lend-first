@@ -1,0 +1,151 @@
+
+
+// --------------------------------------------------------------------------
+// LAYOUT: HEADER
+// --------------------------------------------------------------------------
+
+
+$headerInset: space(1.5);
+$headerInsetMobile: space(0.75);
+$footerColor: #677985;
+
+.Nav {
+    border-bottom: 1px solid palette(black-10);
+    position: relative;
+
+    @include when-inside(".Footer") { 
+        background-color: transparent;
+        border: 0;
+    }
+}
+
+.Nav-logo {
+    @include o-aligner();
+
+    a {
+        background-image: none;
+        
+        @include on-event(true) {
+            color: palette(brand);
+        }
+    }
+    
+    @include media-breakpoint-up(sm) {
+        margin-right: $headerInset;
+    }
+    
+    @include media-breakpoint-down(sm) {
+        justify-content: flex-start;
+        padding: $headerInsetMobile 0;
+    }
+}
+
+.Nav-menu {
+    @include o-aligner();
+    @include listInline();
+    margin: 0 0 0 auto;
+    right: space(1);
+
+    li {
+        &:not(:last-child) {
+			margin-right: $headerInset;
+		}
+    }
+
+    li a {
+        @include underlineLink(none);
+        display: inline-block;
+        padding: $headerInset 0;
+        
+        @include on-event(true) {
+            color: palette(black-40);
+        }
+    }
+    
+    .is-active a {
+        color: palette(text);
+    }
+    
+    @include media-breakpoint-down(sm) {
+        @include when-inside("nav[role="banner"]") {
+            display: none;
+        }
+    }
+}
+
+
+// Mobile nav
+// --------------------------------------------------------------------------
+
+.o-modal .Nav-logo {
+    justify-content: center;
+    padding: 0 0 $headerInset;
+    
+    a {        
+        @include on-event(true) {
+            color: palette(white) !important;
+        }
+    }
+}
+
+.o-modal .Nav-menu {
+    flex-direction: column;
+    
+    li {
+        margin: 0;
+    }
+        
+    a {
+        @include displaySuper();
+        margin: 0;
+        padding: 0 0 $headerInset 0;
+
+        @include on-event(true) {
+            color: palette(white) !important;
+        }
+    }
+}
+
+.o-modal .Contact-detail {
+    color: palette(white);
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+
+// The footer
+// --------------------------------------------------------------------------
+
+.Footer {
+    background-color: palette('black-5');
+    margin-top: $blockSpace * 0.9;
+    padding-bottom: $headlineSpace * 0.75;
+}
+
+.Footer-feature {
+    background-color: palette('brand');
+    padding: space(0.5) 0;
+    
+    p {
+        color: palette(white);
+        font-family: $font-text-medium;
+        text-align: center;
+    }
+}
+
+.Footer .Nav-menu {
+    //margin: 0;
+}
+
+.Footer-minors {
+    @include textXs();
+    border-top: 1px solid palette('black-20');
+    color: palette('black-40');
+    margin: 0;
+    padding-top: 8px;
+    
+    @include media-breakpoint-up(sm) {
+        //width: 70%;
+    }
+}

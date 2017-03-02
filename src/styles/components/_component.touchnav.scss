@@ -1,0 +1,37 @@
+
+
+// --------------------------------------------------------------------------
+//    MOBILE NAV
+// --------------------------------------------------------------------------
+
+
+.TouchNav {
+    bottom: space(1);
+    box-shadow: 0 0 space(1.5) palette('black-40');
+    position: fixed;
+    right: space(1);
+    z-index: 99;
+}
+
+.c-nav-trigger {
+	@include textRg();
+    background-color: palette(brand);
+    //border: 1px solid palette("black-10");
+    border-radius: 50%;
+    bottom: $blockSpace * 1.45;
+    box-shadow: 0 0 space(1) rgba( palette(text), 0.4 );
+    color: palette(white);
+    font-family: $font-text-medium;
+    line-height: 75px;
+    position: fixed;
+    right: space(1);
+    text-align: center;
+    width: 75px;
+    z-index: 99;
+
+    &:before {
+        content: '\2630';
+        font-size: 112%;
+        margin-right: 3px;
+    }
+}

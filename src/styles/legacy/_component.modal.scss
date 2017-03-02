@@ -1,0 +1,94 @@
+
+
+// --------------------------------------------------------------------------
+//   MODAL COMPONENT
+// --------------------------------------------------------------------------
+
+
+.Modal {
+    z-index: map-fetch($z-index, 'below');
+    background-color: palette(neutral);
+    backface-visibility: hidden;
+    margin: 0;
+    opacity: 0;
+    outline: 0;
+    overflow: hidden;
+    transition:
+        z-index 0s ease 500ms,
+        opacity 500ms ease;
+    width: 100vw;
+    // z-index: -1;
+
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+/* uncss:ignore */
+.Modal.is-displayed {
+    z-index: map-fetch($z-index, 'modal');
+    opacity: 1;
+    overflow: hidden;
+    transition:
+        z-index 0s ease,
+        opacity 250ms ease;
+    // z-index: $zIndex-1;
+
+    @include media-breakpoint-up(xs) {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
+
+.Modal-dialog {
+    border: 1px solid palette(muted);
+    border-radius: size(border-radius, large);
+    margin: space(1) auto;
+    position: relative;
+    // transform: scale(0.9, 0.9);
+    // transition: transform map-fetch($transition, duration, long) map-fetch($transition, type, cubic-static)
+    width: size(container, modal-form-sm);
+
+    /* uncss:ignore */
+    @include when-inside('.Modal.is-displayed') {
+        // transform: scale(1, 1);
+        // transition: transform map-fetch($transition, duration, short) map-fetch($transition, type, cubic-state)
+    }
+
+    @include media-breakpoint-up(sm) {
+        margin: space(2.5) auto;
+        width: size(container, modal-form);
+    }
+}
+
+.Modal-title {
+    color: palette(brand-alt);
+    text-align: center;
+}
+
+.Modal-content {
+    // background-color: #fff;
+    background-clip: padding-box;
+    // border: 1px solid #999;
+    // border: 1px solid rgba(0,0,0,.2);
+    // border-radius: 6px;
+    // box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    outline: 0;
+    padding: space(0.75);
+    position: relative;
+    transform: scale(0.9, 0.9);
+    transition: transform map-fetch($transition, duration, long) map-fetch($transition, type, cubic-static);
+
+    /* uncss:ignore */
+    @include when-inside('.Modal.is-displayed') {
+        transform: scale(1, 1);
+        transition: transform map-fetch($transition, duration, short) map-fetch($transition, type, cubic-state);
+    }
+
+    @include media-breakpoint-up(xs) {
+        // box-shadow: 0 5px 15px rgba(0,0,0,.5);
+        padding: space(1.5);
+    }
+}

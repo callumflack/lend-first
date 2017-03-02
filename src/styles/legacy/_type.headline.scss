@@ -1,0 +1,202 @@
+
+
+// --------------------------------------------------------------------------
+//   HEADLINE TYPOGRAPHY
+// --------------------------------------------------------------------------
+
+
+@mixin Headline() {
+	color: color(text, brand);
+	font-family: $font-text-bold;
+	font-size: map-fetch($size, font, headerLg, xs);
+	line-height: 1.35;
+	margin-bottom: space(1.25);
+	text-align: center;
+
+	@include media-breakpoint-up(xs) {
+		font-size: map-fetch($size, font, headerLg, base);
+		margin-bottom: space(1.75);
+	}
+}
+
+@mixin Headline--doubleLine() {
+	font-family: $font-text-book;
+	line-height: 1.2;
+
+	span,
+	.mobile {
+		font-family: $font-text-bold;
+	}
+
+	// First-line method (doesn't work in IE on element that 'hasLayout'!)
+	// @url: http://reference.sitepoint.com/css/pseudoelement-firstline
+	// &:first-line,
+	// &::first-line { @include font-weight('black'); }
+}
+
+@mixin HeadlineRuler {
+	span {
+		background-color: palette(background);
+		display: inline-block;
+		font-family: inherit;
+		padding: 0 space(0.25);
+
+		// new setup
+		position: relative;
+		z-index: 2;
+
+		@include media-breakpoint-up(xs) {
+			padding: 0 space(0.5);
+		}
+	}
+
+	//&:after {
+	//	background-color: palette(brand);
+	//	content: "";
+	//	display: block;
+	//	height: 1px;
+	//	position: relative;
+	//	transform: translateY(-16px);
+    //
+	//	@include media-breakpoint-up(xs) {
+	//		transform: translateY(-20px);
+	//	}
+	//}
+}
+
+
+@mixin Headline--ruled() {
+	@include HeadlineRuler();
+	color: color(text, brand);
+	position: relative;
+}
+
+.HeadlineRuler    { @include HeadlineRuler(); }
+.Headline--noRule { &:after { background-color: transparent !important; } }
+
+.Headline--ruled {
+	@include Headline--ruled();
+	&:after { border-color: palette(brand); }
+	@include media-breakpoint-up(max-xs) { &:after { border-color: transparent; } }
+}
+
+.Button--ruled {
+	@include Headline--ruled();
+	&:after {
+		border-color: palette(brand);
+		transform: translateY(-27px);
+	}
+	@include media-breakpoint-up(max-xs) { &:after {
+		border-color: transparent;
+	} }
+}
+
+
+
+// Vax Initiate
+// --------------------------------------------------------------------------
+
+.Headline { @include Headline(); }
+.Headline--doubleLine { @include Headline--doubleLine(); }
+
+
+// Hierarchy
+// primary, secondary, tertiary, quaternary, quinary, senary,
+// septenary, octonary, nonary, denary… and super.
+// --------------------------------------------------------------------------
+
+//// aka display
+//.Headline--super {
+//	// @include Headline;
+//	border-bottom: 1px solid color(text, brand);
+//	color: color(text, brand);
+//	font-family: $font-text-medium;
+//	font-size: map-fetch($size, font, headerXl, xs);
+//	letter-spacing: -0.015em;
+//	line-height: 1.25;
+//	margin-bottom: space(0.75);
+//	padding-bottom: space(0.45);
+//	text-align: left;
+//
+//	@include media-breakpoint-up(xs) {
+//		border-width: 2px;
+//		font-size: map-fetch($size, font, headerXl, base);
+//		line-height: 1.1;
+//	}
+//}
+//
+//// quick trumps 160830
+//.index .Headline--super {
+//    @include media-breakpoint-up(sm) { width: 90%; }
+//    @include media-breakpoint-up(md) { width: 70%; }
+//}
+
+
+
+.Headline--highlight {
+	@include Headline--ruled();
+	color: palette(brand-alt);
+	&:after { background-color: palette(brand-alt); }
+
+	@include when-inside(".Modal") {
+		span { background-color: palette(neutral); }
+	}
+}
+
+.Headline--primary {
+	@include Headline--ruled();
+	// &:after { border-color: rgba(palette(brand), 0.4); }
+	// &:after { border-color: palette(brand); }
+
+	@include when-inside(".Modal") {
+		span { background-color: palette(neutral); }
+	}
+
+	@include when-inside(".Fold-target") {
+		span { background-color: palette(brand-muted); }
+	}
+}
+
+.Headline--secondary {
+	@include Headline--ruled();
+	color: color(text, medium);
+	font-family: $font-text-book;
+
+	&:after { background-color: palette(muted); }
+
+	@include media-breakpoint-up('max-sm') {
+		@include when-inside('.Section--cards') {
+			&:after { border-color: transparent; }
+		}
+	}
+}
+
+.Headline--tertiary {
+	@include Headline--ruled();
+	font-family: $font-text-bold;
+	color: color(text, charcoal);
+}
+
+.Headline--quaternary {
+	color: color(text, charcoal);
+	font-family: $font-text-black;
+	font-size: map-fetch($size, font, headerSm, xs);
+	margin-bottom: space(0.5);
+	text-align: left;
+
+	@include media-breakpoint-up(xs) {
+		font-size: map-fetch($size, font, headerSm, base);
+	}
+}
+
+.Headline--quinary {
+	color: color(text, charcoal);
+	font-family: $font-text-medium;
+	font-size: map-fetch($size, font, textSm, base);
+	margin-bottom: space(0.5);
+	text-align: left;
+
+	@include media-breakpoint-up(xs) {
+		// font-size: map-fetch($size, font, textSm, base);
+	}
+}

@@ -1,0 +1,32 @@
+.c-post-supporters {
+    margin-bottom: $paragraphSpace * 0.5;
+    opacity: 0.3;
+
+    img {
+        margin-top: $paragraphSpace * 0.75;
+        margin-left: $paragraphSpace;
+        width: 33.333%;
+
+        @include first-child() { margin-left: 0; }
+        @include every(4) { margin-left: 0; }
+
+        @include media-breakpoint-up(sm) {
+            @include first-child() { margin-top: $paragraphSpace * 0.5; }
+            @include all-but(1) { margin-top: $paragraphSpace * 1.25; }
+            display: block;
+            margin-left: 0;
+            width: 66.666%;
+        }
+
+        @include media-breakpoint-up(xl) {
+            width: auto;
+            width: 80%;
+        }
+
+        &.portrait {
+            @include media-breakpoint-up(xs) { width: 16%; }
+            @include media-breakpoint-up(sm) { width: 27%; }
+            @include media-breakpoint-up(xl) { width: 43%; }
+        }
+    }
+}

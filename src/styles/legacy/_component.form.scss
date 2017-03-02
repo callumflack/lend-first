@@ -1,0 +1,157 @@
+
+
+// --------------------------------------------------------------------------
+// FORM
+// --------------------------------------------------------------------------
+
+
+input,
+textarea,
+select,
+label {
+    @include textRg();
+    color: color(text, medium);
+}
+
+input,
+textarea,
+select {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: map-fetch($size, border-radius, base );
+    display: inline-block;
+    resize: none;
+    transition: all map-fetch($transition, duration, long) map-fetch($transition, type, base);
+    width: 100%;
+    -webkit-appearance: none;
+
+    // New technique: consistent height via line-height, not padding
+    // Replaces… padding: rem(13) rem(16) !important;
+    line-height: map-fetch($size, button-height, base);
+
+    @include on-event() {
+        outline: 0;
+    }
+
+    @include media-breakpoint-up(max-xs) {
+        // font-size: 16px;
+        // padding: rem(16) rem(19) !important;
+    }
+
+    &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 rem(100) darken(palette(neutral),4%) inset;
+        -webkit-text-fill-color: color(text, medium);
+        background-clip:         padding-box;
+    }
+
+    $color-placeholder: color(text, medium);
+
+    &::-webkit-input-placeholder { color: $color-placeholder; }
+    &:-moz-placeholder           { color: $color-placeholder; }
+    &::-moz-placeholder          { color: $color-placeholder; }
+    &:-ms-input-placeholder      { color: $color-placeholder; }
+}
+
+input,
+textarea {
+    border-bottom: 1px solid palette(muted);
+    margin-bottom: space(0.5);
+}
+
+textarea {
+    line-height: 1.5;
+    margin-top: space(0.5);
+}
+
+
+
+// Pattern: transition hide the form label.
+// Requires JS.
+// --------------------------------------------------------------------------
+
+/* uncss:ignore */
+.form-group {
+    position: relative;
+
+    label {
+        position: absolute;
+        top: rem(16);
+        // left: rem(16);
+        cursor: text;
+        transition: all map-fetch($transition, duration, short) map-fetch($transition, type, base);
+        z-index: 100;
+    }
+
+    input.form-control {
+        border-radius: 0;
+    }
+
+    input.form-control,
+    textarea.form-control {
+        // padding: 0 rem(16) !important;
+        padding: 0;
+    }
+
+    // retain theme typography alignment
+    input.Button {
+        border-radius: map-fetch($size, border-radius, base );
+        padding-top: 2px;
+    }
+
+    // /* uncss:ignore */
+    // &.is-active > label:not(.error) {
+    //     // color: color(text, charcoal);
+    //     // font-size: rem($sizeTextSm * 0.65);
+    //     opacity: 0;
+    //     transform: translateY(rem(-10));
+    // }
+
+    &:not(:last-child) {
+        margin: 0 0 space(0.5);
+    }
+}
+
+/* uncss:ignore */
+.form-group.is-active > label:not(.error) {
+    opacity: 0;
+    transform: translateY(rem(-10));
+}
+
+
+// label {
+//     &.error{
+//         box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+//         background-color: palette(warning );
+//         padding: 10px 20px 10px 20px;
+//         max-width: 260px !important;
+//         border-radius: 5px;
+//         margin-top: 40px;
+//         color: palette(white);
+//         position: absolute;
+//         z-index: $zindex-tooltip;
+//
+//         &::before{
+//             border-bottom: 10px solid $color-validation-error;
+//             border-right: 10px solid transparent;
+//             border-left: 10px solid transparent;
+//             box-sizing: border-box;
+//             content: '';
+//             height: 0;
+//             width: 0;
+//             left: 8%;
+//             position: absolute;
+//             margin-top: -19px;
+//         }
+//
+//         &[for="hiddenRecaptcha2"]{
+//             margin-left: 10%;
+//         }
+//     }
+// }
+//
+// input,
+// textarea{
+//     &.error{
+//         border-color: $color-validation-error;
+//     }
+// }

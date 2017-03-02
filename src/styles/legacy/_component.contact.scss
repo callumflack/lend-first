@@ -1,0 +1,39 @@
+
+
+// --------------------------------------------------------------------------
+//   CONTACT BLOCK ELEMENT
+// --------------------------------------------------------------------------
+
+
+.Contact {
+    color: palette('black-40');
+    display: block;
+}
+
+.Contact + .Contact {
+    margin-top: space(1/6);
+}
+
+.Contact-action {
+    @include textRg();
+    color: currentColor;
+    font-family: $font-text-medium;
+    line-height: 1.2;
+    position: relative;
+}
+
+.Contact-action + .Contact-action {
+    margin-top: 4px;
+}
+
+.Contact-detail {
+    @include textSm();
+    color: currentColor;
+    display: block;
+    font-size: map-fetch($size, font, textSm, xs);
+    margin: rem(4) 0 0;
+
+    @include media-breakpoint-up(xs) {
+        font-size: map-fetch($size, font, textSm, base);
+    }
+}

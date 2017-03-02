@@ -1,0 +1,54 @@
+
+
+// --------------------------------------------------------------------------
+// TRUMPS: RESPONSIVE HELPERS
+// Hide or show things responsively v2
+// --------------------------------------------------------------------------
+
+
+// hide for liquid conditionals
+.u-hide                      { display: none; }
+
+// hide at breakpoints
+.u-mxs-hide                  { @include media-breakpoint-up(max-xs) { display: none !important; } }
+.u-xs-hide                   { @include media-breakpoint-up(xs) { display: none !important; } }
+.u-sm-hide                   { @include media-breakpoint-up(sm) { display: none !important; } }
+.u-md-hide                   { @include media-breakpoint-up(md) { display: none !important; } }
+.u-lg-hide                   { @include media-breakpoint-up(lg) { display: none !important; } }
+
+// display at breakpoints
+.u-mxs-display               { display: none; @include media-breakpoint-up(max-xs) { display: block !important; } }
+.u-xs-display                { display: none; @include media-breakpoint-up(xs) { display: block !important; } }
+.u-lg-display                { display: none; @include media-breakpoint-up(lg) { display: block !important; } }
+
+// display:block at breakpoints
+.u-mxs-block               { @include media-breakpoint-up(max-xs) { display: block !important; } }
+.u-xs-block                { @include media-breakpoint-up(xs) { display: block !important; } }
+.u-lg-block                { @include media-breakpoint-up(lg) { display: block !important; } }
+
+// breakpoint: max-sm
+.msm-Grid-cell--center       { @include media-breakpoint-up(max-sm) { margin: 0 auto; } }
+.u-msm-size10of12            { @include media-breakpoint-up(max-sm) { width: 83.33333333333334% !important; } }
+
+// breakpoint: max-xs
+.u-mxs-flex                  { @include media-breakpoint-up(max-xs) { display: flex !important; } }
+.u-mxs-flexOrderFirst        { @include media-breakpoint-up(max-xs) { order: -1 !important; } }
+.u-mxs-flexOrderLast         { @include media-breakpoint-up(max-xs) { order: 1 !important; } }
+.u-mxs-flexAlignItemsStretch { @include media-breakpoint-up(max-xs) { align-items: stretch !important; } }
+.u-mxs-flexJustifyBetween    { @include media-breakpoint-up(max-xs) { justify-content: space-between !important; } }
+
+// breakpoint: xs
+.xs-Grid--withGutter         { @include media-breakpoint-up(xs) { margin: 0 -(space(0.5)); > .Grid-cell { padding: 0 space(0.5); } } }
+.u-xs-flex                   { display: none; @include media-breakpoint-up(xs) { display: flex !important; } }
+
+// breakpoint: sm
+.u-sm-flex                   { @include media-breakpoint-up(sm) { display: flex !important; } }
+.u-sm-flexAlignItemsCenter   { @include media-breakpoint-up(sm) { align-items: center !important; } }
+.u-sm-flexJustifyCenter      { @include media-breakpoint-up(sm) { justify-content: center !important; } }
+
+// text alignments
+.u-mxs-textCenter            { @include media-breakpoint-up(max-xs) { text-align: center !important; } }
+.u-msm-textCenter            { @include media-breakpoint-up(max-sm) { text-align: center !important; } }
+.u-ip6-textLeft              { @include media-breakpoint-up(ip6) { text-align: left !important; } }
+.u-xs-textRight              { @include media-breakpoint-up(xs) { text-align: right !important; } }
+.u-lg-textCenter             { @include media-breakpoint-up(lg) { text-align: center !important; } }

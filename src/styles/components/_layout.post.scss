@@ -1,0 +1,395 @@
+
+
+// --------------------------------------------------------------------------
+//   COMPONENT: BLOG POSTS
+// --------------------------------------------------------------------------
+
+
+// Post grid used in conjunction with 'o-grid'
+// 1. Do this when * has borders, which aren't included in the box-model.
+// --------------------------------------------------------------------------
+
+//.o-grid {
+//    display: flex;
+//    flex-wrap: wrap;
+//}
+//.o-grid > * {
+//    flex: 1 0 5em;
+//}
+
+.c-postGrid > * {
+    flex-basis: calc(100% / 2);
+    @include media-breakpoint-up(sm) { flex-basis: calc(100% / 3); }
+    @include media-breakpoint-up(xl) { flex-basis: calc(100% / 5); }
+
+    // Post-info grid
+    @include when-inside(".c-post-info") {
+        margin: 0;
+        flex-basis: calc(100% / 4);
+        // @include media-breakpoint-up(sm) { flex-basis: calc(100% / 3); }
+        @include media-breakpoint-up(sm) { flex-basis: calc(100% / 7); }
+    }
+
+    // Post-info grid
+    @include when-inside(".c-post-next") {
+        flex-basis: calc(100% / 2);
+        @include media-breakpoint-up(sm) { flex-basis: calc(100% / 5); }
+    }
+}
+
+// 1px border for each cell
+//.c-postGrid .c-postCell:not(:first-child),
+//.c-postGrid--inPost .c-postCell:not(:first-child) {
+//    .FlexEmbed {
+//        margin-left: 1px;
+//    }
+//}
+
+// Cell height
+.c-postGrid .FlexEmbed-ratio {
+    padding-bottom: 35vh;
+    @include media-breakpoint-up(sm) { padding-bottom: 25vh; }
+    @include media-breakpoint-up(md) { padding-bottom: 50vh; }
+
+    @include when-inside(".c-post-next") {
+        padding-bottom: 20vh;
+        //@include media-breakpoint-up(sm) { padding-bottom: 25vh; }
+    }
+}
+
+
+
+
+
+
+
+
+
+// Post cell (in post grid)
+// --------------------------------------------------------------------------
+
+a.c-postCell {
+	@include complexLink();
+	border: 0;
+	//margin: 1px;
+	position: relative;
+
+    // add the border here to simplify the flex-basis calculations
+    .FlexEmbed {
+        margin: 1px 0.5px;
+    }
+
+	@include on-event() {
+        .c-postCell-image {
+			@include baseTransition();
+            background-color: $lightBlendColor;
+            filter: grayscale(0);
+        }
+
+        .c-postCell-subheadline {
+			@include baseTransition();
+            color: palette(white);
+        }
+	}
+}
+
+.c-postCell-image {
+	@include baseTransition();
+    @include imageBlend();
+    @include coverImage();
+    filter: grayscale(100%);
+}
+
+.c-postCell-headline,
+.c-postCell-subheadline {
+    @include textAside();
+    color: palette(white);
+    padding: 0 15%;
+    text-align: center;
+
+    &:not(:first-child) {
+        margin-top: space(0.25);
+    }
+}
+
+.c-postCell-headline {
+    color: palette(white);
+}
+
+.c-postCell-subheadline {
+    @include baseTransition();
+    color: palette(black-40);
+    display: block;
+    font-family: $font-text-regular;
+}
+
+
+
+
+
+
+
+
+
+
+// Post hero
+// --------------------------------------------------------------------------
+
+.FlexEmbed-ratio--hero {
+    padding-bottom: 90%;
+    @include media-breakpoint-up(sm) { padding-bottom: 56.25%; }
+    @include media-breakpoint-up(xl) { padding-bottom: 50%; }
+
+    //@include media-breakpoint-up(sm) { padding-bottom: 56.25%; padding-bottom: 50vh; }
+    //@include media-breakpoint-up(xl) { padding-bottom: 50%; padding-bottom: 82vh; }
+
+    //@include when-inside(".c-content--page") {
+    //    //padding-bottom: 45%;
+    //    //@include media-breakpoint-up(sm) { padding-bottom: 28.125%; padding-bottom: 25vh; }
+    //    @include media-breakpoint-up(xl) { padding-bottom: 25%; padding-bottom: 41vh; }
+    //}
+}
+
+.FlexEmbed-ratio--heroVideo {
+    padding-bottom: 56.25%;
+    // @include media-breakpoint-up(sm) { padding-bottom: 56.25%; }
+}
+
+.c-post-hgroup {
+    margin: ($blockSpace * 0.75);
+
+    @include media-breakpoint-up(sm) { max-width: 80vw; margin: 0 auto; }
+    @include media-breakpoint-up(xl) { max-width: 60vw; }
+}
+
+.c-post-headline {
+    @include headline();
+    letter-spacing: 0.45em;
+
+    @include media-breakpoint-up(sm) {
+        width: 80%;
+        margin-left: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+        margin-left: 1.5%
+    }
+}
+
+.c-post-subheadline {
+    //@include textAside();
+    @include headlineSm();
+    font-family: $font-text-bold;
+    margin-top: space(0.5);
+
+    p {
+        @include textMeta();
+        color: palette(black-50);
+        margin-bottom: 0;
+    }
+}
+
+.c-post-headline,
+.c-post-subheadline {
+    color: palette(white);
+    text-align: center;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Post info (wrapping post-meta info blocks)
+// --------------------------------------------------------------------------
+
+.c-post-info {
+    //margin-top: ($blockSpace * 1.25);
+
+    @include media-breakpoint-up(lg-for-container-lg) {
+        margin: 0;
+        position: absolute; // remove from the flow
+        transform: translateY(-100%);
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+// Post article
+// --------------------------------------------------------------------------
+
+.c-post-article {
+    //margin-top: ($blockSpace * 1);
+    //@include media-breakpoint-up(sm) { margin-top: ($blockSpace * 1.25); }
+    @include blockSpaceMarginTop();
+}
+
+// markdown scope
+.s-post {
+    p,
+    ul,
+    a {
+        font-family: $font-serif;
+        letter-spacing: 0;
+        //line-height: 1.6;
+    }
+
+    p:first-child {
+        //@include textLg();
+        //font-family: $font-serif;
+
+        //@include headlineSm();
+        //font-family: $font-text-bold;
+        //margin-bottom: $blockSpace * 0.75 * 0.5;
+
+
+        //font-size: 27px;
+        //letter-spacing: 0.0125em;
+        //line-height: 1.35;
+    }
+
+    a {
+        @include underlineLink();
+    }
+
+    // capitalised bold sans
+    strong {
+        text-transform: uppercase;
+    }
+
+    em {
+        font-family: $font-serif-i;
+        //font-style: italic;
+    }
+
+    h2,
+    h3 {
+        &:not(:first-child) {
+            margin-top: $blockSpace * 0.75;
+		}
+
+        &:not(:last-child) {
+            margin-bottom: $paragraphSpace;
+            //margin-bottom: $blockSpace * 0.75 * 0.5;
+        }
+    }
+
+	h2 {
+		//@include textRg();
+        @include headlineSm();
+        font-family: $font-text-bold;
+
+        @include media-breakpoint-up(sm) {
+            width: 85%;
+        }
+    }
+
+    h3 {
+        @include textAside();
+        font-family: $font-text-bold;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid palette(black-10);
+		margin: $paragraphSpace * 2 0;
+    }
+
+    blockquote p {
+        border-left: 1px solid palette(black-40);
+        color: palette(black-50);
+        padding-left: space(1);
+    }
+
+    figure {
+        &:not(:first-child) {
+            margin-top: $blockSpace * 0.75;
+		}
+
+        padding-bottom: $paragraphSpace * 0.5;
+    }
+
+    @include media-breakpoint-up(sm) { margin-right: $gutterSpace; }
+    @include media-breakpoint-up(xl) { margin-right: $gutterSpace * 2; }
+
+}
+
+.s-post-list {
+    column-count: 2;
+}
+
+// markdown tables scope
+.s-post table {
+    //background-color: rgba( palette(brand), 0.15);
+    //border: 1px solid palette(black-20);
+    border-collapse: collapse;
+    font-family: $font-serif;
+    letter-spacing: 0;
+    margin: $blockSpace * 0.75 0;
+
+    thead tr {
+        background-color: rgba( palette(brand), 0.15);
+    }
+
+    th {
+        @include headlineSm();
+        //border-bottom: 1px solid palette(black-20);
+        font-family: $font-text-bold;
+        padding: space(0.5);
+    }
+
+    tbody tr {
+        @include odd() { background-color: rgba( palette(brand), 0.15); }
+        @include even() { background-color: rgba( palette(brand), 0.09); }
+    }
+
+    td {
+        //border-bottom: 1px solid palette(black-20);
+        padding: space(0.5);
+        vertical-align: baseline;
+
+        &:first-child {
+            @include textAside();
+            border-right: 1px solid palette(black-40);
+            line-height: 1.5;
+            text-align: right;
+
+            @include media-breakpoint-up(sm) {
+                width: calc(100% / 3);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// Post next/prev
+// --------------------------------------------------------------------------
+
+.c-post-next {
+    margin-top: $blockSpace * 2;
+
+    h3 {
+        margin-bottom: $blockSpace * 0.5;
+    }
+}

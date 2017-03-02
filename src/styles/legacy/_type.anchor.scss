@@ -1,0 +1,99 @@
+
+
+// --------------------------------------------------------------------------
+// TYPOGRAPHY ANCHORS
+// Avoiding ugly text-decoration: underlines
+// --------------------------------------------------------------------------
+
+
+$linkRuleBlack: linear-gradient(to bottom, rgba(palette(dark),0) 50%, rgba(palette(dark),0.4) 50%);
+$linkRuleGrey:  linear-gradient(to bottom, rgba(palette(muted),0) 50%, palette(muted) 50%);
+$linkRuleLite:  linear-gradient(to bottom, rgba(palette(light),0) 50%, palette(light) 50%);
+$linkRuleWhite: linear-gradient(to bottom, rgba(palette(white),0) 50%, palette(white) 50%);
+$linkRuleBrand: linear-gradient(to bottom, rgba(palette(brand),0) 50%, palette(brand) 50%);
+$linkRuleNone:  linear-gradient(to bottom, rgba(palette(dark),0) 50%, rgba(palette(dark),0) 50%);
+
+@mixin underlineLink(
+    $mixin-rule: $linkRuleBlack,
+    $mixin-hover-rule: none,
+    $mixin-color: currentColor,
+    $mixin-hover-color: inherit,
+    // $mixin-hover-color: currentColor,
+    $mixin-inverse: false
+
+) {
+
+    @if $mixin-rule == 'none' {
+        background-image: none;
+    }
+
+    @else {
+        background-image: $mixin-rule;
+        background-repeat: repeat-x;
+        background-size: 1px 1px;
+        background-position: 0 100%;
+        color: $mixin-color;
+        //padding-bottom: rem(3);
+        text-decoration: none;
+    }
+
+    @include on-event() {
+        background-image: $mixin-hover-rule;
+        color: $mixin-hover-color;
+        text-decoration: none;
+    }
+}
+
+a {
+    @include underlineLink();
+    text-decoration: none;
+}
+
+// a + a { margin-left: $space * 1.25; }
+
+.underlineLink { @include underlineLink(); }
+.u-childLink { a { @include underlineLink(); } }
+
+.underlineLinkGrey { @include underlineLink($mixin-rule: $linkRuleGrey); }
+.u-childLinkGrey { a { @include underlineLink($mixin-rule: $linkRuleGrey); } }
+
+.underlineLinkLite { @include underlineLink($mixin-rule: $linkRuleLite); }
+.u-childLinkLite { a { @include underlineLink($mixin-rule: $linkRuleLite); } }
+
+.underlineLinkBrand { @include underlineLink($mixin-rule: $linkRuleBrand); }
+.u-childLinkBrand { a { @include underlineLink($mixin-rule: $linkRuleBrand); } }
+
+.underlineLinkWhite { @include underlineLink($mixin-rule: $linkRuleWhite); }
+.u-childLinkWhite { a { @include underlineLink($mixin-rule: $linkRuleWhite); } }
+
+.underlineLinkInvisible { @include underlineLink(none); }
+.u-childLinkInvisible { a { @include underlineLink(none); } }
+
+
+// Buried anchors
+// Same pattern as Suit's underlineLinkComplex, but different styling.
+// --------------------------------------------------------------------------
+
+@mixin complexLink {
+    display: block;
+    width: 100%;
+
+    @include on-event() {
+        .underlineLinkBuriedTarget {
+            @include baseTransition();
+            color: palette(brand);
+        }
+    }
+}
+
+.underlineLinkBuried {
+    @include complexLink();
+    margin-bottom: space(0.5);
+}
+
+// Don't forget: this is a span, not an <a>,
+// so it needs these styles.
+.underlineLinkBuriedTarget {
+    @include baseTransition();
+    color: palette(charcoal);
+}

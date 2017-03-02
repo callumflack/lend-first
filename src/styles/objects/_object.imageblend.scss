@@ -1,0 +1,42 @@
+
+
+// --------------------------------------------------------------------------
+// OBJECT: IMAGE BLENDS
+// See: http://codepen.io/Guilh/pen/LEQWev?editors=110
+// See: https://sarasoueidan.com/demos/css-blender/
+// See: http://una.im/CSSgram/
+// See: https://css-tricks.com/css3-gradients/
+// --------------------------------------------------------------------------
+
+
+$brandBlendColor:      rgba( palette(brand), 0.7 );
+$brandLightBlendColor: rgba( palette(brand), 0.1 );
+$darkBlendColor :      rgba( palette(text), 0.7 );
+$greyBlendColor:       rgba( palette(text), 0.15 );
+$lightBlendColor:      rgba( palette(white), 0.4 );
+$whiteBlendColor:      rgba( palette(white), 0.85 );
+
+@mixin imageBlend(
+	$gradient: false,
+    $blend: multiply,
+    $color: $darkBlendColor
+) {
+	
+	@if $gradient {
+		//background-color: $color;
+		background-image: linear-gradient( $greyBlendColor, $darkBlendColor 50% ); 
+	} @else {
+		background-color: $color;
+	}
+	
+    background-blend-mode: $blend;
+
+}
+
+.o-imageBlend             { @include imageBlend(); }
+.o-imageBlend--gradient   { @include imageBlend($gradient: true); }
+.o-imageBlend--brand      { @include imageBlend($color: $brandBlendColor); }
+.o-imageBlend--brandLight { @include imageBlend($color: $brandLightBlendColor); }
+.o-imageBlend--grey       { @include imageBlend($color: $greyBlendColor); }
+.o-imageBlend--light      { @include imageBlend($blend: overlay, $color: $lightBlendColor); }
+.o-imageBlend--whiten     { @include imageBlend($blend: overlay, $color: $whiteBlendColor); filter: grayscale(100%); }

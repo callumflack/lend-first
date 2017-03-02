@@ -1,0 +1,81 @@
+
+
+// --------------------------------------------------------------------------
+//   NAV LAYOUT
+// --------------------------------------------------------------------------
+
+
+.c-nav {
+    display: flex;
+    justify-content: space-between;
+    //padding: space(1) space(1.5) space(0.75);
+	@include containerWindow();
+
+    //@include media-breakpoint-up(sm) { max-width: container-width(xl); }
+    //@include media-breakpoint-up(lg) { max-width: none; }
+    //@include media-breakpoint-up(lg) { padding: 0 4%; }
+    //@include media-breakpoint-up(xl) { padding: 0 12%; }
+    //@include media-breakpoint-up(su) { padding: 0 18%; }
+
+    // footer
+    @include when-inside("footer") {
+        opacity: 0.5;
+    }
+}
+
+.c-nav p,
+.c-nav ul {
+	margin-bottom: 0;
+}
+
+.c-nav a {
+	padding: space(1) 0;
+	
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.c-nav-menu {
+	@include listInline();
+}
+
+.c-nav-menu li {
+	@include textMetaHeadline();
+}
+
+.c-nav-menu li:not(:last-child) {
+	margin-right: space(1);
+}
+
+//.c-nav-profile a {
+//	border: 1px solid palette(text);
+//	border-radius: 50%;
+//	fill: palette(text);
+//	height: 36px;
+//	width: 36px;
+//}
+
+.c-nav-profile {
+	border: 1px solid palette(text);
+	border-radius: 50%;
+	display: inline-block;
+	fill: palette(text);
+	height: 36px;
+	letter-spacing: 0;
+	margin-right: space(0.75);
+	padding: 0 !important;
+	vertical-align: middle;
+	width: 36px;
+	
+	> svg {
+		transform: translate(5px,2px);
+	}
+}
+
+.c-nav-profile a {
+	//fill: palette(text);
+	//height: 36px;
+	////padding: 0 !important;
+	//width: 36px;
+}

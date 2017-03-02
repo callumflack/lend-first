@@ -1,0 +1,153 @@
+
+
+// --------------------------------------------------------------------------
+//   COMPONENT: CARDS
+//   See: https://github.com/IanLunn/Hover
+// --------------------------------------------------------------------------
+
+
+@mixin cardGlow() {
+	@include smoothTransition();
+	&:hover {
+		box-shadow: 0 0 space(1.5) palette(black-40);
+	}
+}
+
+@mixin imageFilter {
+	filter: grayscale(100%);
+	&:hover {
+		filter: grayscale(0);
+	}
+}
+
+
+// The card
+// --------------------------------------------------------------------------
+
+.Card {
+    @include cardGlow();
+    background-image: none;
+	border: 1px solid palette(black-15);
+    border-radius: $cardRadius;
+    display: block;
+    position: relative;
+    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    
+    @include on-event() {
+        border-color: palette(brand);
+        transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        
+        .Card-lede {
+            color: palette(brand);
+            transition: color 0.3s ease-in-out;
+        }
+    }
+}
+
+.Card-image {
+	@include coverImage();
+    align-items: flex-end;
+    background-color: palette(brand);
+	border-top-left-radius: $cardRadius;
+	border-top-right-radius: $cardRadius;
+    display: flex;
+	height: $headlineSpace * 3.5;
+    position: relative;
+	
+    &:before {
+        @include o-posFullScreen(absolute);
+        background-image: linear-gradient( rgba( palette(black), 0 ) 50%, rgba( palette(black), 0.7 ) 100% );
+        background-blend-mode: multiply;
+        content: " ";
+        opacity: 1;
+    }
+    
+	@include media-breakpoint-up(xs) {
+	    height: $headlineSpace * 6;
+	}
+}
+
+.Card-title {
+    @include textSm();
+    background-color: transparent;
+    color: palette(white);
+	font-family: $font-text-bold;
+    margin-bottom: 0;
+    padding: rem(7) rem(12) rem(6);
+	text-transform: capitalize;
+    z-index: 2;
+
+	@include media-breakpoint-up(xs) {
+		padding: rem(7) rem(16) rem(6);
+	}
+}
+
+.Card-lede {
+    @include textTemplate(
+    	$mixinColor: palette(text),
+    	$mixinFont: $font-text-light,
+    	$mixinLineHeight: 1.3,
+        $mixinSize: headline--md
+    );
+	background-color: palette(white);
+	border-bottom-left-radius: $cardRadius;
+	border-bottom-right-radius: $cardRadius;
+	margin-bottom: 0;
+	min-height: $headlineSpace * 4;
+    padding: 7px 24px 12px 9px;
+    text-align: left;
+    transition: color 0.3s ease-in-out;
+
+    @include media-breakpoint-up(sm) {
+        margin-bottom: 0;
+		min-height: $headlineSpace * 3;
+		padding: 14px 48px 24px 18px;
+    }
+}
+
+
+
+// Large card variation
+// --------------------------------------------------------------------------
+
+.Card--lg .Card-image {
+    height: space(16);
+    height: $headlineSpace * 9;
+    
+    &--blank {
+    	height: $headlineSpace * 9 * 0.5;
+        
+        &:before {
+            opacity: 0.3;
+        }
+    }
+}
+
+.Card--lg .c-headline--md {
+    color: palette(white);
+    font-family: $font-text-medium;
+    padding: 0 22px 14px;
+    margin: 0;
+    text-align: left;
+    z-index: 2;
+}
+
+.Card--lg .Card-lede {
+    padding: 16px 24px 16px 20px;
+}
+
+.Card--lg {
+    .o-linkBuriedTarget {
+        font-family: $font-text-medium;
+    }
+    
+    @include on-event() { 
+        .o-linkBuriedTarget {
+            color: palette(brand); 
+        }
+    }
+}
+
+.Card--lg + .Card--lg {
+    margin-top: $blockSpace * 0.5;
+}

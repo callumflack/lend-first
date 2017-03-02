@@ -1,0 +1,138 @@
+
+
+// --------------------------------------------------------------------------
+//   CONTAINER OBJECT
+// --------------------------------------------------------------------------
+
+
+@mixin container(
+	$padded: true,
+	$width: container-width(md)
+) {
+
+	@if $padded {
+		height: inherit;
+		padding-left: $containerSpace;
+		padding-right: $containerSpace;
+	} @else {
+		max-width: $width - ($containerSpace);
+	}
+	
+	@include clearfix();
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $width;
+	position: relative;
+
+	p,
+	li,
+	ol {
+		&:last-child,
+		&:last-child a {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.o-container {
+	@include container();
+
+    // sizes
+	&--md {
+		@include container( $width: container-width(md) );
+	}
+
+	&--lg {
+		@include container( $width: container-width(lg) );
+	}
+
+	&--xl {
+		@include container( $width: container-width(xl) );
+	}
+
+    &--fullWindowMobile {
+        @include media-breakpoint-down(lg-tablet) {
+            max-width: 100%;
+            padding: 0;
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+.c-container-rule {
+	@include container(false);
+	border-top: 1px solid palette(black-10);
+	margin-top: 0;
+	margin-bottom: space(0.75);
+}
+
+
+
+@mixin containerWindow() {
+	padding: space(1) space(1.5) space(0.75);
+	//@include media-breakpoint-up(sm) { padding: space(1) space(1.5) space(0.75); }
+}
+
+.c-container--window {
+	@include containerWindow();
+}
+
+
+
+
+
+
+
+//&--super {
+//    //@include container( container-width(su) );
+//	max-width: 100%;
+//	padding: 0 space(1.5);
+//
+//    @include media-breakpoint-up(sm) {
+//        padding: 0 space(4);
+//    }
+//}
+
+//&--postInfo {
+//	@include container( $width: container-width(lg) );
+//	//padding: 0;
+//
+//	@include media-breakpoint-up(xs) {
+//		padding: 0 !important;
+//	}
+//
+//	@include media-breakpoint-up(xl) {
+//		// @include container( container-width(xl) );
+//		padding: 0 space(1.5);
+//	}
+//
+//	@include media-breakpoint-up(su) {
+//		@include container( $width: container-width(xl) );
+//	}
+//}
+
+
+//&.Container--full {
+//    margin: 0;
+//    max-width: map-fetch($size, container, wide-picture);
+//    padding: 0;
+//
+//    @include media-breakpoint-up(xs) {
+//        margin: 0 auto !important;
+//        padding: 0 space(0.75);
+//    }
+//}
+
+//.o-column--post {
+//	max-width: container-width(xs);
+//	// @include when-inside(".o-container")     { margin-left: 0; }
+//	// @include when-inside(".o-container--xl") { margin-left: calc( (1200-960) / 2 ); }
+//}
