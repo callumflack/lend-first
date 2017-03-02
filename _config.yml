@@ -52,7 +52,8 @@ defaults:
     lede: true
     offset-top: 820
     offset-bottom: 1300
-description: LendFirst offers smart advice and real solutions for first home buyers and first-time investors, in Cairns, Queeensland, Australia.
+description: LendFirst offers smart advice and real solutions for first home buyers
+  and first-time investors, in Cairns, Queeensland, Australia.
 baseurl: 
 url: http://lendfirst.com.au
 logo: "/uploads/lendfirst-logo.png"
@@ -69,7 +70,8 @@ address-link: https://goo.gl/maps/3RTKiR89iD72
 phone: 0422 830 333
 email: michael@lendfirst.com.au
 insurance-link: https://bob.ensurance.com.au/Proposal/New/3/Agent/LENDFIRST
-accreditation: Michael Garland is a credit representative (473132) of BLSSA Pty Ltd ACN 117 651 760 (Australian Credit Licence 391237).
+accreditation: Michael Garland is a credit representative (473132) of BLSSA Pty Ltd
+  ACN 117 651 760 (Australian Credit Licence 391237).
 google-analytics: UA-75811838-1
 javascriptsurl: "/public/javascripts/"
 markdown: kramdown
