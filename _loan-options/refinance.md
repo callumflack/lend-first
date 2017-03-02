@@ -1,7 +1,7 @@
 ---
 title: Refinance
 card-title: I want to upgrade to a better loan.
-image: /uploads/refinance.jpg
+image: "/uploads/refinance.jpg"
 order: 3
 menu:
 - Do I have to change everything

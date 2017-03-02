@@ -1,6 +1,6 @@
 ---
-title: LendFirst Home Loans
-timezone: Australia/Brisbane
+title: Lend First Home Loans
+timezone: UTC
 collections:
   posts:
     title: Blog
@@ -52,45 +52,3 @@ defaults:
     lede: true
     offset-top: 820
     offset-bottom: 1300
-description: LendFirst offers smart advice and real solutions for first home buyers and first-time investors, in Cairns, Queeensland, Australia.
-baseurl: 
-url: http://lendfirst.com.au
-logo: "/uploads/lendfirst-logo.png"
-facebook:
-  username: LendFirst
-social:
-  name: LendFirst
-  links:
-  - https://www.facebook.com/lendfirst
-  - https://www.linkedin.com/in/michael-garland-88b00a26
-author: patternworks_
-address: PO Box 526 Redlynch, Queensland 4870 Australia
-address-link: https://goo.gl/maps/3RTKiR89iD72
-phone: 0422 830 333
-email: michael@lendfirst.com.au
-insurance-link: https://bob.ensurance.com.au/Proposal/New/3/Agent/LENDFIRST
-accreditation: Michael Garland is a credit representative (473132) of BLSSA Pty Ltd ACN 117 651 760 (Australian Credit Licence 391237).
-google-analytics: UA-75811838-1
-javascriptsurl: "/public/javascripts/"
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-gems:
-- jekyll-feed
-- jekyll-sitemap
-- jekyll-seo-tag
-exclude:
-- Gemfile
-- Gemfile.lock
-- ".gitignore"
-- ".editorconfig"
-- gulpfile.js
-- package.json
-- node_modules
-- yarn.lock
-- src
-- build
-- DESCRIPTION*
-- README*
-- TODO*

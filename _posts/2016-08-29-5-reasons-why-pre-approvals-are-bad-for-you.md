@@ -1,10 +1,11 @@
 ---
 title: 5 reasons why pre-approvals are bad
-date: 2016-08-29 00:00:00 +10:00
-categories: tips
+date: 2016-08-28 14:00:00 Z
+categories:
+- tips
 tags:
-- borrowing 
-image: /uploads/post-5-reasons-why-pre-approvals-are-bad.jpg
+- borrowing
+image: "/uploads/post-5-reasons-why-pre-approvals-are-bad.jpg"
 image-align: true
 ---
 

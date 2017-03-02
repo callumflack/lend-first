@@ -1,7 +1,7 @@
 ---
 title: First Home Buyers
 card-title: I want to get my first loan.
-image: /uploads/first-home-buyers.jpg
+image: "/uploads/first-home-buyers.jpg"
 order: 1
 menu:
 - How much deposit

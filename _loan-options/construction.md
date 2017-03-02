@@ -1,7 +1,7 @@
 ---
 title: Construction
 card-title: I want a loan to build with.
-image: /uploads/construction.jpg
+image: "/uploads/construction.jpg"
 order: 5
 menu:
 - Buying land

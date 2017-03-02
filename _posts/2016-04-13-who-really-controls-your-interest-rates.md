@@ -1,12 +1,13 @@
 ---
 title: Who really controls your interest rates?
-date: 2016-04-13 00:00:00 +10:00
-categories: bulletin
-tags: 
+date: 2016-04-12 14:00:00 Z
+categories:
+- bulletin
+tags:
 - interest rates
 - reserve bank
 - mortgage
-image: /uploads/post-who-really-controls-your-interest-rates.jpg
+image: "/uploads/post-who-really-controls-your-interest-rates.jpg"
 image-align: true
 ---
 

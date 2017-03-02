@@ -1,6 +1,6 @@
 ---
 title: Something different
-image: /uploads/something-different.jpg
+image: "/uploads/something-different.jpg"
 headline: Loan options for something different
 card-title: I have an unusual loan…
 order: 8

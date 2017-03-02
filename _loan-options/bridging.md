@@ -1,7 +1,7 @@
 ---
 title: Bridging
 card-title: I want to upgrade with a loan.
-image: /uploads/bridging.jpg
+image: "/uploads/bridging.jpg"
 order: 6
 menu:
 - How does it work

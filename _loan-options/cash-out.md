@@ -1,7 +1,7 @@
 ---
 title: Cash out
 card-title: I want to increase a loan.
-image: /uploads/cash-out.jpg
+image: "/uploads/cash-out.jpg"
 order: 7
 menu:
 - What is an acceptable purpose

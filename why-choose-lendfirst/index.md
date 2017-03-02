@@ -1,15 +1,14 @@
 ---
 title: Why choose LendFirst?
 layout: page
-image: /uploads/why-choose-lendfirst.jpg
+image: "/uploads/why-choose-lendfirst.jpg"
 has-javascripts: true
-menu: 
+menu:
 - What is a Mortgage Broker
 - What qualifications does a Mortgage Broker have
 - Who is Michael Garland
 - The Lend First difference
 - How does a Mortgage Broker get paid
-
 ---
 
 Most brokers rely on complex and confusing software programs to help provide the best lending solution for the client. However, software programs are only as good as the information the lender puts into them and more often than not this information is incorrect.  

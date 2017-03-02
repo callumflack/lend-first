@@ -1,11 +1,12 @@
 ---
 title: An unsuccessful debt reduction strategy
-date: 2016-09-05 00:00:00 +11:00
-categories: tips
-tags: 
+date: 2016-09-04 13:00:00 Z
+categories:
+- tips
+tags:
 - problem solved
 - debt
-image: /uploads/post-an-unsuccessful-debt-reduction-strategy.jpg
+image: "/uploads/post-an-unsuccessful-debt-reduction-strategy.jpg"
 image-align: true
 ---
 

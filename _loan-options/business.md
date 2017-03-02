@@ -1,7 +1,7 @@
 ---
 title: Business
 card-title: I want to get a loan for my business.
-image: /uploads/business.jpg
+image: "/uploads/business.jpg"
 order: 4
 menu:
 - What are the general requirements
