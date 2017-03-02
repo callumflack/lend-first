@@ -1,4 +1,5 @@
-{% assign sortedPosts = (site.categories[categoryName] | sort: 'date') | reverse %}
+{% comment %}{% assign sortedPosts = (site.categories[categoryName] | sort: 'date') | reverse %}{% endcomment %}
+{% assign sortedPosts = (site.posts | sort: 'date') | reverse %}
 {% for post in sortedPosts %}
     {% include post-cell.html %}
 {% endfor %}
