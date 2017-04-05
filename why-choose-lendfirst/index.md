@@ -11,7 +11,9 @@ menu:
 layout: page
 ---
 
-Our mission at Lendfirst Home Loans is to assist undervalued low deposit and first home buyers find real solutions to buy homes.  First home and low deposit buyers are frequently mislead by media, family & friends, banks and other advisers who aren’t qualified or don’t have the knowledge to get it right and many buyers miss out as a result.
+**Our mission at Lendfirst Home Loans is to assist undervalued low deposit and first home buyers find real solutions to buy homes.**  
+
+First home and low deposit buyers are frequently mislead by media, family & friends, banks and other advisers who aren’t qualified or don’t have the knowledge to get it right and many buyers miss out as a result.
 
 If you are a first home buyer or have a limited deposit, Lendfirst Home Loans specialises in finding real solutions just for you.  Because we are experts in low deposit loans, we often get you a ‘Yes’ when others have already given you a ‘No’.
 
@@ -20,14 +22,15 @@ An independent finance specialist who analyses your needs and matches those need
 
 <h4 id="what-qualifications-does-a-mortgage-broker-have">What Qualifications does a Mortgage Broker need to have?</h4>
 Mortgage brokers must have completed:
-* a minimum Certificate IV in Finance and Mortgage Broking and 
+* a minimum Certificate IV in Finance and Mortgage Broking and
 * be a member of an external dispute resolution scheme and
-* be a member of an industry body such as MFAA or FBAA and 
+* be a member of an industry body such as MFAA or FBAA and
 * be officially licensed by ASIC
 
 There are no requirements for a Mortgage Broker to have any prior lending experience and there are no minimum number of lenders a broker must be accredited with.
 
 It is difficult to find a good broker except by personal experience which is too late if you find a not so good one however there are a couple of signs to indicate you have a good broker on your side:
+
 * They have a professional website that is easy to find
 * Their website is transparent and it is easy to identify the individuals in the business
 * Their website contains information that is genuinely useful 
