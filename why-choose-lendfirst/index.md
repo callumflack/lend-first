@@ -15,7 +15,7 @@ layout: page
 
 First home and low deposit buyers are frequently mislead by media, family & friends, banks and other advisers who aren’t qualified or don’t have the knowledge to get it right and many buyers miss out as a result.
 
-If you are a first home buyer or have a limited deposit, Lendfirst Home Loans specialises in finding real solutions just for you.  Because we are experts in low deposit loans, we often get you a ‘Yes’ when others have already given you a ‘No’.
+If you are a first home buyer or have a limited deposit, Lendfirst Home Loans specialises in finding real solutions just for you.  Because we are the experts in low deposit loans, we often get you a ‘Yes’ when others have already given you a ‘No’.
 
 <h4 id="what-is-a-mortgage-broker">What is a Mortgage Broker?</h4>
 An independent finance specialist who analyses your needs and matches those needs with the most suitable lending product from a range of lenders not just the one bank. A mortgage broker will assist you with your paperwork such as loan applications and supporting documents.  The best mortgage brokers are one’s who educate you and advise you on your finance options and don’t just simply take your order or tell you what the computer says.
