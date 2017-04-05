@@ -20,20 +20,20 @@ An independent finance specialist who analyses your needs and matches those need
 
 <h4 id="what-qualifications-does-a-mortgage-broker-have">What Qualifications does a Mortgage Broker need to have?</h4>
 Mortgage brokers must have completed:
-•	a minimum Certificate IV in Finance and Mortgage Broking and 
-•	be a member of an external dispute resolution scheme and
-•	be a member of an industry body such as MFAA or FBAA and 
-•	be officially licensed by ASIC
+* a minimum Certificate IV in Finance and Mortgage Broking and 
+* be a member of an external dispute resolution scheme and
+* be a member of an industry body such as MFAA or FBAA and 
+* be officially licensed by ASIC
 
 There are no requirements for a Mortgage Broker to have any prior lending experience and there are no minimum number of lenders a broker must be accredited with.
 
 It is difficult to find a good broker except by personal experience which is too late if you find a not so good one however there are a couple of signs to indicate you have a good broker on your side:
-•	They have a professional website that is easy to find
-•	Their website is transparent and it is easy to identify the individuals in the business
-•	Their website contains information that is genuinely useful 
-•	They answer the phone or at least return your call promptly
-•	They freely give you information and answers whenever you ask
-•	They don’t offer immediate solutions, they take the time to research options
+* They have a professional website that is easy to find
+* Their website is transparent and it is easy to identify the individuals in the business
+* Their website contains information that is genuinely useful 
+* They answer the phone or at least return your call promptly
+* They freely give you information and answers whenever you ask
+* They don’t offer immediate solutions, they take the time to research options
 
 A referral from a trusted friend is good but not always. Your situation may be more complex and your friend’s broker may not have the knowledge to deal with your situation as easily.
 Shop around and speak to more than one broker.  10mins chatting on the phone will give you more than enough information to decide who is going to do the best job for you.
@@ -64,7 +64,7 @@ At Lendfirst Home Loans we tirelessly research policy manuals, websites and bank
 Research suggests a large number of brokers have 3 to 4 favourite lenders and will only recommend those lenders even if there are more appropriate options available.  
 Lendfirst Home Loans has over 30 favourite lenders and will always recommend the most suitable loan regardless of the lenders name, size, location or broker incentives being offered. 
 
-We specialize in First Home Buyers and loans for those with low deposits however our experience and our unique approach to finding solutions continues to attract complex residential and commercial lending clients that other brokers and banks find too difficult.
+We specialise in First Home Buyers and loans for those with low deposits however our experience and our unique approach to finding solutions continues to attract complex residential and commercial lending clients that other brokers and banks find too difficult.
 
 At Lendfirst Home Loans, we understand the time pressures that come with purchase contracts and through experience are able to identify problems before they happen. This allows us to fix issues before they arise even if that issue is a problem for the solicitor, valuer, building and pest inspector or real estate agent. 
  
