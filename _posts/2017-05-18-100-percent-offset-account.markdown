@@ -10,7 +10,7 @@ A 100% Offset Account is a normal everyday transaction account that is linked to
 
 The run down on offset accounts:
 * They are transactional and can be used for salary credits, ATM & EFTPOS withdrawals
-Accessible with internet and phone banking just like any other savings or transaction account
+* Accessible with internet and phone banking just like any other savings or transaction account
 * They do not earn any interest
 * They have no minimum balance requirements
 * Must be an account held at the same bank as your home loan
@@ -26,7 +26,7 @@ Using the same example of $350,000 loan at 4.50% rate this time with $20,000 in 
 This is done every day.  At the end of a 30 day month, the total daily amounts $1,221 is debited to the loan so the loan balance becomes $351,221.
 The normal monthly payment of $1,774 is still made and loan balance then starts day 1 of the next month at $349,447.
 
-	$349,447 - $20,000 X 0.0123287% = $40.62
+    $349,447 - $20,000 X 0.0123287% = $40.62
 
 This may not seem like much but you have saved $2.47 a day.  Over 12mths that’s a saving of approx $900.
 

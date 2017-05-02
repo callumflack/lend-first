@@ -6,7 +6,7 @@
 
 
 .c-settings {
-	
+    
 }
 
 
@@ -14,26 +14,26 @@
 // --------------------------------------------------------------------------
 
 .c-settingsHeader {
-	@include containerWindow();
-	border-bottom: 1px solid palette(black-10);
-	border-top: 1px solid palette(black-10);
-	padding-top: space(2.5);
-	padding-bottom: space(0.75);
-	position: relative;
+    @include containerWindow();
+    border-bottom: 1px solid palette(black-10);
+    border-top: 1px solid palette(black-10);
+    padding-top: space(2.5);
+    padding-bottom: space(0.75);
+    position: relative;
 }
 
 .c-settings-backButton {
     @include button();
-	padding-left: 0;
-	position: absolute;
-	top: space(2.5) - 3px;
-	
-	@include on-event(true) {
-	    background-color: transparent;
-	    border-color: transparent;
-		color: palette(black-40);
-		font-family: $font-text-medium;
-	}
+    padding-left: 0;
+    position: absolute;
+    top: space(2.5) - 3px;
+    
+    @include on-event(true) {
+        background-color: transparent;
+        border-color: transparent;
+        color: palette(black-40);
+        font-family: $font-text-medium;
+    }
 }
 
 
@@ -41,42 +41,43 @@
 // --------------------------------------------------------------------------
 
 .c-settingsBlock {
-	@include container( $width: container-width(md) );
-	margin-top: space(2);
+    @include containerFrame();
+    @include containerWidth( $width: container-width(md) );
+    margin-top: space(2);
 }
 
 .c-settingsBlock + .c-settingsBlock {
-	//margin-top: space(3);
+    //margin-top: space(3);
 }
 
 .c-settings-header {
-	background-color: palette(background-neutral);
-	border: 1px solid palette(black-10);
-	padding: space(0.5)	space(1);
-	
-	&.is-published { background-color: palette(highlight-action); border-color: palette(highlight-action); h3 { color: palette(white); } }
-	&.is-draft     { background-color: palette(highlight-action-dark); border-color: palette(highlight-action-dark); h3 { color: palette(white); } }
+    background-color: palette(background-neutral);
+    border: 1px solid palette(black-10);
+    padding: space(0.5)	space(1);
+    
+    &.is-published { background-color: palette(highlight-action); border-color: palette(highlight-action); h3 { color: palette(white); } }
+    &.is-draft     { background-color: palette(highlight-action-dark); border-color: palette(highlight-action-dark); h3 { color: palette(white); } }
 }
 
 .c-settings-header h3 {
-	@include textRg();
-	font-family: $font-text-medium;
+    @include textRg();
+    font-family: $font-text-medium;
 }
 
 .c-settings-form {
-	border: 1px solid palette(black-10);
-	padding: space(1) space(1) space(2);
+    border: 1px solid palette(black-10);
+    padding: space(1) space(1) space(2);
 }
 
 .c-settings-header + form .c-settings-form {
-	border-top: 0;
-	margin-top: -1px;
+    border-top: 0;
+    margin-top: -1px;
 }
 
 .c-settings-note {
-	@include textXs();
-	color: palette(black-40);
-	margin-top: space(0.25);
+    @include textXs();
+    color: palette(black-40);
+    margin-top: space(0.25);
 }
 
 
@@ -85,30 +86,30 @@
 // --------------------------------------------------------------------------
 
 @mixin statusLabelTheme(
-	$color
+    $color
 ) {
-	@include on-event(true) {
-		background-color: $color;
-		//border-color: $color;
-		//color: $color;
-	}
+    @include on-event(true) {
+        background-color: $color;
+        //border-color: $color;
+        //color: $color;
+    }
 }
 
 .c-settings-status {
-	@include textXsBold();
-	border-radius: $labelRadius;
-	//border-style: solid;
-	//border-width: 1px;
-	color: palette(white);
-	display: inline-block;
-	height: 100%;
-	margin-left: space(1);
-	margin-top: 3px;
-	padding: 4px 8px;
-	text-transform: uppercase;
-	
-	&.is-published { @include statusLabelTheme( palette(highlight-action) ); }
-	&.is-draft     { @include statusLabelTheme( palette(highlight-action-dark) ); }
+    @include textXsBold();
+    border-radius: $labelRadius;
+    //border-style: solid;
+    //border-width: 1px;
+    color: palette(white);
+    display: inline-block;
+    height: 100%;
+    margin-left: space(1);
+    margin-top: 3px;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    
+    &.is-published { @include statusLabelTheme( palette(highlight-action) ); }
+    &.is-draft     { @include statusLabelTheme( palette(highlight-action-dark) ); }
 }
 
 
@@ -116,24 +117,24 @@
 // --------------------------------------------------------------------------
 
 @mixin statusButtonTheme(
-	$color
+    $color
 ) {
-	@include on-event(true) {
-		background-color: $color;
-		border-color: $color;
-	}
+    @include on-event(true) {
+        background-color: $color;
+        border-color: $color;
+    }
 }
 
 .c-settings-button {
-	float: right;
-	margin-top: space(1);
-	padding: 0 space(1.5);
-	
-	&--draft   { @include statusButtonTheme( palette(highlight-action-dark) ); }
-	&--archive { @include statusButtonTheme( palette(black-40) ); }
-	//&--archive { @include on-event(true) { background-color: palette(black-20); } }
+    float: right;
+    margin-top: space(1);
+    padding: 0 space(1.5);
+    
+    &--draft   { @include statusButtonTheme( palette(highlight-action-dark) ); }
+    &--archive { @include statusButtonTheme( palette(black-40) ); }
+    //&--archive { @include on-event(true) { background-color: palette(black-20); } }
 }
 
 .c-settings-button + .c-settings-button {
-	margin-right: space(0.5);
+    margin-right: space(0.5);
 }

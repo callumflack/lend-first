@@ -4,7 +4,7 @@ layout: default
 
 <article>
     <header class="Section--header">
-        <div class="o-container--md">
+        <div class="o-container o-container--md">
             <h1 class="c-display--super">
                 {% if page.url contains "loan-options"  %}
                     {% if page.headline %}
@@ -37,11 +37,11 @@ layout: default
         </figure>
     {% endunless %}
     <section class="Section">
-        <div class="o-container--md">
+        <div class="o-container o-container--md">
             <div class="Grid Grid--withGutter">
                 
                 {% unless page.single-column %}
-                    <div class="Grid-cell u-sm-size4of12 u-hide u-sm-display">
+                    <div class="Grid-cell u-sm-size3of12 u-hide u-sm-display">
                         <aside class="Aside--affixed affix-top" data-spy="affix" data-offset-top="{{ page.offset-top }}" data-offset-bottom="{{ page.offset-bottom }}">
                             
                             {% if page.menu %}

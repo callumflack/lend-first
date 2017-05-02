@@ -14,8 +14,9 @@
 }
 
 .c-block--headline--md {
-    //@include container( $padded: false, $width: container-width(md) );
-    @include container( $width: container-width(md) );
+    @include containerFrame();
+    //@include containerWidth( $padded: false, $width: container-width(md) );
+    @include containerWidth( $width: container-width(md) );
 }
 
 .c-block--headline .c-display--hero, 
@@ -92,18 +93,18 @@
     //margin-bottom: space(2);
     
     .form-control {
-    	@include baseTransition();
+        @include baseTransition();
         @include typeReset();
         @include textRg();
         border: 1px solid palette('black-20');
-    	border-top-left-radius: $buttonRadius;
-    	border-bottom-left-radius: $buttonRadius;
+        border-top-left-radius: $buttonRadius;
+        border-bottom-left-radius: $buttonRadius;
         line-height: map-fetch($button-height, base);
-    	padding: 0 space(1);
+        padding: 0 space(1);
 
-    	@include on-event(true) {
-    		outline: none !important;
-    	}
+        @include on-event(true) {
+            outline: none !important;
+        }
         
         @include media-breakpoint-up(sm) {
             width: 50%;
@@ -111,8 +112,8 @@
     }
     
     .c-button {
-    	border-top-left-radius: 0;
-    	border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
         margin-left: -1px;
     }
 }

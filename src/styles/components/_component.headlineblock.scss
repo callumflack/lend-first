@@ -10,8 +10,9 @@
 }
 
 .c-block--headline--md {
-    //@include container( $padded: false, $width: container-width(md) );
-    @include container( $width: container-width(md) );
+    @include containerFrame();
+    //@include containerWidth( $padded: false, $width: container-width(md) );
+    @include containerWidth( $width: container-width(md) );
 }
 
 .c-block--headline .c-display,

@@ -6,7 +6,7 @@ layout: default
     <div class="FlexEmbed">
         <div class="FlexEmbed-ratio"></div>
         <div class="FlexEmbed-content o-coverImage o-imageBlend--grey" style="background-image: url('/public/images/hero-08.jpg')">
-            <div class="o-container--md o-aligner">
+            <div class="o-container o-container--md o-aligner">
                 <div class="c-block--headline o-aligner-item">
                     <h1 class="c-display--hero">Smart advice.<br>Real solutions.</h1>
                     <!-- <p class="c-text--lg c-text--hero">We'll help you find the right door<br>to secure your future lifestyle.</p> -->
@@ -19,7 +19,7 @@ layout: default
 </section>
 
 <section class="Section--underHero">
-    <div class="o-container--md">
+    <div class="o-container o-container--md">
         <!-- <blockquote>“When doctors look at X-rays, they see more because they know anatomy and what to look for in the mix of light and shadow. Over the years they have learned to more clearly discern slight differences in shape and shade that to us are indiscernible.”</blockquote> -->
 
         <div class="c-block--headline">
@@ -27,49 +27,49 @@ layout: default
                 Through constant exposure to a variety of financial advice problems over many years, Michael uses his intuition to see answers to financial problems when others cannot even see the problem. If you seem to be stuck, or you’re looking at accepting terms that aren’t as good as you’d hoped, perhaps Michael can give you a new way of looking at the situation.
             </p>
         </div>
-		
+        
         {% include contact-michael.html %}
 
-	</div>
+    </div>
 </section>
 
 <section class="Section">
-	<div class="o-container">
-		<div class="c-block--headline">
-		    <h1 class="c-display">Learn about loans</h1>
-		</div>
-	</div>
+    <div class="o-container">
+        <div class="c-block--headline">
+            <h1 class="c-display">Learn about loans</h1>
+        </div>
+    </div>
 
-	{% include card.html %}
+    {% include card.html %}
 
 </section>
 
 <section class="Section">
-	<div class="o-container">
+    <div class="o-container">
         <div class="c-block--headline">
             <h1 class="c-display">Smart advice blog</h1>
             <p class="c-text--lgMeta">
                 <a class="o-arrowEast o-linkInvisible" href="/blog">View all blog posts</a>
             </p>
         </div>
-		{% for post in site.posts limit: 1 %}
-			{% include post-cell.html %}
-		{% endfor %}
+        {% for post in site.posts limit: 1 %}
+            {% include post-cell.html %}
+        {% endfor %}
         
-	</div>
+    </div>
 </section>
 
 <section class="Section">
-	<div class="o-container">
+    <div class="o-container">
         <div class="c-block--headline c-block--headline--md">
             <h1 class="c-display">Some of our lending partners</h1>
             <p class="c-text--lgMeta">With 3,500 interest rate variations across 30 lenders, we've got options. However, we always match the right one to your circumstances. <a class="" href="/why-choose-lendfirst">That’s why we talk to people first.</a></p>
         </div>
-		<figure class="t-figure--lenders">
-			<picture>
-				<source media="(min-width: 600px)" srcset="/uploads/lenders.png">
-				<img src="/uploads/lenders-xs.png" alt="Some of our lending partners">
-			</picture>
-		</figure>
-	</div>
+        <figure class="t-figure--lenders">
+            <picture>
+                <source media="(min-width: 600px)" srcset="/uploads/lenders.png">
+                <img src="/uploads/lenders-xs.png" alt="Some of our lending partners">
+            </picture>
+        </figure>
+    </div>
 </section>

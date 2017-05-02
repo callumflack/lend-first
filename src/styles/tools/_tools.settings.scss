@@ -72,6 +72,8 @@ $containerSpace                : space(1);
 $paragraphSpace                : space(1.25);
 $blockSpace                    : 12.5vh;
 $headlineSpace                 : 3.25vh;
+$windowSpace                   : 7.03125%;
+$windowSpaceLg                 : 13.67188%;
 
 $affixWidth                    : 240px;
 
@@ -106,8 +108,8 @@ $grid-breakpoints: (
 $container-max-widths: (
     sm: 576px,
     rg: 660px,
-    md: 960px,
-    lg: 1080px,
+    md: 840px,
+    lg: 1200px,
     xl: 1400px,
     su: 1700px,
 ) !default;

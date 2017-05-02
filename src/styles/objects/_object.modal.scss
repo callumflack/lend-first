@@ -46,7 +46,8 @@
 
 @mixin t-modalDialog() {
     //transform: translateY(10px);
-    @include container();
+    @include containerFrame();
+    @include containerWidth();
     transition: all map-fetch($transition, duration, fast) map-fetch($transition, type, base);
 }
 

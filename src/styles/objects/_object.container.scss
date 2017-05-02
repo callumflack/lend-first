@@ -5,134 +5,106 @@
 // --------------------------------------------------------------------------
 
 
-@mixin container(
-	$padded: true,
-	$width: container-width(md)
+@mixin containerWidth(
+    $padded: true,
+    $width: container-width(md)
 ) {
 
-	@if $padded {
-		height: inherit;
-		padding-left: $containerSpace;
-		padding-right: $containerSpace;
-	} @else {
-		max-width: $width - ($containerSpace);
-	}
-	
-	@include clearfix();
-	margin-left: auto;
-	margin-right: auto;
-	max-width: $width;
-	position: relative;
-
-	p,
-	li,
-	ol {
-		&:last-child,
-		&:last-child a {
-			margin-bottom: 0;
-		}
-	}
+    @if $padded {
+        height: inherit;
+        max-width: $width + ($gutterSpace * 2);
+        padding-left: $gutterSpace;
+        padding-right: $gutterSpace;
+        
+        @include media-breakpoint-up(lg) {
+            max-width: $width + ($gutterSpace * 4);
+            padding-left: $gutterSpace * 2;
+            padding-right: $gutterSpace * 2;
+        }
+        
+    } @else {
+        max-width: $width;
+    }
 }
 
-.o-container {
-	@include container();
+@mixin containerFrame() {
+    @include clearfix();
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
 
-    // sizes
-	&--md {
-		@include container( $width: container-width(md) );
-	}
-
-	&--lg {
-		@include container( $width: container-width(lg) );
-	}
-
-	&--xl {
-		@include container( $width: container-width(xl) );
-	}
-
-    &--fullWindowMobile {
-        @include media-breakpoint-down(lg-tablet) {
-            max-width: 100%;
-            padding: 0;
+    p,
+    li,
+    ol {
+        &:last-child,
+        &:last-child a {
+            margin-bottom: 0;
         }
     }
+}
+
+
+.o-container {
+    @include containerFrame();
+    @include containerWidth();
+
+    // widths
+    &--sm {
+        @include containerWidth( $width: container-width(sm) );
+    }
+
+    &--rg {
+        @include containerWidth( $width: container-width(rg) );
+    }
+
+    &--md {
+        @include containerWidth( $width: container-width(md) );
+    }
+
+    &--lg {
+        @include containerWidth( $width: container-width(lg) );
+    }
+
+    &--xl {
+        @include containerWidth( $width: container-width(xl) );
+    }
     
+    // insets like instrument.com
+    &--tuck {
+        padding-left: $windowSpace;
+        padding-right: $windowSpace;
+
+        @include media-breakpoint-up(xl) {
+            padding-left: $windowSpaceLg;
+            padding-right: $windowSpaceLg;
+        }
+    }
 }
 
 
 
-
-
-
-
-
-
-.c-container-rule {
-	@include container(false);
-	border-top: 1px solid palette(black-10);
-	margin-top: 0;
-	margin-bottom: space(0.75);
-}
-
-
+// Variables & modifiers
+// --------------------------------------------------------------------------
 
 @mixin containerWindow() {
-	padding: space(1) space(1.5) space(0.75);
-	//@include media-breakpoint-up(sm) { padding: space(1) space(1.5) space(0.75); }
+    padding: 21px space(1.5) 20px;
+    //@include media-breakpoint-up(sm) { padding: space(1) space(1.5) space(0.75); }
 }
 
 .c-container--window {
-	@include containerWindow();
+    @include containerWindow();
 }
 
+.c-container-rule {
+    @include containerWidth($padded: false);
+    border: 0;
+    border-top: 1px solid palette(black-10);
+    margin-top: 0;
+    margin-bottom: space(0.75);
+}
 
-
-
-
-
-
-//&--super {
-//    //@include container( container-width(su) );
-//	max-width: 100%;
-//	padding: 0 space(1.5);
-//
-//    @include media-breakpoint-up(sm) {
-//        padding: 0 space(4);
-//    }
-//}
-
-//&--postInfo {
-//	@include container( $width: container-width(lg) );
-//	//padding: 0;
-//
-//	@include media-breakpoint-up(xs) {
-//		padding: 0 !important;
-//	}
-//
-//	@include media-breakpoint-up(xl) {
-//		// @include container( container-width(xl) );
-//		padding: 0 space(1.5);
-//	}
-//
-//	@include media-breakpoint-up(su) {
-//		@include container( $width: container-width(xl) );
-//	}
-//}
-
-
-//&.Container--full {
-//    margin: 0;
-//    max-width: map-fetch($size, container, wide-picture);
-//    padding: 0;
-//
-//    @include media-breakpoint-up(xs) {
-//        margin: 0 auto !important;
-//        padding: 0 space(0.75);
-//    }
-//}
-
-//.o-column--post {
-//	max-width: container-width(xs);
-//	// @include when-inside(".o-container")     { margin-left: 0; }
-//	// @include when-inside(".o-container--xl") { margin-left: calc( (1200-960) / 2 ); }
-//}
+.o-column--post {
+    max-width: container-width(xs);
+    // @include when-inside(".o-container")     { margin-left: 0; }
+    // @include when-inside(".o-container--xl") { margin-left: calc( (1200-960) / 2 ); }
+}
