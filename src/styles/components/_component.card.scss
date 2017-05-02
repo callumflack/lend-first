@@ -156,21 +156,10 @@
 
 // Variable for non-image posts
 .Card--lg .Card-image--categoryLabel {
-    //align-items: initial;
-    //flex-direction: column;
     height: $headlineSpace * 9 * 0.25;
 
-    &:before { content: none; }
-    
-    span {
-        @include typeSize(text--xs);
-        color: palette(white);
-        display: block;
-        font-family: $font-text-medium;
-        margin-top: auto;
-        padding: 0 22px 4px;
-        text-align: right;
-        text-transform: uppercase;
+    &:before { 
+        content: none; 
     }
     
     .c-headline--md {
