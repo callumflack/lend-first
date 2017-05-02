@@ -35,6 +35,7 @@ $palette: (
     black-5                    : tint($base-black, 96%),
     black-3                    : tint($base-black, 98%),
     white                      : $base-white,
+    border                     : tint($base-black, 80%),
     background                 : #fdfdfd,
     background-neutral         : #F7F4F4,
     background-light           : rgba( #F7F4F4, 0.25 ),
@@ -67,7 +68,7 @@ $base-line-height              : ($base-font-size-unit * $base-line-height-unit)
 $space-unit                    : $base-line-height;
 $space                         : $space-unit * 1;
 
-$gutterSpace                   : space(0.5);
+$gutterSpace                   : space(1);
 $containerSpace                : space(1);
 $paragraphSpace                : space(1.25);
 $blockSpace                    : 12.5vh;

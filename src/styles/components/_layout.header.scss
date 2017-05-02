@@ -48,8 +48,8 @@ $footerColor: #677985;
 
     li {
         &:not(:last-child) {
-			margin-right: $headerInset;
-		}
+            margin-right: $headerInset;
+        }
     }
 
     li a {
@@ -140,7 +140,7 @@ $footerColor: #677985;
 
 .Footer-minors {
     @include textXs();
-    border-top: 1px solid palette('black-20');
+    border-top: 1px solid palette('border');
     color: palette('black-40');
     margin: 0;
     padding-top: 8px;

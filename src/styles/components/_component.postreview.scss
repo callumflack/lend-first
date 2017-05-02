@@ -1,0 +1,23 @@
+
+.c-postReview {
+    @include textSm();
+    border-top: 1px solid palette("border");
+    color: palette("black-40");
+    margin-top: space(2);
+    padding-top: $paragraphSpace * 0.5;
+    
+    ul {
+        @include listClean();
+        margin-top: $paragraphSpace * 0.5;
+    }
+    
+    li {
+        @include textSm();
+        color: palette("black-40");
+        
+        span {
+            display: inline-block;
+            width: space(3);
+        }
+    }
+}

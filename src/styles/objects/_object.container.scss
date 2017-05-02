@@ -95,6 +95,13 @@
     @include containerWindow();
 }
 
+@include media-breakpoint-down(xl) {
+    .o-container--fullWindowMobile {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
 .c-container-rule {
     @include containerWidth($padded: false);
     border: 0;
