@@ -3497,10 +3497,10 @@ blockquote,
   color: #1096ef; }
   @media (min-width: 544px) {
     .c-display--hero {
-      font-size: 42px; } }
+      font-size: 39px; } }
   @media (min-width: 1200px) {
     .c-display--hero {
-      font-size: 48px; } }
+      font-size: 45px; } }
   .c-display--hero > li,
   .c-display--hero > li a,
   .c-display--hero > a {
@@ -3520,10 +3520,10 @@ blockquote,
   font-size: 32px; }
   @media (min-width: 544px) {
     .c-display {
-      font-size: 42px; } }
+      font-size: 39px; } }
   @media (min-width: 1200px) {
     .c-display {
-      font-size: 48px; } }
+      font-size: 45px; } }
   .c-display > li,
   .c-display > li a,
   .c-display > a {
@@ -3543,10 +3543,10 @@ blockquote,
   font-size: 32px; }
   @media (min-width: 544px) {
     .c-display--super {
-      font-size: 42px; } }
+      font-size: 39px; } }
   @media (min-width: 1200px) {
     .c-display--super {
-      font-size: 48px; } }
+      font-size: 45px; } }
   .c-display--super > li,
   .c-display--super > li a,
   .c-display--super > a {
@@ -4020,10 +4020,10 @@ td {
     padding: 0 0 36px 0; }
     @media (min-width: 544px) {
       .o-modal .Nav-menu a {
-        font-size: 42px; } }
+        font-size: 39px; } }
     @media (min-width: 1200px) {
       .o-modal .Nav-menu a {
-        font-size: 48px; } }
+        font-size: 45px; } }
     .o-modal .Nav-menu a > li,
     .o-modal .Nav-menu a > li a,
     .o-modal .Nav-menu a > a {
@@ -4081,7 +4081,7 @@ td {
     padding-bottom: 50vh; }
 
 .Section--header,
-.Section--withFigure {
+.Section--figure + .Section {
   margin: 3.25vh 0 0; }
 
 .Section--underHero {

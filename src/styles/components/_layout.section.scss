@@ -19,7 +19,7 @@
 }
 
 .Section--header,
-.Section--withFigure {
+.Section--figure + .Section {
     margin: $headlineSpace 0 0;
     
     //margin: space(1) 0 0;

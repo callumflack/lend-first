@@ -3,7 +3,7 @@ layout: default
 ---
 
 <article>
-    <section class="Section--header">
+    <header class="Section--header">
         <div class="o-container--md">
             <h1 class="c-display--super">
                 {% if page.url contains "loan-options"  %}
@@ -17,9 +17,9 @@ layout: default
                 {% endif %}
             </h1>
         </div>
-    </section>
+    </header>
     {% unless page.categories contains "tips" or post.categories contains "tips" %}
-        <figure class="">
+        <figure class="Section--figure">
             <div class="o-container o-container--lg o-container--fullWindowMobile">
                 <div class="FlexEmbed">
                     <div class="FlexEmbed-ratio FlexEmbed-ratio--2by1"></div>
@@ -36,7 +36,7 @@ layout: default
             </div>
         </figure>
     {% endunless %}
-    <section class="{% if page.image or post.image %}Section--withFigure{% else %}Section{% endif %}">
+    <section class="Section">
         <div class="o-container--md">
             <div class="Grid Grid--withGutter">
                 
