@@ -2,11 +2,11 @@
 title: 5 reasons why pre-approvals are bad
 date: 2016-08-28 14:00:00 Z
 categories:
-- tips
+- comment
 tags:
 - borrowing
 image: "/uploads/post-5-reasons-why-pre-approvals-are-bad.jpg"
-image-align: true
+image-align-bottom: true
 ---
 
 A pre-approval of finance before shopping for a house is common for many buyers and recommended by many lending experts but applying for a pre-approval could ruin your chances when it comes to making a formal application.

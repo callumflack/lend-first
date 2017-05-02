@@ -2473,49 +2473,6 @@ pre {
   -ms-transform: translateY(-0.375rem);
   transform: translateY(-0.375rem); }
 
-.o-arrowL-left:before {
-  content: "";
-  display: inline-block;
-  height: 0;
-  -webkit-transform: translateY(-0.0625rem);
-  -ms-transform: translateY(-0.0625rem);
-  transform: translateY(-0.0625rem);
-  vertical-align: middle;
-  width: 0;
-  border-top: 0.3em solid transparent;
-  border-bottom: 0.3em solid transparent;
-  border-right: 0.3em solid;
-  margin-left: 0.0875rem;
-  margin-right: 0.4375rem; }
-
-.o-arrowL-bottom:before {
-  content: "";
-  display: inline-block;
-  height: 0;
-  -webkit-transform: translateY(-0.0625rem);
-  -ms-transform: translateY(-0.0625rem);
-  transform: translateY(-0.0625rem);
-  vertical-align: middle;
-  width: 0;
-  border-top: 0.3em solid;
-  border-left: 0.3em solid transparent;
-  border-right: 0.3em solid transparent;
-  margin-right: 0.35rem; }
-
-.o-arrowL-top:before {
-  content: "";
-  display: inline-block;
-  height: 0;
-  -webkit-transform: translateY(-0.0625rem);
-  -ms-transform: translateY(-0.0625rem);
-  transform: translateY(-0.0625rem);
-  vertical-align: middle;
-  width: 0;
-  border-bottom: 0.3em solid;
-  border-left: 0.3em solid transparent;
-  border-right: 0.3em solid transparent;
-  margin-right: 0.35rem; }
-
 .o-figure {
   display: inline-block;
   margin: 0 0 24px; }
@@ -3106,6 +3063,9 @@ a {
 .o-coverImage--alignBottom {
   background-position-y: 100% !important; }
 
+.o-coverImage--alignTop {
+  background-position-y: 0 !important; }
+
 .o-containImage {
   -webkit-transition-property: all;
   -o-transition-property: all;
@@ -3229,15 +3189,8 @@ pre {
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0;
   line-height: 1.5;
-  font-size: 13px; }
-  @media (min-width: 544px) {
-    ul, ol, dl,
-    p, address,
-    table, time,
-    fieldset, figcaption,
-    pre {
-      font-size: 15px; } }
-  @media (min-width: 1200px) {
+  font-size: 15px; }
+  @media (min-width: 768px) {
     ul, ol, dl,
     p, address,
     table, time,
@@ -3298,13 +3251,13 @@ blockquote,
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0;
   line-height: 1.5;
-  font-size: 19px;
+  font-size: 25px;
   border-left: 2px solid #b3b3b3;
   padding-left: 24px; }
-  @media (min-width: 544px) {
+  @media (min-width: 992px) {
     blockquote,
     .Blockquote {
-      font-size: 25px; } }
+      font-size: 28px; } }
   blockquote > li,
   blockquote > li a,
   blockquote > a,
@@ -3319,15 +3272,12 @@ blockquote,
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0;
   line-height: 1.5;
-  font-size: 13px;
+  font-size: 15px;
   color: #1096ef;
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   font-size: 27px;
   line-height: 1.45; }
-  @media (min-width: 544px) {
-    .Lede {
-      font-size: 15px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .Lede {
       font-size: 17px; } }
   .Lede > li,
@@ -3354,11 +3304,8 @@ blockquote,
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0.0125em;
   line-height: 1.5;
-  font-size: 11px; }
-  @media (min-width: 544px) {
-    .c-text--sm {
-      font-size: 13px; } }
-  @media (min-width: 1200px) {
+  font-size: 13px; }
+  @media (min-width: 768px) {
     .c-text--sm {
       font-size: 14px; } }
   .c-text--sm > li,
@@ -3372,11 +3319,8 @@ blockquote,
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0;
   line-height: 1.5;
-  font-size: 13px; }
-  @media (min-width: 544px) {
-    .c-text {
-      font-size: 15px; } }
-  @media (min-width: 1200px) {
+  font-size: 15px; }
+  @media (min-width: 768px) {
     .c-text {
       font-size: 17px; } }
   .c-text > li,
@@ -3390,10 +3334,10 @@ blockquote,
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0;
   line-height: 1.5;
-  font-size: 16px; }
-  @media (min-width: 544px) {
+  font-size: 20px; }
+  @media (min-width: 992px) {
     .c-text--lg {
-      font-size: 20px; } }
+      font-size: 22px; } }
   .c-text--lg > li,
   .c-text--lg > li a,
   .c-text--lg > a {
@@ -3405,11 +3349,11 @@ blockquote,
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 20px;
   text-align: center; }
-  @media (min-width: 544px) {
+  @media (min-width: 992px) {
     .c-text--lgMeta {
-      font-size: 20px; } }
+      font-size: 22px; } }
   .c-text--lgMeta > li,
   .c-text--lgMeta > li a,
   .c-text--lgMeta > a {
@@ -3421,13 +3365,10 @@ blockquote,
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0;
   line-height: 1.5;
-  font-size: 13px;
+  font-size: 15px;
   color: gray;
   margin-bottom: 12px; }
-  @media (min-width: 544px) {
-    .c-text--intro {
-      font-size: 15px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .c-text--intro {
       font-size: 17px; } }
   .c-text--intro > li,
@@ -3441,12 +3382,9 @@ blockquote,
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0.0125em;
   line-height: 1.5;
-  font-size: 11px;
+  font-size: 13px;
   color: gray !important; }
-  @media (min-width: 544px) {
-    .c-text--meta {
-      font-size: 13px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .c-text--meta {
       font-size: 14px; } }
   .c-text--meta > li,
@@ -3467,11 +3405,8 @@ blockquote,
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0;
   line-height: 1.5;
-  font-size: 13px; }
-  @media (min-width: 544px) {
-    .c-text-block > * {
-      font-size: 15px; } }
-  @media (min-width: 1200px) {
+  font-size: 15px; }
+  @media (min-width: 768px) {
     .c-text-block > * {
       font-size: 17px; } }
   .c-text-block > * > li,
@@ -3497,12 +3432,9 @@ blockquote,
     font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
     letter-spacing: 0;
     line-height: 1.5;
-    font-size: 13px;
+    font-size: 15px;
     margin-bottom: 0; }
-    @media (min-width: 544px) {
-      .c-text-block--footer > * {
-        font-size: 15px; } }
-    @media (min-width: 1200px) {
+    @media (min-width: 768px) {
       .c-text-block--footer > * {
         font-size: 17px; } }
     .c-text-block--footer > * > li,
@@ -3516,13 +3448,10 @@ blockquote,
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0.0125em;
   line-height: 1.5;
-  font-size: 11px;
+  font-size: 13px;
   display: inline-block;
   width: 18px; }
-  @media (min-width: 544px) {
-    .c-list--itemTag {
-      font-size: 13px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .c-list--itemTag {
       font-size: 14px; } }
   .c-list--itemTag > li,
@@ -3536,16 +3465,13 @@ blockquote,
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0.0125em;
   line-height: 1.5;
-  font-size: 11px;
+  font-size: 13px;
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
   color: gray;
   margin-bottom: 30px; }
-  @media (min-width: 544px) {
-    .c-list--meta {
-      font-size: 13px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .c-list--meta {
       font-size: 14px; } }
   .c-list--meta > li,
@@ -3848,10 +3774,10 @@ blockquote,
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0;
   line-height: 1.5;
-  font-size: 16px; }
-  @media (min-width: 544px) {
+  font-size: 20px; }
+  @media (min-width: 992px) {
     .s-article--withLede p:first-of-type {
-      font-size: 20px; } }
+      font-size: 22px; } }
   .s-article--withLede p:first-of-type > li,
   .s-article--withLede p:first-of-type > li a,
   .s-article--withLede p:first-of-type > a {
@@ -3866,11 +3792,8 @@ blockquote,
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0.0125em;
   line-height: 1.5;
-  font-size: 11px; }
-  @media (min-width: 544px) {
-    .s-article small {
-      font-size: 13px; } }
-  @media (min-width: 1200px) {
+  font-size: 13px; }
+  @media (min-width: 768px) {
     .s-article small {
       font-size: 14px; } }
   .s-article small > li,
@@ -3923,15 +3846,11 @@ td {
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0.0125em;
   line-height: 1.5;
-  font-size: 11px;
+  font-size: 13px;
   display: inline-block;
   margin-bottom: 0;
   vertical-align: text-top; }
-  @media (min-width: 544px) {
-    th,
-    td {
-      font-size: 13px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     th,
     td {
       font-size: 14px; } }
@@ -4139,17 +4058,14 @@ td {
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0.0125em;
   line-height: 1.5;
-  font-size: 10px;
+  font-size: 12px;
   border-top: 1px solid #cccccc;
   color: #999999;
   margin: 0;
   padding-top: 8px; }
-  @media (min-width: 544px) {
+  @media (min-width: 768px) {
     .Footer-minors {
-      font-size: 11px; } }
-  @media (min-width: 1200px) {
-    .Footer-minors {
-      font-size: 12px; } }
+      font-size: 13px; } }
   .Footer-minors > li,
   .Footer-minors > li a,
   .Footer-minors > a {
@@ -4195,7 +4111,7 @@ td {
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0;
   line-height: 1.5;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 44px; }
   .c-button, .c-button:hover, .c-button:active, .c-button:focus {
     background-color: transparent;
@@ -4206,10 +4122,7 @@ td {
     background-color: #999999;
     cursor: not-allowed;
     opacity: 0.4; }
-  @media (min-width: 544px) {
-    .c-button {
-      font-size: 15px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .c-button {
       font-size: 17px; } }
   .c-button > li,
@@ -4258,7 +4171,7 @@ td {
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0;
   line-height: 1.5;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 44px; }
   .c-button--rev, .c-button--rev:hover, .c-button--rev:active, .c-button--rev:focus {
     background-color: transparent;
@@ -4269,10 +4182,7 @@ td {
     background-color: #999999;
     cursor: not-allowed;
     opacity: 0.4; }
-  @media (min-width: 544px) {
-    .c-button--rev {
-      font-size: 15px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .c-button--rev {
       font-size: 17px; } }
   .c-button--rev > li,
@@ -4321,7 +4231,7 @@ td {
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0;
   line-height: 1.5;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 44px;
   min-width: 92%;
   padding: 6px 6px 6px 12px;
@@ -4335,10 +4245,7 @@ td {
     background-color: #999999;
     cursor: not-allowed;
     opacity: 0.4; }
-  @media (min-width: 544px) {
-    .t-button--primary {
-      font-size: 15px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .t-button--primary {
       font-size: 17px; } }
   .t-button--primary > li,
@@ -4468,16 +4375,13 @@ td {
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0;
   line-height: 1.5;
-  font-size: 13px;
+  font-size: 15px;
   border: 1px solid #cccccc;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   line-height: 44px;
   padding: 0 24px; }
-  @media (min-width: 544px) {
-    .c-block--newsletter .form-control {
-      font-size: 15px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .c-block--newsletter .form-control {
       font-size: 17px; } }
   .c-block--newsletter .form-control > li,
@@ -4583,7 +4487,7 @@ td {
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0.0125em;
   line-height: 1.5;
-  font-size: 11px;
+  font-size: 13px;
   background-color: transparent;
   color: #FFF;
   font-family: "AtlasGrotesk-Bold", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
@@ -4592,10 +4496,7 @@ td {
   text-transform: capitalize;
   z-index: 2;
   padding: 0.4375rem 1rem 0.375rem; }
-  @media (min-width: 544px) {
-    .Card-title {
-      font-size: 13px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .Card-title {
       font-size: 14px; } }
   .Card-title > li,
@@ -4609,7 +4510,7 @@ td {
   font-family: "AtlasGrotesk-Light", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0;
   line-height: 1.3;
-  font-size: 19px;
+  font-size: 25px;
   background-color: #FFF;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -4620,9 +4521,9 @@ td {
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out; }
-  @media (min-width: 544px) {
+  @media (min-width: 992px) {
     .Card-lede {
-      font-size: 25px; } }
+      font-size: 28px; } }
   .Card-lede > li,
   .Card-lede > li a,
   .Card-lede > a {
@@ -4638,9 +4539,34 @@ td {
   height: 384px;
   height: 29.25vh; }
   .Card--lg .Card-image--blank {
-    height: 14.625vh; }
+    height: 7.3125vh; }
     .Card--lg .Card-image--blank:before {
       opacity: 0.3; }
+  .Card--lg .Card-image--categoryLabel {
+    -webkit-box-align: initial;
+    -webkit-align-items: initial;
+    -ms-flex-align: initial;
+    align-items: initial;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 7.3125vh; }
+    .Card--lg .Card-image--categoryLabel:before {
+      content: none; }
+    .Card--lg .Card-image--categoryLabel span {
+      font-size: 12px;
+      color: #FFF;
+      display: block;
+      font-family: "AtlasGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
+      margin-top: auto;
+      padding: 0 22px 4px;
+      text-align: right;
+      text-transform: uppercase; }
+      @media (min-width: 768px) {
+        .Card--lg .Card-image--categoryLabel span {
+          font-size: 13px; } }
 
 .Card--lg .c-headline--md {
   color: #FFF;
@@ -4671,12 +4597,9 @@ td {
     font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
     letter-spacing: 0.0125em;
     line-height: 1.5;
-    font-size: 11px;
+    font-size: 13px;
     margin-bottom: 2px; }
-    @media (min-width: 544px) {
-      .Posts-nav > li {
-        font-size: 13px; } }
-    @media (min-width: 1200px) {
+    @media (min-width: 768px) {
       .Posts-nav > li {
         font-size: 14px; } }
     .Posts-nav > li > li,
@@ -4746,15 +4669,12 @@ td {
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0;
   line-height: 1.5;
-  font-size: 13px;
+  font-size: 15px;
   color: currentColor;
   font-family: "AtlasGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   line-height: 1.2;
   position: relative; }
-  @media (min-width: 544px) {
-    .Contact-action {
-      font-size: 15px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .Contact-action {
       font-size: 17px; } }
   .Contact-action > li,
@@ -4768,14 +4688,11 @@ td {
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0.0125em;
   line-height: 1.5;
-  font-size: 11px;
+  font-size: 13px;
   color: currentColor;
   display: block;
   margin: 4px 0 0; }
-  @media (min-width: 544px) {
-    .Contact-detail {
-      font-size: 13px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .Contact-detail {
       font-size: 14px; } }
   .Contact-detail > li,
@@ -4799,17 +4716,14 @@ td {
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0.0125em;
   line-height: 1.5;
-  font-size: 11px;
+  font-size: 13px;
   color: gray;
   line-height: 1.5;
   margin: 0;
   -webkit-transition: all 150ms ease-out;
   -o-transition: all 150ms ease-out;
   transition: all 150ms ease-out; }
-  @media (min-width: 544px) {
-    .Aside-list--item {
-      font-size: 13px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .Aside-list--item {
       font-size: 14px; } }
   .Aside-list--item > li,
@@ -4839,17 +4753,14 @@ td {
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0.0125em;
   line-height: 1.5;
-  font-size: 11px;
+  font-size: 13px;
   background-image: none !important;
   color: gray;
   display: block;
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   line-height: 1.5;
   margin: 8px 0 24px 0; }
-  @media (min-width: 544px) {
-    .Aside-list--link {
-      font-size: 13px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .Aside-list--link {
       font-size: 14px; } }
   .Aside-list--link > li,
@@ -4902,7 +4813,7 @@ body {
   font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   letter-spacing: 0;
   line-height: 1.5;
-  font-size: 13px;
+  font-size: 15px;
   background-color: #1096ef;
   border-radius: 50%;
   bottom: 18.125vh;
@@ -4916,10 +4827,7 @@ body {
   text-align: center;
   width: 75px;
   z-index: 99; }
-  @media (min-width: 544px) {
-    .c-nav-trigger {
-      font-size: 15px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .c-nav-trigger {
       font-size: 17px; } }
   .c-nav-trigger > li,

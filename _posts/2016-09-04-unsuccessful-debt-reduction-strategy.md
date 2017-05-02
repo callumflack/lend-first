@@ -2,12 +2,12 @@
 title: An unsuccessful debt reduction strategy
 date: 2016-09-04 13:00:00 Z
 categories:
-- tips
+- comment
 tags:
 - problem solved
 - debt
 image: "/uploads/post-an-unsuccessful-debt-reduction-strategy.jpg"
-image-align: true
+image-align-bottom: true
 ---
 
 A client of mine, who we shall call Bob, earned an obscenely high amount of income, he drove a brand new BMW, always wore nice Italian suits and travelled overseas at least twice a year.  Ignoring stereotypes, Bob was actually a very down to earth, genuine nice guy but terrible with money.

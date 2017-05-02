@@ -25,10 +25,15 @@
 {% endcomment %}
     
 <a class="Card Card--lg" href="{{ post.url }}">
-    <div class="Card-image {% if post.image-align %}o-coverImage--alignBottom{% endif %} {% if post.image == false %}Card-image--blank{% endif %}" 
-        {% unless post.image == false %}
+    <div class="
+        Card-image 
+        {% if post.image-align-bottom %} o-coverImage--alignBottom{% endif %} 
+        {% if post.image-align-top %} o-coverImage--alignTop{% endif %} 
+        {% if post.categories contains "tips" %} Card-image--categoryLabel{% endif %}" 
+        {% unless post.categories contains "tips" %}
             style="background-image: url('/uploads/post-{{ post.title | downcase | replace: ' ', '-' | replace: '—', '-' | remove: '?' }}.jpg')"
         {% endunless %}>
+        {% if post.categories contains "tips" %}<span>Tips</span>{% endif %}
         <h2 class="c-headline--md">{{ post.title }}</h2>
     </div>
     <div class="Card-lede">

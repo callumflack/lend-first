@@ -42,13 +42,14 @@ defaults:
     type: posts
   values:
     layout: page
-    permalink: "/:categories/:slug/"
+    permalink: "/blog/:slug/"
     has-javascripts: true
     title: 
     categories: 
     type: post
     image: true
-    image-align: false
+    image-align-top: false
+    image-align-bottom: false
     lede: true
     offset-top: 820
     offset-bottom: 1300

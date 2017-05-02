@@ -1,6 +1,10 @@
 ---
 title: Introducing Lendfirst Home Loans, the low deposit experts
 date: 2017-05-02 13:46:00 +10:00
+categories:
+- comment
+image: "/uploads/post-introducing-lendfirst-home-loans,-the-low-deposit-experts.jpg"
+image-align-top: true
 ---
 
 Lendfirst Home Loans (previously Australian Property Finance, Cairns) purpose is to assist undervalued low deposit and first home buyers find real solutions to buy their homes. First home buyers and low deposit buyers are regularly mislead by media, friends, family, banks and other advisers who say home ownership is not possible without a large deposit. This is simply not the case and many miss out because they listen to incorrect advice.

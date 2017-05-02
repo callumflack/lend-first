@@ -2,7 +2,7 @@
 title: Are you a DIY borrower?
 date: 2016-08-14 14:00:00 Z
 categories:
-- tips
+- comment
 tags:
 - borrowing
 image: "/uploads/post-are-you-a-diy-borrower.jpg"

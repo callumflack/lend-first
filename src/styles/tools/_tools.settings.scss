@@ -20,40 +20,40 @@ $base-black                    : #000;
 $base-white                    : #FFF;
 
 $palette: (
-	black                      : $base-black,
-	text-dark                  : #151515,
-	text                       : #353535,
-	dark                       : tint($base-black, 15%),
-	ash                        : tint($base-black, 22%),
-	black-66                   : tint($base-black, 34%),
-	black-50                   : tint($base-black, 50%),
-	black-40                   : tint($base-black, 60%),
-	black-30                   : tint($base-black, 70%),
-	black-20                   : tint($base-black, 80%),
-	black-15                   : tint($base-black, 86%),
-	black-10                   : tint($base-black, 91%),
-	black-5                    : tint($base-black, 96%),
-	black-3                    : tint($base-black, 98%),
-	white                      : $base-white,
-	background                 : #fdfdfd,
-	background-neutral         : #F7F4F4,
+    black                      : $base-black,
+    text-dark                  : #151515,
+    text                       : #353535,
+    dark                       : tint($base-black, 15%),
+    ash                        : tint($base-black, 22%),
+    black-66                   : tint($base-black, 34%),
+    black-50                   : tint($base-black, 50%),
+    black-40                   : tint($base-black, 60%),
+    black-30                   : tint($base-black, 70%),
+    black-20                   : tint($base-black, 80%),
+    black-15                   : tint($base-black, 86%),
+    black-10                   : tint($base-black, 91%),
+    black-5                    : tint($base-black, 96%),
+    black-3                    : tint($base-black, 98%),
+    white                      : $base-white,
+    background                 : #fdfdfd,
+    background-neutral         : #F7F4F4,
     background-light           : rgba( #F7F4F4, 0.25 ),
     background-light-alt       : rgba( #F2F2F2, 0.8 ),
-	neutral                    : #F3F2F1,
-	neutral-text               : darken(#f0eeeb, 27%),
-	neutral-dark               : darken(#f0eeeb, 9%),
-	neutral-light              : lighten(#f0eeeb, 4%),
-	brand                      : #1096ef,
-	brand-light                : #c7e3f6,
-	brand-counter              : #887E73,
-	brand-neutral              : #3A7BA6,
-	modal-background           : #1096ef,
-	highlight-action           : #E01D64,
-	highlight-action-dark      : #A30C43,
-	highlight-edit             : #4ECF00,
-	warning                    : #FFD40C,
-	bad-news                   : #C60C0C,
-	good-news                  : brand-complement
+    neutral                    : #F3F2F1,
+    neutral-text               : darken(#f0eeeb, 27%),
+    neutral-dark               : darken(#f0eeeb, 9%),
+    neutral-light              : lighten(#f0eeeb, 4%),
+    brand                      : #1096ef,
+    brand-light                : #c7e3f6,
+    brand-counter              : #887E73,
+    brand-neutral              : #3A7BA6,
+    modal-background           : #1096ef,
+    highlight-action           : #E01D64,
+    highlight-action-dark      : #A30C43,
+    highlight-edit             : #4ECF00,
+    warning                    : #FFD40C,
+    bad-news                   : #C60C0C,
+    good-news                  : brand-complement
 );
 
 
@@ -94,22 +94,22 @@ $labelRadius                   : 3px;
 // ) !default;
 
 $grid-breakpoints: (
-	xs: 0,
-	sm: 544px,
-	md: 768px,
-	lg: 992px,
-	lg-tablet: 1024px,
-	xl: 1200px,
-	su: 1400px
+    xs: 0,
+    sm: 544px,
+    md: 768px,
+    lg: 992px,
+    lg-tablet: 1024px,
+    xl: 1200px,
+    su: 1400px
 ) !default;
 
 $container-max-widths: (
-	sm: 576px,
-	rg: 660px,
-	md: 960px,
-	lg: 1080px,
-	xl: 1400px,
-	su: 1700px,
+    sm: 576px,
+    rg: 660px,
+    md: 960px,
+    lg: 1080px,
+    xl: 1400px,
+    su: 1700px,
 ) !default;
 
 
@@ -117,56 +117,56 @@ $container-max-widths: (
 // --------------------------------------------------------------------------
 
 $fontsizes: (
-	text--xs: (
-		xs            : 10px,
-		sm            : 11px,
-		rg            : 12px
-	),
-	text--sm: (
-		xs            : 11px,
-		sm            : 13px,
-		rg            : 14px
-	),
+    text--xs: (
+        xs            : 11px,
+        sm            : 12px,
+        rg            : 13px
+    ),
+    text--sm: (
+        xs            : 11px,
+        sm            : 13px,
+        rg            : 14px
+    ),
     text--meta: (
         xs            : 12px,
         sm            : 14px,
         rg            : 15px
     ),
-	text: (
-		xs            : 13px,
-		sm            : 15px,
-		rg            : 17px
-	),
-	text--lg: (
+    text: (
+        xs            : 13px,
+        sm            : 15px,
+        rg            : 17px
+    ),
+    text--lg: (
         xs            : 16px,
         sm            : 20px,
         lg            : 22px
-	),
-	headline--xs: (
-		xs            : 18px,
-		sm            : 22px,
-		lg            : 27px
-	),
-	headline--sm: (
-		xs            : 15px,
-		sm            : 17px,
-		lg            : 18px
-	),
-	headline--md: (
-		xs            : 19px,
-		sm            : 25px,
-		lg            : 28px
-	),
-	headline: (
-		xs            : 27px,
-		sm            : 32px,
-		lg            : 44px
-	),
-	display: (
-		xs            : 32px,
-		sm            : 42px,
-		lg            : 48px
-	)
+    ),
+    headline--xs: (
+        xs            : 18px,
+        sm            : 22px,
+        lg            : 27px
+    ),
+    headline--sm: (
+        xs            : 15px,
+        sm            : 17px,
+        lg            : 18px
+    ),
+    headline--md: (
+        xs            : 19px,
+        sm            : 25px,
+        lg            : 28px
+    ),
+    headline: (
+        xs            : 27px,
+        sm            : 32px,
+        lg            : 44px
+    ),
+    display: (
+        xs            : 32px,
+        sm            : 42px,
+        lg            : 48px
+    )
 );
 
 
@@ -196,18 +196,18 @@ $list-inset: (
 // --------------------------------------------------------------------------
 
 $transition: (
-	duration: (
-		fast         : 50ms,
-		short        : 150ms,
-		long         : 500ms
-	),
-	type: (
-		thisalso     : cubic-bezier(0.19, 1, 0.22, 1),
-		cubic-static : cubic-bezier(0, -0.1, 1, -0.1),
-		cubic-state  : cubic-bezier(0, 1.1, 1, 1.1),
-		base         : ease-out,
-		fine         : ease-in-out
-	)
+    duration: (
+        fast         : 50ms,
+        short        : 150ms,
+        long         : 500ms
+    ),
+    type: (
+        thisalso     : cubic-bezier(0.19, 1, 0.22, 1),
+        cubic-static : cubic-bezier(0, -0.1, 1, -0.1),
+        cubic-state  : cubic-bezier(0, 1.1, 1, 1.1),
+        base         : ease-out,
+        fine         : ease-in-out
+    )
 );
 
 
@@ -215,13 +215,13 @@ $transition: (
 // --------------------------------------------------------------------------
 
 $z-index: (
-	'modal'     : 8001,
-	'overlay'   : 8000,
-	'dropdown'  : 7000,
-	'second'    : 2000,
-	'first'     : 1000,
-	'default'   : 1,
-	'below'     : -1,
+    'modal'     : 8001,
+    'overlay'   : 8000,
+    'dropdown'  : 7000,
+    'second'    : 2000,
+    'first'     : 1000,
+    'default'   : 1,
+    'below'     : -1,
 );
 
 

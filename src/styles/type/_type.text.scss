@@ -9,33 +9,34 @@
 // PS: https://blog.codepen.io/2016/10/31/fluid-type-blogs/
 
 @mixin textTemplate(
-	$mixinSize: text,
-	$mixinColor: palette(text),
-	$mixinFont: $font-text-regular,
-	$mixinLetterSpacing: 0,
-	$mixinLineHeight: $base-line-height-unit
+    $mixinSize: text,
+    $mixinColor: palette(text),
+    $mixinFont: $font-text-regular,
+    $mixinLetterSpacing: 0,
+    $mixinLineHeight: $base-line-height-unit
 ) {
 
-	// standards
-	color: $mixinColor;
-	font-family: $mixinFont;
-	letter-spacing: $mixinLetterSpacing;
-	line-height: $mixinLineHeight;
+    // standards
+    color: $mixinColor;
+    font-family: $mixinFont;
+    letter-spacing: $mixinLetterSpacing;
+    line-height: $mixinLineHeight;
 
-	// sizes
-	font-size: fontsize($mixinSize, xs);
-	@include media-breakpoint-up(sm) { font-size: fontsize($mixinSize, sm); }
-	@include media-breakpoint-up(xl) { font-size: fontsize($mixinSize, rg); }
+    // sizes
+    @include typeSize($mixinSize);
+    //font-size: fontsize($mixinSize, xs);
+    //@include media-breakpoint-up(sm) { font-size: fontsize($mixinSize, sm); }
+    //@include media-breakpoint-up(xl) { font-size: fontsize($mixinSize, rg); }
 
-	// very specific children
-	> li,
-	> li a,
-	> a {
-		color: currentColor;
-		//font-family: inherit;
-		//font-size: inherit;
-		margin: 0;
-	}
+    // very specific children
+    > li,
+    > li a,
+    > a {
+        color: currentColor;
+        //font-family: inherit;
+        //font-size: inherit;
+        margin: 0;
+    }
 }
 
 
@@ -44,49 +45,49 @@
 
 @mixin textXs() {
     @include textTemplate(
-	    $mixinSize: text--xs,
-	    $mixinLetterSpacing: 0.0125em
+        $mixinSize: text--xs,
+        $mixinLetterSpacing: 0.0125em
     );
 }
 
 @mixin textSm() {
     @include textTemplate(
-	    $mixinSize: text--sm,
-	    $mixinLetterSpacing: 0.0125em
+        $mixinSize: text--sm,
+        $mixinLetterSpacing: 0.0125em
     );
 }
 
 @mixin textRg() {
-	@include textTemplate(
+    @include textTemplate(
         //$mixinLetterSpacing: 0.0125em
     );
 }
 
 @mixin textRgBold() {
-	@include textTemplate(
+    @include textTemplate(
         $mixinFont: $font-text-bold
     );
 }
 
 @mixin textLg() {
-	@include textTemplate(
-		$mixinSize: text--lg
-	);
+    @include textTemplate(
+        $mixinSize: text--lg
+    );
 }
 
 @mixin textLgMeta() {
-	@include textTemplate(
-		$mixinSize: text--lg,
-    	$mixinColor: palette('black-40')
-	);
+    @include textTemplate(
+        $mixinSize: text--lg,
+        $mixinColor: palette('black-40')
+    );
     text-align: center;
 }
 
 @mixin textLgBold() {
-	@include textTemplate(
-		$mixinSize: text--lg,
-		$mixinFont: $font-text-bold
-	);
+    @include textTemplate(
+        $mixinSize: text--lg,
+        $mixinFont: $font-text-bold
+    );
 }
 
 
@@ -156,56 +157,56 @@ p, address,
 table, time,
 fieldset, figcaption,
 pre {
-	@include textRg();
+    @include textRg();
 }
 
 p + ul {
-	margin-top: -$paragraphSpace * 0.75;
-	@include media-breakpoint-up(sm) {
+    margin-top: -$paragraphSpace * 0.75;
+    @include media-breakpoint-up(sm) {
         margin-top: -$paragraphSpace;
     }
 }
 
 em,
 .u-textEm {
-	@include typeReset();
-	//font-family: $font-text-bold-i;
+    @include typeReset();
+    //font-family: $font-text-bold-i;
 }
 
 b,
 strong,
 .u-textBold {
-	@include typeReset();
+    @include typeReset();
     //@include textMeta();
-	font-family: $font-text-medium;
+    font-family: $font-text-medium;
 }
 
 blockquote,
 .Blockquote {
     @include textTemplate(
-	    $mixinSize: headline--md,
-	    //$mixinLetterSpacing: 0.0125em,
-    	$mixinColor: palette(black-50),
-    	$mixinLineHeight: $base-line-height-unit
+        $mixinSize: headline--md,
+        //$mixinLetterSpacing: 0.0125em,
+        $mixinColor: palette(black-50),
+        $mixinLineHeight: $base-line-height-unit
     );
-	
+    
     border-left: 2px solid palette(black-30);
     padding-left: space(1);
 }
 
 .Lede {
- 	@include textRg();
- 	color: palette(brand);
- 	font-family: $font-text-regular;
- 	font-size: fontsize(headline, xs);
- 	line-height: 1.45;
- 	// margin-bottom: space(1);
+     @include textRg();
+     color: palette(brand);
+     font-family: $font-text-regular;
+     font-size: fontsize(headline, xs);
+     line-height: 1.45;
+     // margin-bottom: space(1);
 
- 	@include media-breakpoint-up(sm) {
- 		font-family: $font-text-bold;
- 		font-size: fontsize(headline, base);
- 		line-height: $base-line-height-unit;
- 	}
+     @include media-breakpoint-up(sm) {
+         font-family: $font-text-bold;
+         font-size: fontsize(headline, base);
+         line-height: $base-line-height-unit;
+     }
 }
 
 
@@ -239,22 +240,22 @@ blockquote,
 
 
 .c-text--meta {
-	@include textSm();
-	color: palette(black-50) !important;
-	// text-align: center;
+    @include textSm();
+    color: palette(black-50) !important;
+    // text-align: center;
 
-	> a {
-		border-color: transparent !important;
+    > a {
+        border-color: transparent !important;
 
-		@include on-event() {
-			border-color: palette(black-50) !important;
-		}
-	}
+        @include on-event() {
+            border-color: palette(black-50) !important;
+        }
+    }
 
-	@include media-breakpoint-up(sm) {
-		margin: auto;
-		// width: 70%;
-	}
+    @include media-breakpoint-up(sm) {
+        margin: auto;
+        // width: 70%;
+    }
 }
 
 
@@ -265,22 +266,22 @@ blockquote,
 .c-text-block { > * { @include textRg(); } }
 
 .c-text-block--footer {
-	@include listClean();
-	margin: 0;
+    @include listClean();
+    margin: 0;
 
-	&::before {
-		background-color: rgba( palette(background), 0.2);
-		content: " ";
-		display: block;
-		height: 1px;
-		margin: space(1) 0 space(1.15);
-		width: 2.5%;
-	}
+    &::before {
+        background-color: rgba( palette(background), 0.2);
+        content: " ";
+        display: block;
+        height: 1px;
+        margin: space(1) 0 space(1.15);
+        width: 2.5%;
+    }
 
-	> * {
-		@include textRg();
-		margin-bottom: 0;
-	}
+    > * {
+        @include textRg();
+        margin-bottom: 0;
+    }
 }
 
 
@@ -291,23 +292,23 @@ blockquote,
 
 //list cell of fixed width, like a tabbed info element
 .c-list--itemTag {
-	@include textSm();
-	display: inline-block;
-	width: space(0.75);
+    @include textSm();
+    display: inline-block;
+    width: space(0.75);
 }
 
 .c-list--meta {
-	@include textSm();
-	@include listClean();
-	color: palette(black-50);
-	margin-bottom: space(1.25);
+    @include textSm();
+    @include listClean();
+    color: palette(black-50);
+    margin-bottom: space(1.25);
 }
 
 .c-list--meta-title {
-	color: palette(text) !important;
-	margin: space(1.25) 0 space(0.625) !important;
+    color: palette(text) !important;
+    margin: space(1.25) 0 space(0.625) !important;
 
-	&:first-child {
-		margin-top: 0 !important;
-	}
+    &:first-child {
+        margin-top: 0 !important;
+    }
 }

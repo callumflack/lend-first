@@ -18,13 +18,13 @@ layout: default
             </h1>
         </div>
     </section>
-    {% if page.image or post.image %}
+    {% unless page.categories contains "tips" or post.categories contains "tips" %}
         <figure class="">
             <div class="o-container o-container--lg o-container--fullWindowMobile">
                 <div class="FlexEmbed">
                     <div class="FlexEmbed-ratio FlexEmbed-ratio--2by1"></div>
                     <div class="FlexEmbed-content">
-                        <div class="u-posAbsoluteCenter o-coverImage{% if page.image-align %} o-coverImage--alignBottom{% endif %}" 
+                        <div class="u-posAbsoluteCenter o-coverImage{% if page.image-align-bottom %} o-coverImage--alignBottom{% endif %} {% if page.image-align-top %} o-coverImage--alignTop{% endif %}" 
                             style="background-image: url('{{ page.image | downcase | replace: ' ', '-' | replace: '—', '-' | remove: '?' }}')">
                         </div>
                         {% comment %}
@@ -35,7 +35,7 @@ layout: default
                 </div>
             </div>
         </figure>
-    {% endif %}
+    {% endunless %}
     <section class="{% if page.image or post.image %}Section--withFigure{% else %}Section{% endif %}">
         <div class="o-container--md">
             <div class="Grid Grid--withGutter">
@@ -79,9 +79,9 @@ layout: default
 {% include contact-michael-block.html %}
 
 {% if page.url contains 'loan-options' %}
-	{% include cards-block.html %}
+    {% include cards-block.html %}
 {% endif %}
 
 {% if page.url == site.pages.why-choose-lendfirst.url or post.url %}
-	{% include newsletter-block.html %}
+    {% include newsletter-block.html %}
 {% endif %}

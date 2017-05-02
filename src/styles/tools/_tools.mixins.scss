@@ -10,8 +10,16 @@
 
 @mixin typeReset() {
     font-stretch: normal;
-	font-style: normal;
-	font-weight: normal;
+    font-style: normal;
+    font-weight: normal;
+}
+
+@mixin typeSize(
+    $size: text
+) {
+    font-size: fontsize($size, sm);
+    @include media-breakpoint-up(md) { font-size: fontsize($size, rg); }
+    @include media-breakpoint-up(lg) { font-size: fontsize($size, lg); }
 }
 
 
@@ -51,15 +59,15 @@
 //    `:before` to contain the top-margins of child elements.
 
 @mixin clearfix() {
-	&:before,
-	&:after {
-		content: " "; // 1
-		display: table; // 2
-	}
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
 
-	&:after {
-		clear: both;
-	}
+    &:after {
+        clear: both;
+    }
 }
 
 
@@ -71,20 +79,20 @@
 // @link https://css-tricks.com/snippets/sass/simplifying-contexts-events/
 
 @mixin on-event($self: false) {
-	@if $self {
-		&,
-		&:hover,
-		&:active,
-		&:focus {
-			@content;
-		}
-	} @else {
-		&:hover,
-		&:active,
-		&:focus {
-			@content;
-		}
-	}
+    @if $self {
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    } @else {
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    }
 }
 
 
@@ -111,9 +119,9 @@
 // }
 
 @mixin when-inside($context) {
-	#{$context} & {
-		@content;
-	}
+    #{$context} & {
+        @content;
+    }
 }
 
 
@@ -122,11 +130,11 @@
 // Quick and easy. Could extend this…
 
 @mixin baseTransition(
-	$property: all
+    $property: all
 ) {
-	transition-property: $property;
-	transition-duration: map-fetch($transition, duration, long);
-	transition-timing-function: map-fetch($transition, type, base);
+    transition-property: $property;
+    transition-duration: map-fetch($transition, duration, long);
+    transition-timing-function: map-fetch($transition, type, base);
 }
 
 
@@ -137,19 +145,19 @@
 // Renamed remFallback() from scut-remFallback() for ease of use.
 
 @mixin remFallback (
-	$pixels,
-	$property: font-size
+    $pixels,
+    $property: font-size
 ) {
 
-	$px-vals: null;
-	@each $val in $pixels {
-		$val-in-px: scut-strip-unit($val) * 1px;
-		$px-vals: append($px-vals, $val-in-px);
-	}
-	$rem-vals: rem($pixels);
+    $px-vals: null;
+    @each $val in $pixels {
+        $val-in-px: scut-strip-unit($val) * 1px;
+        $px-vals: append($px-vals, $val-in-px);
+    }
+    $rem-vals: rem($pixels);
 
-	#{$property}: $px-vals;
-	#{$property}: $rem-vals;
+    #{$property}: $px-vals;
+    #{$property}: $rem-vals;
 
 }
 
@@ -165,32 +173,32 @@
 // 4. @CF: 'will-change' is almost available. See: https://dev.opera.com/articles/css-will-change-property/
 
 @mixin hardwareAccel() {
-	transform: translateZ(0); //1.
+    transform: translateZ(0); //1.
 }
 
 @mixin improveAntiAlias() {
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0); // 2.
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0); // 2.
 }
 
 @mixin fontSmooth() {
-	backface-visibility: hidden;
+    backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 @mixin forceBlockLevel() {
-	display: inline-block; //3.
-	// vertical-align: middle;
+    display: inline-block; //3.
+    // vertical-align: middle;
 }
 
 @mixin anticipatePainting {
-	will-change: all; // 4.
+    will-change: all; // 4.
 }
 
 @mixin smoothTransition() {
-	//@include forceBlockLevel();
-	@include hardwareAccel();
-	/* @include improveAntiAlias(); */
-	@include fontSmooth();
-	/* @include anticipatePainting(); */
+    //@include forceBlockLevel();
+    @include hardwareAccel();
+    /* @include improveAntiAlias(); */
+    @include fontSmooth();
+    /* @include anticipatePainting(); */
 }
