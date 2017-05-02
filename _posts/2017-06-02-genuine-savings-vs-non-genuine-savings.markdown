@@ -31,4 +31,5 @@ Borrower can prove with rates notice and loan statements, they have equity in an
 
 Just because genuine savings is the preferred source for most lenders this does not mean borrowers cannot get a loan if their savings is non-genuine.
 
-Having enough savings to begin with is more important than where it came from.!
+Having enough savings to begin with is more important than where it came from.
+!
