@@ -17,18 +17,18 @@ $lightBlendColor:      rgba( palette(white), 0.4 );
 $whiteBlendColor:      rgba( palette(white), 0.85 );
 
 @mixin imageBlend(
-	$gradient: false,
+    $gradient: false,
     $blend: multiply,
     $color: $darkBlendColor
 ) {
-	
-	@if $gradient {
-		//background-color: $color;
-		background-image: linear-gradient( $greyBlendColor, $darkBlendColor 50% ); 
-	} @else {
-		background-color: $color;
-	}
-	
+    
+    @if $gradient {
+        //background-color: $color;
+        background-image: linear-gradient( $greyBlendColor, $darkBlendColor 50% ); 
+    } @else {
+        background-color: $color;
+    }
+    
     background-blend-mode: $blend;
 
 }

@@ -63,8 +63,6 @@ $arrowMargin: 0.35rem;
     margin-right: $arrowMargin;
 }
 
-
-
 // small
 .o-arrowEast--sm:after {
     @include arrow();
@@ -94,45 +92,6 @@ $arrowMargin: 0.35rem;
     margin-right: 0;
     transform: translateY(rem(-6));
 }
-
-
-
-
-
-
-
-
-
-
-
-// wha?
-// vars that would be better done using the OUI system?
-
-.o-arrowL-left:before {
-    @include arrow();
-    border-top: $arrowSize solid transparent;
-    border-bottom: $arrowSize solid transparent;
-    border-right: $arrowSize solid;
-    margin-left: $arrowMargin * 0.25;
-    margin-right: $arrowMargin * 1.25;
-}
-
-.o-arrowL-bottom:before {
-    @include arrow();
-    border-top: $arrowSize solid;
-    border-left: $arrowSize solid transparent;
-    border-right: $arrowSize solid transparent;
-    margin-right: $arrowMargin;
-}
-
-.o-arrowL-top:before {
-    @include arrow();
-    border-bottom: $arrowSize solid;
-    border-left: $arrowSize solid transparent;
-    border-right: $arrowSize solid transparent;
-    margin-right: $arrowMargin;
-}
-
 
 
 
