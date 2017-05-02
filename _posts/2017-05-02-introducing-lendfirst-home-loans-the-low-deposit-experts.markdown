@@ -11,4 +11,4 @@ Lendfirst Home Loans (previously Australian Property Finance, Cairns) purpose is
 
 If you are a first home buyer or have a limited deposit, Lendfirst Home Loans specialises in finding real solutions just for you.  Because we are experts in low deposit loans, we often get you a ‘Yes’ when others have already given you a ‘No’.
 
-We will publish regular thought provoking and interesting articles via our weekly blog and provide regular informative explanations of policies, processes and systems needed to buy a house and/or get a home loan.  Follow us on facebook, visit our website or simply email to participate.
+We will publish regular thought provoking and interesting articles via our weekly blog and provide regular informative explanations of policies, processes and systems needed to buy a house and/or get a home loan. Follow us on Facebook, visit our website or simply email to participate.
