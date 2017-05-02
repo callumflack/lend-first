@@ -1,6 +1,6 @@
 ---
 title: Fixed or Variable—which is best for me?
-date: 2016-08-21 14:00:00 Z
+date: 2016-08-22 00:00:00 +10:00
 categories:
 - tips
 tags:

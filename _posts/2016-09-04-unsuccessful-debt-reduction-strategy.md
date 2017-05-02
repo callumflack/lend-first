@@ -1,6 +1,6 @@
 ---
 title: An unsuccessful debt reduction strategy
-date: 2016-09-04 13:00:00 Z
+date: 2016-09-04 23:00:00 +10:00
 categories:
 - comment
 tags:
