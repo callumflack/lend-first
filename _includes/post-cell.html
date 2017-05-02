@@ -33,7 +33,7 @@
         {% unless post.categories contains "tips" %}
             style="background-image: url('/uploads/post-{{ post.title | downcase | replace: ' ', '-' | replace: '—', '-' | remove: '?' }}.jpg')"
         {% endunless %}>
-        {% if post.categories contains "tips" %}<span>Tips</span>{% endif %}
+        
         <h2 class="c-headline--md">{{ post.title }}</h2>
     </div>
     <div class="Card-lede">

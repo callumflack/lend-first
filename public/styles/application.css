@@ -4542,36 +4542,12 @@ td {
     height: 7.3125vh; }
     .Card--lg .Card-image--blank:before {
       opacity: 0.3; }
-  .Card--lg .Card-image--categoryLabel {
-    -webkit-box-align: initial;
-    -webkit-align-items: initial;
-    -ms-flex-align: initial;
-    align-items: initial;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    height: 7.3125vh; }
-    .Card--lg .Card-image--categoryLabel:before {
-      content: none; }
-    .Card--lg .Card-image--categoryLabel span {
-      font-size: 12px;
-      color: #FFF;
-      display: block;
-      font-family: "AtlasGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
-      margin-top: auto;
-      padding: 0 22px 4px;
-      text-align: right;
-      text-transform: uppercase; }
-      @media (min-width: 768px) {
-        .Card--lg .Card-image--categoryLabel span {
-          font-size: 13px; } }
 
 .Card--lg .c-headline--md {
   color: #FFF;
   font-family: "AtlasGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
   padding: 0 22px 14px;
+  position: relative;
   margin: 0;
   text-align: left;
   z-index: 2; }
@@ -4580,13 +4556,41 @@ td {
   padding: 16px 24px 16px 20px; }
 
 .Card--lg .o-linkBuriedTarget {
-  font-family: "AtlasGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif; }
-
-.Card--lg:hover .o-linkBuriedTarget, .Card--lg:active .o-linkBuriedTarget, .Card--lg:focus .o-linkBuriedTarget {
   color: #1096ef; }
 
 .Card--lg + .Card--lg {
   margin-top: 6.25vh; }
+
+.Card--lg .Card-image--categoryLabel {
+  height: 7.3125vh; }
+  .Card--lg .Card-image--categoryLabel:before {
+    content: none; }
+  .Card--lg .Card-image--categoryLabel span {
+    font-size: 12px;
+    color: #FFF;
+    display: block;
+    font-family: "AtlasGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
+    margin-top: auto;
+    padding: 0 22px 4px;
+    text-align: right;
+    text-transform: uppercase; }
+    @media (min-width: 768px) {
+      .Card--lg .Card-image--categoryLabel span {
+        font-size: 13px; } }
+  .Card--lg .Card-image--categoryLabel .c-headline--md {
+    display: inline-block; }
+    .Card--lg .Card-image--categoryLabel .c-headline--md:after {
+      font-size: 12px;
+      color: #FFF;
+      content: "TIPS";
+      display: block;
+      font-family: "AtlasGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
+      position: absolute;
+      right: -20px;
+      top: 3px; }
+      @media (min-width: 768px) {
+        .Card--lg .Card-image--categoryLabel .c-headline--md:after {
+          font-size: 13px; } }
 
 .Posts-nav {
   list-style-type: none;
