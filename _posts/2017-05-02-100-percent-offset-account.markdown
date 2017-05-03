@@ -1,6 +1,6 @@
 ---
 title: 100% Offset Account
-date: 2017-05-03 17:59:00 +10:00
+date: 2017-05-02 17:59:00 +10:00
 categories:
 - tips
 ---
