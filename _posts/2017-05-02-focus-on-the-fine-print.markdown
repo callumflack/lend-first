@@ -10,6 +10,6 @@ Being a keen angler, I’m always on the lookout for new fishing gear.  Spotting
 I’ve seen banks, brokers and online lenders advertise home loans in a similar way.  Cheap rates are advertised and all are genuine, but reading the fine print they are only available to certain borrowers.  Some only apply to those with 30% deposits, some to capital cities and almost none for small deposits.
 
 Comparing 35+ lenders, there are over 5,000 different interest rate variations all with different requirements.  Do not make decisions based on an advertised interest rate.  There is no point making key life decisions on a cheap rate you saw on facebook if you do not qualify for it.
-
 The fine print is the key determining factor of your interest rate and the fine print is now changing faster than it ever has before.
+
 Don’t ignore rates completely, just don’t make big life decisions based on them alone.
