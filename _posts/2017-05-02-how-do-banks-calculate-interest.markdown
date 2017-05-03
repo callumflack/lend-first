@@ -1,5 +1,5 @@
 ---
-title: How do Banks Calculate Interest
+title: How do Banks calculate interest
 date: 2017-05-02 13:48:00 +10:00
 categories:
 - tips
