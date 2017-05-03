@@ -3795,6 +3795,9 @@ blockquote,
     color: currentColor;
     margin: 0; }
 
+.s-article code {
+  color: #999999; }
+
 .s-article a {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(16, 150, 239, 0)), color-stop(50%, #1096ef));
   background-image: -webkit-linear-gradient(top, rgba(16, 150, 239, 0) 50%, #1096ef 50%);

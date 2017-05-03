@@ -32,6 +32,11 @@
 .s-article small { @include textSm(); }
 //.s-article ul { margin-top: -#{$paragraphSpace}; }
 
+.s-article code { 
+    //@include textSm();
+    color: palette("black-40");
+}
+
 .s-article a {
     @include underlineLink($linkRuleBrand);
     color: palette(brand) !important;
