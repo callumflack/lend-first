@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+---
+layout: compress
+---
+
 <html lang="{{ site.lang | default: page.lang | default: 'en' }}" {% if page.url == site.pages.thanks.url %}class="u-bgNeutral"{% endif %}>
 
 {% include head.html %}
 
 <body id="top" class="{{ page.title | downcase | replace: ' ', '-' }}" data-offset="300">
 
-	{% comment %}{% endcomment %}
+    {% comment %}{% endcomment %}
     {% include nav.html %}
     
     <main>
@@ -13,10 +16,10 @@
     </main>
 
 
-	{% include footer.html %}
-	{% include nav-touch.html %}
-	{% include nav-mobile.html %}
-	{% include icons.html %}
+    {% include footer.html %}
+    {% include nav-touch.html %}
+    {% include nav-mobile.html %}
+    {% include icons.html %}
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     {% if page.has-javascripts %}
