@@ -1,13 +1,13 @@
 ---
-title: Lenders Mortgage Insurance - FAQ
+title: Lenders Mortgage Insurance—FAQ
 date: 2017-05-02 18:02:00 +10:00
 categories:
 - tips
 ---
 
-What is it?
+Lenders Mortgage Insurance is an insurance policy that pays the difference between the sale price of a property and the outstanding loan owed to a bank in the event of a forced sale.
 
-An insurance policy that pays the difference between the sale price of a property and the outstanding loan owed to a bank in the event of a forced sale. Example, property sold at Mortgagee Auction for $340,000 with outstanding loan of $362,000.  Claim amount is $22,000.
+For example, for a property sold at Mortgagee Auction for $340,000 with outstanding loan of $362,000, the claim amount is $22,000.
 
 Who does it cover?
 
@@ -23,42 +23,31 @@ It is at the banks discretion, but usually always applies if the loan is more th
 
 How much does it cost?
 
-Premiums can range from $500 to $50,000 or more.  The premium is percentage based and this benchmark increases with risk and amount.  For Example:
- * A $350,000 loan at 82% is approx. $2,300 but a $350,000 loan at 95% is approx. $12,000.
-*  A $750,000 loan at 82% is approx. $6,900 but a $750,000 loan at 95% is approx. $35,000
+Premiums can range from $500 to $50,000 or more.  The premium is percentage based and this benchmark increases with risk and amount. For Example:
+
+`A $350,000 loan at 82% is approx. $2,300 but a $350,000 loan at 95% is approx. $12,000.` 
+`A $750,000 loan at 82% is approx. $6,900 but a $750,000 loan at 95% is approx. $35,000` 
+
 
 Can I add the premium to my loan?
 
 Yes, but most banks won’t if you are already borrowing 95% of the security value before adding the premium.  There are some lenders that allow it.
+
 Can you show me an example?
+|                           | 95% Max  | 100% Max |
+| ------------------------- | -------- | -------- |
+| Purchase Price            | $370,000 | $370,000 |
+| Base Loan Amount (95%)    | $350,000 | $350,000 |
+| Premium Amount            | $12,000  | $12,000  |
+| Amount actually borrowed  | $350,000 | $362,000 |
+| Funds available from loan | $338,000 | $350,000 |
+| Savings Needed            | $32,000  | $20,000  |
 
 
-Purchase Price
-Base Loan Amount (95%)
-Premium Amount
-Amount actually borrowed
-Funds available from loan
-Savings Needed
 
-95% Max
-$370,000
-$350,000
-$12,000
-$350,000
-$338,000
-$32,000
+Do I get a refund if I refinance?
 
-100% Max
-$370,000
-$350,000
-$12,000
-$362,000
-$350,000
-$20,000
-
- Do I get a refund if I refinance?
-
-No, you will have to pay the full amount again regardless of how long you have been with the previous lender. If you refinance with the same lender, you only pay the difference between any new premium and what you’ve already paid.
+No, you will have to pay the full amount again regardless of how long you have been with the previous lender. If you refinance with the same lender, you only pay the difference between any new premium and what you’ve already paid.
 
 Is the Mortgage Insurer separate to the bank?
 
