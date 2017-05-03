@@ -28,12 +28,12 @@ Premiums can range from $500 to $50,000 or more.  The premium is percentage base
 `A $350,000 loan at 82% is approx. $2,300 but a $350,000 loan at 95% is approx. $12,000.` 
 `A $750,000 loan at 82% is approx. $6,900 but a $750,000 loan at 95% is approx. $35,000` 
 
-
 Can I add the premium to my loan?
 
 Yes, but most banks won’t if you are already borrowing 95% of the security value before adding the premium.  There are some lenders that allow it.
 
 Can you show me an example?
+
 |                           | 95% Max  | 100% Max |
 | ------------------------- | -------- | -------- |
 | Purchase Price            | $370,000 | $370,000 |
@@ -42,8 +42,6 @@ Can you show me an example?
 | Amount actually borrowed  | $350,000 | $362,000 |
 | Funds available from loan | $338,000 | $350,000 |
 | Savings Needed            | $32,000  | $20,000  |
-
-
 
 Do I get a refund if I refinance?
 
