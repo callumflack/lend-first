@@ -1,6 +1,7 @@
 ---
 title: Focus on the Fine Print
 date: 2017-05-03 17:57:00 +10:00
+published: false
 categories:
 - comment
 ---
