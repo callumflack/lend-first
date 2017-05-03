@@ -12,37 +12,37 @@
  * See http://bit.ly/1gy8OJS for details.
  */
 @mixin o-aligner {
-	display: flex;
-	align-items: center;
-	//height: 100%; /* 1 */
-	min-height: 100%; /* 2 */
-	justify-content: center;
+    display: flex;
+    align-items: center;
+    //height: 100%; /* 1 */
+    //min-height: 100%; /* 2 */
+    justify-content: center;
 }
 
 @mixin o-aligner-item {
-	flex: 1;
+    flex: 1;
     margin-bottom: 0 !important;
 }
 
 .o-aligner {
-	@include o-aligner;
+    @include o-aligner;
 }
 
 .o-aligner-item {
-	@include o-aligner-item;
+    @include o-aligner-item;
 }
 
 .o-aligner-item--top {
-	align-self: flex-start;
+    align-self: flex-start;
 }
 
 .o-aligner-item--bottom {
-	align-self: flex-end;
+    align-self: flex-end;
 }
 
 .o-aligner-item--fixed {
-	flex: none;
-	max-width: 50%;
+    flex: none;
+    max-width: 50%;
 }
 
 /**
