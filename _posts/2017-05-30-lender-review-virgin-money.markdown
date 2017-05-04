@@ -1,7 +1,6 @@
 ---
 title: Lender Review—Virgin Money
 date: 2017-05-30 07:00:00 +10:00
-published: false
 categories:
 - comment
 review: true
