@@ -41,10 +41,11 @@ defaults:
     path: ''
     type: posts
   values:
+    title: 
     layout: page
     permalink: "/blog/:slug/"
+    future: false
     has-javascripts: true
-    title: 
     categories: 
     type: post
     image: true
