@@ -13,3 +13,5 @@ trim_trailing_whitespace = false
 # Matches the exact files…
 # [src/**.js]
 # [{package.json,.travis.yml}]
+[*.yml]
+indent_size = 2
