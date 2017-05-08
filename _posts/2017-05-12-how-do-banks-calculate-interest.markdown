@@ -16,7 +16,6 @@ This calculation is done every day. At the end of a 30 day month, the total $1,2
 
 Usually on this day the monthly payment of $1,774 is made and the loan balance starts day 1 of the next month at $349,520 and the process starts again.
 
-
     $349,521 X 0.0123287% = $43.09
 
 The same calculation applies regardless of whether the loan is a fixed or variable rate. If loan settles on say 13th of the month, it is the number of days until the 13th of the next month and so on.
