@@ -1,11 +1,12 @@
 ---
 title: Focus on the fine print
-date: 2017-05-16 07:00:00 +10:00
+date: 2017-05-15 07:00:00 +10:00
 categories:
 - comment
+image: "/uploads/post-focus-on-the-fine-print.jpg"
 ---
 
-Being a keen angler, I’m always on the lookout for new fishing gear.  Spotting a facebook ad for a fishing shop ‘Closing Down -50% off everything’ sale got my interest with no ‘Upto’ clause inserted. I checked the bank balance, worked out how to explain it to my wife and jumped online credit card in hand and they didn’t disappoint, there were bargains galore and thanked the fishing gods for my good fortune.
+Being a keen angler, I’m always on the lookout for new fishing gear.  Spotting a facebook ad for a fishing shop ‘Closing Down - 50% off everything’ sale got my interest with no ‘Upto’ clause inserted. I checked the bank balance, worked out how to explain it to my wife and jumped online credit card in hand and they didn’t disappoint, there were bargains galore and thanked the fishing gods for my good fortune.
 
 Adding the bargains to my cart I went to checkout but there was no section for postage. Confused I read the fine print to discover the discount only applied to store pick up.  No good when you live 2,500klms away.
 
