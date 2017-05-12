@@ -85,7 +85,6 @@ gems:
 - jekyll-sitemap
 - jekyll-seo-tag
 exclude:
-- Gemfile
 - Gemfile.lock
 - ".gitignore"
 - ".editorconfig"
