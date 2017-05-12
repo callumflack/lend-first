@@ -18,6 +18,6 @@ Usually on this day the monthly payment of $1,774 is made and the loan balance s
 
     $349,521 X 0.0123287% = $43.09
 
-The same calculation applies regardless of whether the loan is a fixed or variable rate. If loan settles on say 13th of the month, it is the number of days until the 13th of the next month and so on.
+The same calculation applies regardless of whether the loan is a fixed or variable rate. If the loan settles on say 13th of the month, it is the number of days until the 13th of the next month and so on.
 
 Understanding this process is critical in deciding which loan features (redraws, offsets) and repayment options (weekly, fortnightly, monthly) work best.
