@@ -3,6 +3,9 @@ title: 100% Offset Account
 date: 2017-05-19 07:00:00 +10:00
 categories:
 - tips
+table-style: 
+- s-table-3columns
+- s-table-withTotal
 ---
 
 A 100% Offset Account is a normal everyday transaction account that is linked to your home loan which can reduce the interest charged. A full offset means that 100% of the funds in your offset account will be deducted from what you owe on your home loan before interest is calculated.
@@ -17,7 +20,7 @@ The run down on offset accounts:
 - Must be in exactly the same name as the home loan – If joint loan then must be joint savings account
 - Usually only available with variable rate loans but a small number of banks allow them on fixed rates
 
-To understand how 100% Offset Accounts work, you first need to understand How Do Banks Calculate Interest. 
+To understand how 100% offset accounts work, you first need to understand [how banks calculate interest]({{ site.baseurl }}{% post_url 2017-05-11-how-do-banks-calculate-interest %}). 
 
 Using the same example of $350,000 loan at 4.50% rate this time with $20,000 in a 100% offset account.
 
@@ -41,7 +44,7 @@ Be careful, some offsets come with extra fees and higher rates. Here is a real e
 | Interest Rate                        | 4.10%           | 4.65%       |
 | Monthly Fees                         | $0              | $33         |
 | Daily Interest                       | $39.31          | $44.59      |
-| Monthly Cost (interest + fees)       | $1,179.30       | $1,370.70   |
+| Monthly Cost<br>(interest + fees)       | $1,179.30       | $1,370.70   |
 | Monthly Offset Benefit               | $0              | $76.44      |
 | Net monthly cost                     | $1,179.30       | $1,294.26   |
 
