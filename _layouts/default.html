@@ -2,11 +2,11 @@
 layout: compress
 ---
 
-<html lang="{{ site.lang | default: page.lang | default: 'en' }}" {% if page.url == site.pages.thanks.url %}class="u-bgNeutral"{% endif %}>
+<html lang="{{ site.lang | default: page.lang | default: 'en' }}">
 
 {% include head.html %}
 
-<body id="top" class="{{ page.title | downcase | replace: ' ', '-' }}" data-offset="300">
+<body id="top" class="{{ page.title | downcase | replace: ' ', '-' }}{% if page.table-style %} {% for class in page.table-style %} {{ class }} {% endfor %}{% endif %}" data-offset="300">
 
     {% comment %}{% endcomment %}
     {% include nav.html %}

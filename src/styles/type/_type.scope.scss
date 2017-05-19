@@ -68,18 +68,18 @@ tbody tr {
 }
 
 thead tr {
-    background-color: rgba( palette(brand), 0.1 );
+    background-color: rgba( palette(brand), 0.12 );
 }
 
 tbody tr {
-    background-color: rgba( palette(brand), 0.05 );
+    background-color: rgba( palette(brand), 0.07 );
 
     &:last-child {
         padding-bottom: space(0.5);
     }
 
     //@include when-inside(".first-home-buyers") {
-    //    &:last-child { border-top: 1px solid palette(muted); }
+    //    &:last-child { border-top: 1px solid palette(border); }
     //}
 }
 
@@ -93,15 +93,47 @@ td {
 
 th {
     font-family: $font-text-bold;
+    text-align: left;
 }
 
 
-// Table column widths
+
+// Highlight code block
+// Used in this project to show calculations
+// --------------------------------------------------------------------------
+
+.highlight code {
+    @include textSm();
+    background-color: rgba( palette(brand), 0.07 );
+    display: block;
+    line-height: 1.75;
+    margin-bottom: 0;
+    padding: space(0.5) space(0.75) space(0.35);
+
+    &:last-child {
+        //padding-bottom: space(0.5);
+    }
+}
+
+
+
+// Table vars
 // --------------------------------------------------------------------------
 
 th,
 td {
     width: 18%; // default to prevent layouts failing abjectly.
+}
+
+.s-table-3columns {
+    th,
+    td {
+        width: 32%;
+    }
+}
+
+.s-table-withTotal {
+    tbody tr:last-child { border-top: 1px solid palette(border); }
 }
 
 /* uncss:ignore */
@@ -122,7 +154,7 @@ td {
 
 /* uncss:ignore */
 .investment tbody tr:nth-last-child(2),
-.investment tbody tr::last-child { border-top: 1px solid palette(muted); }
+.investment tbody tr::last-child { border-top: 1px solid palette(border); }
 
 /* uncss:ignore */
 .first-home-buyers th,
@@ -133,4 +165,4 @@ td {
 .first-home-buyers td:nth-of-type(2) { text-align: right; width: 10%; }
 
 /* uncss:ignore */
-.first-home-buyers tbody tr:last-child { border-top: 1px solid palette(muted); }
+.first-home-buyers tbody tr:last-child { border-top: 1px solid palette(border); }

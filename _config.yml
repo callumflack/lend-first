@@ -35,6 +35,7 @@ defaults:
   values:
     layout: page
     has-javascripts: true
+    table-style: false
     offset-top: 820
     offset-bottom: 1300
 - scope:
