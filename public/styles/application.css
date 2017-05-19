@@ -3216,12 +3216,6 @@ pre {
     color: currentColor;
     margin: 0; }
 
-p + ul {
-  margin-top: -22.5px; }
-  @media (min-width: 544px) {
-    p + ul {
-      margin-top: -30px; } }
-
 em,
 .u-textEm {
   font-stretch: normal;
@@ -3827,10 +3821,10 @@ tbody tr {
   padding: 8.4px 18px 6px; }
 
 thead tr {
-  background-color: rgba(16, 150, 239, 0.1); }
+  background-color: rgba(16, 150, 239, 0.12); }
 
 tbody tr {
-  background-color: rgba(16, 150, 239, 0.05); }
+  background-color: rgba(16, 150, 239, 0.07); }
   tbody tr:last-child {
     padding-bottom: 12px; }
 
@@ -3858,11 +3852,39 @@ td {
     margin: 0; }
 
 th {
-  font-family: "AtlasGrotesk-Bold", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif; }
+  font-family: "AtlasGrotesk-Bold", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
+  text-align: left; }
+
+.highlight code {
+  color: #353535;
+  font-family: "AtlasGrotesk-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
+  letter-spacing: 0.0125em;
+  line-height: 1.5;
+  font-size: 13px;
+  background-color: rgba(16, 150, 239, 0.07);
+  display: block;
+  line-height: 1.75;
+  margin-bottom: 0;
+  padding: 12px 18px 8.4px; }
+  @media (min-width: 768px) {
+    .highlight code {
+      font-size: 14px; } }
+  .highlight code > li,
+  .highlight code > li a,
+  .highlight code > a {
+    color: currentColor;
+    margin: 0; }
 
 th,
 td {
   width: 18%; }
+
+.s-table-3columns th,
+.s-table-3columns td {
+  width: 32%; }
+
+.s-table-withTotal tbody tr:last-child {
+  border-top: 1px solid #cccccc; }
 
 /* uncss:ignore */
 .bridging th,
@@ -3887,7 +3909,7 @@ td {
 /* uncss:ignore */
 .investment tbody tr:nth-last-child(2),
 .investment tbody tr::last-child {
-  border-top: 1px solid; }
+  border-top: 1px solid #cccccc; }
 
 /* uncss:ignore */
 .first-home-buyers th,
@@ -3902,7 +3924,7 @@ td {
 
 /* uncss:ignore */
 .first-home-buyers tbody tr:last-child {
-  border-top: 1px solid; }
+  border-top: 1px solid #cccccc; }
 
 .Nav {
   border-bottom: 1px solid #e8e8e8;

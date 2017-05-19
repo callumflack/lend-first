@@ -1,4 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://lendfirst.com.au/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lendfirst.com.au/" rel="alternate" type="text/html" /><updated>2017-05-15T09:15:17+10:00</updated><id>https://lendfirst.com.au/</id><title type="html">LendFirst Home Loans</title><subtitle>LendFirst offers smart advice and real solutions for first home buyers and first-time investors, in Cairns, Queeensland, Australia.</subtitle><author><name>patternworks_</name></author><entry><title type="html">Focus on the fine print</title><link href="https://lendfirst.com.au/blog/focus-on-the-fine-print/" rel="alternate" type="text/html" title="Focus on the fine print" /><published>2017-05-15T07:00:00+10:00</published><updated>2017-05-15T07:00:00+10:00</updated><id>https://lendfirst.com.au/blog/focus-on-the-fine-print</id><content type="html" xml:base="https://lendfirst.com.au/blog/focus-on-the-fine-print/">&lt;p&gt;Being a keen angler, I’m always on the lookout for new fishing gear.  Spotting a facebook ad for a fishing shop ‘Closing Down – 50% off everything’ sale got my interest with no ‘Upto’ clause inserted. I checked the bank balance, worked out how to explain it to my wife and jumped online credit card in hand and they didn’t disappoint, there were bargains galore and thanked the fishing gods for my good fortune.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://lendfirst.com.au/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lendfirst.com.au/" rel="alternate" type="text/html" /><updated>2017-05-19T10:34:30+10:00</updated><id>https://lendfirst.com.au/</id><title type="html">LendFirst Home Loans</title><subtitle>LendFirst offers smart advice and real solutions for first home buyers and first-time investors, in Cairns, Queeensland, Australia.</subtitle><author><name>patternworks_</name></author><entry><title type="html">100% Offset Account</title><link href="https://lendfirst.com.au/blog/100-percent-offset-account/" rel="alternate" type="text/html" title="100% Offset Account" /><published>2017-05-19T07:00:00+10:00</published><updated>2017-05-19T07:00:00+10:00</updated><id>https://lendfirst.com.au/blog/100-percent-offset-account</id><content type="html" xml:base="https://lendfirst.com.au/blog/100-percent-offset-account/">&lt;p&gt;A 100% Offset Account is a normal everyday transaction account that is linked to your home loan which can reduce the interest charged. A full offset means that 100% of the funds in your offset account will be deducted from what you owe on your home loan before interest is calculated.&lt;/p&gt;
+
+&lt;p&gt;The run down on offset accounts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;They are transactional and can be used for salary credits, ATM &amp;amp; EFTPOS withdrawals&lt;/li&gt;
+  &lt;li&gt;Accessible with internet and phone banking just like any other savings or transaction account&lt;/li&gt;
+  &lt;li&gt;They do not earn any interest&lt;/li&gt;
+  &lt;li&gt;They have no minimum balance requirements&lt;/li&gt;
+  &lt;li&gt;Must be an account held at the same bank as your home loan&lt;/li&gt;
+  &lt;li&gt;Must be in exactly the same name as the home loan – If joint loan then must be joint savings account&lt;/li&gt;
+  &lt;li&gt;Usually only available with variable rate loans but a small number of banks allow them on fixed rates&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To understand how 100% offset accounts work, you first need to understand &lt;a href=&quot;/blog/how-do-banks-calculate-interest/&quot;&gt;how banks calculate interest&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Using the same example of $350,000 loan at 4.50% rate this time with $20,000 in a 100% offset account.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(Loan Balance – Offset Balance) X (Annual Rate/365) = Daily Interest
+($350,000 - $20,000) X (4.50% / 365) = Daily Interest
+$330,000 X 0.0123287% = Daily Interest 
+$40.68 = Daily Interest
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This is done every day.  At the end of a 30 day month, the total daily amounts $1,221 is debited to the loan so the loan balance becomes $351,221.&lt;/p&gt;
+
+&lt;p&gt;The normal monthly payment of $1,774 is still made and loan balance then starts day 1 of the next month at $349,447.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$349,447 - $20,000 X 0.0123287% = $40.62
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This may not seem like much but you have saved $2.47 a day.  Over 12 months that’s a saving of approximately $900.&lt;/p&gt;
+
+&lt;p&gt;Be careful, some offsets come with extra fees and higher rates. Here is a real example of the difference in one lenders products.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;$350,000 Loan with $20,000 in Offset&lt;/th&gt;
+      &lt;th&gt;Basic no offset&lt;/th&gt;
+      &lt;th&gt;With Offset&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Interest Rate&lt;/td&gt;
+      &lt;td&gt;4.10%&lt;/td&gt;
+      &lt;td&gt;4.65%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Monthly Fees&lt;/td&gt;
+      &lt;td&gt;$0&lt;/td&gt;
+      &lt;td&gt;$33&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Daily Interest&lt;/td&gt;
+      &lt;td&gt;$39.31&lt;/td&gt;
+      &lt;td&gt;$44.59&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Monthly Cost&lt;br /&gt;(interest + fees)&lt;/td&gt;
+      &lt;td&gt;$1,179.30&lt;/td&gt;
+      &lt;td&gt;$1,370.70&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Monthly Offset Benefit&lt;/td&gt;
+      &lt;td&gt;$0&lt;/td&gt;
+      &lt;td&gt;$76.44&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Net monthly cost&lt;/td&gt;
+      &lt;td&gt;$1,179.30&lt;/td&gt;
+      &lt;td&gt;$1,294.26&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;*$50,000 is the min balance needed to be better off with offset in this example&lt;/p&gt;
+
+&lt;p&gt;This example does not apply in all situations but it does highlight the potential downsides to 100% offset accounts.&lt;/p&gt;</content><author><name>patternworks_</name></author><summary type="html">A 100% Offset Account is a normal everyday transaction account that is linked to your home loan which can reduce the interest charged. A full offset means that 100% of the funds in your offset account will be deducted from what you owe on your home loan before interest is calculated.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://lendfirst.com.au/true" /></entry><entry><title type="html">Focus on the fine print</title><link href="https://lendfirst.com.au/blog/focus-on-the-fine-print/" rel="alternate" type="text/html" title="Focus on the fine print" /><published>2017-05-15T07:00:00+10:00</published><updated>2017-05-15T07:00:00+10:00</updated><id>https://lendfirst.com.au/blog/focus-on-the-fine-print</id><content type="html" xml:base="https://lendfirst.com.au/blog/focus-on-the-fine-print/">&lt;p&gt;Being a keen angler, I’m always on the lookout for new fishing gear.  Spotting a facebook ad for a fishing shop ‘Closing Down – 50% off everything’ sale got my interest with no ‘Upto’ clause inserted. I checked the bank balance, worked out how to explain it to my wife and jumped online credit card in hand and they didn’t disappoint, there were bargains galore and thanked the fishing gods for my good fortune.&lt;/p&gt;
 
 &lt;p&gt;Adding the bargains to my cart I went to checkout but there was no section for postage. Confused I read the fine print to discover the discount only applied to store pick up.  No good when you live 2,500klms away.&lt;/p&gt;
 
