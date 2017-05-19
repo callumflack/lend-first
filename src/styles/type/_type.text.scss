@@ -161,10 +161,10 @@ pre {
 }
 
 p + ul {
-    margin-top: -$paragraphSpace * 0.75;
-    @include media-breakpoint-up(sm) {
-        margin-top: -$paragraphSpace;
-    }
+    //margin-top: -$paragraphSpace * 0.75;
+    //@include media-breakpoint-up(sm) {
+    //    margin-top: -$paragraphSpace;
+    //}
 }
 
 em,
