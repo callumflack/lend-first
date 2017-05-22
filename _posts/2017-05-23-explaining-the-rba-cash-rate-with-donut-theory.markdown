@@ -1,8 +1,9 @@
 ---
 title: Explaining the RBA cash rate with donut theory
-date: 2017-05-23 07:00:00 +10:00
+date: 2017-05-22 07:00:00 +10:00
 categories:
 - comment
+image: "/uploads/post-explaining-the-rba-cash-rate-with-donut-theory.jpg"
 ---
 
 So the cost of donuts has gone up $0.50 but before you write to your local member of parliament demanding a royal commission let’s have a think about the costs that go into making a donut.  There’s yeast, cinnamon, oil, cream, jam, chocolate and the many other ingredients. If the cost of some or all of these ingredients increase, than it is logic and reality that the overall price we pay for the donut increases too.
