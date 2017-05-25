@@ -33,6 +33,7 @@
 // gulp-minify-css   : Minify CSS
 // gulp-parker       : Stylesheet analysis tool
 // gulp-plumber      : Prevent pipe breaking from errors
+// gulp-purify       : Replacement for uncss…
 // gulp-rename       : Rename files
 // gulp-sass         : Compile Sass
 // gulp-sass-lint    : Lint Sass
@@ -230,21 +231,32 @@ gulp.task( 'lint:sass', function() {
         .pipe( plugins.sasslint.failOnError() );
 } );
 
-gulp.task( 'minify:css', function () {
-    gulp.src( options.css.file )
+// gulp.task( 'minify:css', function () {
+//     gulp.src( options.css.file )
+//         .pipe( plugins.plumber() )
+//         .pipe( plugins.uncss ( {
+//             // for Jekyll:
+//             html: [
+//                 '_site/**/*.html'
+//             ],
+//             uncssrc: '.uncssrc'
+//         } ) )
+//         .pipe( plugins.cssnano( { advanced: false } ) )
+//         .pipe( plugins.rename( { suffix: '.min' } ) )
+//         .pipe( gulp.dest( options.css.destination ) )
+//         .pipe( plugins.size({title: 'styles'}) )
+//         .pipe( plugins.connect.reload() );
+// });
+
+// purify
+gulp.task( 'minify:css' , function() {
+    return gulp.src( options.css.file )
         .pipe( plugins.plumber() )
-        .pipe( plugins.uncss ( {
-            // for Jekyll:
-            html: [
-                '_site/**/*.html'
-            ],
-            uncssrc: '.uncssrc'
-        } ) )
+        .pipe( plugins.purifycss(['./public/scripts/**/*.js', './_site/**/*.html']))
         .pipe( plugins.cssnano( { advanced: false } ) )
         .pipe( plugins.rename( { suffix: '.min' } ) )
         .pipe( gulp.dest( options.css.destination ) )
         .pipe( plugins.size({title: 'styles'}) )
-        .pipe( plugins.connect.reload() );
 });
 
 gulp.task( 'test:css', function() {

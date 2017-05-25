@@ -13,6 +13,7 @@
     "gulp-order": "^1.1.1",
     "gulp-parker": "^0.1.4",
     "gulp-plumber": "^1.1.0",
+    "gulp-purifycss": "0.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sass-lint": "^1.2.0",
