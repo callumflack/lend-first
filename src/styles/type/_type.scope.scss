@@ -109,6 +109,7 @@ th {
     line-height: 1.75;
     margin-bottom: 0;
     padding: space(0.5) space(0.75) space(0.35);
+    white-space: pre-line;
 
     &:last-child {
         //padding-bottom: space(0.5);
@@ -128,7 +129,12 @@ td {
 .s-table-3columns {
     th,
     td {
-        width: 32%;
+        &:first-of-type {
+            padding-right: 3%;
+            width: 40%;
+        }
+        
+        width: 29%;
     }
 }
 
