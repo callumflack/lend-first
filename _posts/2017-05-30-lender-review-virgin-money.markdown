@@ -3,6 +3,7 @@ title: Lender Review—Virgin Money
 date: 2017-05-30 07:00:00 +10:00
 categories:
 - comment
+image: "/uploads/post-lender-review-virgin-money.jpg"
 review: true
 ---
 
@@ -29,5 +30,3 @@ A new lender with a fresh approach to home loans, First Home Buyer Friendly. Cre
 * First home buyers ★★★★★
 * Upgraders ★★★★☆
 * Investors ★★★★☆
-* Credit Impaired		
-* Small Business
