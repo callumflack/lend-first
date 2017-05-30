@@ -7,6 +7,7 @@ categories:
 
 Whether savings is genuine or non-genuine can sometimes make a difference between an approval or a decline but most of the time the biggest difference is more to do with the cost of mortgage insurance and the relevant interest rate.
 
+## Genuine Savings
 Genuine Savings is an established savings pattern over a period of 3 months. Savings are considered genuine when:
 * Has come from any source and remained untouched in a bank account for a min 3 months or
 * Sale of shares, if ownership of shares were for longer than 3 months or
@@ -14,6 +15,7 @@ Genuine Savings is an established savings pattern over a period of 3 months. Sav
 * Redraw on an existing loan where the loan is in the borrowers name or
 * Bonuses from an employer as long as bonus is not used as income
 
+## Non Genuine Savings
 Non Genuine Savings is where the deposit has come from any other source that is not considered to be ‘Genuine’:
 * First Home Owners Grant
 * Gifts or Inheritances
@@ -23,6 +25,7 @@ Non Genuine Savings is where the deposit has come from any other source that is 
 * Savings held in the name of a business or company
 * Savings is borrowed from any source
 
+## The grey area
 Non Genuine savings can sometimes be treated as ‘Genuine’ in the following situations:
 * Borrower can prove a reliable rental history with a licensed agent for at least 6mths with a lease in their own name
 * Borrower can prove extra repayments made on an existing loan (including personal loans) equals the amount of non-genuine savings
