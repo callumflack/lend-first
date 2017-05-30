@@ -33,7 +33,7 @@
 // gulp-minify-css   : Minify CSS
 // gulp-parker       : Stylesheet analysis tool
 // gulp-plumber      : Prevent pipe breaking from errors
-// gulp-purify       : Replacement for uncss…
+// gulp-purify       : Replacement for uncss: https://github.com/purifycss/purifycss
 // gulp-rename       : Rename files
 // gulp-sass         : Compile Sass
 // gulp-sass-lint    : Lint Sass
