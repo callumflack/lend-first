@@ -3,7 +3,9 @@ title: Comparison rates
 date: 2017-06-13 07:00:00 +10:00
 categories:
 - comment
-image: "/uploads/post-5-reasons-why-pre-approvals-are-bad.jpg"
+table-style:
+- s-table-3columns
+image: "/uploads/post-comparison-rates.jpg"
 ---
 
 A comparison rate is a tool to help consumers identify the true cost of a loan by reducing the costs of a loan—including interest & fees—into a single percentage rate to easily compare the true cost of home loans.  We can use comparison rates to compare various loans from different lenders. 
