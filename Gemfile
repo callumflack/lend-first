@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
+gem 'jekyll', '3.4'
 gem 'jekyll-feed'
 gem 'jekyll-sitemap'
-gem 'jekyll-seo-tag', '2.0.0'
+gem 'jekyll-seo-tag', '2.1.0'
