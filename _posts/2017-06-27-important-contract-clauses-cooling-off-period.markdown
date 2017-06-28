@@ -1,6 +1,8 @@
 ---
 title: Important Contract Clauses—Cooling Off Period
 date: 2017-06-27 20:00:00 +10:00
+categories:
+- tips
 ---
 
 The Cooling Off Period is the period after a buyer enters a contract to buy home or land in which the buyer can terminate the contract without having to provide a reason or justification to the seller. Notification must be provided in writing.
