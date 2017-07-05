@@ -31,7 +31,7 @@
         {% if post.image-align-top %} o-coverImage--alignTop{% endif %} 
         {% if post.categories contains "tips" %} Card-image--categoryLabel{% endif %}" 
         {% unless post.categories contains "tips" %}
-            style="background-image: url('/uploads/post-{{ post.title | downcase | replace: ' ', '-' | replace: '—', '-' | remove: '?' }}.jpg')"
+            style="background-image: url('/uploads/post-{{ post.title | downcase | replace: ' ', '-' | replace: '—', '-' | remove: ','  | remove: '?' }}.jpg')"
         {% endunless %}>
         
         <h2 class="c-headline--md">{{ post.title }}</h2>
