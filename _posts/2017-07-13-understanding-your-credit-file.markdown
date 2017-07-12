@@ -1,6 +1,6 @@
 ---
 title: Understanding Your Credit File
-date: 2017-07-13 09:00:00 +10:00
+date: 2017-07-12 09:00:00 +10:00
 categories:
 - tips
 ---
