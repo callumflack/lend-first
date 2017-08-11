@@ -3,9 +3,10 @@ title: Important Contract Clauses (Qld)—Finance Date
 date: 2017-08-11 07:00:00 +10:00
 categories:
 - tips
-note: "Please note: the above information is general in nature and does not constitute legal advice. You should always seek independent legal opinion in relation to any matter regarding the finance clause in your property contract."
+note: 'Please note: the above information is general in nature and does not constitute
+  legal advice. You should always seek independent legal opinion in relation to any
+  matter regarding the finance clause in your property contract.'
 ---
-
 
 In Queensland, the Finance Date Contract Clauses refer to the period of time a buyer has to obtain formal finance approval for the purchase after entering a contract to buy a property.
 
