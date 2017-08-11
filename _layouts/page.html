@@ -69,6 +69,11 @@ layout: default
                     <div class="s-article {% if page.lede %}s-article--withLede{% endif %}">
                         {{ content | markdownify }}
                     </div>
+                    {% if page.note %}
+                        <div class="c-postReview">
+                            {{ page.note }}
+                        </div>
+                    {% endif %}
                     {% if page.review %}
                         <div class="c-postReview">
                             Guide to the scorecard: 
