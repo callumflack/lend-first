@@ -6,7 +6,6 @@ categories:
 image: 
 ---
 
-
 A client of mine, who regularly donated to charity for over 20 years, got a rude shock last week when a bank's statement scanning software identified the client as a potential gambler.
 
 The client’s honest intention was simply to make a $10 donation each month to charity however that donation took the form of a $10 endeavour lottery ticket. Unfortunately, the word ‘Lotteries’ appears on his statement. The software identifies the word Lotteries showing up on a regular basis and therefore flagged a potential gambling problem.
