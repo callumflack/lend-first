@@ -3,7 +3,7 @@ title: Introducing Lendfirst Home Loans, the low deposit experts
 date: 2017-05-08 11:00:00 +10:00
 categories:
 - comment
-image: "/uploads/post-introducing-lendfirst-home-loans,-the-low-deposit-experts.jpg"
+image: "/uploads/post-introducing-lendfirst-home-loans.jpg"
 image-align-top: true
 ---
 
