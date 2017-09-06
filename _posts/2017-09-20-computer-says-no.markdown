@@ -3,7 +3,7 @@ title: Computer says NO!
 date: 2017-09-20 07:00:00 +10:00
 categories:
 - comment
-image: '/uploads/post-computer-says-no!.jpg'
+image: "/uploads/post-computer-says-no!.jpg"
 ---
 
 John had been with his bank since he was a child, he opened his savings account when he was in school, he borrowed for cars and repaid the loans early, his credit card was perfect and he had plenty of savings. His parents banked there all their lives and John had referred many friends to the bank, he was a very loyal customer.

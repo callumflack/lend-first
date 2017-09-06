@@ -3,7 +3,7 @@ title: Redefining Good Vs Bad Debt
 date: 2017-09-06 07:00:00 +10:00
 categories:
 - comment
-image: '/uploads/post-redefining-good-vs-bad-debt.jpg'
+image: "/uploads/post-redefining-good-vs-bad-debt.jpg"
 note: Image by Alice Pasqual
 ---
 

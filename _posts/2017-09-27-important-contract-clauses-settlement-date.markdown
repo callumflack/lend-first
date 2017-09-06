@@ -3,7 +3,9 @@ title: Important Contract Clauses—Settlement Date
 date: 2017-09-27 20:00:00 +10:00
 categories:
 - tips
-note: The above information is general in nature and does not constitute legal advice. You should always seek independent legal opinion in relation to any matter regarding the settlement conditions in your property contract.
+note: The above information is general in nature and does not constitute legal advice.
+  You should always seek independent legal opinion in relation to any matter regarding
+  the settlement conditions in your property contract.
 ---
 
 The Settlement Date is the day when money and property title are exchanged between buyer and seller and ownership of the property officially transfers to the buyer. That is, the actual day on which transfer of cash or assets is completed and is usually a few days after the trade was done. 

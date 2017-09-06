@@ -3,7 +3,7 @@ title: Does renting prove you can afford a house of your own?
 date: 2017-10-04 07:00:00 +10:00
 categories:
 - comment
-image: '/uploads/post-does-renting-prove.jpg'
+image: "/uploads/post-does-renting-prove.jpg"
 ---
 
 Belinda & John wanted to buy their first home. Belinda worked FT with a good wage and John was a stay at home dad. They had no debts and a little savings. They paid $420 per week rent and thought it was time to start paying off their own home. The problem was, Belinda & John used their rent payment as a benchmark for working out what they could buy. 
