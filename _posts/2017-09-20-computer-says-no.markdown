@@ -6,16 +6,18 @@ categories:
 image: "/uploads/post-computer-says-no!.jpg"
 ---
 
-John had been with his bank since he was a child, he opened his savings account when he was in school, he borrowed for cars and repaid the loans early, his credit card was perfect and he had plenty of savings. His parents banked there all their lives and John had referred many friends to the bank, he was a very loyal customer.
+It’s just a line from the Little Britain comedy show, right? Wrong! Unfortunately it’s a part of everyday life these days. I think using technology to help make decisions is a great thing, but it must be used with common sense and a helpful attitude. 
 
-When John found the home he’d always wanted, he applied for a loan with his bank but it was declined. John had the savings, he proved he had the income, he had an excellent credit score and never missed a repayment in his life so what went wrong.
+Here’s a great example.
 
-John was a casual, had been for years, but 11 months ago he changed to a new employer doing the same job but for better pay. Sounds fine right? Wrong! Bank policy said John needed to be with his current employer for 12 months. 
+A customer, (let’s call him Bob to protect the innocent), had saved with his bank since he was at school and had been pretty loyal. He chose the bank because his parents had banked there all their lives too. He bought his car with a loan from the bank and paid the money back on time. He took their credit card offer and used it wisely (ish!). In fact, he’d even recommended that his friends used the same bank as it’d been plain sailing for him.
 
-Now the average person would say fine he will be 12 months when the loan starts so no problem. Wrong again! The policy says 12 months at time of application.
+And then it happened. The computer said ‘no!’
 
-Now more than ever, common sense is thrown out the window in favour of what’s written on a checklist. The comedy show ‘Little Britain’ took fun of the issue in their ‘Computer Says No’ sketch and whilst many may laugh, it is now closer to reality than what many people realise.
+Bob found his perfect home. He knew he could afford it and he knew his credit score was spot on, so he approached his bank for a home loan. They had a great rate on offer to ‘loyal’ customers so it was a no brainer.
 
-If you're applying for a loan, forget loyalty, forget brand names, forget special offers and focus on what the computer is going to say.
+What he didn’t realise was that the ‘rules’ had not had common sense applied to them. Him changing companies 11 months before for a job with better pay and better prospects was a mistake.
 
-[Watch the ‘Computer Says No’ sketch here.](https://youtu.be/AJQ3TM-p2QI)
+Yep – the bank’s policy was that you must be with your employer for 12 months. When you make your application – not when your loan actually starts. You can’t make this stuff up. It’s worth talking to your broker when you first start thinking about your home loan and he can let you know the potential pitfalls.  He can also be on your side should you need to make the bank use common sense.
+
+Forgotten how funny (and scarily lifelike) the Little Britain sketch is? [Watch it now!](https://youtu.be/AJQ3TM-p2QI) Enjoy.
