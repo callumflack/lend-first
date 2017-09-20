@@ -127,6 +127,10 @@ $footerColor: #677985;
     background-color: palette('brand');
     padding: space(0.5) 0;
     
+    &:first-child {
+        background-color: rgba(palette('brand'), 0.7);
+    }
+    
     p {
         color: palette(white);
         font-family: $font-text-medium;
