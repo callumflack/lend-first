@@ -1,6 +1,6 @@
 ---
 title: Send your bank statements easily
-has-javascripts: true
+has-javascripts: false
 layout: bank-statements-entry
 ---
 
