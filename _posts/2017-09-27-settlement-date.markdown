@@ -3,7 +3,10 @@ title: Settlement Date!
 date: 2017-09-27 20:00:00 +10:00
 categories:
 - tips
-note: Although I am giving you general information here, it’s not legal advice. You should always seek independent legal advice in relation to any matter regarding settlement conditions and contracts. If you need a solicitor, your broker can usually help you to find one.
+note: Although I am giving you general information here, it’s not legal advice. You
+  should always seek independent legal advice in relation to any matter regarding
+  settlement conditions and contracts. If you need a solicitor, your broker can usually
+  help you to find one.
 ---
 
 There’s lots of jargon when you’re buying a home, and do you know what? You’ll only ever need to know what they mean when you’re going through the process. It can seem like the banks and solicitors have made up these words (and maybe they have) so let me make sense of one for you today – settlement date.
