@@ -1,114 +1,117 @@
-
-
 // --------------------------------------------------------------------------
 //    BUTTONS
 // --------------------------------------------------------------------------
 
-
 @mixin buttonTheme() {
-	@include baseTransition();
-	border-radius: $buttonRadius;
-	border-style: solid;
-	border-width: 1px;
-	padding: 0 space(1);
-    
-	// transition: all transition(duration, short) transition(type, base);
-	// vertical-align: top; // 1.
+  @include baseTransition();
+  border-radius: $buttonRadius;
+  border-style: solid;
+  border-width: 1px;
+  padding: 0 space(1);
 
-	@include on-event(true) {
-		background-color: transparent;
-		border-color: currentColor;
-		outline: none !important;
+  // transition: all transition(duration, short) transition(type, base);
+  // vertical-align: top; // 1.
 
-        // theme unused
-        //opacity: 0.5;
-	}
-	
-	a {
+  @include on-event(true) {
+    background-color: transparent;
+    border-color: currentColor;
+    outline: none !important;
 
-	}
+    // theme unused
+    //opacity: 0.5;
+  }
 
-	&[disabled] {
-		border-color: palette(black-40);
-		background-color: palette(black-40);
-		cursor: not-allowed;
-		opacity: 0.4;
-	}
+  a {
+  }
+
+  &[disabled] {
+    border-color: palette(black-40);
+    background-color: palette(black-40);
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
 }
 
 @mixin buttonText() {
-    @include typeReset();
-    @include textRg();
-    line-height: map-fetch($button-height, base);
+  @include typeReset();
+  @include textRg();
+  line-height: map-fetch($button-height, base);
 
-    @include on-event(true) {
-        color: palette(brand);
-        font-family: $font-text-bold;
-    }
+  @include on-event(true) {
+    color: palette(brand);
+    font-family: $font-text-bold;
+  }
 }
-
 
 // Primary button
 // --------------------------------------------------------------------------
 
 @mixin button() {
-	@include buttonTheme();
-	@include buttonText();
+  @include buttonTheme();
+  @include buttonText();
 }
 
 .c-button {
-	@include button;
+  @include button;
 }
 
 .c-button--dark {
-	@include on-event(true) {
-        color: palette("black-66");
-        //font-family: $font-text-bold;
-    }
+  @include on-event(true) {
+    color: palette("black-66");
+    //font-family: $font-text-bold;
+  }
 }
 
 .c-button--lg {
-	line-height: map-fetch($button-height, lg);
-    padding: 0 space(2);
+  line-height: map-fetch($button-height, lg);
+  padding: 0 space(2);
 }
 
 .c-button--full {
-	text-align: center;
-	width: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 .c-button--lineHeight {
-    line-height: map-fetch($button-height, base) !important;
-	padding-top: 0;
-	padding-bottom: 0;
+  line-height: map-fetch($button-height, base) !important;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-.c-button--rev {
-    @include button;
-	
-	@include on-event(true) {
-        background-color: transparent;
-		border-color: currentColor;
-		color: palette(highlight-edit);
-	}
+// .c-button--rev {
+//   @include button;
+
+//   @include on-event(true) {
+//     background-color: transparent;
+//     border-color: currentColor;
+//     color: palette(brand);
+//   }
+// }
+
+.c-button--fill {
+  @include button;
+
+  @include on-event(true) {
+    background-color: palette(brand);
+    border-color: palette(brand);
+    color: palette(white);
+  }
 }
 
 .c-button--transparent {
-	@include on-event(true) {
-	    background-color: transparent;
-	    border-color: transparent;
-		color: palette(black-40);
-		font-family: $font-text-medium;
-	}
+  @include on-event(true) {
+    background-color: transparent;
+    border-color: transparent;
+    color: palette(black-40);
+    font-family: $font-text-medium;
+  }
 }
 
 .c-button--profile {
-	position: absolute;
-	right: space(1.5);
-    top: space(1.5);
+  position: absolute;
+  right: space(1.5);
+  top: space(1.5);
 }
-
-
 
 // Ticket button
 // --------------------------------------------------------------------------
@@ -116,27 +119,26 @@
 $arrowSize: map-fetch($button-height, base);
 
 @mixin Arrow() {
-    content: "";
-    display: block;
-    position: absolute;
-    //right: -#{$arrowSize * 0.5};
-    right: -23px;
-    top: -1px;
-
+  content: "";
+  display: block;
+  position: absolute;
+  //right: -#{$arrowSize * 0.5};
+  right: -23px;
+  top: -1px;
 }
 
 /* uncss:ignore */
 .t-button--primary {
-	@include button();
-    min-width: 92%;
-    padding: space(0.25) space(0.25) space(0.25) space(0.5);
-    position: relative;
+  @include button();
+  min-width: 92%;
+  padding: space(0.25) space(0.25) space(0.25) space(0.5);
+  position: relative;
 
-    &:after {
-        @include Arrow();
-        border-bottom: 59px solid transparent;
-        border-left: $arrowSize * 0.5 solid palette(brand);
-    }
+  &:after {
+    @include Arrow();
+    border-bottom: 59px solid transparent;
+    border-left: $arrowSize * 0.5 solid palette(brand);
+  }
 }
 
 //.t-button--secondary {
@@ -163,7 +165,6 @@ $arrowSize: map-fetch($button-height, base);
 //        font-family: $font-text-bold;
 //    }
 //}
-
 
 // Secondary buttons
 // --------------------------------------------------------------------------
@@ -208,7 +209,6 @@ $arrowSize: map-fetch($button-height, base);
 //	@include buttonSecondary();
 //}
 
-
 // Invisible button (for holding the touch space & layout)
 // --------------------------------------------------------------------------
 
@@ -228,7 +228,6 @@ $arrowSize: map-fetch($button-height, base);
 //.t-buttonInvisible {
 //	@include buttonInvisible();
 //}
-
 
 // Button sizes
 // --------------------------------------------------------------------------
@@ -273,28 +272,25 @@ $arrowSize: map-fetch($button-height, base);
 //	}
 //}
 
-
 // Close button (this just positions an icon)
 // --------------------------------------------------------------------------
 
 .t-buttonClose {
-	color: palette(brand);
-	position: fixed;
-	right: space(0.5);
-	top: space(0.5);
-	z-index: map-fetch($z-index, first);
+  color: palette(brand);
+  position: fixed;
+  right: space(0.5);
+  top: space(0.5);
+  z-index: map-fetch($z-index, first);
 
-	@include on-event() {
-		outline: none;
-	}
+  @include on-event() {
+    outline: none;
+  }
 
-	@include media-breakpoint-up(xs) {
-		right: space(1);
-		top: 31px;
-	}
+  @include media-breakpoint-up(xs) {
+    right: space(1);
+    top: 31px;
+  }
 }
-
-
 
 // Subtitle
 // --------------------------------------------------------------------------

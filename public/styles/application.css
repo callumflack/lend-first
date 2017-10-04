@@ -1641,6 +1641,7 @@ ul {
 .u-textKern {
   font-feature-settings: "kern" 1;
   /* 1 */
+  -webkit-font-kerning: normal;
   font-kerning: normal;
   /* 2 */
   text-rendering: optimizeLegibility;
@@ -4065,6 +4066,8 @@ td {
 .Footer-feature {
   background-color: #1096ef;
   padding: 12px 0; }
+  .Footer-feature:first-child {
+    background-color: rgba(16, 150, 239, 0.7); }
   .Footer-feature p {
     color: #FFF;
     font-family: "AtlasGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif;
@@ -4167,7 +4170,7 @@ td {
   padding-top: 0;
   padding-bottom: 0; }
 
-.c-button--rev {
+.c-button--fill {
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
@@ -4190,30 +4193,30 @@ td {
   line-height: 1.5;
   font-size: 15px;
   line-height: 44px; }
-  .c-button--rev, .c-button--rev:hover, .c-button--rev:active, .c-button--rev:focus {
+  .c-button--fill, .c-button--fill:hover, .c-button--fill:active, .c-button--fill:focus {
     background-color: transparent;
     border-color: currentColor;
     outline: none !important; }
-  .c-button--rev[disabled] {
+  .c-button--fill[disabled] {
     border-color: #999999;
     background-color: #999999;
     cursor: not-allowed;
     opacity: 0.4; }
   @media (min-width: 768px) {
-    .c-button--rev {
+    .c-button--fill {
       font-size: 17px; } }
-  .c-button--rev > li,
-  .c-button--rev > li a,
-  .c-button--rev > a {
+  .c-button--fill > li,
+  .c-button--fill > li a,
+  .c-button--fill > a {
     color: currentColor;
     margin: 0; }
-  .c-button--rev, .c-button--rev:hover, .c-button--rev:active, .c-button--rev:focus {
+  .c-button--fill, .c-button--fill:hover, .c-button--fill:active, .c-button--fill:focus {
     color: #1096ef;
     font-family: "AtlasGrotesk-Bold", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", "Droid Sans", "Segoe UI", "Fira Sans", "Ubuntu", sans-serif; }
-  .c-button--rev, .c-button--rev:hover, .c-button--rev:active, .c-button--rev:focus {
-    background-color: transparent;
-    border-color: currentColor;
-    color: #4ECF00; }
+  .c-button--fill, .c-button--fill:hover, .c-button--fill:active, .c-button--fill:focus {
+    background-color: #1096ef;
+    border-color: #1096ef;
+    color: #FFF; }
 
 .c-button--transparent, .c-button--transparent:hover, .c-button--transparent:active, .c-button--transparent:focus {
   background-color: transparent;
