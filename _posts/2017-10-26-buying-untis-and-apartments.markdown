@@ -1,5 +1,5 @@
 ---
-title: Buying Apartments & Units 
+title: Buying Apartments & Units
 date: 2017-10-26 07:00:00 +10:00
 categories:
 - comment
