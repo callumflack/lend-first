@@ -1,6 +1,8 @@
 ---
 title: Home Loan Pre-Approvals
 date: 2017-11-09 22:34:00 +10:00
+categories:
+- tips
 ---
 
 Pre-Approvals, are they as helpful as they sound? Firstly, let’s just see what Pre-Approval actually means.
