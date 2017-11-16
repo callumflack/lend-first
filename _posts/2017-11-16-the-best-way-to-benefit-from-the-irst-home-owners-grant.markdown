@@ -1,9 +1,9 @@
 ---
 title: The best way to benefit from the First Home Owners Grant
 date: 2017-11-16 22:34:00 +10:00
-image: /uploads/post-first-home-owners-grant.jpg
 categories:
 - comment
+image: "/uploads/post-first-home-owners-grant.jpg"
 ---
 
 First home buyers will be aware of the Queensland Government’s First Home Owner’s Grant. Builders are advertising it, and lots of lenders are promoting it too.
