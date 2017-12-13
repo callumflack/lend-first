@@ -1,6 +1,6 @@
 ---
 title: Employment Type—Self Employed
-date: 2017-12-14 14:00:00 +10:00
+date: 2017-12-14 09:00:00 +10:00
 categories:
 - tips
 ---
