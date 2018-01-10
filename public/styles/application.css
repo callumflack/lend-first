@@ -3149,6 +3149,7 @@ a {
   -webkit-transition: all 50ms ease-out;
   -o-transition: all 50ms ease-out;
   transition: all 50ms ease-out;
+  height: 100%;
   position: relative; }
   .o-modal-dialog:before, .o-modal-dialog:after {
     content: " ";
