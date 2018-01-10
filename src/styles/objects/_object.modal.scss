@@ -1,10 +1,7 @@
-
-
 // --------------------------------------------------------------------------
 //   MODAL OBJECT
 //   Reqs: '_object.positions.scss'
 // --------------------------------------------------------------------------
-
 
 // Modal object with theme
 
@@ -21,7 +18,7 @@
     outline: 0;
     overflow-x: hidden;
     width: 100vw;
-    z-index: map-fetch($z-index, 'below');
+    z-index: map-fetch($z-index, "below");
 }
 
 @mixin t-modalActive {
@@ -33,7 +30,7 @@
     @include t-modalActive();
     opacity: 1;
     // overflow: hidden;
-    z-index: map-fetch($z-index, 'modal');
+    z-index: map-fetch($z-index, "modal");
 
     @include media-breakpoint-up(xs) {
         overflow-x: hidden;
@@ -41,18 +38,19 @@
     }
 }
 
-
 // Modal dialog object with theme
 
 @mixin t-modalDialog() {
     //transform: translateY(10px);
     @include containerFrame();
     @include containerWidth();
-    transition: all map-fetch($transition, duration, fast) map-fetch($transition, type, base);
+    transition: all map-fetch($transition, duration, fast)
+        map-fetch($transition, type, base);
 }
 
 .o-modal-dialog {
     @include t-modalDialog();
+    height: 100%;
     //margin: space(1) auto;
     position: relative;
 

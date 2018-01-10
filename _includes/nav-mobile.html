@@ -1,9 +1,9 @@
 <div class="o-modal" tabindex="-1" role="dialog" aria-labelledby="mobileNav" data-modal>
 	<div class="o-modal-dialog o-aligner" role="document">
 		<div class="o-aligner-item">
-		    {% include nav-items.html %}
-            <a class="Contact-detail" href="{{ site.phone }}">Call {{ site.phone }}</a>
-            <a class="Contact-detail" href="mailto:{{ site.email }}">{{ site.email }}</a>
+			{% include nav-items.html %}
+			<a class="Contact-detail" href="tel:{{ site.phone }}">Call {{ site.phone }}</a>
+			<a class="Contact-detail" href="mailto:{{ site.email }}">{{ site.email }}</a>
 		</div>
 	</div>
 </div>
