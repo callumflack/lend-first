@@ -1,4 +1,3 @@
----
 title: LendFirst Home Loans
 timezone: Australia/Brisbane
 collections:
@@ -12,52 +11,52 @@ collections:
     title: Uploads
     output: false
 defaults:
-- scope:
-    path: ''
-    type: about
-  values:
-    layout: post
-    permalink: "/:collection/:path/"
-- scope:
-    path: ''
-    type: loan-options
-  values:
-    layout: page
-    permalink: "/:collection/:path/"
-    image: true
-    lede: true
-    has-javascripts: true
-    offset-top: 820
-    offset-bottom: 1940
-- scope:
-    path: ''
-    type: pages
-  values:
-    layout: page
-    has-javascripts: true
-    table-style: false
-    offset-top: 820
-    offset-bottom: 1300
-- scope:
-    path: ''
-    type: posts
-  values:
-    title: 
-    layout: page
-    permalink: "/blog/:slug/"
-    future: false
-    has-javascripts: true
-    categories: 
-    type: post
-    image: true
-    image-align-top: false
-    image-align-bottom: false
-    lede: true
-    offset-top: 820
-    offset-bottom: 1300
+  - scope:
+      path: ""
+      type: about
+    values:
+      layout: post
+      permalink: "/:collection/:path/"
+  - scope:
+      path: ""
+      type: loan-options
+    values:
+      layout: page
+      permalink: "/:collection/:path/"
+      image: true
+      lede: true
+      has-javascripts: true
+      offset-top: 820
+      offset-bottom: 1940
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+      has-javascripts: true
+      table-style: false
+      offset-top: 820
+      offset-bottom: 1300
+  - scope:
+      path: ""
+      type: posts
+    values:
+      ? title
+      layout: page
+      permalink: "/blog/:slug/"
+      future: false
+      has-javascripts: true
+      ? categories
+      type: post
+      image: true
+      image-align-top: false
+      image-align-bottom: false
+      lede: true
+      offset-top: 820
+      offset-bottom: 1300
 description: LendFirst offers smart advice and real solutions for first home buyers
   and first-time investors, in Cairns, Queeensland, Australia.
-baseurl: 
+? baseurl
 url: https://lendfirst.com.au
 logo: "/uploads/lendfirst-logo.png"
 facebook:
@@ -65,8 +64,8 @@ facebook:
 social:
   name: LendFirst
   links:
-  - https://www.facebook.com/lendfirst
-  - https://www.linkedin.com/in/michael-garland-88b00a26
+    - https://www.facebook.com/lendfirst
+    - https://www.linkedin.com/in/michael-garland-88b00a26
 author: patternworks_
 address: PO Box 526 Redlynch, Queensland 4870 Australia
 address-link: https://goo.gl/maps/3RTKiR89iD72
@@ -81,20 +80,20 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-gems:
-- jekyll-feed
-- jekyll-sitemap
-- jekyll-seo-tag
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 exclude:
-- Gemfile.lock
-- ".gitignore"
-- ".editorconfig"
-- gulpfile.js
-- package.json
-- node_modules
-- yarn.lock
-- src
-- build
-- DESCRIPTION*
-- README*
-- TODO*
+  - Gemfile.lock
+  - ".gitignore"
+  - ".editorconfig"
+  - gulpfile.js
+  - package.json
+  - node_modules
+  - yarn.lock
+  - src
+  - build
+  - DESCRIPTION*
+  - README*
+  - TODO*
