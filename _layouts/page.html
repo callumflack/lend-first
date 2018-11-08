@@ -6,89 +6,91 @@ layout: default
     <header class="Section--header">
         <div class="o-container o-container--md">
             <h1 class="c-display--super">
-                {% if page.url contains "loan-options"  %}
-                    {% if page.headline %}
-                        {{ page.headline }}
-                    {% else %}
-                        {{ page.title }} loan options
-                    {% endif %}
+                {% if page.url contains "loan-options" %}
+                {% if page.headline %}
+                {{ page.headline }}
                 {% else %}
-                    {{ page.title }}
+                {{ page.title }} loan options
+                {% endif %}
+                {% else %}
+                {{ page.title }}
                 {% endif %}
             </h1>
         </div>
     </header>
-    {% unless page.categories contains "tips" or post.categories contains "tips" %}
-        <figure class="Section--figure">
-            <div class="o-container o-container--lg o-container--fullWindowMobile">
-                <div class="FlexEmbed">
-                    <div class="FlexEmbed-ratio FlexEmbed-ratio--2by1"></div>
-                    <div class="FlexEmbed-content">
-                        <div class="u-posAbsoluteCenter o-coverImage{% if page.image-align-bottom %} o-coverImage--alignBottom{% endif %} {% if page.image-align-top %} o-coverImage--alignTop{% endif %}" 
-                            style="background-image: url('{{ page.image | downcase | replace: ' ', '-' | replace: '—', '-' | remove: '?' }}')">
-                        </div>
-                        {% comment %}
-                        {% assign image = "{{ page.title | downcase | replace: ' ', '-' }}.jpg" %}
-                        {% include responsive-img-cloudinary.html %}
-                        {% endcomment %}
+    {% unless page.title contains "Privacy" or page.categories contains "tips" or post.categories contains "tips" %}
+    <figure class="Section--figure">
+        <div class="o-container o-container--lg o-container--fullWindowMobile">
+            <div class="FlexEmbed">
+                <div class="FlexEmbed-ratio FlexEmbed-ratio--2by1"></div>
+                <div class="FlexEmbed-content">
+                    <div class="u-posAbsoluteCenter o-coverImage{% if page.image-align-bottom %} o-coverImage--alignBottom{% endif %} {% if page.image-align-top %} o-coverImage--alignTop{% endif %}"
+                        style="background-image: url('{{ page.image | downcase | replace: ' ', '-' | replace: '—', '-' | remove: '?' }}')">
                     </div>
+                    {% comment %}
+                    {% assign image = "{{ page.title | downcase | replace: ' ', '-' }}.jpg" %}
+                    {% include responsive-img-cloudinary.html %}
+                    {% endcomment %}
                 </div>
             </div>
-        </figure>
+        </div>
+    </figure>
     {% endunless %}
     <section class="Section">
         <div class="o-container o-container--md">
             <div class="Grid Grid--withGutter">
-                
+
                 {% unless page.single-column %}
-                    <div class="Grid-cell u-sm-size3of12 u-hide u-sm-display">
-                        <aside class="Aside--affixed affix-top" data-spy="affix" data-offset-top="{{ page.offset-top }}" data-offset-bottom="{{ page.offset-bottom }}">
-                            
-                            {% if page.menu %}
-                                <ul class="Aside-list" data-gumshoe>
-                                    {% for item in page.menu %}
-                                        <li class="Aside-list--item">
-                                            <a href="{{ page.url  | remove: '.html' | prepend: site.baseurl }}#{{ item | downcase | replace: ' ', '-' | remove:',' | remove:'&rsquo;' }}">{{ item }}?</a>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            {% endif %}
-                            
-                            <a class="Aside-list--link o-arrowNorth" href="#top">
-                                Back to top
-                            </a>
-                            <div class="Aside-share u-flex">
-                                {% include share.html %}
-                            </div>
-                                
-                        </aside>
-                    </div>
+                <div class="Grid-cell u-sm-size3of12 u-hide u-sm-display">
+                    <aside class="Aside--affixed affix-top" data-spy="affix" data-offset-top="{{ page.offset-top }}"
+                        data-offset-bottom="{{ page.offset-bottom }}">
+
+                        {% if page.menu %}
+                        <ul class="Aside-list" data-gumshoe>
+                            {% for item in page.menu %}
+                            <li class="Aside-list--item">
+                                <a href="{{ page.url  | remove: '.html' | prepend: site.baseurl }}#{{ item | downcase | replace: ' ', '-' | remove:',' | remove:'&rsquo;' }}">{{
+                                    item }}?</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+
+                        <a class="Aside-list--link o-arrowNorth" href="#top">
+                            Back to top
+                        </a>
+                        <div class="Aside-share u-flex">
+                            {% include share.html %}
+                        </div>
+
+                    </aside>
+                </div>
                 {% endunless %}
-                
+
                 <div class="Grid-cell u-sm-size9of12">
                     <div class="s-article {% if page.lede %}s-article--withLede{% endif %}">
                         {{ content | markdownify }}
                     </div>
                     {% if page.note %}
-                        <div class="c-postReview">
-                            {{ page.note }}
-                        </div>
+                    <div class="c-postReview">
+                        {{ page.note }}
+                    </div>
                     {% endif %}
                     {% if page.review %}
-                        <div class="c-postReview">
-                            Guide to the scorecard: 
-                            <ul>
-                                <li><span>★★★★★</span>Definitely put them on the shopping list.</li>
-                                <li><span>★★★★☆</span>Worth comparing with other options.</li>
-                                <li><span>★★★☆☆</span>Not bad but not great. Similar to everyone else.</li>
-                                <li><span>★★☆☆☆</span>Consider other options first.</li>
-                                <li><span>★☆☆☆☆</span>Last resort option.</li>
-                                <li><span>☆☆☆☆☆</span>Not even an option.</li>
-                            </ul>
-                        </div>
+                    <div class="c-postReview">
+                        Guide to the scorecard:
+                        <ul>
+                            <li><span>★★★★★</span>Definitely put them on the shopping list.</li>
+                            <li><span>★★★★☆</span>Worth comparing with other options.</li>
+                            <li><span>★★★☆☆</span>Not bad but not great. Similar to everyone else.</li>
+                            <li><span>★★☆☆☆</span>Consider other options first.</li>
+                            <li><span>★☆☆☆☆</span>Last resort option.</li>
+                            <li><span>☆☆☆☆☆</span>Not even an option.</li>
+                        </ul>
+                    </div>
                     {% endif %}
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -99,9 +101,9 @@ layout: default
 {% include contact-michael-block.html %}
 
 {% if page.url contains 'loan-options' %}
-    {% include cards-block.html %}
+{% include cards-block.html %}
 {% endif %}
 
 {% if page.url == site.pages.why-choose-lendfirst.url or post.url %}
-    {% include newsletter-block.html %}
+{% include newsletter-block.html %}
 {% endif %}
